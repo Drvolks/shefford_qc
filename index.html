@@ -167,7 +167,7 @@
             </a>
             <span>
                 <strong>Shefford, QC</strong><br>
-                <span class="font-small">2024-08-01 05:35:00 PM</span>
+                <span class="font-small">2024-08-01 05:45:00 PM</span>
             </span>
         </span>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -213,7 +213,7 @@
                     <i class="wi wi-sunset mr-1" style="opacity: .75"></i> 08:16:05 PM
                 </li>
                 <li class="nav-item mr-4 text-white" style="line-height: 1.75">
-                    <i class="wi wi-moonrise mr-1" style="opacity: .75"></i> 02:03:00 AM <br>
+                    <i class="wi wi-moonrise mr-1" style="opacity: .75"></i> 02:03:01 AM <br>
                     <i class="wi wi-moonset mr-1" style="opacity: .75"></i> 07:03:05 PM
                 </li>
                 <li class="nav-item mr-4 text-white text-center" style="line-height: 1.75" >
@@ -243,7 +243,7 @@
 
 
             <i class="wi wi-direction-down-right"
-               title="Trend: -7.0°C (3.0 hours)"
+               title="Trend: -6.3°C (3.0 hours)"
                data-toggle="tooltip"></i>
 
         </h3>
@@ -255,7 +255,7 @@
             (17:30)
           </div>
           <div class="col-6">
-            <h4 class="h2-responsive">20.4°C</h4>
+            <h4 class="h2-responsive">20.8°C</h4>
           </div>
           <div class="col-3 text-muted font-small hi-text">
             28.2°C <br>
@@ -279,7 +279,7 @@
 
 
             <i class="wi wi-direction-up-right"
-               title="Trend: 26% (3.0 hours)"
+               title="Trend: 23% (3.0 hours)"
                data-toggle="tooltip"></i>
 
         </h3>
@@ -317,8 +317,8 @@
 
 
 
-            <i class="wi wi-wind from-074-deg"
-               title="074°" data-toggle="tooltip"></i>
+            <i class="wi wi-wind from-045-deg"
+               title="045°" data-toggle="tooltip"></i>
 
         </h3>
 
@@ -330,7 +330,7 @@
           </div>
           <div class="col-6">
             <h4 class="h2-responsive">
-              4 km/h ENE
+              1 km/h NE
             </h4>
           </div>
           <div class="col-3 text-muted font-small hi-text">
@@ -360,7 +360,7 @@
 
         <div class="row">
           <div class="col-3 text-muted font-small">
-            6.31 cm/h <br>
+            4.27 cm/h <br>
             Rain Rate
           </div>
           <div class="col-6">
@@ -398,7 +398,7 @@
             (17:30)
           </div>
           <div class="col-6">
-            <h4 class="h2-responsive">20.2°C</h4>
+            <h4 class="h2-responsive">20.7°C</h4>
           </div>
           <div class="col-3 text-muted font-small hi-text">
             23.6°C <br>
@@ -429,7 +429,7 @@
             (17:30)
           </div>
           <div class="col-6">
-            <h4 class="h2-responsive">20.4°C</h4>
+            <h4 class="h2-responsive">20.8°C</h4>
           </div>
           <div class="col-3 text-muted font-small hi-text">
             28.2°C <br>
@@ -460,7 +460,7 @@
             (17:30)
           </div>
           <div class="col-6">
-            <h4 class="h2-responsive">21.1°C</h4>
+            <h4 class="h2-responsive">21.5°C</h4>
           </div>
           <div class="col-3 text-muted font-small hi-text">
             31.2°C <br>
@@ -505,7 +505,7 @@
             (17:30)
           </div>
           <div class="col-6">
-            <h4 class="h2-responsive">23.3°C</h4>
+            <h4 class="h2-responsive">24.7°C</h4>
           </div>
           <div class="col-3 text-muted font-small hi-text">
             33.1°C <br>
@@ -1068,7 +1068,6 @@ new ApexCharts(document.querySelector('#outTempchart'), {
     {
       name: "Outside Temperature",
       data: [ 
-      [1722461700, 22.7],
       [1722462300, 22.4],
       [1722462900, 22.2],
       [1722463500, 22.1],
@@ -1212,12 +1211,12 @@ new ApexCharts(document.querySelector('#outTempchart'), {
       [1722546300, 21.7],
       [1722546900, 21.0],
       [1722547500, 20.5],
+      [1722548100, 20.8],
  ]
     }
     ,{
       name: "Dew Point",
       data: [ 
-      [1722461700, 22.4],
       [1722462300, 21.9],
       [1722462900, 22.0],
       [1722463500, 21.8],
@@ -1361,6 +1360,7 @@ new ApexCharts(document.querySelector('#outTempchart'), {
       [1722546300, 21.1],
       [1722546900, 20.7],
       [1722547500, 20.4],
+      [1722548100, 20.7],
  ]
     }
   ]
@@ -1385,7 +1385,6 @@ new ApexCharts(document.querySelector('#windchillchart'), {
     {
       name: "Wind Chill",
       data: [ 
-      [1722461700, 22.7],
       [1722462300, 22.4],
       [1722462900, 22.2],
       [1722463500, 22.1],
@@ -1529,12 +1528,12 @@ new ApexCharts(document.querySelector('#windchillchart'), {
       [1722546300, 21.7],
       [1722546900, 21.0],
       [1722547500, 20.5],
+      [1722548100, 20.8],
  ]
     }
     ,{
       name: "Heat Index",
       data: [ 
-      [1722461700, 23.6],
       [1722462300, 23.2],
       [1722462900, 23.1],
       [1722463500, 22.9],
@@ -1678,12 +1677,12 @@ new ApexCharts(document.querySelector('#windchillchart'), {
       [1722546300, 22.5],
       [1722546900, 21.7],
       [1722547500, 21.2],
+      [1722548100, 21.5],
  ]
     }
     ,{
       name: "appTemp",
       data: [ 
-      [1722461700, 27.4],
       [1722462300, 27.0],
       [1722462900, 26.9],
       [1722463500, 26.7],
@@ -1827,6 +1826,7 @@ new ApexCharts(document.querySelector('#windchillchart'), {
       [1722546300, 25.2],
       [1722546900, 24.2],
       [1722547500, 23.5],
+      [1722548100, 24.7],
  ]
     }
   ]
@@ -1851,7 +1851,6 @@ new ApexCharts(document.querySelector('#barometerchart'), {
     {
       name: "Barometer",
       data: [ 
-      [1722461700, null],
       [1722462300, null],
       [1722462900, null],
       [1722463500, null],
@@ -1995,6 +1994,7 @@ new ApexCharts(document.querySelector('#barometerchart'), {
       [1722546300, null],
       [1722546900, null],
       [1722547500, null],
+      [1722548100, null],
  ]
     }
   ]
@@ -2019,30 +2019,30 @@ new ApexCharts(document.querySelector('#rainchart'), {
     {
       name: "Rain",
       data: [ 
-      [1722461700, 0.18],
-      [1722465300, 0.05],
-      [1722468900, 0.03],
-      [1722472500, 0.00],
-      [1722476100, 0.00],
-      [1722479700, 0.18],
-      [1722483300, 0.00],
-      [1722486900, 0.00],
-      [1722490500, 0.00],
-      [1722494100, 0.00],
-      [1722497700, 0.00],
-      [1722501300, 0.00],
-      [1722504900, 0.00],
-      [1722508500, 0.00],
-      [1722512100, 0.00],
-      [1722515700, 0.00],
-      [1722519300, 0.00],
-      [1722522900, 0.00],
-      [1722526500, 0.00],
-      [1722530100, 0.00],
-      [1722533700, 0.00],
-      [1722537300, 0.00],
-      [1722540900, 0.05],
-      [1722544500, 2.79],
+      [1722462300, 0.18],
+      [1722465900, 0.05],
+      [1722469500, 0.03],
+      [1722473100, 0.00],
+      [1722476700, 0.00],
+      [1722480300, 0.18],
+      [1722483900, 0.00],
+      [1722487500, 0.00],
+      [1722491100, 0.00],
+      [1722494700, 0.00],
+      [1722498300, 0.00],
+      [1722501900, 0.00],
+      [1722505500, 0.00],
+      [1722509100, 0.00],
+      [1722512700, 0.00],
+      [1722516300, 0.00],
+      [1722519900, 0.00],
+      [1722523500, 0.00],
+      [1722527100, 0.00],
+      [1722530700, 0.00],
+      [1722534300, 0.00],
+      [1722537900, 0.00],
+      [1722541500, 0.30],
+      [1722545100, 2.54],
  ]
     }
   ]
@@ -2067,7 +2067,6 @@ new ApexCharts(document.querySelector('#windSpeedchart'), {
     {
       name: "Wind Speed",
       data: [ 
-      [1722461700, 1],
       [1722462300, 0],
       [1722462900, 0],
       [1722463500, 0],
@@ -2211,12 +2210,12 @@ new ApexCharts(document.querySelector('#windSpeedchart'), {
       [1722546300, 4],
       [1722546900, 5],
       [1722547500, 5],
+      [1722548100, 1],
  ]
     }
     ,{
       name: "Gust Speed",
       data: [ 
-      [1722461700, 4],
       [1722462300, 0],
       [1722462900, 0],
       [1722463500, 0],
@@ -2360,6 +2359,7 @@ new ApexCharts(document.querySelector('#windSpeedchart'), {
       [1722546300, 5],
       [1722546900, 8],
       [1722547500, 8],
+      [1722548100, 3],
  ]
     }
   ]
@@ -2384,7 +2384,6 @@ new ApexCharts(document.querySelector('#outHumiditychart'), {
     {
       name: "Outside Humidity",
       data: [ 
-      [1722461700, 98],
       [1722462300, 97],
       [1722462900, 98],
       [1722463500, 98],
@@ -2528,6 +2527,7 @@ new ApexCharts(document.querySelector('#outHumiditychart'), {
       [1722546300, 96],
       [1722546900, 98],
       [1722547500, 99],
+      [1722548100, 99],
  ]
     }
   ]
@@ -2556,7 +2556,6 @@ new ApexCharts(document.querySelector('#inTempchart'), {
     {
       name: "Inside Temperature",
       data: [ 
-      [1722461700, null],
       [1722462300, null],
       [1722462900, null],
       [1722463500, null],
@@ -2700,6 +2699,7 @@ new ApexCharts(document.querySelector('#inTempchart'), {
       [1722546300, null],
       [1722546900, null],
       [1722547500, null],
+      [1722548100, null],
  ]
     }
   ]
@@ -2722,7 +2722,6 @@ new ApexCharts(document.querySelector('#inHumiditychart'), {
     {
       name: "Inside Humidity",
       data: [ 
-      [1722461700, null],
       [1722462300, null],
       [1722462900, null],
       [1722463500, null],
@@ -2866,6 +2865,7 @@ new ApexCharts(document.querySelector('#inHumiditychart'), {
       [1722546300, null],
       [1722546900, null],
       [1722547500, null],
+      [1722548100, null],
  ]
     }
   ]
@@ -2894,7 +2894,6 @@ new ApexCharts(document.querySelector('#cloudbasechart'), {
     {
       name: "cloudbase",
       data: [ 
-      [1722461700, 336],
       [1722462300, 368],
       [1722462900, 332],
       [1722463500, 341],
@@ -3038,6 +3037,7 @@ new ApexCharts(document.querySelector('#cloudbasechart'), {
       [1722546300, 378],
       [1722546900, 335],
       [1722547500, 320],
+      [1722548100, 320],
  ]
     }
   ]
@@ -3059,11 +3059,6 @@ new ApexCharts(document.querySelector('#cloudbasechart'), {
   };
 
   var raw_data = [
-  {
-    'dir': "20.084479026594607",
-    'speed': "1.059108367989362",
-    'max': "4.310998666280064"
-  },
   {
     'dir': "",
     'speed': "0.0",
@@ -3778,6 +3773,11 @@ new ApexCharts(document.querySelector('#cloudbasechart'), {
     'dir': "86.88010370341514",
     'speed': "4.603446039571954",
     'max': "7.621997641936128"
+  },
+  {
+    'dir': "45.0",
+    'speed': "0.7711426185697648",
+    'max': "2.6559991782973444"
   },
   ];
 
