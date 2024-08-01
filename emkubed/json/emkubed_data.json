@@ -1,0 +1,277 @@
+{
+    "version": "5.1.0",
+    "weewxuptime": "2 seconds",
+    "serveruptime": "343270 seconds",
+    "station": {
+        "hardware": "SDR",
+        "location": "Shefford, QC",
+        "latitude": "45 12.26' N",
+        "longitude": "072 21.17' W",
+        "latitude_dd": "45.2043",
+        "longitude_dd": "-72.3529",
+        "altitude": "300 meters"
+    },
+    "station_observations": {
+        "temp": "degree_C",
+        "barometer": "mbar",
+        "humidity": "percent",
+        "rain": "cm",
+        "rainRate": "cm_per_hour",
+	"windSpeed": "km_per_hour"
+    },
+    "current": {
+        "datetime": "1722547500",
+        "outTemp": "20.9",
+        "outHumidity": "98",
+        "windchill": "20.9",
+        "heatindex": "21.6",
+        "dewpoint": "20.6",
+        "barometer": "   N/A",
+        "barometer_trend": "   N/A",
+        "windspeed": "5",
+        "winddir": "NW",
+        "windGust": "8",
+        "windGustDir": "N/A",
+        "windcompass": "NW",
+        "rainRate": "3.476486956521741",
+        "rain": "0.22860000000000022"
+    },
+    "day": {
+        "outTemp": {
+            "max": "28.2",
+            "maxtime": "1722537304",
+            "min": "20.7",
+            "mintime": "1722507900"
+        },
+        "heatindex": {
+            "max": "31.2",
+            "maxtime": "1722534904"
+        },
+        "windchill": {
+            "max": "20.7",
+            "maxtime": "1722507900"
+        },
+        "humidity": {
+            "max": "99",
+            "maxtime": "1722484805",
+            "min": "70",
+            "mintime": "1722537304"
+        },
+        "dewpoint": {
+            "max": "23.6",
+            "maxtime": "1722533666",
+            "min": "20.4",
+            "mintime": "1722547429"
+        },
+        "barometer": {
+            "max": "   N/A",
+            "maxtime": "",
+            "min": "   N/A",
+            "mintime": ""
+        },
+        "rain": {
+            "sum": "1.78",
+            "max": "3.86",
+            "maxtime": "1722547448"
+        },        
+        "wind": {
+            "max": "8",
+            "maxtime": "1722538710",
+            "gustdir": "315&#176;"
+        },
+        "uv": {
+            "max": "   N/A",
+            "maxtime": "",
+            "min": "   N/A",
+            "mintime": ""
+        },
+        "solar_radiation": {
+            "max": "   N/A",
+            "maxtime": "",
+            "min": "   N/A",
+            "mintime": ""
+        }
+    },
+    "week": {
+        "outTemp": {
+            "max": "29.1",
+            "maxtime": "1722365700",
+            "min": "18.0",
+            "mintime": "1722152900"
+        },
+        "heatindex": {
+            "max": "31.2",
+            "maxtime": "1722534904"
+        },
+        "windchill": {
+            "max": "20.7",
+            "maxtime": "1722507900"
+        },
+        "humidity": {
+            "max": "99",
+            "maxtime": "1722461067",
+            "min": "49",
+            "mintime": "1722274187"
+        },
+        "dewpoint": {
+            "max": "23.6",
+            "maxtime": "1722533666",
+            "min": "13.7",
+            "mintime": "1722152900"
+        },
+        "barometer": {
+            "max": "   N/A",
+            "maxtime": "",
+            "min": "   N/A",
+            "mintime": ""
+        },
+        "rain": {
+            "sum": "2.95",
+            "max": "3.86",
+            "maxtime": "1722547448"
+        },        
+        "wind": {
+            "max": "8",
+            "maxtime": "1722538710",
+            "gustdir": "315&#176;"
+        },
+        "uv": {
+            "max": "   N/A",
+            "maxtime": "",
+            "min": "   N/A",
+            "mintime": ""
+        },
+        "solar_radiation": {
+            "max": "   N/A",
+            "maxtime": "",
+            "min": "   N/A",
+            "mintime": ""
+        }
+    },
+    "month": {
+        "outTemp": {
+            "max": "28.2",
+            "maxtime": "1722537304",
+            "min": "20.7",
+            "mintime": "1722507900"
+        },
+        "heatindex": {
+            "max": "31.2",
+            "maxtime": "1722534904"
+        },
+        "windchill": {
+            "max": "20.7",
+            "maxtime": "1722507900"
+        },
+        "humidity": {
+            "max": "99",
+            "maxtime": "1722484805",
+            "min": "70",
+            "mintime": "1722537304"
+        },
+        "dewpoint": {
+            "max": "23.6",
+            "maxtime": "1722533666",
+            "min": "20.4",
+            "mintime": "1722547429"
+        },
+        "barometer": {
+            "max": "   N/A",
+            "maxtime": "",
+            "min": "   N/A",
+            "mintime": ""
+        },
+        "rain": {
+            "sum": "1.78",
+            "max": "3.86",
+            "maxtime": "1722547448"
+        },        
+        "wind": {
+            "max": "8",
+            "maxtime": "1722538710",
+            "gustdir": "315&#176;"
+        },
+        "uv": {
+            "max": "   N/A",
+            "maxtime": "",
+            "min": "   N/A",
+            "mintime": ""
+        },
+        "solar_radiation": {
+            "max": "   N/A",
+            "maxtime": "",
+            "min": "   N/A",
+            "mintime": ""
+        }
+    },
+    "year": {
+        "outTemp": {
+            "max": "29.1",
+            "maxtime": "1722365700",
+            "min": "13.7",
+            "mintime": "1721987400"
+        },
+        "heatindex": {
+            "max": "31.2",
+            "maxtime": "1722534904"
+        },
+        "windchill": {
+            "max": "20.7",
+            "maxtime": "1722507900"
+        },
+        "humidity": {
+            "max": "99",
+            "maxtime": "1722461067",
+            "min": "49",
+            "mintime": "1722101811"
+        },
+        "dewpoint": {
+            "max": "23.6",
+            "maxtime": "1722533666",
+            "min": "9.3",
+            "mintime": "1722064469"
+        },
+        "barometer": {
+            "max": "   N/A",
+            "maxtime": "",
+            "min": "   N/A",
+            "mintime": ""
+        },
+        "rain": {
+            "sum": "2.95",
+            "max": "3.86",
+            "maxtime": "1722547448"
+        },        
+        "wind": {
+            "max": "8",
+            "maxtime": "1722538710",
+            "gustdir": "315&#176;"
+        },
+        "uv": {
+            "max": "   N/A",
+            "maxtime": "",
+            "min": "   N/A",
+            "mintime": ""
+        },
+        "solar_radiation": {
+            "max": "   N/A",
+            "maxtime": "",
+            "min": "   N/A",
+            "mintime": ""
+        }
+    },
+    "almanac": {
+        "sunrise": "05:34:35 AM",
+        "sunrise_epoch": "1722504875.586284",
+        "sunrise_hour": "05",
+        "sunrise_minute": "34",
+        "sunset": "08:16:05 PM",
+        "sunset_epoch": "1722557765.2876348",
+        "sunset_hour": "20",
+        "sunset_minute": "16",
+        "moon": {
+            "moon_fullness": "7",
+            "moon_phase": "Waning crescent"
+        }
+    }
+}
