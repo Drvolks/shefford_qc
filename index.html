@@ -5,464 +5,3885 @@
 
 
 <!DOCTYPE html>
-<html lang="en-CA" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
-    <head >
-        <meta charset="UTF-8" />
-        <title>Shefford, QC Weather Conditions</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang="en">
+<head>
+  <title>
+    Current | Shefford, QC
+  </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
 
-        <meta name="description" content="Weather conditions for Shefford, QC as observed by a personal weather station and the weewx weather software"/>
-        <meta name="robots" content="noodp"/>
-        <meta property="og:locale" content="en_CA" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Shefford, QC Weather Conditions" />
-        <meta property="og:description" content="Weather conditions for Shefford, QC as observed by a personal weather station and the weewx weather software" />
-        <meta property="og:site_name" content="Shefford, QC Weather Conditions" />
+<meta name="description" content="">
+<meta name="keywords" content="['weather', 'weewx', 'neowx-material']">
 
-        <link rel='dns-prefetch' href='//code.highcharts.com' />
-        <link rel='dns-prefetch' href='//fonts.googleapis.com' />
-        <link rel='dns-prefetch' href='//stackpath.bootstrapcdn.com' />
-        <link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Weather">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="application-name" content="Weather | Shefford, QC">
 
-        <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Roboto%3A300%2C400%2C700&#038;ver=1.0' type='text/css' media='all' />
-        <link rel='stylesheet' href='//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' type='text/css' media='all' />
-        <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css?ver=4.7.4' type='text/css' media='all' />
-        <link rel='stylesheet' href='//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css' type='text/css' media='all' />
-        <link rel='stylesheet' href='./style.css?ver=1722546026' type='text/css' media='all' id="belchertownStyle" />
-        <link rel='stylesheet' href='./belchertown-dark.min.css?ver=1722546026' type='text/css' media='all' id="belchertownStyle" />
+<meta name="application-name" content="Weather | Shefford, QC">
+<meta name="msapplication-tooltip" content="Shefford, QC">
+<meta name="msapplication-starturl" content="/">
 
-        <link rel="manifest" href="./manifest.json" crossorigin="use-credentials">
-        <link rel="apple-touch-icon" href="./images/station.png">
-        <link rel="apple-touch-icon" sizes="48x48" href="./images/station48.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="./images/station72.png">
-        <link rel="apple-touch-icon" sizes="96x96" href="./images/station96.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="./images/station144.png">
-        <link rel="apple-touch-icon" sizes="168x168" href="./images/station168.png">
-        <link rel="apple-touch-icon" sizes="192x192" href="./images/station192.png">
+<meta name="msapplication-tap-highlight" content="no">
+
+<link href="img/icon-16.ico" rel="shortcut icon" type="image/x-icon">
+<link href="img/icon-16.png" rel="icon" type="image/png" sizes="16x16">
+<link href="img/icon-32.png" rel="icon" type="image/png" sizes="32x32">
+<link href="img/icon-48.png" rel="icon" type="image/png" sizes="48x48">
+
+<link href="img/icon-180.png" rel="apple-touch-icon">
+<link href="img/icon-76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="img/icon-120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="img/icon-152.png" rel="apple-touch-icon" sizes="152x152">
+
+<link href="img/icon-192.png" rel="icon" sizes="192x192">
+<link href="img/icon-128.png" rel="icon" sizes="128x128">
+
+<link href="manifest.json" rel="manifest">
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<link rel="stylesheet" href="css/style.min.css">
+
+<link rel="stylesheet" href="weather-icons/css/weather-icons.min.css">
+<link rel="stylesheet" href="weather-icons/css/weather-icons-wind.min.css">
+
+
+
+
+
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="img/splash/splash_1136x640.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+        href="img/splash/splash_2436x1125.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="img/splash/splash_1792x828.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="img/splash/splash_828x1792.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="img/splash/splash_1334x750.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="img/splash/splash_1242x2688.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+        href="img/splash/splash_2208x1242.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="img/splash/splash_1125x2436.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="img/splash/splash_1242x2208.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="img/splash/splash_2732x2048.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+        href="img/splash/splash_2688x1242.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="img/splash/splash_2224x1668.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="img/splash/splash_750x1334.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="img/splash/splash_2048x2732.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="img/splash/splash_2388x1668.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="img/splash/splash_1668x2224.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="img/splash/splash_640x1136.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="img/splash/splash_1668x2388.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="img/splash/splash_2048x1536.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="img/splash/splash_1536x2048.png"
+/>
+</head>
+<body class="auto-theme main-bg" ontouchstart="">
+
+<header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark indigo">
+        <span class="navbar-brand d-flex">
+            <a class="mr-2" href="index.html">
+                <img src="img/icon-alpha-1x.png" srcset="img/icon-alpha-1x.png 1x, img/icon-alpha-2x.png 2x" style="width: 4rem">
+            </a>
+            <span>
+                <strong>Shefford, QC</strong><br>
+                <span class="font-small">2024-08-01 05:00:00 PM</span>
+            </span>
+        </span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="ml-3 collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mr-auto">
+
+                    <li class="nav-item active mr-3">
+                        <a class="nav-link" href="index.html">Current</a>
+                    </li>
+
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="yesterday.html">Yesterday</a>
+                    </li>
+
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="week.html">Week</a>
+                    </li>
+
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="month.html">Month</a>
+                    </li>
+
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="year.html">Year</a>
+                    </li>
+
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="archive.html">Archive</a>
+                    </li>
+
+
+
+
+            </ul>
+        </div>
+
+            <ul class="navbar-nav nav-flex-icons" style="line-height: 1.75; padding-top: .5rem">
+                <li class="nav-item mr-4 text-white">
+                    <i class="wi wi-sunrise mr-1" style="opacity: .75"></i> 05:34:37 AM <br>
+                    <i class="wi wi-sunset mr-1" style="opacity: .75"></i> 08:16:03 PM
+                </li>
+                <li class="nav-item mr-4 text-white" style="line-height: 1.75">
+                    <i class="wi wi-moonrise mr-1" style="opacity: .75"></i> 02:03:03 AM <br>
+                    <i class="wi wi-moonset mr-1" style="opacity: .75"></i> 07:03:03 PM
+                </li>
+                <li class="nav-item mr-4 text-white text-center" style="line-height: 1.75" >
+                    <span title="Waning crescent" data-toggle="tooltip">
+                        <i class="wi wi-moon-waning-crescent-4 mr-1" style="opacity: .75"></i>
+                        7%
+                    </span><br>
+                    <a href="almanac.html" class="text-white" style="opacity: .6">
+                        More
+                    </a>
+                </li>
+            </ul>
+    </nav>
+
+</header>
+<main>
+  <div class="container-fluid d-flex-xxl">
+
+    <div class="row my-4 temprow align-content-start">
+
+          <div class="col-12 col-md-6 col-xl-4 mb-4">
+    <div class="card">
+      <div class="card-body text-center">
+        <h3 class="h5-responsive indigo-text">
+          Outside Temperature
+
+
+
+            <i class="wi wi-direction-down-right"
+               title="Trend: -4.2°C (3.0 hours)"
+               data-toggle="tooltip"></i>
+
+        </h3>
+
+
+        <div class="row">
+          <div class="col-3 text-muted font-small lo-text">
+            20.7°C <br>
+            (06:25)
+          </div>
+          <div class="col-6">
+            <h4 class="h2-responsive">23.0°C</h4>
+          </div>
+          <div class="col-3 text-muted font-small hi-text">
+            28.2°C <br>
+            (14:35)
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+          <div class="col-12 col-md-6 col-xl-4 mb-4">
+    <div class="card">
+      <div class="card-body text-center">
+        <h3 class="h5-responsive indigo-text">
+          Outside Humidity
+
+
+
+            <i class="wi wi-direction-up-right"
+               title="Trend: 18% (3.0 hours)"
+               data-toggle="tooltip"></i>
+
+        </h3>
+
+
+        <div class="row">
+          <div class="col-3 text-muted font-small lo-text">
+            70% <br>
+            (14:35)
+          </div>
+          <div class="col-6">
+            <h4 class="h2-responsive">93%</h4>
+          </div>
+          <div class="col-3 text-muted font-small hi-text">
+            99% <br>
+            (00:00)
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
         
-        <!--[if lt IE 9]>
-        <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js'></script>
-        <![endif]-->
-        <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
-        <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone-with-data.min.js"></script>
-        <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.1.0/paho-mqtt.min.js"></script>
-        <script type='text/javascript' src='//code.highcharts.com/stock/10/highstock.js'></script>
-        <script type='text/javascript' src='//code.highcharts.com/10/highcharts-more.js'></script>
-        <script type='text/javascript' src='//code.highcharts.com/10/modules/exporting.js'></script>
-        <script type='text/javascript' src='//code.highcharts.com/10/modules/solid-gauge.js'></script>
-        <script type='text/javascript' src='//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'></script>
-        <script type='text/javascript' src='./js/belchertown.js?1722546026'></script>
-        <script>
-            // Set the session variables for the theme
-            if ( sessionStorage.getItem('theme') === null ) {
-                sessionStorage.setItem('theme', 'light');
-            }
-            if ( sessionStorage.getItem('currentTheme') === null ) {
-                sessionStorage.setItem('currentTheme', 'light');
-            }
-        </script>
+
+
+          <div class="col-12 col-md-6 col-xl-4 mb-4">
+    <div class="card">
+      <div class="card-body text-center">
+        <h3 class="h5-responsive indigo-text">
+          Wind Speed
+
+
+
+            <i class="wi wi-wind from-033-deg"
+               title="033°" data-toggle="tooltip"></i>
+
+        </h3>
+
+
+        <div class="row">
+          <div class="col-3 text-muted font-small">
+            0 km/h <br>
+            Avg
+          </div>
+          <div class="col-6">
+            <h4 class="h2-responsive">
+              3 km/h NNE
+            </h4>
+          </div>
+          <div class="col-3 text-muted font-small hi-text">
+            8 km/h NW <br>
+            <i class="wi wi-wind from-315-deg mr-2"
+               title="315°" data-toggle="tooltip"></i>
+            (14:58)
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+          <div class="col-12 col-md-6 col-xl-4 mb-4">
+    <div class="card">
+      <div class="card-body text-center">
+        <h3 class="h5-responsive indigo-text">
+          Rain
+
+
+        </h3>
+
+
+        <div class="row">
+          <div class="col-3 text-muted font-small">
+            1.24 cm/h <br>
+            Rain Rate
+          </div>
+          <div class="col-6">
+            <h4 class="h2-responsive">0.61 cm</h4>
+          </div>
+          <div class="col-3 text-muted font-small hi-text">
+            1.52 cm/h <br>
+            (16:49)
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
         
-                
-        <link rel="icon" href="./favicon.ico" />
+
+
+          <div class="col-12 col-md-6 col-xl-4 mb-4">
+    <div class="card">
+      <div class="card-body text-center">
+        <h3 class="h5-responsive indigo-text">
+          Dew Point
+
+
+        </h3>
+
+
+        <div class="row">
+          <div class="col-3 text-muted font-small lo-text">
+            20.6°C <br>
+            (06:25)
+          </div>
+          <div class="col-6">
+            <h4 class="h2-responsive">21.8°C</h4>
+          </div>
+          <div class="col-3 text-muted font-small hi-text">
+            23.6°C <br>
+            (13:34)
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+          <div class="col-12 col-md-6 col-xl-4 mb-4">
+    <div class="card">
+      <div class="card-body text-center">
+        <h3 class="h5-responsive indigo-text">
+          Wind Chill
+
+
+        </h3>
+
+
+        <div class="row">
+          <div class="col-3 text-muted font-small lo-text">
+            20.7°C <br>
+            (06:25)
+          </div>
+          <div class="col-6">
+            <h4 class="h2-responsive">23.0°C</h4>
+          </div>
+          <div class="col-3 text-muted font-small hi-text">
+            28.2°C <br>
+            (14:35)
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+          <div class="col-12 col-md-6 col-xl-4 mb-4">
+    <div class="card">
+      <div class="card-body text-center">
+        <h3 class="h5-responsive indigo-text">
+          Heat Index
+
+
+        </h3>
+
+
+        <div class="row">
+          <div class="col-3 text-muted font-small lo-text">
+            21.4°C <br>
+            (06:20)
+          </div>
+          <div class="col-6">
+            <h4 class="h2-responsive">23.8°C</h4>
+          </div>
+          <div class="col-3 text-muted font-small hi-text">
+            31.2°C <br>
+            (13:55)
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
         
 
 
-    </head>
-    
-    <body class="page-template-default page full-width-content light" itemscope itemtype="https://schema.org/WebPage">
-        <div class="site-container">
-            <header class="site-header">
-                <div class="wrap">
-                    <div class="title-area">
-                        <p class="site-title" itemprop="headline">
-                            <a href="./">
-                                Shefford
-                            </a>
-                        </p>
-                    </div>
-                    <div class="widget-area header-widget-area">
-                        <section id="nav_menu">
-                            <div class="widget-wrap">
-                                <nav class="nav-header" itemscope itemtype="https://schema.org/SiteNavigationElement">
-                                    <ul id="menu-menu" class="menu genesis-nav-menu">
-                                        <!-- class = current-menu-item -->
-                                        <li class="menu-item menu-item-home"><a href="." itemprop="url"><span itemprop="name">Home</span></a></li>
-                                        <li class="menu-item menu-item-1"><a href="./graphs/" itemprop="url"><span itemprop="name">Graphs</span></a></li>
-                                        <li class="menu-item menu-item-2"><a href="./records/" itemprop="url"><span itemprop="name">Records</span></a></li>
-                                        <li class="menu-item menu-item-3"><a href="./reports/" itemprop="url"><span itemprop="name">Reports</span></a></li>
-                                        <li class="menu-item menu-item-4"><a href="./about/" itemprop="url"><span itemprop="name">About</span></a></li>
-                                        <label class="themeSwitchLabel">
-                                            <input type="checkbox" id="themeSwitch" >
-                                            <span class="slider round"></span>
-                                        </label>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </header>
-      
-    <script type="text/javascript">
-        var finalRotation;
-        var moment_locale = "en-CA";
-        moment.locale(moment_locale);
         
-        var homepage_graphgroup = "homepage";
 
-        function autoRefreshPage() {
-            window.location = window.location.href;
-        }
+
         
-        ajaxweewx().then(function(weewx_data) { // This call will make sure json/weewx_data.json is loaded before anything else
-            update_weewx_data(weewx_data); // Initial call to update (date, daily high, low, etc)
-            belchertown_debug(weewx_data); // Make weewx_data.json available in debugging console
+
+
+
+
         
+
+
+          <div class="col-12 col-md-6 col-xl-4 mb-4">
+    <div class="card">
+      <div class="card-body text-center">
+        <h3 class="h5-responsive indigo-text">
+          appTemp
+
+
+        </h3>
+
+
+        <div class="row">
+          <div class="col-3 text-muted font-small lo-text">
+            24.0°C <br>
+            (06:45)
+          </div>
+          <div class="col-6">
+            <h4 class="h2-responsive">27.0°C</h4>
+          </div>
+          <div class="col-3 text-muted font-small hi-text">
+            33.1°C <br>
+            (13:55)
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+          <div class="col-12 col-md-6 col-xl-4 mb-4">
+    <div class="card">
+      <div class="card-body text-center">
+        <h3 class="h5-responsive indigo-text">
+          cloudbase
+
+
+        </h3>
+
+
+        <div class="row">
+          <div class="col-3 text-muted font-small lo-text">
+            320 meters <br>
+            (06:20)
+          </div>
+          <div class="col-6">
+            <h4 class="h2-responsive">449 meters</h4>
+          </div>
+          <div class="col-3 text-muted font-small hi-text">
+            1049 meters <br>
+            (14:35)
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
         
-            jQuery(document).ready(function() {
 
 
-                get_outTemp_color( "degree_C", "23.0" );
-            
-                rotateThis( "33" );
-
-                // Update the Last Updated timestamp with moment.js,
-                updated = tzAdjustedMoment( 1722546000 ).format("LL, LTS");
-                updated_text = "Last Updated " + updated;
-                jQuery(".updated").html( updated_text );
-            
-            
-                var graphgroups_raw = {"homepage": ["chart1", "chart2", "chart3", "chart4"], "day": ["chart1", "chart2", "chart3", "chart4"], "week": ["chart1", "chart2", "chart3", "chart4"], "month": ["chart1", "chart2", "chart3", "chart4"], "year": ["chart1", "chart2", "chart3", "chart4"]}; // All charts and IDs
-                var thisPageGraphs = graphgroups_raw[homepage_graphgroup]; // Filter all charts down to the ones we want for this page
-                // Loop through the graph groups for this page and add the graph divs to the page
-                try {
-                    thisPageGraphs.forEach( graphID => {
-                        jQuery(".graph-outer").append('<div class="col-sm-6"><div id="' + graphID + '" style="width:100%;height:100%;margin-top:20px;"></div></div>');
-                    });
-                    showChart(homepage_graphgroup);
-                } catch(err) {
-                    console.log("ERROR: Cannot add graphs from [" + homepage_graphgroup + "] graph group: " + err.message);
-                }
-            
-                // MQTT Websockets not enabled
-
-                        
-                // Update the Last Updated timestamp with moment.js,
-                updated = tzAdjustedMoment( 1722546000 ).format("LL, LTS");
-                updated_text = "Last Updated " + updated;
-                jQuery(".updated").html( updated_text );
-            
-            
-                //  display the relevant forecast; a new session will display the default forecast, a reloaded session the currently displayed forecast
-                if ( sessionStorage.getItem ("forecastInterval")  ) {
-                    interval = sessionStorage.getItem("forecastInterval");
-                    sessionStorage.setItem ( "forecastInterval" , null );
-                    forecast_select( interval );
-                } else {
-                    sessionStorage.setItem ( "forecastInterval" , null );
-                    forecast_select( sessionStorage.getItem( "defaultInterval") );
-                }
-            });
-        }).catch(function(e) {
-            console.log(e);
-        });
         
-    </script>
-  
-    <div class="site-inner">
-        <main class="content">    
 
-            <article class="weewx frontpage" itemscope="" itemtype="http://schema.org/CreativeWork">
-            
-                <!-- Top bar with city and share -->
-                <div class="wx-stn-info-container">
-                    <div class="wx-stn-name">
-                        <h1>My Station Weather Conditions</h1>                    
-                    </div>
-                    <div class="wx-stn-info">
-                        Observations are powered by a Personal Weather Station
-                    </div>
-                    <div class="clear"></div>
-                    <!-- Updated time ago -->
-                    <div class="updated-wrapper">
-                        <div class="onlineMarkerOuter">
-                            <span class="loadingMarker" style="display:none"></span>
-                            <span class="onlineMarker" style="display:none"></span>
-                            <span class="offlineMarker" style="display:none"></span>
-                        </div>
-                        <div class="updated"></div><!-- AJAX moment.js -->
-                    </div>
-                    <div class="clear"></div>
-                    <div class="last-updated-alert" style="display:none;"></div><!-- AJAX moment.js -->
-                </div>
-                
-                <!-- First row with temperature, observation data and radar -->
-                <div class="row temperature-row">
-                    <div class="col-lg-4 toprow-height">
-                        <div class="row obs-row">
-                        
-                            <!-- Temperature -->
-                            <div class="weather-obs-top">
-                                <div class="row temp-observation">
-                                    <div class="col-sm-6 current_obs_top">
-                                    </div>
-                                    <div class="col-sm-6 current_temp">
-                                        <div class="outtemp_outer"><span class="outtemp">23.0</span><sup class="outtempunitlabelsuper"> &#176;C</sup></div><!-- AJAX -->
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-6 current-obs-container">
-                                        <div class="current-obs-text">
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="feelslike">Feels like: 27.0 &#176;C</div><!-- AJAX -->
-                                        <div class="stn-high-low">
-                                            <table class="stn-high-low-table">
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="stn-high-low-table-title">High</td>
-                                                        <td class="stn-high-low-table-title border-left">Low</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="high">28.2 &#176;C</td>
-                                                        <td class="border-left low">20.7 &#176;C</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Wind -->
-                        <div class="obs-wind-divider"></div>
-                        <div class="row windrow">
-                            <div class="weather-obs-bottom">
-                                <div class="col-sm-12 current_wind">
-                                    <div class="col-sm-6">
-                                        <div class="compass">
-                                            <div class="direction">
-                                                <span class="curwinddir">
-                                                NNE
-                                                </span>
-                                                <span class="curwinddeg">
-                                                33&#176;
-                                                </span>
-                                            </div>
-                                            <div class="arrow"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 windspeedtable">
-                                        <table class="wind-table">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="windtext">Speed</td>
-                                                    <td class="windtext border-left gust">Gust</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <span class="curwindspeed">
-                                                            3
-                                                        </span>
-                                                    </td>
-                                                    <td class="border-left gust">&nbsp;
-                                                        <span class="curwindgust">
-                                                            4
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="mph" colspan="3"> km/h</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <!-- Wind Hook -->
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Station observations -->
-                    <div class="col-lg-3 current-almanac toprow-height border-left border-right">
-                        <div class="station-observations weather-obs-top">
-                            <table cellpadding="0" cellspacing="0">
-                                <tbody>
-                                    <tr><td class='station-observations-label'>Outside Humidity</td><td><span class=outHumidity>93%</span><!-- AJAX --></td></tr><tr><td class='station-observations-label'>Rain</td><td><span class='dayRain'>0.61 cm</span><!-- AJAX -->&nbsp;<span class='border-left'>&nbsp;</span><span class='rainRate'>1.24 cm/hr</span><!-- AJAX --></td></tr>
-                                </tbody>
-                            </table>
-                            <!-- Station Observations Hook -->
-                        </div>                        
-                        
-                        <!-- Sun and Moon section -->
-                        <div class="weather-obs-bottom">
-                            <table cellpadding="0" cellspacing="0">
-                                <tbody>
-                                    <tr>
-                                        <td colspan="2">
-                                            <div class="row small-almanac">
-                                                <div class="sun-moon-title">
-                                                    Sun & Moon
-                                                </div>
-                                                <div class="col-sm-5 sun">
-                                                    <span class="sunrise-set-image"><img src="./images/sunrise.png"></span><span class="sunrise-value"></span><!-- moment.js -->
-                                                    <br>
-                                                    <span class="sunrise-set-image"><img src="./images/sunset.png"></span><span class="sunset-value"></span><!-- moment.js -->
-                                                </div>
-                                                <div class="col-sm-7 moon">
-                                                    <div class="moon-container">
-                                                        <span class="moon-icon">
-                                                            <div class="moon-icon"></div><!-- JS -->
-                                                        </span>
-                                                        <strong><span class="moon-phase">Waning Crescent</span></strong><!-- AJAX -->
-                                                        <br>
-                                                        <span class="moon-visible"><strong>7%</strong> visible</span><!-- AJAX -->
-                                                    </div>
-                                                </div>
-                                                <div class="clear"></div>
-                                                <!-- Almanac Modal -->
-                                                <div class="sun-moon-modal"><a href="#almanac" data-toggle="modal" data-target="#almanac">More Almanac Information</a></div>
-                                                <!-- Almanac Modal -->
-                                                <div class="modal fade" id="almanac" tabindex="-1" role="dialog" aria-labelledby="almanac" aria-hidden="true">
-                                                    <div class="modal-dialog modal-lg" role="document">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                    <span aria-hidden="true">&times;</span>
-                                                                </button>
-                                                                <h4 class="modal-title" id="almanac">Almanac Information</h4>
-                                                            </div>
-                                                            <div class="almanac-extras-modal-body modal-body">
-<div id='celestial_widget' class='widget'> <div class='widget_contents'> <div id='celestial_details'> <div class='celestial_body'> <table class='celestial'> <tr><th>&#9728; Sun</th><th></th></tr> <tr> <td class='label'>Start civil twilight</td> <td class='data'>05:00:00 AM</td> </tr> <tr> <td class='label'>Rise</td> <td class='data'>05:34:37 AM</td> </tr> <tr> <td class='label'>Transit</td> <td class='data'>12:55:42 PM</td> </tr> <tr> <td class='label'>Set</td> <td class='data'>08:16:03 PM</td> </tr> <tr> <td class='label'>End Civil Twilight</td> <td class='data'>08:50:31 PM</td> </tr> <tr> <td class='label'>Azimuth</td> <td class='data'>262.3&deg;</td> </tr> <tr> <td class='label'>Altitude</td> <td class='data'>32.7&deg;</td> </tr> <tr> <td class='label'>Right ascension</td> <td class='data'>132.5&deg;</td> </tr> <tr> <td class='label'>Declination</td> <td class='data'>17.7&deg;</td> </tr><tr><td class='label'>Equinox</td><td class='data'>2024-09-22 08:43:32 AM</td></tr><tr><td class='label'>Solstice</td><td class='data'>2024-12-21 04:20:20 AM</td></tr><tr> <td class='label'>Total daylight</td> <td class='data'>14 hours, 41 minutes, 26 seconds<br/>2 minutes, 25 seconds less than yesterday</td> </tr> </table> </div> <div class='celestial_body'> <table class='celestial'> <tr><th>&#9789; Moon</th><th></th></tr> <tr><td class='label'>&nbsp;</td><td class='data'>&nbsp;</td></tr> <tr> <td class='label'>Rise</td> <td class='data'>02:03:03 AM</td> </tr> <tr> <td class='label'>Transit</td> <td class='data'>10:34:27 AM</td> </tr> <tr> <td class='label'>Set</td> <td class='data'>07:03:03 PM</td> </tr> <tr><td class='label'>&nbsp;</td><td class='data'>&nbsp;</td></tr> <tr> <td class='label'>Azimuth</td> <td class='data'>292.4&deg;</td> </tr> <tr> <td class='label'>Altitude</td> <td class='data'>16.9&deg;</td> </tr> <tr> <td class='label'>Right ascension</td> <td class='data'>100.1&deg;</td> </tr> <tr> <td class='label'>Declination</td> <td class='data'>27.5&deg;</td> </tr><tr> <td class='label'>New moon</td> <td class='data'>2024-08-04 07:12:58 AM</td> </tr> <tr> <td class='label'>Full moon</td> <td class='data'>2024-08-19 02:25:44 PM</td> </tr><tr> <td class='label'>Phase</td> <td class='data'>Waning Crescent<br/> 7% full</td> </tr> </table> </div> </div> </div> </div> <div class='clear'></div><div class='almanac_last_updated'></div>
-                                                            </div><!-- AJAX -->
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    
-                    <!-- Radar image -->
-                    <div class="col-lg-5 radar-map toprow-height">
-                        <div class="radar_image"><iframe width="650px" height="360px" src="https://embed.windy.com/embed2.html?lat=45.2043&lon=-72.3529&zoom=8&level=surface&overlay=radar&menu=&message=true&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=45.2043&detailLon=-72.3529&metricWind=&metricTemp=&radarRange=-1" frameborder="0"></iframe></div>
-                    </div>
-                </div>
-                <!-- End of first row -->
-                
 
-                
-                <!-- End of second row -->
-                
-                
-                <!-- Start of third row -->
-                <div class="row eq-stats-row">            
-                    <div class="col-sm-12 stn-quick-stats">
-                        
-                        <!-- Today Snapshot Stats -->
-                        <div class="row">
-                            <div class="snapshot-records-text">
-                                Weather Record Snapshots. <a href="./records">View all weather records here.</a>
-                            </div>
-                            
-                            <div class="col-sm-6 stn-quick-stats">
-                                <div class="stats-title">
-                                    <span class="snapshot-records-today-header"></span><!-- JS and AJAX -->
-                                </div>
-                                <table>
-                                    <tr>
-                                        <td><b>High:</b></td>    <td><span class="dailystatshigh">28.2 &#176;C</span></td><!-- AJAX -->
-                                        <td><b>Low:</b></td>    <td><span class="dailystatslow">20.7 &#176;C</span></td><!-- AJAX -->
-                                    </tr>
-                                    <tr>
-                                        <td><b>Average Wind:</b></td>    <td><span class="dailystatswindavg">0 km/h</span></td><!-- AJAX -->
-                                        <td><b>Highest Wind:</b></td>        <td><span class="dailystatswindmax">8 km/h</span></td><!-- AJAX -->                    
-                                    </tr>
-                                    <tr>
-                                        <td><b>Today's Rain:</b></td>    <td><span class="dailystatsrain">0.61 cm</span></td><!-- AJAX -->
-                                        <td><b>Highest Rate:</b></td>    <td><span class="dailystatsrainrate">1.52 cm/hr</span></td><!-- AJAX -->
-                                    </tr>
-                                </table>
-                            </div>
+        
 
-                            <!-- This Month Snapshot Stats -->
-                            <div class="col-sm-6 stn-quick-stats border-left">
-                                <div class="stats-title">
-                                    <span class="snapshot-records-month-header"></span><!-- JS and AJAX -->
-                                </div>
-                                <table>
-                                    <tr>
-                                        <td><b>High:</b></td>    <td><span class="monthstatshigh">28.2 &#176;C</span></td><!-- AJAX -->
-                                        <td><b>Low:</b></td>    <td><span class="monthstatslow">20.7 &#176;C</span></td><!-- AJAX -->
-                                    </tr>
-                                    <tr>
-                                        <td><b>Average Wind:</b></td>    <td><span class="monthstatswindavg">0 km/h</span></td><!-- AJAX -->
-                                        <td><b>Highest Wind:</b></td>        <td><span class="monthstatswindmax">8 km/h</span></td><!-- AJAX -->
-                                    </tr>
-                                    <tr>
-                                        <td><b>Total Rain:</b></td>        <td><span class="monthstatsrain">0.61 cm</span></td><!-- AJAX -->
-                                        <td><b>Highest Rate:</b></td>    <td><span class="monthstatsrainrate">1.52 cm/hr</span></td><!-- AJAX -->
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                <!-- End of third row -->
-                
-                
-                <!-- Begin of fourth row - dynamic charts -->
-                <div class="row highcharts-row graph">
-                    <div class="col-sm-12 wx-graph-front">
-                        <span class="homepage-graphgroup-title">Homepage</span> <a href="./graphs">View more here.</a>
-                    </div>
-                    
-                    <div class="graph-outer row"></div><!-- JS populated -->
-                    
-                </div>
-                <!-- End of fourth row -->
-                
-                <div class="clear"></div>
-                
-                
-            </article>
 
-        </main>
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
     </div>
 
-		</div><!-- close div tag from header.html.tmpl -->
+    <hr class="my-4 rowdivider">
 
-		<footer class="site-footer">
-			<div class="wrap">
-                <div class="row">
-                    <div class="col-sm-4 footerLeft">
-                        Copyright &copy; 2024 My Weather Website
-                    </div>
-                    <div class="col-sm-5 footerCenter">
-                        <strong>Never make important decisions from this website.</strong>
-                    </div>
-                    <div class="col-sm-3 footerRight">
-                        weewx theme by <a href="https://github.com/poblabs/weewx-belchertown" target="_blank">Pat O'Brien</a>
-                    </div>
-                </div>
-			</div>
-		</footer>
-		
-		<script type='text/javascript' src='./js/responsive-menu.js'></script>
-		
-		<!-- Belchertown Skin Version: 1.3.1 -->
-        <!-- Page Generated: 2024-08-01 05:00:00 PM -->
+    <div class="row mt-5 mb-4 graphrow align-content-start">
 
-    </body>
+            <div class="col-12 col-xl-6 mb-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="h5-responsive indigo-text">
+              Outside Temperature
+          </h5>
+          <div id="outTempchart"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+            <div class="col-12 col-xl-6 mb-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="h5-responsive indigo-text">
+              Wind Chill
+          </h5>
+          <div id="windchillchart"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+        
+
+
+            <div class="col-12 col-xl-6 mb-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="h5-responsive indigo-text">
+              Rain
+          </h5>
+          <div id="rainchart"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+        
+
+
+            <div class="col-12 col-xl-6 mb-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="h5-responsive indigo-text">
+              Wind Speed
+          </h5>
+          <div id="windSpeedchart"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+            <div class="col-12 col-xl-6 mb-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="h5-responsive indigo-text">
+              Wind Vector
+          </h5>
+          <div id="windvecchart"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+        
+
+
+
+
+        
+
+
+            <div class="col-12 col-xl-6 mb-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="h5-responsive indigo-text">
+              Outside Humidity
+          </h5>
+          <div id="outHumiditychart"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+        
+
+
+        
+
+
+        
+
+
+            <div class="col-12 col-xl-6 mb-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="h5-responsive indigo-text">
+              cloudbase
+          </h5>
+          <div id="cloudbasechart"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+    </div>
+
+  </div>
+</main>
+
+
+<footer class="page-footer font-small indigo pt-4">
+
+    <div class="container-fluid text-center text-md-left mb-4">
+
+        <div class="row">
+
+            <div class="col-md-6 mt-md-0 mt-3">
+
+                <h5 class="text-uppercase">About</h5>
+
+                <table class="d-inline">
+                    <tr>
+                        <td>Hardware:</td>
+                        <td>SDR</td>
+                    </tr>
+                    <tr>
+                        <td>Altitude:</td>
+                        <td>300 meters</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="telemetry.html">
+                                Telemetry
+                            </a>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+
+
+            </div>
+
+            <hr class="clearfix w-100 d-md-none pb-3">
+
+            <div class="col-md-3 mb-md-0 mb-3">
+
+
+            </div>
+
+            <div class="col-md-3 mb-md-0 mb-3">
+
+                <h5 class="text-uppercase">Links</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="https://www.lightningmaps.org" target="_blank" rel="noopener">Lightning Maps</a>
+                    </li>
+                    <li>
+                        <a href="https://www.windy.com" target="_blank" rel="noopener">Windy</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-copyright text-center py-3">
+        &copy; 2024 My weather station
+
+          <span class="mx-2">&bull;</span>
+          Powered by <a href="https://weewx.com" target="_blank">weewx</a>
+          v5.1.0
+
+          <span class="mx-2">&bull;</span>
+          <a href="https://neoground.com/projects/neowx-material" target="_blank">NeoWX Material</a> skin
+          v1.11
+
+    </div>
+
+</footer>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<script src="js/vendor/moment.min.js"></script>
+<script src="js/vendor/apexcharts/apexcharts.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+
+<script type="text/javascript">
+    var config_mode = 'auto';
+    var theme_mode = 'light';
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        theme_mode = 'dark';
+    }
+    // Override mode by config
+    if(config_mode != "auto") {
+        theme_mode = config_mode;
+    }
+
+    window.Apex = {
+        theme: {
+            mode: theme_mode,
+            palette: 'palette1'
+        },
+        dataLabels: {
+            enabled: false
+        },
+        stroke: {
+            curve: 'smooth',
+            width: 2
+        },
+        markers: {
+            size: 0,
+        },
+        chart: {
+            height: 300,
+            stacked: false,
+            zoom: {
+                type: 'x',
+                enabled: true,
+                autoScaleYaxis: true
+            },
+            toolbar: {
+                autoSelected: 'zoom',
+                export: {
+                    csv: {
+                        headerCategory: 'DateTime',
+                        dateFormatter(timestamp) {
+                            return moment.unix(timestamp).toISOString()
+                        }
+                    }
+                }
+            },
+            locales: [
+{
+  "name": "en",
+  "options": {
+    "months": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "shortMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ],
+    "days": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "shortDays": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    "toolbar": {
+      "exportToSVG": "Download SVG",
+      "exportToPNG": "Download PNG",
+      "exportToCSV": "Download CSV",
+      "menu": "Menu",
+      "selection": "Selection",
+      "selectionZoom": "Selection Zoom",
+      "zoomIn": "Zoom In",
+      "zoomOut": "Zoom Out",
+      "pan": "Panning",
+      "reset": "Reset Zoom"
+    }
+  }
+}
+            ],
+            defaultLocale: 'en',
+            animations: {
+                enabled: false
+            },
+        },
+    }
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+  // Config templates
+
+  var graph_area_config = {
+
+chart: {
+    type: 'area'
+},
+fill: {
+    type: 'gradient',
+    gradient: {
+        shadeIntensity: 1,
+        inverseColors: false,
+        opacityFrom: 0.6,
+        opacityTo: 0,
+        stops: [0, 75, 100]
+    },
+},
+xaxis: {
+    type: 'datetime',
+    hideOverlappingLabels: true,
+    tickAmount: 8,
+    labels: {
+        formatter: function(val, timestamp) {
+            return moment.unix(timestamp).format("dd DD HH:mm");
+        }
+    }
+},
+tooltip: {
+    x: {
+        format: "dd DD.MM. HH:MM"
+    }
+},  }
+  var graph_bar_config = {
+
+chart: {
+    type: 'bar'
+},
+fill: {
+    opacity: 0.1
+},
+xaxis: {
+    type: 'datetime',
+    hideOverlappingLabels: true,
+    tickAmount: 8,
+    labels: {
+        formatter: function(val, timestamp) {
+            return moment.unix(timestamp).format("dd DD HH:mm");
+        }
+    }
+},
+tooltip: {
+    x: {
+        format: "dd DD.MM. HH:MM"
+    }
+},  }
+
+  var graph_radar_config = {
+
+chart: {
+    type: 'radar',
+},
+fill: {
+    opacity: 0.1
+},
+xaxis: {
+    categories: [
+      'N',
+      'NE',
+      'E',
+      'SE',
+      'S',
+      'SW',
+      'W',
+      'NW'
+    ]
+},
+tooltip: {
+    x: {
+        formatter: function(value, { series, seriesIndex, dataPointIndex, w }) {
+            return value
+        }
+    }
+},  }
+
+  // outTemp + Dewpoint
+  
+
+new ApexCharts(document.querySelector('#outTempchart'), {
+  ...graph_area_config,
+  yaxis: {
+    labels: {
+      formatter: function (val) {
+        return formatNumber(val, "%.1f") + "°C";
+      }
+    }
+  },
+  series: [
+    {
+      name: "Outside Temperature",
+      data: [ 
+      [1722459600, 22.6],
+      [1722460200, 22.7],
+      [1722460800, 22.7],
+      [1722461400, 22.7],
+      [1722462000, 22.6],
+      [1722462600, 22.3],
+      [1722463200, 22.2],
+      [1722463800, 22.1],
+      [1722464400, 22.0],
+      [1722465000, 22.0],
+      [1722465600, 22.2],
+      [1722466200, 22.2],
+      [1722466800, 22.2],
+      [1722467400, 22.2],
+      [1722468000, 22.2],
+      [1722468600, 22.2],
+      [1722469200, 22.2],
+      [1722469800, 22.3],
+      [1722470400, 22.3],
+      [1722471000, 22.3],
+      [1722471600, 22.2],
+      [1722472200, 22.1],
+      [1722472800, 22.1],
+      [1722473400, 22.1],
+      [1722474000, 22.0],
+      [1722474600, 22.0],
+      [1722475200, 22.0],
+      [1722475800, 22.0],
+      [1722476400, 22.0],
+      [1722477000, 22.0],
+      [1722477600, 22.0],
+      [1722478200, 21.9],
+      [1722478800, 21.9],
+      [1722479400, 21.9],
+      [1722480000, 21.9],
+      [1722480600, 21.9],
+      [1722481200, 21.9],
+      [1722481800, 21.9],
+      [1722482400, 21.9],
+      [1722483000, 21.9],
+      [1722483600, 21.9],
+      [1722484200, 21.9],
+      [1722484800, 21.9],
+      [1722485400, 21.8],
+      [1722486000, 21.8],
+      [1722486600, 21.8],
+      [1722487200, 21.8],
+      [1722487800, 21.8],
+      [1722488400, 21.8],
+      [1722489000, 21.8],
+      [1722489600, 21.7],
+      [1722490200, 21.7],
+      [1722490800, 21.7],
+      [1722491400, 21.7],
+      [1722492000, 21.7],
+      [1722492600, 21.7],
+      [1722493200, 21.7],
+      [1722493800, 21.7],
+      [1722494400, 21.7],
+      [1722495000, 21.6],
+      [1722495600, 21.6],
+      [1722496200, 21.5],
+      [1722496800, 21.5],
+      [1722497400, 21.5],
+      [1722498000, 21.5],
+      [1722498600, 21.5],
+      [1722499200, 21.5],
+      [1722499800, 21.5],
+      [1722500400, 21.5],
+      [1722501000, 21.5],
+      [1722501600, 21.4],
+      [1722502200, 21.4],
+      [1722502800, 21.3],
+      [1722503400, 21.2],
+      [1722504000, 21.2],
+      [1722504600, 21.1],
+      [1722505200, 20.9],
+      [1722505800, 20.9],
+      [1722506400, 20.8],
+      [1722507000, 20.8],
+      [1722507600, 20.7],
+      [1722508200, 20.7],
+      [1722508800, 20.7],
+      [1722509400, 20.7],
+      [1722510000, 20.7],
+      [1722510600, 20.7],
+      [1722511200, 20.7],
+      [1722511800, 20.7],
+      [1722512400, 20.7],
+      [1722513000, 20.8],
+      [1722513600, 20.8],
+      [1722514200, 20.9],
+      [1722514800, 21.0],
+      [1722515400, 21.1],
+      [1722516000, 21.1],
+      [1722516600, 21.2],
+      [1722517200, 21.3],
+      [1722517800, 21.3],
+      [1722518400, 21.4],
+      [1722519000, 21.5],
+      [1722519600, 21.2],
+      [1722520200, 21.2],
+      [1722520800, 21.3],
+      [1722521400, 21.3],
+      [1722522000, 21.3],
+      [1722522600, 21.5],
+      [1722523200, 21.5],
+      [1722523800, 21.6],
+      [1722524400, 21.9],
+      [1722525000, 22.0],
+      [1722525600, 22.0],
+      [1722526200, 22.3],
+      [1722526800, 22.4],
+      [1722527400, 22.4],
+      [1722528000, 22.7],
+      [1722528600, 22.7],
+      [1722529200, 23.1],
+      [1722529800, 23.6],
+      [1722530400, 24.3],
+      [1722531000, 24.6],
+      [1722531600, 25.0],
+      [1722532200, 25.2],
+      [1722532800, 25.2],
+      [1722533400, 26.5],
+      [1722534000, 25.7],
+      [1722534600, 26.8],
+      [1722535200, 27.3],
+      [1722535800, 27.0],
+      [1722536400, 26.7],
+      [1722537000, 27.3],
+      [1722537600, 27.1],
+      [1722538200, 27.0],
+      [1722538800, 26.6],
+      [1722539400, 26.0],
+      [1722540000, 26.6],
+      [1722540600, 26.2],
+      [1722541200, 25.8],
+      [1722541800, 25.1],
+      [1722542400, 25.6],
+      [1722543000, 25.7],
+      [1722543600, 25.3],
+      [1722544200, 24.6],
+      [1722544800, 24.0],
+      [1722545400, 23.3],
+ ]
+    }
+    ,{
+      name: "Dew Point",
+      data: [ 
+      [1722459600, 22.2],
+      [1722460200, 22.1],
+      [1722460800, 22.5],
+      [1722461400, 22.6],
+      [1722462000, 22.0],
+      [1722462600, 21.9],
+      [1722463200, 21.9],
+      [1722463800, 21.7],
+      [1722464400, 21.8],
+      [1722465000, 21.9],
+      [1722465600, 22.0],
+      [1722466200, 22.1],
+      [1722466800, 22.1],
+      [1722467400, 22.1],
+      [1722468000, 22.1],
+      [1722468600, 22.1],
+      [1722469200, 22.1],
+      [1722469800, 22.1],
+      [1722470400, 22.1],
+      [1722471000, 22.1],
+      [1722471600, 22.0],
+      [1722472200, 21.9],
+      [1722472800, 21.9],
+      [1722473400, 21.9],
+      [1722474000, 21.8],
+      [1722474600, 21.8],
+      [1722475200, 21.8],
+      [1722475800, 21.8],
+      [1722476400, 21.8],
+      [1722477000, 21.8],
+      [1722477600, 21.8],
+      [1722478200, 21.7],
+      [1722478800, 21.7],
+      [1722479400, 21.7],
+      [1722480000, 21.7],
+      [1722480600, 21.7],
+      [1722481200, 21.7],
+      [1722481800, 21.7],
+      [1722482400, 21.7],
+      [1722483000, 21.7],
+      [1722483600, 21.7],
+      [1722484200, 21.7],
+      [1722484800, 21.7],
+      [1722485400, 21.7],
+      [1722486000, 21.6],
+      [1722486600, 21.6],
+      [1722487200, 21.6],
+      [1722487800, 21.6],
+      [1722488400, 21.6],
+      [1722489000, 21.6],
+      [1722489600, 21.6],
+      [1722490200, 21.6],
+      [1722490800, 21.6],
+      [1722491400, 21.6],
+      [1722492000, 21.6],
+      [1722492600, 21.6],
+      [1722493200, 21.6],
+      [1722493800, 21.6],
+      [1722494400, 21.5],
+      [1722495000, 21.4],
+      [1722495600, 21.4],
+      [1722496200, 21.3],
+      [1722496800, 21.3],
+      [1722497400, 21.3],
+      [1722498000, 21.3],
+      [1722498600, 21.3],
+      [1722499200, 21.3],
+      [1722499800, 21.3],
+      [1722500400, 21.3],
+      [1722501000, 21.3],
+      [1722501600, 21.3],
+      [1722502200, 21.2],
+      [1722502800, 21.1],
+      [1722503400, 21.1],
+      [1722504000, 21.0],
+      [1722504600, 20.9],
+      [1722505200, 20.8],
+      [1722505800, 20.7],
+      [1722506400, 20.6],
+      [1722507000, 20.6],
+      [1722507600, 20.6],
+      [1722508200, 20.6],
+      [1722508800, 20.6],
+      [1722509400, 20.6],
+      [1722510000, 20.6],
+      [1722510600, 20.6],
+      [1722511200, 20.6],
+      [1722511800, 20.6],
+      [1722512400, 20.6],
+      [1722513000, 20.6],
+      [1722513600, 20.6],
+      [1722514200, 20.7],
+      [1722514800, 20.8],
+      [1722515400, 20.9],
+      [1722516000, 21.0],
+      [1722516600, 21.1],
+      [1722517200, 21.1],
+      [1722517800, 21.1],
+      [1722518400, 21.2],
+      [1722519000, 21.4],
+      [1722519600, 21.0],
+      [1722520200, 21.0],
+      [1722520800, 21.1],
+      [1722521400, 21.1],
+      [1722522000, 21.2],
+      [1722522600, 21.4],
+      [1722523200, 21.4],
+      [1722523800, 21.4],
+      [1722524400, 21.7],
+      [1722525000, 21.8],
+      [1722525600, 21.9],
+      [1722526200, 22.2],
+      [1722526800, 22.2],
+      [1722527400, 22.3],
+      [1722528000, 22.5],
+      [1722528600, 22.4],
+      [1722529200, 22.6],
+      [1722529800, 22.9],
+      [1722530400, 22.7],
+      [1722531000, 22.7],
+      [1722531600, 22.4],
+      [1722532200, 22.8],
+      [1722532800, 22.4],
+      [1722533400, 23.1],
+      [1722534000, 22.5],
+      [1722534600, 22.4],
+      [1722535200, 22.7],
+      [1722535800, 22.7],
+      [1722536400, 22.8],
+      [1722537000, 22.2],
+      [1722537600, 22.7],
+      [1722538200, 22.6],
+      [1722538800, 22.6],
+      [1722539400, 22.5],
+      [1722540000, 22.1],
+      [1722540600, 22.0],
+      [1722541200, 22.5],
+      [1722541800, 22.7],
+      [1722542400, 22.9],
+      [1722543000, 22.8],
+      [1722543600, 22.8],
+      [1722544200, 22.7],
+      [1722544800, 22.9],
+      [1722545400, 22.1],
+ ]
+    }
+  ]
+}).render()
+
+
+
+
+  // Wind chill + Heat index + optional appTemp
+  
+
+new ApexCharts(document.querySelector('#windchillchart'), {
+  ...graph_area_config,
+  yaxis: {
+    labels: {
+      formatter: function (val) {
+        return formatNumber(val, "%.1f") + "°C";
+      }
+    }
+  },
+  series: [
+    {
+      name: "Wind Chill",
+      data: [ 
+      [1722459600, 22.6],
+      [1722460200, 22.7],
+      [1722460800, 22.7],
+      [1722461400, 22.7],
+      [1722462000, 22.6],
+      [1722462600, 22.3],
+      [1722463200, 22.2],
+      [1722463800, 22.1],
+      [1722464400, 22.0],
+      [1722465000, 22.0],
+      [1722465600, 22.2],
+      [1722466200, 22.2],
+      [1722466800, 22.2],
+      [1722467400, 22.2],
+      [1722468000, 22.2],
+      [1722468600, 22.2],
+      [1722469200, 22.2],
+      [1722469800, 22.3],
+      [1722470400, 22.3],
+      [1722471000, 22.3],
+      [1722471600, 22.2],
+      [1722472200, 22.1],
+      [1722472800, 22.1],
+      [1722473400, 22.1],
+      [1722474000, 22.0],
+      [1722474600, 22.0],
+      [1722475200, 22.0],
+      [1722475800, 22.0],
+      [1722476400, 22.0],
+      [1722477000, 22.0],
+      [1722477600, 22.0],
+      [1722478200, 21.9],
+      [1722478800, 21.9],
+      [1722479400, 21.9],
+      [1722480000, 21.9],
+      [1722480600, 21.9],
+      [1722481200, 21.9],
+      [1722481800, 21.9],
+      [1722482400, 21.9],
+      [1722483000, 21.9],
+      [1722483600, 21.9],
+      [1722484200, 21.9],
+      [1722484800, 21.9],
+      [1722485400, 21.8],
+      [1722486000, 21.8],
+      [1722486600, 21.8],
+      [1722487200, 21.8],
+      [1722487800, 21.8],
+      [1722488400, 21.8],
+      [1722489000, 21.8],
+      [1722489600, 21.7],
+      [1722490200, 21.7],
+      [1722490800, 21.7],
+      [1722491400, 21.7],
+      [1722492000, 21.7],
+      [1722492600, 21.7],
+      [1722493200, 21.7],
+      [1722493800, 21.7],
+      [1722494400, 21.7],
+      [1722495000, 21.6],
+      [1722495600, 21.6],
+      [1722496200, 21.5],
+      [1722496800, 21.5],
+      [1722497400, 21.5],
+      [1722498000, 21.5],
+      [1722498600, 21.5],
+      [1722499200, 21.5],
+      [1722499800, 21.5],
+      [1722500400, 21.5],
+      [1722501000, 21.5],
+      [1722501600, 21.4],
+      [1722502200, 21.4],
+      [1722502800, 21.3],
+      [1722503400, 21.2],
+      [1722504000, 21.2],
+      [1722504600, 21.1],
+      [1722505200, 20.9],
+      [1722505800, 20.9],
+      [1722506400, 20.8],
+      [1722507000, 20.8],
+      [1722507600, 20.7],
+      [1722508200, 20.7],
+      [1722508800, 20.7],
+      [1722509400, 20.7],
+      [1722510000, 20.7],
+      [1722510600, 20.7],
+      [1722511200, 20.7],
+      [1722511800, 20.7],
+      [1722512400, 20.7],
+      [1722513000, 20.8],
+      [1722513600, 20.8],
+      [1722514200, 20.9],
+      [1722514800, 21.0],
+      [1722515400, 21.1],
+      [1722516000, 21.1],
+      [1722516600, 21.2],
+      [1722517200, 21.3],
+      [1722517800, 21.3],
+      [1722518400, 21.4],
+      [1722519000, 21.5],
+      [1722519600, 21.2],
+      [1722520200, 21.2],
+      [1722520800, 21.3],
+      [1722521400, 21.3],
+      [1722522000, 21.3],
+      [1722522600, 21.5],
+      [1722523200, 21.5],
+      [1722523800, 21.6],
+      [1722524400, 21.9],
+      [1722525000, 22.0],
+      [1722525600, 22.0],
+      [1722526200, 22.3],
+      [1722526800, 22.4],
+      [1722527400, 22.4],
+      [1722528000, 22.7],
+      [1722528600, 22.7],
+      [1722529200, 23.1],
+      [1722529800, 23.6],
+      [1722530400, 24.3],
+      [1722531000, 24.6],
+      [1722531600, 25.0],
+      [1722532200, 25.2],
+      [1722532800, 25.2],
+      [1722533400, 26.5],
+      [1722534000, 25.7],
+      [1722534600, 26.8],
+      [1722535200, 27.3],
+      [1722535800, 27.0],
+      [1722536400, 26.7],
+      [1722537000, 27.3],
+      [1722537600, 27.1],
+      [1722538200, 27.0],
+      [1722538800, 26.6],
+      [1722539400, 26.0],
+      [1722540000, 26.6],
+      [1722540600, 26.2],
+      [1722541200, 25.8],
+      [1722541800, 25.1],
+      [1722542400, 25.6],
+      [1722543000, 25.7],
+      [1722543600, 25.3],
+      [1722544200, 24.6],
+      [1722544800, 24.0],
+      [1722545400, 23.3],
+ ]
+    }
+    ,{
+      name: "Heat Index",
+      data: [ 
+      [1722459600, 23.5],
+      [1722460200, 23.6],
+      [1722460800, 23.6],
+      [1722461400, 23.6],
+      [1722462000, 23.4],
+      [1722462600, 23.1],
+      [1722463200, 23.0],
+      [1722463800, 22.9],
+      [1722464400, 22.8],
+      [1722465000, 22.9],
+      [1722465600, 23.0],
+      [1722466200, 23.1],
+      [1722466800, 23.1],
+      [1722467400, 23.1],
+      [1722468000, 23.1],
+      [1722468600, 23.1],
+      [1722469200, 23.1],
+      [1722469800, 23.1],
+      [1722470400, 23.1],
+      [1722471000, 23.1],
+      [1722471600, 23.1],
+      [1722472200, 23.0],
+      [1722472800, 23.0],
+      [1722473400, 22.9],
+      [1722474000, 22.8],
+      [1722474600, 22.8],
+      [1722475200, 22.8],
+      [1722475800, 22.8],
+      [1722476400, 22.8],
+      [1722477000, 22.8],
+      [1722477600, 22.8],
+      [1722478200, 22.7],
+      [1722478800, 22.7],
+      [1722479400, 22.7],
+      [1722480000, 22.7],
+      [1722480600, 22.7],
+      [1722481200, 22.7],
+      [1722481800, 22.7],
+      [1722482400, 22.7],
+      [1722483000, 22.7],
+      [1722483600, 22.7],
+      [1722484200, 22.7],
+      [1722484800, 22.7],
+      [1722485400, 22.7],
+      [1722486000, 22.6],
+      [1722486600, 22.6],
+      [1722487200, 22.6],
+      [1722487800, 22.6],
+      [1722488400, 22.6],
+      [1722489000, 22.6],
+      [1722489600, 22.5],
+      [1722490200, 22.5],
+      [1722490800, 22.5],
+      [1722491400, 22.5],
+      [1722492000, 22.5],
+      [1722492600, 22.5],
+      [1722493200, 22.5],
+      [1722493800, 22.5],
+      [1722494400, 22.5],
+      [1722495000, 22.4],
+      [1722495600, 22.4],
+      [1722496200, 22.3],
+      [1722496800, 22.3],
+      [1722497400, 22.3],
+      [1722498000, 22.3],
+      [1722498600, 22.3],
+      [1722499200, 22.3],
+      [1722499800, 22.3],
+      [1722500400, 22.3],
+      [1722501000, 22.3],
+      [1722501600, 22.2],
+      [1722502200, 22.2],
+      [1722502800, 22.1],
+      [1722503400, 22.0],
+      [1722504000, 21.9],
+      [1722504600, 21.8],
+      [1722505200, 21.7],
+      [1722505800, 21.6],
+      [1722506400, 21.5],
+      [1722507000, 21.5],
+      [1722507600, 21.4],
+      [1722508200, 21.4],
+      [1722508800, 21.4],
+      [1722509400, 21.4],
+      [1722510000, 21.4],
+      [1722510600, 21.4],
+      [1722511200, 21.4],
+      [1722511800, 21.4],
+      [1722512400, 21.4],
+      [1722513000, 21.5],
+      [1722513600, 21.5],
+      [1722514200, 21.6],
+      [1722514800, 21.7],
+      [1722515400, 21.8],
+      [1722516000, 21.9],
+      [1722516600, 22.0],
+      [1722517200, 22.0],
+      [1722517800, 22.0],
+      [1722518400, 22.1],
+      [1722519000, 22.3],
+      [1722519600, 22.0],
+      [1722520200, 21.9],
+      [1722520800, 22.0],
+      [1722521400, 22.0],
+      [1722522000, 22.1],
+      [1722522600, 22.3],
+      [1722523200, 22.3],
+      [1722523800, 22.4],
+      [1722524400, 22.7],
+      [1722525000, 22.8],
+      [1722525600, 22.9],
+      [1722526200, 23.2],
+      [1722526800, 23.3],
+      [1722527400, 23.3],
+      [1722528000, 23.6],
+      [1722528600, 23.6],
+      [1722529200, 24.0],
+      [1722529800, 24.5],
+      [1722530400, 25.1],
+      [1722531000, 25.5],
+      [1722531600, 25.8],
+      [1722532200, 26.0],
+      [1722532800, 26.0],
+      [1722533400, 28.6],
+      [1722534000, 26.5],
+      [1722534600, 28.8],
+      [1722535200, 30.0],
+      [1722535800, 29.5],
+      [1722536400, 29.0],
+      [1722537000, 29.8],
+      [1722537600, 29.7],
+      [1722538200, 29.4],
+      [1722538800, 28.6],
+      [1722539400, 27.3],
+      [1722540000, 28.6],
+      [1722540600, 27.0],
+      [1722541200, 26.6],
+      [1722541800, 25.9],
+      [1722542400, 26.5],
+      [1722543000, 26.5],
+      [1722543600, 26.1],
+      [1722544200, 25.5],
+      [1722544800, 24.9],
+      [1722545400, 24.1],
+ ]
+    }
+    ,{
+      name: "appTemp",
+      data: [ 
+      [1722459600, 27.4],
+      [1722460200, 27.5],
+      [1722460800, 27.7],
+      [1722461400, 27.5],
+      [1722462000, 27.2],
+      [1722462600, 26.9],
+      [1722463200, 26.8],
+      [1722463800, 26.6],
+      [1722464400, 26.6],
+      [1722465000, 26.7],
+      [1722465600, 26.9],
+      [1722466200, 27.0],
+      [1722466800, 27.0],
+      [1722467400, 27.0],
+      [1722468000, 27.0],
+      [1722468600, 27.0],
+      [1722469200, 27.0],
+      [1722469800, 27.0],
+      [1722470400, 27.0],
+      [1722471000, 27.0],
+      [1722471600, 26.9],
+      [1722472200, 26.8],
+      [1722472800, 26.8],
+      [1722473400, 26.8],
+      [1722474000, 26.6],
+      [1722474600, 26.6],
+      [1722475200, 26.6],
+      [1722475800, 26.6],
+      [1722476400, 26.6],
+      [1722477000, 26.6],
+      [1722477600, 26.6],
+      [1722478200, 26.5],
+      [1722478800, 26.4],
+      [1722479400, 26.4],
+      [1722480000, 26.4],
+      [1722480600, 26.4],
+      [1722481200, 26.4],
+      [1722481800, 26.4],
+      [1722482400, 26.4],
+      [1722483000, 26.4],
+      [1722483600, 26.4],
+      [1722484200, 26.4],
+      [1722484800, 26.4],
+      [1722485400, 26.4],
+      [1722486000, 26.3],
+      [1722486600, 26.3],
+      [1722487200, 26.3],
+      [1722487800, 26.3],
+      [1722488400, 26.3],
+      [1722489000, 26.2],
+      [1722489600, 26.2],
+      [1722490200, 26.2],
+      [1722490800, 26.2],
+      [1722491400, 26.2],
+      [1722492000, 26.2],
+      [1722492600, 26.2],
+      [1722493200, 26.0],
+      [1722493800, 26.1],
+      [1722494400, 26.1],
+      [1722495000, 26.0],
+      [1722495600, 26.0],
+      [1722496200, 25.9],
+      [1722496800, 25.9],
+      [1722497400, 25.9],
+      [1722498000, 25.9],
+      [1722498600, 25.9],
+      [1722499200, 25.9],
+      [1722499800, 25.9],
+      [1722500400, 25.9],
+      [1722501000, 25.9],
+      [1722501600, 25.8],
+      [1722502200, 25.7],
+      [1722502800, 25.5],
+      [1722503400, 25.4],
+      [1722504000, 25.3],
+      [1722504600, 25.2],
+      [1722505200, 25.0],
+      [1722505800, 24.9],
+      [1722506400, 24.8],
+      [1722507000, 24.8],
+      [1722507600, 24.7],
+      [1722508200, 24.7],
+      [1722508800, 24.5],
+      [1722509400, 24.7],
+      [1722510000, 24.7],
+      [1722510600, 24.7],
+      [1722511200, 24.7],
+      [1722511800, 24.7],
+      [1722512400, 24.7],
+      [1722513000, 24.7],
+      [1722513600, 24.8],
+      [1722514200, 24.9],
+      [1722514800, 25.1],
+      [1722515400, 25.2],
+      [1722516000, 25.3],
+      [1722516600, 25.4],
+      [1722517200, 25.5],
+      [1722517800, 25.4],
+      [1722518400, 25.6],
+      [1722519000, 25.9],
+      [1722519600, 25.4],
+      [1722520200, 25.4],
+      [1722520800, 25.5],
+      [1722521400, 25.5],
+      [1722522000, 25.6],
+      [1722522600, 25.8],
+      [1722523200, 25.6],
+      [1722523800, 26.0],
+      [1722524400, 26.3],
+      [1722525000, 26.6],
+      [1722525600, 26.7],
+      [1722526200, 27.1],
+      [1722526800, 27.1],
+      [1722527400, 27.2],
+      [1722528000, 27.6],
+      [1722528600, 27.6],
+      [1722529200, 28.0],
+      [1722529800, 28.5],
+      [1722530400, 29.2],
+      [1722531000, 29.5],
+      [1722531600, 29.8],
+      [1722532200, 30.0],
+      [1722532800, 29.6],
+      [1722533400, 31.8],
+      [1722534000, 30.5],
+      [1722534600, 31.7],
+      [1722535200, 32.1],
+      [1722535800, 31.9],
+      [1722536400, 31.8],
+      [1722537000, 31.9],
+      [1722537600, 32.1],
+      [1722538200, 31.8],
+      [1722538800, 31.4],
+      [1722539400, 31.0],
+      [1722540000, 31.0],
+      [1722540600, 30.8],
+      [1722541200, 30.8],
+      [1722541800, 30.2],
+      [1722542400, 30.8],
+      [1722543000, 30.8],
+      [1722543600, 30.4],
+      [1722544200, 29.3],
+      [1722544800, 28.9],
+      [1722545400, 27.4],
+ ]
+    }
+  ]
+}).render()
+
+
+
+
+  // Barometer
+  
+
+new ApexCharts(document.querySelector('#barometerchart'), {
+  ...graph_area_config,
+  yaxis: {
+    labels: {
+      formatter: function (val) {
+        return formatNumber(val, "%.1f") + " mbar";
+      }
+    }
+  },
+  series: [
+    {
+      name: "Barometer",
+      data: [ 
+      [1722459600, null],
+      [1722460200, null],
+      [1722460800, null],
+      [1722461400, null],
+      [1722462000, null],
+      [1722462600, null],
+      [1722463200, null],
+      [1722463800, null],
+      [1722464400, null],
+      [1722465000, null],
+      [1722465600, null],
+      [1722466200, null],
+      [1722466800, null],
+      [1722467400, null],
+      [1722468000, null],
+      [1722468600, null],
+      [1722469200, null],
+      [1722469800, null],
+      [1722470400, null],
+      [1722471000, null],
+      [1722471600, null],
+      [1722472200, null],
+      [1722472800, null],
+      [1722473400, null],
+      [1722474000, null],
+      [1722474600, null],
+      [1722475200, null],
+      [1722475800, null],
+      [1722476400, null],
+      [1722477000, null],
+      [1722477600, null],
+      [1722478200, null],
+      [1722478800, null],
+      [1722479400, null],
+      [1722480000, null],
+      [1722480600, null],
+      [1722481200, null],
+      [1722481800, null],
+      [1722482400, null],
+      [1722483000, null],
+      [1722483600, null],
+      [1722484200, null],
+      [1722484800, null],
+      [1722485400, null],
+      [1722486000, null],
+      [1722486600, null],
+      [1722487200, null],
+      [1722487800, null],
+      [1722488400, null],
+      [1722489000, null],
+      [1722489600, null],
+      [1722490200, null],
+      [1722490800, null],
+      [1722491400, null],
+      [1722492000, null],
+      [1722492600, null],
+      [1722493200, null],
+      [1722493800, null],
+      [1722494400, null],
+      [1722495000, null],
+      [1722495600, null],
+      [1722496200, null],
+      [1722496800, null],
+      [1722497400, null],
+      [1722498000, null],
+      [1722498600, null],
+      [1722499200, null],
+      [1722499800, null],
+      [1722500400, null],
+      [1722501000, null],
+      [1722501600, null],
+      [1722502200, null],
+      [1722502800, null],
+      [1722503400, null],
+      [1722504000, null],
+      [1722504600, null],
+      [1722505200, null],
+      [1722505800, null],
+      [1722506400, null],
+      [1722507000, null],
+      [1722507600, null],
+      [1722508200, null],
+      [1722508800, null],
+      [1722509400, null],
+      [1722510000, null],
+      [1722510600, null],
+      [1722511200, null],
+      [1722511800, null],
+      [1722512400, null],
+      [1722513000, null],
+      [1722513600, null],
+      [1722514200, null],
+      [1722514800, null],
+      [1722515400, null],
+      [1722516000, null],
+      [1722516600, null],
+      [1722517200, null],
+      [1722517800, null],
+      [1722518400, null],
+      [1722519000, null],
+      [1722519600, null],
+      [1722520200, null],
+      [1722520800, null],
+      [1722521400, null],
+      [1722522000, null],
+      [1722522600, null],
+      [1722523200, null],
+      [1722523800, null],
+      [1722524400, null],
+      [1722525000, null],
+      [1722525600, null],
+      [1722526200, null],
+      [1722526800, null],
+      [1722527400, null],
+      [1722528000, null],
+      [1722528600, null],
+      [1722529200, null],
+      [1722529800, null],
+      [1722530400, null],
+      [1722531000, null],
+      [1722531600, null],
+      [1722532200, null],
+      [1722532800, null],
+      [1722533400, null],
+      [1722534000, null],
+      [1722534600, null],
+      [1722535200, null],
+      [1722535800, null],
+      [1722536400, null],
+      [1722537000, null],
+      [1722537600, null],
+      [1722538200, null],
+      [1722538800, null],
+      [1722539400, null],
+      [1722540000, null],
+      [1722540600, null],
+      [1722541200, null],
+      [1722541800, null],
+      [1722542400, null],
+      [1722543000, null],
+      [1722543600, null],
+      [1722544200, null],
+      [1722544800, null],
+      [1722545400, null],
+ ]
+    }
+  ]
+}).render()
+
+
+
+
+  // Rain
+  
+
+new ApexCharts(document.querySelector('#rainchart'), {
+  ...graph_bar_config,
+  yaxis: {
+    labels: {
+      formatter: function (val) {
+        return formatNumber(val, "%.2f") + " cm";
+      }
+    }
+  },
+  series: [
+    {
+      name: "Rain",
+      data: [ 
+      [1722459600, 0.30],
+      [1722463200, 0.18],
+      [1722466800, 0.08],
+      [1722470400, 0.00],
+      [1722474000, 0.00],
+      [1722477600, 0.00],
+      [1722481200, 0.18],
+      [1722484800, 0.00],
+      [1722488400, 0.00],
+      [1722492000, 0.00],
+      [1722495600, 0.00],
+      [1722499200, 0.00],
+      [1722502800, 0.00],
+      [1722506400, 0.00],
+      [1722510000, 0.00],
+      [1722513600, 0.00],
+      [1722517200, 0.00],
+      [1722520800, 0.00],
+      [1722524400, 0.00],
+      [1722528000, 0.00],
+      [1722531600, 0.00],
+      [1722535200, 0.00],
+      [1722538800, 0.00],
+      [1722542400, 0.61],
+ ]
+    }
+  ]
+}).render()
+
+
+
+
+  // Wind
+  
+
+new ApexCharts(document.querySelector('#windSpeedchart'), {
+  ...graph_area_config,
+  yaxis: {
+    labels: {
+      formatter: function (val) {
+        return formatNumber(val, "%.0f") + " km/h";
+      }
+    }
+  },
+  series: [
+    {
+      name: "Wind Speed",
+      data: [ 
+      [1722459600, 0],
+      [1722460200, 0],
+      [1722460800, 0],
+      [1722461400, 1],
+      [1722462000, 1],
+      [1722462600, 0],
+      [1722463200, 0],
+      [1722463800, 0],
+      [1722464400, 0],
+      [1722465000, 0],
+      [1722465600, 0],
+      [1722466200, 0],
+      [1722466800, 0],
+      [1722467400, 0],
+      [1722468000, 0],
+      [1722468600, 0],
+      [1722469200, 0],
+      [1722469800, 0],
+      [1722470400, 0],
+      [1722471000, 0],
+      [1722471600, 0],
+      [1722472200, 0],
+      [1722472800, 0],
+      [1722473400, 0],
+      [1722474000, 0],
+      [1722474600, 0],
+      [1722475200, 0],
+      [1722475800, 0],
+      [1722476400, 0],
+      [1722477000, 0],
+      [1722477600, 1],
+      [1722478200, 0],
+      [1722478800, 0],
+      [1722479400, 0],
+      [1722480000, 0],
+      [1722480600, 0],
+      [1722481200, 0],
+      [1722481800, 0],
+      [1722482400, 0],
+      [1722483000, 0],
+      [1722483600, 0],
+      [1722484200, 0],
+      [1722484800, 0],
+      [1722485400, 0],
+      [1722486000, 0],
+      [1722486600, 0],
+      [1722487200, 0],
+      [1722487800, 0],
+      [1722488400, 0],
+      [1722489000, 0],
+      [1722489600, 0],
+      [1722490200, 0],
+      [1722490800, 0],
+      [1722491400, 0],
+      [1722492000, 0],
+      [1722492600, 0],
+      [1722493200, 1],
+      [1722493800, 1],
+      [1722494400, 0],
+      [1722495000, 0],
+      [1722495600, 0],
+      [1722496200, 0],
+      [1722496800, 0],
+      [1722497400, 0],
+      [1722498000, 0],
+      [1722498600, 0],
+      [1722499200, 0],
+      [1722499800, 0],
+      [1722500400, 0],
+      [1722501000, 0],
+      [1722501600, 0],
+      [1722502200, 0],
+      [1722502800, 0],
+      [1722503400, 0],
+      [1722504000, 0],
+      [1722504600, 0],
+      [1722505200, 0],
+      [1722505800, 0],
+      [1722506400, 0],
+      [1722507000, 0],
+      [1722507600, 0],
+      [1722508200, 0],
+      [1722508800, 1],
+      [1722509400, 0],
+      [1722510000, 0],
+      [1722510600, 0],
+      [1722511200, 0],
+      [1722511800, 0],
+      [1722512400, 0],
+      [1722513000, 0],
+      [1722513600, 0],
+      [1722514200, 0],
+      [1722514800, 0],
+      [1722515400, 0],
+      [1722516000, 0],
+      [1722516600, 0],
+      [1722517200, 0],
+      [1722517800, 1],
+      [1722518400, 0],
+      [1722519000, 0],
+      [1722519600, 0],
+      [1722520200, 0],
+      [1722520800, 0],
+      [1722521400, 0],
+      [1722522000, 0],
+      [1722522600, 1],
+      [1722523200, 1],
+      [1722523800, 0],
+      [1722524400, 1],
+      [1722525000, 0],
+      [1722525600, 0],
+      [1722526200, 1],
+      [1722526800, 1],
+      [1722527400, 0],
+      [1722528000, 0],
+      [1722528600, 1],
+      [1722529200, 1],
+      [1722529800, 3],
+      [1722530400, 1],
+      [1722531000, 2],
+      [1722531600, 2],
+      [1722532200, 3],
+      [1722532800, 3],
+      [1722533400, 1],
+      [1722534000, 1],
+      [1722534600, 1],
+      [1722535200, 2],
+      [1722535800, 2],
+      [1722536400, 1],
+      [1722537000, 2],
+      [1722537600, 1],
+      [1722538200, 2],
+      [1722538800, 2],
+      [1722539400, 1],
+      [1722540000, 3],
+      [1722540600, 1],
+      [1722541200, 0],
+      [1722541800, 0],
+      [1722542400, 0],
+      [1722543000, 0],
+      [1722543600, 0],
+      [1722544200, 3],
+      [1722544800, 2],
+      [1722545400, 3],
+ ]
+    }
+    ,{
+      name: "Gust Speed",
+      data: [ 
+      [1722459600, 0],
+      [1722460200, 0],
+      [1722460800, 0],
+      [1722461400, 3],
+      [1722462000, 4],
+      [1722462600, 0],
+      [1722463200, 0],
+      [1722463800, 0],
+      [1722464400, 0],
+      [1722465000, 0],
+      [1722465600, 0],
+      [1722466200, 0],
+      [1722466800, 0],
+      [1722467400, 0],
+      [1722468000, 0],
+      [1722468600, 0],
+      [1722469200, 0],
+      [1722469800, 0],
+      [1722470400, 0],
+      [1722471000, 0],
+      [1722471600, 0],
+      [1722472200, 0],
+      [1722472800, 0],
+      [1722473400, 0],
+      [1722474000, 0],
+      [1722474600, 0],
+      [1722475200, 0],
+      [1722475800, 0],
+      [1722476400, 0],
+      [1722477000, 0],
+      [1722477600, 4],
+      [1722478200, 0],
+      [1722478800, 0],
+      [1722479400, 2],
+      [1722480000, 2],
+      [1722480600, 0],
+      [1722481200, 0],
+      [1722481800, 0],
+      [1722482400, 0],
+      [1722483000, 0],
+      [1722483600, 0],
+      [1722484200, 0],
+      [1722484800, 0],
+      [1722485400, 0],
+      [1722486000, 0],
+      [1722486600, 0],
+      [1722487200, 0],
+      [1722487800, 0],
+      [1722488400, 0],
+      [1722489000, 0],
+      [1722489600, 0],
+      [1722490200, 0],
+      [1722490800, 0],
+      [1722491400, 0],
+      [1722492000, 0],
+      [1722492600, 0],
+      [1722493200, 3],
+      [1722493800, 3],
+      [1722494400, 0],
+      [1722495000, 0],
+      [1722495600, 0],
+      [1722496200, 0],
+      [1722496800, 0],
+      [1722497400, 0],
+      [1722498000, 0],
+      [1722498600, 0],
+      [1722499200, 0],
+      [1722499800, 0],
+      [1722500400, 0],
+      [1722501000, 0],
+      [1722501600, 0],
+      [1722502200, 0],
+      [1722502800, 0],
+      [1722503400, 0],
+      [1722504000, 0],
+      [1722504600, 0],
+      [1722505200, 0],
+      [1722505800, 0],
+      [1722506400, 0],
+      [1722507000, 0],
+      [1722507600, 0],
+      [1722508200, 0],
+      [1722508800, 3],
+      [1722509400, 0],
+      [1722510000, 0],
+      [1722510600, 0],
+      [1722511200, 0],
+      [1722511800, 0],
+      [1722512400, 0],
+      [1722513000, 0],
+      [1722513600, 0],
+      [1722514200, 0],
+      [1722514800, 0],
+      [1722515400, 0],
+      [1722516000, 0],
+      [1722516600, 0],
+      [1722517200, 0],
+      [1722517800, 4],
+      [1722518400, 0],
+      [1722519000, 0],
+      [1722519600, 0],
+      [1722520200, 0],
+      [1722520800, 0],
+      [1722521400, 0],
+      [1722522000, 0],
+      [1722522600, 4],
+      [1722523200, 6],
+      [1722523800, 0],
+      [1722524400, 3],
+      [1722525000, 2],
+      [1722525600, 0],
+      [1722526200, 3],
+      [1722526800, 3],
+      [1722527400, 4],
+      [1722528000, 3],
+      [1722528600, 3],
+      [1722529200, 5],
+      [1722529800, 8],
+      [1722530400, 4],
+      [1722531000, 3],
+      [1722531600, 5],
+      [1722532200, 7],
+      [1722532800, 6],
+      [1722533400, 3],
+      [1722534000, 4],
+      [1722534600, 4],
+      [1722535200, 4],
+      [1722535800, 6],
+      [1722536400, 4],
+      [1722537000, 4],
+      [1722537600, 3],
+      [1722538200, 8],
+      [1722538800, 4],
+      [1722539400, 5],
+      [1722540000, 5],
+      [1722540600, 3],
+      [1722541200, 0],
+      [1722541800, 0],
+      [1722542400, 0],
+      [1722543000, 0],
+      [1722543600, 0],
+      [1722544200, 3],
+      [1722544800, 3],
+      [1722545400, 4],
+ ]
+    }
+  ]
+}).render()
+
+
+
+
+  // outHumidity
+  
+
+new ApexCharts(document.querySelector('#outHumiditychart'), {
+  ...graph_area_config,
+  yaxis: {
+    labels: {
+      formatter: function (val) {
+        return formatNumber(val, "%.0f") + "%";
+      }
+    }
+  },
+  series: [
+    {
+      name: "Outside Humidity",
+      data: [ 
+      [1722459600, 97],
+      [1722460200, 96],
+      [1722460800, 99],
+      [1722461400, 99],
+      [1722462000, 97],
+      [1722462600, 98],
+      [1722463200, 98],
+      [1722463800, 98],
+      [1722464400, 99],
+      [1722465000, 99],
+      [1722465600, 99],
+      [1722466200, 99],
+      [1722466800, 99],
+      [1722467400, 99],
+      [1722468000, 99],
+      [1722468600, 99],
+      [1722469200, 99],
+      [1722469800, 99],
+      [1722470400, 99],
+      [1722471000, 99],
+      [1722471600, 99],
+      [1722472200, 99],
+      [1722472800, 99],
+      [1722473400, 99],
+      [1722474000, 99],
+      [1722474600, 99],
+      [1722475200, 99],
+      [1722475800, 99],
+      [1722476400, 99],
+      [1722477000, 99],
+      [1722477600, 99],
+      [1722478200, 99],
+      [1722478800, 99],
+      [1722479400, 99],
+      [1722480000, 99],
+      [1722480600, 99],
+      [1722481200, 99],
+      [1722481800, 99],
+      [1722482400, 99],
+      [1722483000, 99],
+      [1722483600, 99],
+      [1722484200, 99],
+      [1722484800, 99],
+      [1722485400, 99],
+      [1722486000, 99],
+      [1722486600, 99],
+      [1722487200, 99],
+      [1722487800, 99],
+      [1722488400, 99],
+      [1722489000, 99],
+      [1722489600, 99],
+      [1722490200, 99],
+      [1722490800, 99],
+      [1722491400, 99],
+      [1722492000, 99],
+      [1722492600, 99],
+      [1722493200, 99],
+      [1722493800, 99],
+      [1722494400, 99],
+      [1722495000, 99],
+      [1722495600, 99],
+      [1722496200, 99],
+      [1722496800, 99],
+      [1722497400, 99],
+      [1722498000, 99],
+      [1722498600, 99],
+      [1722499200, 99],
+      [1722499800, 99],
+      [1722500400, 99],
+      [1722501000, 99],
+      [1722501600, 99],
+      [1722502200, 99],
+      [1722502800, 99],
+      [1722503400, 99],
+      [1722504000, 99],
+      [1722504600, 99],
+      [1722505200, 99],
+      [1722505800, 99],
+      [1722506400, 99],
+      [1722507000, 99],
+      [1722507600, 99],
+      [1722508200, 99],
+      [1722508800, 99],
+      [1722509400, 99],
+      [1722510000, 99],
+      [1722510600, 99],
+      [1722511200, 99],
+      [1722511800, 99],
+      [1722512400, 99],
+      [1722513000, 99],
+      [1722513600, 99],
+      [1722514200, 99],
+      [1722514800, 99],
+      [1722515400, 99],
+      [1722516000, 99],
+      [1722516600, 99],
+      [1722517200, 99],
+      [1722517800, 99],
+      [1722518400, 99],
+      [1722519000, 99],
+      [1722519600, 99],
+      [1722520200, 99],
+      [1722520800, 99],
+      [1722521400, 99],
+      [1722522000, 99],
+      [1722522600, 99],
+      [1722523200, 99],
+      [1722523800, 99],
+      [1722524400, 99],
+      [1722525000, 99],
+      [1722525600, 99],
+      [1722526200, 99],
+      [1722526800, 99],
+      [1722527400, 99],
+      [1722528000, 99],
+      [1722528600, 98],
+      [1722529200, 97],
+      [1722529800, 96],
+      [1722530400, 91],
+      [1722531000, 89],
+      [1722531600, 86],
+      [1722532200, 86],
+      [1722532800, 84],
+      [1722533400, 81],
+      [1722534000, 83],
+      [1722534600, 77],
+      [1722535200, 76],
+      [1722535800, 77],
+      [1722536400, 79],
+      [1722537000, 74],
+      [1722537600, 77],
+      [1722538200, 77],
+      [1722538800, 79],
+      [1722539400, 81],
+      [1722540000, 76],
+      [1722540600, 78],
+      [1722541200, 82],
+      [1722541800, 87],
+      [1722542400, 85],
+      [1722543000, 84],
+      [1722543600, 86],
+      [1722544200, 89],
+      [1722544800, 94],
+      [1722545400, 93],
+ ]
+    }
+  ]
+}).render()
+
+
+
+
+  // UV / ET / Radiation
+
+
+
+  // inTemp + inHumidity
+  
+
+new ApexCharts(document.querySelector('#inTempchart'), {
+  ...graph_area_config,
+  yaxis: {
+    labels: {
+      formatter: function (val) {
+        return formatNumber(val, "%.1f") + "°C";
+      }
+    }
+  },
+  series: [
+    {
+      name: "Inside Temperature",
+      data: [ 
+      [1722459600, null],
+      [1722460200, null],
+      [1722460800, null],
+      [1722461400, null],
+      [1722462000, null],
+      [1722462600, null],
+      [1722463200, null],
+      [1722463800, null],
+      [1722464400, null],
+      [1722465000, null],
+      [1722465600, null],
+      [1722466200, null],
+      [1722466800, null],
+      [1722467400, null],
+      [1722468000, null],
+      [1722468600, null],
+      [1722469200, null],
+      [1722469800, null],
+      [1722470400, null],
+      [1722471000, null],
+      [1722471600, null],
+      [1722472200, null],
+      [1722472800, null],
+      [1722473400, null],
+      [1722474000, null],
+      [1722474600, null],
+      [1722475200, null],
+      [1722475800, null],
+      [1722476400, null],
+      [1722477000, null],
+      [1722477600, null],
+      [1722478200, null],
+      [1722478800, null],
+      [1722479400, null],
+      [1722480000, null],
+      [1722480600, null],
+      [1722481200, null],
+      [1722481800, null],
+      [1722482400, null],
+      [1722483000, null],
+      [1722483600, null],
+      [1722484200, null],
+      [1722484800, null],
+      [1722485400, null],
+      [1722486000, null],
+      [1722486600, null],
+      [1722487200, null],
+      [1722487800, null],
+      [1722488400, null],
+      [1722489000, null],
+      [1722489600, null],
+      [1722490200, null],
+      [1722490800, null],
+      [1722491400, null],
+      [1722492000, null],
+      [1722492600, null],
+      [1722493200, null],
+      [1722493800, null],
+      [1722494400, null],
+      [1722495000, null],
+      [1722495600, null],
+      [1722496200, null],
+      [1722496800, null],
+      [1722497400, null],
+      [1722498000, null],
+      [1722498600, null],
+      [1722499200, null],
+      [1722499800, null],
+      [1722500400, null],
+      [1722501000, null],
+      [1722501600, null],
+      [1722502200, null],
+      [1722502800, null],
+      [1722503400, null],
+      [1722504000, null],
+      [1722504600, null],
+      [1722505200, null],
+      [1722505800, null],
+      [1722506400, null],
+      [1722507000, null],
+      [1722507600, null],
+      [1722508200, null],
+      [1722508800, null],
+      [1722509400, null],
+      [1722510000, null],
+      [1722510600, null],
+      [1722511200, null],
+      [1722511800, null],
+      [1722512400, null],
+      [1722513000, null],
+      [1722513600, null],
+      [1722514200, null],
+      [1722514800, null],
+      [1722515400, null],
+      [1722516000, null],
+      [1722516600, null],
+      [1722517200, null],
+      [1722517800, null],
+      [1722518400, null],
+      [1722519000, null],
+      [1722519600, null],
+      [1722520200, null],
+      [1722520800, null],
+      [1722521400, null],
+      [1722522000, null],
+      [1722522600, null],
+      [1722523200, null],
+      [1722523800, null],
+      [1722524400, null],
+      [1722525000, null],
+      [1722525600, null],
+      [1722526200, null],
+      [1722526800, null],
+      [1722527400, null],
+      [1722528000, null],
+      [1722528600, null],
+      [1722529200, null],
+      [1722529800, null],
+      [1722530400, null],
+      [1722531000, null],
+      [1722531600, null],
+      [1722532200, null],
+      [1722532800, null],
+      [1722533400, null],
+      [1722534000, null],
+      [1722534600, null],
+      [1722535200, null],
+      [1722535800, null],
+      [1722536400, null],
+      [1722537000, null],
+      [1722537600, null],
+      [1722538200, null],
+      [1722538800, null],
+      [1722539400, null],
+      [1722540000, null],
+      [1722540600, null],
+      [1722541200, null],
+      [1722541800, null],
+      [1722542400, null],
+      [1722543000, null],
+      [1722543600, null],
+      [1722544200, null],
+      [1722544800, null],
+      [1722545400, null],
+ ]
+    }
+  ]
+}).render()
+
+
+
+  
+
+new ApexCharts(document.querySelector('#inHumiditychart'), {
+  ...graph_area_config,
+  yaxis: {
+    labels: {
+      formatter: function (val) {
+        return formatNumber(val, "%.0f") + "%";
+      }
+    }
+  },
+  series: [
+    {
+      name: "Inside Humidity",
+      data: [ 
+      [1722459600, null],
+      [1722460200, null],
+      [1722460800, null],
+      [1722461400, null],
+      [1722462000, null],
+      [1722462600, null],
+      [1722463200, null],
+      [1722463800, null],
+      [1722464400, null],
+      [1722465000, null],
+      [1722465600, null],
+      [1722466200, null],
+      [1722466800, null],
+      [1722467400, null],
+      [1722468000, null],
+      [1722468600, null],
+      [1722469200, null],
+      [1722469800, null],
+      [1722470400, null],
+      [1722471000, null],
+      [1722471600, null],
+      [1722472200, null],
+      [1722472800, null],
+      [1722473400, null],
+      [1722474000, null],
+      [1722474600, null],
+      [1722475200, null],
+      [1722475800, null],
+      [1722476400, null],
+      [1722477000, null],
+      [1722477600, null],
+      [1722478200, null],
+      [1722478800, null],
+      [1722479400, null],
+      [1722480000, null],
+      [1722480600, null],
+      [1722481200, null],
+      [1722481800, null],
+      [1722482400, null],
+      [1722483000, null],
+      [1722483600, null],
+      [1722484200, null],
+      [1722484800, null],
+      [1722485400, null],
+      [1722486000, null],
+      [1722486600, null],
+      [1722487200, null],
+      [1722487800, null],
+      [1722488400, null],
+      [1722489000, null],
+      [1722489600, null],
+      [1722490200, null],
+      [1722490800, null],
+      [1722491400, null],
+      [1722492000, null],
+      [1722492600, null],
+      [1722493200, null],
+      [1722493800, null],
+      [1722494400, null],
+      [1722495000, null],
+      [1722495600, null],
+      [1722496200, null],
+      [1722496800, null],
+      [1722497400, null],
+      [1722498000, null],
+      [1722498600, null],
+      [1722499200, null],
+      [1722499800, null],
+      [1722500400, null],
+      [1722501000, null],
+      [1722501600, null],
+      [1722502200, null],
+      [1722502800, null],
+      [1722503400, null],
+      [1722504000, null],
+      [1722504600, null],
+      [1722505200, null],
+      [1722505800, null],
+      [1722506400, null],
+      [1722507000, null],
+      [1722507600, null],
+      [1722508200, null],
+      [1722508800, null],
+      [1722509400, null],
+      [1722510000, null],
+      [1722510600, null],
+      [1722511200, null],
+      [1722511800, null],
+      [1722512400, null],
+      [1722513000, null],
+      [1722513600, null],
+      [1722514200, null],
+      [1722514800, null],
+      [1722515400, null],
+      [1722516000, null],
+      [1722516600, null],
+      [1722517200, null],
+      [1722517800, null],
+      [1722518400, null],
+      [1722519000, null],
+      [1722519600, null],
+      [1722520200, null],
+      [1722520800, null],
+      [1722521400, null],
+      [1722522000, null],
+      [1722522600, null],
+      [1722523200, null],
+      [1722523800, null],
+      [1722524400, null],
+      [1722525000, null],
+      [1722525600, null],
+      [1722526200, null],
+      [1722526800, null],
+      [1722527400, null],
+      [1722528000, null],
+      [1722528600, null],
+      [1722529200, null],
+      [1722529800, null],
+      [1722530400, null],
+      [1722531000, null],
+      [1722531600, null],
+      [1722532200, null],
+      [1722532800, null],
+      [1722533400, null],
+      [1722534000, null],
+      [1722534600, null],
+      [1722535200, null],
+      [1722535800, null],
+      [1722536400, null],
+      [1722537000, null],
+      [1722537600, null],
+      [1722538200, null],
+      [1722538800, null],
+      [1722539400, null],
+      [1722540000, null],
+      [1722540600, null],
+      [1722541200, null],
+      [1722541800, null],
+      [1722542400, null],
+      [1722543000, null],
+      [1722543600, null],
+      [1722544200, null],
+      [1722544800, null],
+      [1722545400, null],
+ ]
+    }
+  ]
+}).render()
+
+
+
+
+  // Other sensors
+
+
+
+
+  
+
+new ApexCharts(document.querySelector('#cloudbasechart'), {
+  ...graph_area_config,
+  yaxis: {
+    labels: {
+      formatter: function (val) {
+        return formatNumber(val, "%.0f") + " meters";
+      }
+    }
+  },
+  series: [
+    {
+      name: "cloudbase",
+      data: [ 
+      [1722459600, 355],
+      [1722460200, 375],
+      [1722460800, 330],
+      [1722461400, 321],
+      [1722462000, 368],
+      [1722462600, 341],
+      [1722463200, 337],
+      [1722463800, 341],
+      [1722464400, 324],
+      [1722465000, 321],
+      [1722465600, 321],
+      [1722466200, 321],
+      [1722466800, 321],
+      [1722467400, 321],
+      [1722468000, 321],
+      [1722468600, 321],
+      [1722469200, 321],
+      [1722469800, 321],
+      [1722470400, 321],
+      [1722471000, 321],
+      [1722471600, 321],
+      [1722472200, 321],
+      [1722472800, 321],
+      [1722473400, 321],
+      [1722474000, 321],
+      [1722474600, 321],
+      [1722475200, 321],
+      [1722475800, 321],
+      [1722476400, 321],
+      [1722477000, 321],
+      [1722477600, 321],
+      [1722478200, 321],
+      [1722478800, 321],
+      [1722479400, 321],
+      [1722480000, 321],
+      [1722480600, 321],
+      [1722481200, 321],
+      [1722481800, 321],
+      [1722482400, 321],
+      [1722483000, 321],
+      [1722483600, 321],
+      [1722484200, 321],
+      [1722484800, 321],
+      [1722485400, 321],
+      [1722486000, 321],
+      [1722486600, 321],
+      [1722487200, 321],
+      [1722487800, 321],
+      [1722488400, 321],
+      [1722489000, 321],
+      [1722489600, 321],
+      [1722490200, 321],
+      [1722490800, 321],
+      [1722491400, 321],
+      [1722492000, 321],
+      [1722492600, 321],
+      [1722493200, 321],
+      [1722493800, 321],
+      [1722494400, 321],
+      [1722495000, 321],
+      [1722495600, 321],
+      [1722496200, 320],
+      [1722496800, 320],
+      [1722497400, 320],
+      [1722498000, 320],
+      [1722498600, 320],
+      [1722499200, 320],
+      [1722499800, 320],
+      [1722500400, 320],
+      [1722501000, 320],
+      [1722501600, 320],
+      [1722502200, 320],
+      [1722502800, 320],
+      [1722503400, 320],
+      [1722504000, 320],
+      [1722504600, 320],
+      [1722505200, 320],
+      [1722505800, 320],
+      [1722506400, 320],
+      [1722507000, 320],
+      [1722507600, 320],
+      [1722508200, 320],
+      [1722508800, 320],
+      [1722509400, 320],
+      [1722510000, 320],
+      [1722510600, 320],
+      [1722511200, 320],
+      [1722511800, 320],
+      [1722512400, 320],
+      [1722513000, 320],
+      [1722513600, 320],
+      [1722514200, 320],
+      [1722514800, 320],
+      [1722515400, 320],
+      [1722516000, 320],
+      [1722516600, 320],
+      [1722517200, 320],
+      [1722517800, 320],
+      [1722518400, 320],
+      [1722519000, 321],
+      [1722519600, 320],
+      [1722520200, 320],
+      [1722520800, 320],
+      [1722521400, 320],
+      [1722522000, 320],
+      [1722522600, 320],
+      [1722523200, 321],
+      [1722523800, 321],
+      [1722524400, 321],
+      [1722525000, 321],
+      [1722525600, 321],
+      [1722526200, 321],
+      [1722526800, 321],
+      [1722527400, 323],
+      [1722528000, 326],
+      [1722528600, 338],
+      [1722529200, 366],
+      [1722529800, 390],
+      [1722530400, 495],
+      [1722531000, 546],
+      [1722531600, 624],
+      [1722532200, 602],
+      [1722532800, 651],
+      [1722533400, 732],
+      [1722534000, 699],
+      [1722534600, 848],
+      [1722535200, 867],
+      [1722535800, 838],
+      [1722536400, 794],
+      [1722537000, 934],
+      [1722537600, 849],
+      [1722538200, 851],
+      [1722538800, 797],
+      [1722539400, 738],
+      [1722540000, 862],
+      [1722540600, 816],
+      [1722541200, 706],
+      [1722541800, 597],
+      [1722542400, 645],
+      [1722543000, 663],
+      [1722543600, 611],
+      [1722544200, 545],
+      [1722544800, 439],
+      [1722545400, 441],
+ ]
+    }
+  ]
+}).render()
+
+
+
+
+  // Build wind vector chart
+  var vector_data = {
+    'N': {'sum': 0.0, 'amt': 0, 'avg': 0.0, 'max': 0.0},
+    'NE': {'sum': 0.0, 'amt': 0, 'avg': 0.0, 'max': 0.0},
+    'E': {'sum': 0.0, 'amt': 0, 'avg': 0.0, 'max': 0.0},
+    'SE': {'sum': 0.0, 'amt': 0, 'avg': 0.0, 'max': 0.0},
+    'S': {'sum': 0.0, 'amt': 0, 'avg': 0.0, 'max': 0.0},
+    'SW': {'sum': 0.0, 'amt': 0, 'avg': 0.0, 'max': 0.0},
+    'W': {'sum': 0.0, 'amt': 0, 'avg': 0.0, 'max': 0.0},
+    'NW': {'sum': 0.0, 'amt': 0, 'avg': 0.0, 'max': 0.0},
+  };
+
+  var raw_data = [
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "35.060977259990736",
+    'speed': "0.9204018891627005",
+    'max': "3.4829989224433926"
+  },
+  {
+    'dir': "38.158780262617086",
+    'speed': "0.546586787420853",
+    'max': "4.310998666280064"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "35.86284577647154",
+    'speed': "0.3137933811806984",
+    'max': "4.310998666280064"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "33.75",
+    'speed': "0.19869559070224696",
+    'max': "1.8279994344606723"
+  },
+  {
+    'dir': "270.0",
+    'speed': "0.11921735442134818",
+    'max': "1.8279994344606723"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "258.75",
+    'speed': "0.8318584382950581",
+    'max': "3.4829989224433926"
+  },
+  {
+    'dir': "196.3457242289552",
+    'speed': "0.557836783940373",
+    'max': "3.4829989224433926"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "315.0",
+    'speed': "0.6620976212497794",
+    'max': "3.4829989224433926"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "315.0",
+    'speed': "0.5196194044595688",
+    'max': "4.310998666280064"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "270.6823502335195",
+    'speed': "0.37336944970580876",
+    'max': "4.310998666280064"
+  },
+  {
+    'dir': "261.8842032507823",
+    'speed': "1.4822930196748425",
+    'max': "5.966998153953408"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "277.62649869307785",
+    'speed': "0.573554170382137",
+    'max': "3.4829989224433926"
+  },
+  {
+    'dir': "",
+    'speed': "0.059608677210674095",
+    'max': "1.8279994344606723"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "180.0",
+    'speed': "0.3066303399185113",
+    'max': "3.4829989224433926"
+  },
+  {
+    'dir': "254.59970636557986",
+    'speed': "0.5956954678799752",
+    'max': "3.4829989224433926"
+  },
+  {
+    'dir': "258.75",
+    'speed': "0.3100216432171492",
+    'max': "4.310998666280064"
+  },
+  {
+    'dir': "247.5",
+    'speed': "0.11357605181880628",
+    'max': "3.4829989224433926"
+  },
+  {
+    'dir': "244.15825699622397",
+    'speed': "0.348304240069081",
+    'max': "2.6559991782973444"
+  },
+  {
+    'dir': "270.79980430111635",
+    'speed': "0.6545541453226811",
+    'max': "5.138998410116736"
+  },
+  {
+    'dir': "139.2791599393246",
+    'speed': "1.4170104311760623",
+    'max': "7.621997641936128"
+  },
+  {
+    'dir': "308.41041710650285",
+    'speed': "0.7576628090754993",
+    'max': "4.310998666280064"
+  },
+  {
+    'dir': "281.6200423113601",
+    'speed': "0.9256301484147674",
+    'max': "3.4829989224433926"
+  },
+  {
+    'dir': "270.6985861447987",
+    'speed': "0.9398801440061594",
+    'max': "5.138998410116736"
+  },
+  {
+    'dir': "266.4323472369906",
+    'speed': "1.6010864611838609",
+    'max': "6.794997897790081"
+  },
+  {
+    'dir': "262.69735413695935",
+    'speed': "2.7085426403025217",
+    'max': "5.966998153953408"
+  },
+  {
+    'dir': "227.69755358070438",
+    'speed': "0.3572933677228425",
+    'max': "3.4829989224433926"
+  },
+  {
+    'dir': "261.5349460858247",
+    'speed': "0.8239345277030483",
+    'max': "4.310998666280064"
+  },
+  {
+    'dir': "249.7309773433647",
+    'speed': "0.4330107356020467",
+    'max': "4.310998666280064"
+  },
+  {
+    'dir': "174.09080102598324",
+    'speed': "1.2555104811402866",
+    'max': "4.310998666280064"
+  },
+  {
+    'dir': "244.12194220396054",
+    'speed': "0.9897062155476857",
+    'max': "5.966998153953408"
+  },
+  {
+    'dir': "270.4784765746993",
+    'speed': "0.37336944970580876",
+    'max': "4.310998666280064"
+  },
+  {
+    'dir': "211.3144470974469",
+    'speed': "1.262619174593201",
+    'max': "4.310998666280064"
+  },
+  {
+    'dir': "33.749999999999986",
+    'speed': "0.3790433609939145",
+    'max': "2.6559991782973444"
+  },
+  {
+    'dir': "239.96946943616746",
+    'speed': "1.2978582941258423",
+    'max': "8.4499973857728"
+  },
+  {
+    'dir': "1.1314441951822687",
+    'speed': "0.9578475297518279",
+    'max': "4.310998666280064"
+  },
+  {
+    'dir': "247.5",
+    'speed': "0.34265206790468455",
+    'max': "5.138998410116736"
+  },
+  {
+    'dir': "280.2568654480558",
+    'speed': "2.0652167523756537",
+    'max': "5.138998410116736"
+  },
+  {
+    'dir': "267.2851369097096",
+    'speed': "0.7093041283843452",
+    'max': "3.4829989224433926"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "45.0",
+    'speed': "2.048577961536674",
+    'max': "3.4829989224433926"
+  },
+  {
+    'dir': "163.33392750602545",
+    'speed': "1.1854887636728972",
+    'max': "3.4829989224433926"
+  },
+  {
+    'dir': "175.37072270635522",
+    'speed': "3.2583359484704846",
+    'max': "4.310998666280064"
+  },
+  ];
+
+  raw_data.forEach(function(item) {
+    var vec_dir = parseInt(item.dir);
+    var vec_speed = parseFloat(item.speed);
+    var max_speed = parseFloat(item.max);
+
+    if(typeof vec_dir === 'number') {
+      var vec_key = false;
+
+      // Detect key based on vec direction (0-360). 45° steps, using the middle +- 45/2=22.5
+      if(vec_dir > 337.5 || vec_dir <= 22.5) {
+        vec_key = 'N';
+      }
+      if(vec_dir > 22.5 && vec_dir <= 67.5) {
+        vec_key = 'NE';
+      }
+      if(vec_dir > 67.5 && vec_dir <= 112.5) {
+        vec_key = 'E';
+      }
+      if(vec_dir > 112.5 && vec_dir <= 157.5) {
+        vec_key = 'SE';
+      }
+      if(vec_dir > 157.5 && vec_dir <= 202.5) {
+        vec_key = 'S';
+      }
+      if(vec_dir > 202.5 && vec_dir <= 247.5) {
+        vec_key = 'SW';
+      }
+      if(vec_dir > 247.5 && vec_dir <= 292.5) {
+        vec_key = 'W';
+      }
+      if(vec_dir > 292.5 && vec_dir <= 337.5) {
+        vec_key = 'NW';
+      }
+
+      if(vec_key !== false) {
+        vector_data[vec_key]['sum'] += vec_speed;
+        vector_data[vec_key]['amt']++;
+
+        if(max_speed > vector_data[vec_key]['max']) {
+          vector_data[vec_key]['max'] = max_speed;
+        }
+      }
+
+    }
+  });
+
+  // Finally build arrays for chart
+  var avg_values = [];
+  var max_values = [];
+  Object.keys(vector_data).forEach(function (item) {
+    if(vector_data[item]['amt'] > 0) {
+      avg_values.push(vector_data[item]['sum'] / vector_data[item]['amt']);
+    } else {
+      avg_values.push(0);
+    }
+
+    max_values.push(vector_data[item]['max'])
+  });
+
+  // Display wind vector chart
+
+  new ApexCharts(document.querySelector('#windvecchart'), {
+    ...graph_radar_config,
+    yaxis: {
+      labels: {
+        formatter: function (val) {
+          return formatNumber(val, "%.0f") + " km/h";
+        }
+      }
+    },
+    series: [
+      {
+        name: "Wind Speed",
+        data: avg_values
+      },
+      {
+        name: "Gust Speed",
+        data: max_values
+      },
+    ]
+  }).render()
+
+  // extraTemp 1-8
+
+
+
+
+
+
+
+
+
+  // extraHumid 1-8
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
 </html>
