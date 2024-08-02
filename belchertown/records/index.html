@@ -29,8 +29,8 @@
         <link rel='stylesheet' href='//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' type='text/css' media='all' />
         <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css?ver=4.7.4' type='text/css' media='all' />
         <link rel='stylesheet' href='//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css' type='text/css' media='all' />
-        <link rel='stylesheet' href='../style.css?ver=1722608428' type='text/css' media='all' id="belchertownStyle" />
-        <link rel='stylesheet' href='../belchertown-dark.min.css?ver=1722608428' type='text/css' media='all' id="belchertownStyle" />
+        <link rel='stylesheet' href='../style.css?ver=1722608727' type='text/css' media='all' id="belchertownStyle" />
+        <link rel='stylesheet' href='../belchertown-dark.min.css?ver=1722608727' type='text/css' media='all' id="belchertownStyle" />
 
         <link rel="manifest" href="../manifest.json" crossorigin="use-credentials">
         <link rel="apple-touch-icon" href="../images/station.png">
@@ -52,7 +52,7 @@
         <script type='text/javascript' src='//code.highcharts.com/10/modules/exporting.js'></script>
         <script type='text/javascript' src='//code.highcharts.com/10/modules/solid-gauge.js'></script>
         <script type='text/javascript' src='//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'></script>
-        <script type='text/javascript' src='../js/belchertown.js?1722608428'></script>
+        <script type='text/javascript' src='../js/belchertown.js?1722608727'></script>
         <script>
             // Set the session variables for the theme
             if ( sessionStorage.getItem('theme') === null ) {
@@ -115,13 +115,13 @@
             jQuery("#year-outtemp-min-ts").text( tzAdjustedMoment(1721987400).format( "LLL" ) );
             jQuery("#at-outtemp-min-ts").text( tzAdjustedMoment(1721987400).format( "LLL" ) );
             
-            jQuery("#year-apptemp-max-ts").text( tzAdjustedMoment(1722608141).format( "LLL" ) );
+            jQuery("#year-apptemp-max-ts").text( tzAdjustedMoment(1722608591).format( "LLL" ) );
             jQuery("#year-apptemp-min-ts").text( tzAdjustedMoment(1722547841).format( "LLL" ) );
-            jQuery("#at-apptemp-max-ts").text( tzAdjustedMoment(1722608141).format( "LLL" ) );
+            jQuery("#at-apptemp-max-ts").text( tzAdjustedMoment(1722608591).format( "LLL" ) );
             jQuery("#at-apptemp-min-ts").text( tzAdjustedMoment(1722547841).format( "LLL" ) );
             
-            jQuery("#year-heatindex-max-ts").text( tzAdjustedMoment(1722608141).format( "LLL" ) );
-            jQuery("#at-heatindex-max-ts").text( tzAdjustedMoment(1722608141).format( "LLL" ) );
+            jQuery("#year-heatindex-max-ts").text( tzAdjustedMoment(1722608554).format( "LLL" ) );
+            jQuery("#at-heatindex-max-ts").text( tzAdjustedMoment(1722608554).format( "LLL" ) );
             
             jQuery("#year-windchill-min-ts").text( tzAdjustedMoment(1722547841).format( "LLL" ) );
             jQuery("#at-windchill-min-ts").text( tzAdjustedMoment(1722547841).format( "LLL" ) );
@@ -150,8 +150,8 @@
             jQuery("#year-outHumidity-min-ts").text( tzAdjustedMoment(1722101811).format( "LLL" ) );
             jQuery("#at-outHumidity-min-ts").text( tzAdjustedMoment(1722101811).format( "LLL" ) );
             
-            jQuery("#year-dewpoint-max-ts").text( tzAdjustedMoment(1722533666).format( "LLL" ) );
-            jQuery("#at-dewpoint-max-ts").text( tzAdjustedMoment(1722533666).format( "LLL" ) );
+            jQuery("#year-dewpoint-max-ts").text( tzAdjustedMoment(1722608591).format( "LLL" ) );
+            jQuery("#at-dewpoint-max-ts").text( tzAdjustedMoment(1722608591).format( "LLL" ) );
             
             jQuery("#year-dewpoint-min-ts").text( tzAdjustedMoment(1722064469).format( "LLL" ) );
             jQuery("#at-dewpoint-min-ts").text( tzAdjustedMoment(1722064469).format( "LLL" ) );
@@ -199,7 +199,7 @@
         <div class="col-sm-1 wx-stn-info-current-obs">
             <span class="obs-header-icon">
             </span>
-            <span class="obs-header-outtemp">27.4 &#176;C</span>
+            <span class="obs-header-outtemp">27.8 &#176;C</span>
         </div>
         <div class="col-sm-5">
             <div class="wx-stn-name">
@@ -250,9 +250,9 @@
                             </tr>
                             <tr>
                                 <td>Highest Apparent Temperature</td>
-                                <td class="leftborder">33.2 &#176;C</td>
+                                <td class="leftborder">33.9 &#176;C</td>
                                 <td id="year-apptemp-max-ts"></td><!-- moment.js -->
-                                <td class="leftborder">33.2 &#176;C</td>
+                                <td class="leftborder">33.9 &#176;C</td>
                                 <td id="at-apptemp-max-ts"></td><!-- moment.js -->
                             </tr>
                             <tr>
@@ -264,9 +264,9 @@
                             </tr>
                             <tr>
                                 <td>Highest Heat Index</td>
-                                <td class="leftborder">31.2 &#176;C</td>
+                                <td class="leftborder">32.7 &#176;C</td>
                                 <td id="year-heatindex-max-ts"></td><!-- moment.js -->
-                                <td class="leftborder">31.2 &#176;C</td>
+                                <td class="leftborder">32.7 &#176;C</td>
                                 <td id="at-heatindex-max-ts"></td><!-- moment.js -->
                             </tr>
                             <tr>
@@ -458,7 +458,7 @@
 		<script type='text/javascript' src='../js/responsive-menu.js'></script>
 		
 		<!-- Belchertown Skin Version: 1.3.1 -->
-        <!-- Page Generated: 2024-08-02 10:20:00 AM -->
+        <!-- Page Generated: 2024-08-02 10:25:00 AM -->
 
     </body>
 </html>
