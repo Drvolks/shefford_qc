@@ -332,7 +332,7 @@
 
           </div>
           <div class="col-6">
-            <h4 class="h2-responsive">3.73 cm</h4>
+            <h4 class="h2-responsive">3.78 cm</h4>
           </div>
           <div class="col-3 text-muted font-small hi-text">
             7.01 cm/h <br>
@@ -509,7 +509,33 @@
 
 
 
-        
+          <div class="col-12 col-lg-6 mb-4">
+    <div class="card">
+      <div class="card-body text-center">
+        <h3 class="h5-responsive indigo-text">
+          Temperature1
+        </h3>
+
+
+        <div class="row">
+          <div class="col-3 text-muted font-small lo-text">
+            16.1°C <br>
+            (Mon 05 16:29)
+          </div>
+          <div class="col-6">
+            <h4 class="h2-responsive">17.0°C</h4>
+          </div>
+          <div class="col-3 text-muted font-small hi-text">
+            18.0°C <br>
+            (Mon 05 16:26)
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
 
 
         
@@ -678,7 +704,17 @@
 
 
 
-        
+            <div class="col-12 col-xl-6 mb-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="h5-responsive indigo-text">
+              Temperature1
+          </h5>
+          <div id="extraTemp1chart"></div>
+        </div>
+      </div>
+    </div>
+
 
 
         
@@ -1341,7 +1377,7 @@ new ApexCharts(document.querySelector('#rainchart'), {
       [1722571200, 0.00],
       [1722657600, 0.43],
       [1722744000, 0.25],
-      [1722830400, 0.20],
+      [1722830400, 0.25],
       [1722916800, null],
       [1723003200, null],
       [1723089600, null],
@@ -1664,7 +1700,7 @@ new ApexCharts(document.querySelector('#cloudbasechart'), {
       [1722571200, 692],
       [1722657600, 679],
       [1722744000, 505],
-      [1722830400, 416],
+      [1722830400, 415],
       [1722916800, null],
       [1723003200, null],
       [1723089600, null],
@@ -1734,8 +1770,8 @@ new ApexCharts(document.querySelector('#cloudbasechart'), {
     'max': "11.760996361428864"
   },
   {
-    'dir': "209.0524662168958",
-    'speed': "0.33522386708070745",
+    'dir': "209.3477909165829",
+    'speed': "0.3436686928984289",
     'max': "7.621997641936128"
   },
   {
@@ -1953,6 +1989,60 @@ new ApexCharts(document.querySelector('#cloudbasechart'), {
   }).render()
 
   // extraTemp 1-8
+
+  
+
+
+new ApexCharts(document.querySelector('#extraTemp1chart'), {
+  ...graph_area_config,
+  yaxis: {
+    labels: {
+      formatter: function (val) {
+        return formatNumber(val, "%.1f") + "°C";
+      }
+    }
+  },
+  series: [
+    {
+      name: "Temperature1",
+      data: [       [1722484800, null],
+      [1722571200, null],
+      [1722657600, null],
+      [1722744000, null],
+      [1722830400, 17.0],
+      [1722916800, null],
+      [1723003200, null],
+      [1723089600, null],
+      [1723176000, null],
+      [1723262400, null],
+      [1723348800, null],
+      [1723435200, null],
+      [1723521600, null],
+      [1723608000, null],
+      [1723694400, null],
+      [1723780800, null],
+      [1723867200, null],
+      [1723953600, null],
+      [1724040000, null],
+      [1724126400, null],
+      [1724212800, null],
+      [1724299200, null],
+      [1724385600, null],
+      [1724472000, null],
+      [1724558400, null],
+      [1724644800, null],
+      [1724731200, null],
+      [1724817600, null],
+      [1724904000, null],
+      [1724990400, null],
+      [1725076800, null],
+ ]
+    }
+  ]
+}).render()
+
+
+
 
 
 
