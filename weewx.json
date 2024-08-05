@@ -9,19 +9,19 @@
     },
     "generation":
     {
-        "time": "2024-08-05T11:20:00-0400",
+        "time": "2024-08-05T11:25:00-0400",
         "generator": "weewx 5.1.0"
     },
     "current":
     {
-        "temperature": {"value": 19.664141414141405, "units": "°C"},
-        "dewpoint": {"value": 17.50158513341557, "units": "°C"},
-        "humidity": {"value": 87.36363636363636, "units": "%"},
-        "heat index": {"value": 19.967272727272725, "units": "°C"},
+        "temperature": {"value": 19.363636363636367, "units": "°C"},
+        "dewpoint": {"value": 17.49288505183588, "units": "°C"},
+        "humidity": {"value": 88.95454545454545, "units": "%"},
+        "heat index": {"value": 19.678257575757566, "units": "°C"},
         "wind speed": {"value": 0.0, "units": "km/h"},
         "wind gust": {"value": 0.0, "units": "km/h"},
-        "wind chill": {"value": 19.664141414141405, "units": "°C"},
-        "rain rate": {"value": 0.0, "units": "cm/h"},
+        "wind chill": {"value": 19.363636363636367, "units": "°C"},
+        "rain rate": {"value": 0.037547826086956546, "units": "cm/h"},
         "void_end": null
     },
     "day":
@@ -34,8 +34,8 @@
         "min humidity": {"value": 74.0, "units": "%", "at": "09:51:36 AM"},
         "max wind speed": {"value": 4.012172671773164, "units": "km/h", "at": "09:10:00 AM"},
         "max wind gust": {"value": 7.621997641936128, "units": "km/h", "at": "09:10:00 AM"},
-        "max rain rate": {"value": 0.0, "units": "cm/h", "at": "12:00:02 AM"},
-        "rain total": {"value": 0.0, "units": "cm"},
+        "max rain rate": {"value": 0.10160000000000008, "units": "cm/h", "at": "11:23:09 AM"},
+        "rain total": {"value": 0.025400000000000023, "units": "cm"},
         "void_end": null
     },
     "week":
@@ -49,7 +49,7 @@
         "max wind speed": {"value": 4.012172671773164, "units": "km/h", "at": "09:10:00 AM (Monday)"},
         "max wind gust": {"value": 11.760996361428864, "units": "km/h", "at": "05:45:00 PM (Sunday)"},
         "max rain rate": {"value": 0.7112000000000015, "units": "cm/h", "at": "09:10:00 PM (Sunday)"},
-        "rain total": {"value": 0.2540000000000002, "units": "cm"},
+        "rain total": {"value": 0.27940000000000026, "units": "cm"},
         "void_end": null
     },
     "month":
@@ -63,7 +63,7 @@
         "max wind speed": {"value": 6.416541493136313, "units": "km/h", "at": "2024-08-03 10:55:00 PM"},
         "max wind gust": {"value": 12.588996105265538, "units": "km/h", "at": "2024-08-03 11:00:00 PM"},
         "max rain rate": {"value": 7.0104, "units": "cm/h", "at": "2024-08-01 05:34:08 PM"},
-        "rain total": {"value": 3.5306, "units": "cm"},
+        "rain total": {"value": 3.5560000000000005, "units": "cm"},
         "void_end": null
     },
     "year":
@@ -77,7 +77,7 @@
         "max wind speed": {"value": 6.416541493136313, "units": "km/h", "at": "2024-08-03 10:55:00 PM"},
         "max wind gust": {"value": 12.588996105265538, "units": "km/h", "at": "2024-08-03 11:00:00 PM"},
         "max rain rate": {"value": 7.0104, "units": "cm/h", "at": "2024-08-01 05:34:08 PM"},
-        "rain total": {"value": 4.699000000000001, "units": "cm"},
+        "rain total": {"value": 4.724400000000001, "units": "cm"},
         "void_end": null
     }
 }
