@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "285462 seconds",
-    "serveruptime": "285464 seconds",
+    "weewxuptime": "285755 seconds",
+    "serveruptime": "285757 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,7 +20,7 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1723538700",
+        "datetime": "1723539000",
         "outTemp": "13.8",
         "outHumidity": "99",
         "windchill": "13.8",
@@ -30,8 +30,8 @@
         "barometer_trend": "   N/A",
         "windspeed": "3",
         "winddir": "WNW",
-        "windGust": "3",
-        "windGustDir": "N/A",
+        "windGust": "4",
+        "windGustDir": "W",
         "windcompass": "WNW",
         "rainRate": "0.0",
         "rain": "0.0"
@@ -40,16 +40,16 @@
         "outTemp": {
             "max": "15.1",
             "maxtime": "1723521669",
-            "min": "13.8",
-            "mintime": "1723538263"
+            "min": "13.7",
+            "mintime": "1723538901"
         },
         "heatindex": {
             "max": "15.3",
             "maxtime": "1723521669"
         },
         "windchill": {
-            "max": "13.8",
-            "maxtime": "1723538263"
+            "max": "13.7",
+            "maxtime": "1723538901"
         },
         "humidity": {
             "max": "99",
@@ -61,7 +61,7 @@
             "max": "15.0",
             "maxtime": "1723521669",
             "min": "13.6",
-            "mintime": "1723538263"
+            "mintime": "1723538901"
         },
         "barometer": {
             "max": "   N/A",
@@ -261,12 +261,12 @@
         }
     },
     "almanac": {
-        "sunrise": "05:48:40 AM",
-        "sunrise_epoch": "1723542520.0053735",
+        "sunrise": "05:48:39 AM",
+        "sunrise_epoch": "1723542519.988653",
         "sunrise_hour": "05",
         "sunrise_minute": "48",
         "sunset": "07:58:50 PM",
-        "sunset_epoch": "1723593530.4066715",
+        "sunset_epoch": "1723593530.4233286",
         "sunset_hour": "19",
         "sunset_minute": "58",
         "moon": {
