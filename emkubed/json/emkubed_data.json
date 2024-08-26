@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "1007092 seconds",
-    "serveruptime": "1391860 seconds",
+    "weewxuptime": "1007401 seconds",
+    "serveruptime": "1392169 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,32 +20,32 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1724645100",
+        "datetime": "1724645400",
         "outTemp": "17.9",
         "outHumidity": "95",
         "windchill": "17.9",
-        "heatindex": "18.2",
+        "heatindex": "18.3",
         "dewpoint": "17.1",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
         "windspeed": "2",
-        "winddir": "NNE",
+        "winddir": "NE",
         "windGust": "3",
         "windGustDir": "N/A",
-        "windcompass": "NNE",
+        "windcompass": "NE",
         "rainRate": "0.0",
         "rain": "0.0"
     },
     "day": {
         "outTemp": {
-            "max": "17.9",
-            "maxtime": "1724644813",
+            "max": "18.0",
+            "maxtime": "1724645301",
             "min": "17.9",
             "mintime": "1724644813"
         },
         "heatindex": {
-            "max": "18.2",
-            "maxtime": "1724644813"
+            "max": "18.3",
+            "maxtime": "1724645301"
         },
         "windchill": {
             "max": "17.9",
@@ -58,8 +58,8 @@
             "mintime": "1724644813"
         },
         "dewpoint": {
-            "max": "17.1",
-            "maxtime": "1724645100",
+            "max": "17.2",
+            "maxtime": "1724645301",
             "min": "17.1",
             "mintime": "1724644813"
         },
@@ -262,15 +262,15 @@
     },
     "almanac": {
         "sunrise": "06:04:20 AM",
-        "sunrise_epoch": "1724666660.6829495",
+        "sunrise_epoch": "1724666660.7139988",
         "sunrise_hour": "06",
         "sunrise_minute": "04",
         "sunset": "07:36:51 PM",
-        "sunset_epoch": "1724715411.074607",
+        "sunset_epoch": "1724715411.043664",
         "sunset_hour": "19",
         "sunset_minute": "36",
         "moon": {
-            "moon_fullness": "53",
+            "moon_fullness": "52",
             "moon_phase": "Last quarter"
         }
     }
