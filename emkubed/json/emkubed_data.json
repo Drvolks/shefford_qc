@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "1205989 seconds",
-    "serveruptime": "1590757 seconds",
+    "weewxuptime": "1206288 seconds",
+    "serveruptime": "1591056 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,18 +20,18 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1724844000",
-        "outTemp": "16.5",
+        "datetime": "1724844300",
+        "outTemp": "16.3",
         "outHumidity": "99",
-        "windchill": "16.5",
-        "heatindex": "16.8",
-        "dewpoint": "16.3",
+        "windchill": "16.3",
+        "heatindex": "16.6",
+        "dewpoint": "16.2",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
-        "windspeed": "2",
+        "windspeed": "1",
         "winddir": "SW",
         "windGust": "4",
-        "windGustDir": "SW",
+        "windGustDir": "N/A",
         "windcompass": "SW",
         "rainRate": "0.0",
         "rain": "0.0"
@@ -40,16 +40,16 @@
         "outTemp": {
             "max": "21.6",
             "maxtime": "1724817616",
-            "min": "16.4",
-            "mintime": "1724843866"
+            "min": "16.2",
+            "mintime": "1724844241"
         },
         "heatindex": {
             "max": "21.8",
             "maxtime": "1724818366"
         },
         "windchill": {
-            "max": "16.4",
-            "maxtime": "1724843866"
+            "max": "16.2",
+            "maxtime": "1724844241"
         },
         "humidity": {
             "max": "99",
@@ -261,12 +261,12 @@
         }
     },
     "almanac": {
-        "sunrise": "06:06:44 AM",
-        "sunrise_epoch": "1724839604.0579388",
+        "sunrise": "06:06:43 AM",
+        "sunrise_epoch": "1724839603.9367201",
         "sunrise_hour": "06",
         "sunrise_minute": "06",
         "sunset": "07:33:17 PM",
-        "sunset_epoch": "1724887997.0394623",
+        "sunset_epoch": "1724887997.1602755",
         "sunset_hour": "19",
         "sunset_minute": "33",
         "moon": {
