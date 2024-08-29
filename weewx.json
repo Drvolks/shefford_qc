@@ -9,26 +9,26 @@
     },
     "generation":
     {
-        "time": "2024-08-29T01:00:00-0400",
+        "time": "2024-08-29T01:05:00-0400",
         "generator": "weewx 5.1.0"
     },
     "current":
     {
-        "temperature": {"value": 11.18037500000001, "units": "°C"},
-        "dewpoint": {"value": 9.031674432701623, "units": "°C"},
-        "humidity": {"value": 86.625, "units": "%"},
-        "heat index": {"value": 10.61584305555557, "units": "°C"},
-        "wind speed": {"value": 4.0593465702221625, "units": "km/h"},
-        "wind gust": {"value": 8.4499973857728, "units": "km/h"},
-        "wind direction": {"value": 157.58169496269193, "units": "°"},
-        "wind chill": {"value": 11.18037500000001, "units": "°C"},
+        "temperature": {"value": 11.111000000000011, "units": "°C"},
+        "dewpoint": {"value": 8.957826362102802, "units": "°C"},
+        "humidity": {"value": 86.5909090909091, "units": "%"},
+        "heat index": {"value": 10.538640404040407, "units": "°C"},
+        "wind speed": {"value": 4.198453246553473, "units": "km/h"},
+        "wind gust": {"value": 10.105996873446145, "units": "km/h"},
+        "wind direction": {"value": 152.25594711303742, "units": "°"},
+        "wind chill": {"value": 11.111000000000011, "units": "°C"},
         "rain rate": {"value": 0.0, "units": "cm/h"},
         "void_end": null
     },
     "day":
     {
         "max temperature": {"value": 11.778, "units": "°C", "at": "12:00:18 AM"},
-        "min temperature": {"value": 11.111, "units": "°C", "at": "12:58:07 AM"},
+        "min temperature": {"value": 10.999999999999998, "units": "°C", "at": "01:05:00 AM"},
         "max dewpoint": {"value": 9.198022280508127, "units": "°C", "at": "12:58:07 AM"},
         "min dewpoint": {"value": 8.495714170192857, "units": "°C", "at": "12:44:59 AM"},
         "max humidity": {"value": 88.0, "units": "%", "at": "12:58:07 AM"},
@@ -42,7 +42,7 @@
     "week":
     {
         "max temperature": {"value": 28.277999999999995, "units": "°C", "at": "12:26:11 PM (Tuesday)"},
-        "min temperature": {"value": 11.111, "units": "°C", "at": "12:58:07 AM (Thursday)"},
+        "min temperature": {"value": 10.999999999999998, "units": "°C", "at": "01:05:00 AM (Thursday)"},
         "max dewpoint": {"value": 21.181393220541015, "units": "°C", "at": "12:25:33 PM (Tuesday)"},
         "min dewpoint": {"value": 8.495714170192857, "units": "°C", "at": "12:44:59 AM (Thursday)"},
         "max humidity": {"value": 99.0, "units": "%", "at": "07:50:50 AM (Sunday)"},
