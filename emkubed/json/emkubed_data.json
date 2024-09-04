@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "1817089 seconds",
-    "serveruptime": "2201857 seconds",
+    "weewxuptime": "1817389 seconds",
+    "serveruptime": "2202157 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,18 +20,18 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1725455100",
-        "outTemp": "17.3",
+        "datetime": "1725455400",
+        "outTemp": "17.2",
         "outHumidity": "75",
-        "windchill": "17.3",
-        "heatindex": "17.1",
+        "windchill": "17.2",
+        "heatindex": "17.0",
         "dewpoint": "12.8",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
         "windspeed": "3",
         "winddir": "W",
-        "windGust": "4",
-        "windGustDir": "SW",
+        "windGust": "7",
+        "windGustDir": "W",
         "windcompass": "W",
         "rainRate": "0.0",
         "rain": "0.0"
@@ -58,8 +58,8 @@
             "mintime": "1725454723"
         },
         "dewpoint": {
-            "max": "12.9",
-            "maxtime": "1725454910",
+            "max": "13.0",
+            "maxtime": "1725455173",
             "min": "10.9",
             "mintime": "1725447973"
         },
@@ -75,9 +75,9 @@
             "maxtime": "1725422410"
         },        
         "wind": {
-            "max": "6",
-            "maxtime": "1725454160",
-            "gustdir": "   N/A"
+            "max": "7",
+            "maxtime": "1725455379",
+            "gustdir": "270&#176;"
         },
         "uv": {
             "max": "   N/A",
@@ -262,11 +262,11 @@
     },
     "almanac": {
         "sunrise": "06:15:09 AM",
-        "sunrise_epoch": "1725444909.8393075",
+        "sunrise_epoch": "1725444909.7882109",
         "sunrise_hour": "06",
         "sunrise_minute": "15",
         "sunset": "07:20:24 PM",
-        "sunset_epoch": "1725492024.7785687",
+        "sunset_epoch": "1725492024.8295095",
         "sunset_hour": "19",
         "sunset_minute": "20",
         "moon": {
