@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "2056494 seconds",
-    "serveruptime": "2441263 seconds",
+    "weewxuptime": "2056794 seconds",
+    "serveruptime": "2441562 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,19 +20,19 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1725694500",
-        "outTemp": "14.6",
+        "datetime": "1725694800",
+        "outTemp": "14.5",
         "outHumidity": "92",
-        "windchill": "14.6",
-        "heatindex": "14.5",
-        "dewpoint": "13.3",
+        "windchill": "14.5",
+        "heatindex": "14.4",
+        "dewpoint": "13.2",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
-        "windspeed": "3",
-        "winddir": "E",
-        "windGust": "5",
-        "windGustDir": "ENE",
-        "windcompass": "E",
+        "windspeed": "2",
+        "winddir": "ENE",
+        "windGust": "4",
+        "windGustDir": "N/A",
+        "windcompass": "ENE",
         "rainRate": "0.0",
         "rain": "0.0"
     },
@@ -41,7 +41,7 @@
             "max": "16.1",
             "maxtime": "1725681603",
             "min": "14.5",
-            "mintime": "1725694466"
+            "mintime": "1725694800"
         },
         "heatindex": {
             "max": "15.9",
@@ -49,7 +49,7 @@
         },
         "windchill": {
             "max": "14.5",
-            "maxtime": "1725694466"
+            "maxtime": "1725694800"
         },
         "humidity": {
             "max": "92",
@@ -261,12 +261,12 @@
         }
     },
     "almanac": {
-        "sunrise": "06:18:44 AM",
-        "sunrise_epoch": "1725704324.0628214",
+        "sunrise": "06:18:43 AM",
+        "sunrise_epoch": "1725704323.9903972",
         "sunrise_hour": "06",
         "sunrise_minute": "18",
         "sunset": "07:14:48 PM",
-        "sunset_epoch": "1725750888.8921928",
+        "sunset_epoch": "1725750888.9644048",
         "sunset_hour": "19",
         "sunset_minute": "14",
         "moon": {
