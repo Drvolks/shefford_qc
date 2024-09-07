@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "2051691 seconds",
-    "serveruptime": "2436459 seconds",
+    "weewxuptime": "2051994 seconds",
+    "serveruptime": "2436762 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,18 +20,18 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1725689700",
-        "outTemp": "15.2",
-        "outHumidity": "88",
-        "windchill": "15.2",
-        "heatindex": "15.1",
+        "datetime": "1725690000",
+        "outTemp": "15.1",
+        "outHumidity": "89",
+        "windchill": "15.1",
+        "heatindex": "15.0",
         "dewpoint": "13.3",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
-        "windspeed": "3",
+        "windspeed": "2",
         "winddir": "E",
-        "windGust": "6",
-        "windGustDir": "ESE",
+        "windGust": "3",
+        "windGustDir": "E",
         "windcompass": "E",
         "rainRate": "0.0",
         "rain": "0.0"
@@ -40,16 +40,16 @@
         "outTemp": {
             "max": "16.1",
             "maxtime": "1725681603",
-            "min": "15.2",
-            "mintime": "1725689478"
+            "min": "15.1",
+            "mintime": "1725689741"
         },
         "heatindex": {
             "max": "15.9",
             "maxtime": "1725681603"
         },
         "windchill": {
-            "max": "15.2",
-            "maxtime": "1725689478"
+            "max": "15.1",
+            "maxtime": "1725689741"
         },
         "humidity": {
             "max": "89",
@@ -262,11 +262,11 @@
     },
     "almanac": {
         "sunrise": "06:18:44 AM",
-        "sunrise_epoch": "1725704324.5379965",
+        "sunrise_epoch": "1725704324.4554968",
         "sunrise_hour": "06",
         "sunrise_minute": "18",
         "sunset": "07:14:48 PM",
-        "sunset_epoch": "1725750888.4184086",
+        "sunset_epoch": "1725750888.500667",
         "sunset_hour": "19",
         "sunset_minute": "14",
         "moon": {
