@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "122505 seconds",
-    "serveruptime": "122507 seconds",
+    "weewxuptime": "122805 seconds",
+    "serveruptime": "122808 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,19 +20,19 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1726130400",
+        "datetime": "1726130700",
         "outTemp": "15.1",
         "outHumidity": "78",
         "windchill": "15.1",
-        "heatindex": "14.7",
-        "dewpoint": "11.4",
+        "heatindex": "14.6",
+        "dewpoint": "11.2",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
         "windspeed": "0",
-        "winddir": "N/A",
-        "windGust": "0",
+        "winddir": "NNE",
+        "windGust": "2",
         "windGustDir": "N/A",
-        "windcompass": "N/A",
+        "windcompass": "NNE",
         "rainRate": "0.0",
         "rain": "0.0"
     },
@@ -40,16 +40,16 @@
         "outTemp": {
             "max": "16.1",
             "maxtime": "1726115621",
-            "min": "15.1",
-            "mintime": "1726130134"
+            "min": "15.0",
+            "mintime": "1726130584"
         },
         "heatindex": {
             "max": "15.8",
             "maxtime": "1726115846"
         },
         "windchill": {
-            "max": "15.1",
-            "maxtime": "1726130134"
+            "max": "15.0",
+            "maxtime": "1726130584"
         },
         "humidity": {
             "max": "81",
@@ -262,15 +262,15 @@
     },
     "almanac": {
         "sunrise": "06:24:44 AM",
-        "sunrise_epoch": "1726136684.6720433",
+        "sunrise_epoch": "1726136684.631072",
         "sunrise_hour": "06",
         "sunrise_minute": "24",
         "sunset": "07:05:18 PM",
-        "sunset_epoch": "1726182318.748277",
+        "sunset_epoch": "1726182318.7891374",
         "sunset_hour": "19",
         "sunset_minute": "05",
         "moon": {
-            "moon_fullness": "61",
+            "moon_fullness": "62",
             "moon_phase": "First quarter"
         }
     }
