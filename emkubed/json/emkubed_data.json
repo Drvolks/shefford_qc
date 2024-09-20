@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "198756 seconds",
-    "serveruptime": "198759 seconds",
+    "weewxuptime": "199065 seconds",
+    "serveruptime": "199068 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,18 +20,18 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1726810200",
-        "outTemp": "18.4",
-        "outHumidity": "85",
-        "windchill": "18.4",
-        "heatindex": "18.5",
+        "datetime": "1726810500",
+        "outTemp": "18.3",
+        "outHumidity": "86",
+        "windchill": "18.3",
+        "heatindex": "18.4",
         "dewpoint": "15.9",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
-        "windspeed": "5",
+        "windspeed": "4",
         "winddir": "SSE",
-        "windGust": "7",
-        "windGustDir": "SSW",
+        "windGust": "6",
+        "windGustDir": "N/A",
         "windcompass": "SSE",
         "rainRate": "0.0",
         "rain": "0.0"
@@ -40,16 +40,16 @@
         "outTemp": {
             "max": "18.8",
             "maxtime": "1726805100",
-            "min": "18.4",
-            "mintime": "1726807827"
+            "min": "18.3",
+            "mintime": "1726810303"
         },
         "heatindex": {
             "max": "18.9",
             "maxtime": "1726805100"
         },
         "windchill": {
-            "max": "18.4",
-            "maxtime": "1726807827"
+            "max": "18.3",
+            "maxtime": "1726810303"
         },
         "humidity": {
             "max": "86",
@@ -262,11 +262,11 @@
     },
     "almanac": {
         "sunrise": "06:34:25 AM",
-        "sunrise_epoch": "1726828465.10087",
+        "sunrise_epoch": "1726828465.0411086",
         "sunrise_hour": "06",
         "sunrise_minute": "34",
         "sunset": "06:49:56 PM",
-        "sunset_epoch": "1726872596.1019738",
+        "sunset_epoch": "1726872596.1615963",
         "sunset_hour": "18",
         "sunset_minute": "49",
         "moon": {
