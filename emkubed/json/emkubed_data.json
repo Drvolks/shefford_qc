@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "468157 seconds",
-    "serveruptime": "468160 seconds",
+    "weewxuptime": "468453 seconds",
+    "serveruptime": "468456 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,7 +20,7 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1727079600",
+        "datetime": "1727079900",
         "outTemp": "11.8",
         "outHumidity": "77",
         "windchill": "11.8",
@@ -28,10 +28,10 @@
         "dewpoint": "7.9",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
-        "windspeed": "3",
+        "windspeed": "4",
         "winddir": "E",
-        "windGust": "6",
-        "windGustDir": "N/A",
+        "windGust": "9",
+        "windGustDir": "ENE",
         "windcompass": "E",
         "rainRate": "0.0",
         "rain": "0.0"
@@ -262,15 +262,15 @@
     },
     "almanac": {
         "sunrise": "06:37:58 AM",
-        "sunrise_epoch": "1727087878.8826563",
+        "sunrise_epoch": "1727087878.861825",
         "sunrise_hour": "06",
         "sunrise_minute": "37",
         "sunset": "06:44:15 PM",
-        "sunset_epoch": "1727131455.7871814",
+        "sunset_epoch": "1727131455.8079674",
         "sunset_hour": "18",
         "sunset_minute": "44",
         "moon": {
-            "moon_fullness": "66",
+            "moon_fullness": "65",
             "moon_phase": "Waning gibbous"
         }
     }
