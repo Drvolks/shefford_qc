@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "200052 seconds",
-    "serveruptime": "200055 seconds",
+    "weewxuptime": "200345 seconds",
+    "serveruptime": "200348 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,19 +20,19 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1727763600",
-        "outTemp": "14.3",
-        "outHumidity": "84",
-        "windchill": "14.3",
-        "heatindex": "13.9",
-        "dewpoint": "11.6",
+        "datetime": "1727763900",
+        "outTemp": "14.4",
+        "outHumidity": "83",
+        "windchill": "14.4",
+        "heatindex": "14.0",
+        "dewpoint": "11.5",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
-        "windspeed": "1",
-        "winddir": "NE",
-        "windGust": "3",
-        "windGustDir": "NE",
-        "windcompass": "NE",
+        "windspeed": "3",
+        "winddir": "ENE",
+        "windGust": "4",
+        "windGustDir": "N/A",
+        "windcompass": "ENE",
         "rainRate": "0.0",
         "rain": "0.0"
     },
@@ -59,7 +59,7 @@
         },
         "dewpoint": {
             "max": "11.6",
-            "maxtime": "1727763389",
+            "maxtime": "1727763876",
             "min": "9.8",
             "mintime": "1727755326"
         },
@@ -171,7 +171,7 @@
         },
         "dewpoint": {
             "max": "11.6",
-            "maxtime": "1727763389",
+            "maxtime": "1727763876",
             "min": "9.8",
             "mintime": "1727755326"
         },
@@ -262,11 +262,11 @@
     },
     "almanac": {
         "sunrise": "06:47:52 AM",
-        "sunrise_epoch": "1727779672.2008247",
+        "sunrise_epoch": "1727779672.2830286",
         "sunrise_hour": "06",
         "sunrise_minute": "47",
         "sunset": "06:29:02 PM",
-        "sunset_epoch": "1727821742.3321972",
+        "sunset_epoch": "1727821742.2501428",
         "sunset_hour": "18",
         "sunset_minute": "29",
         "moon": {
