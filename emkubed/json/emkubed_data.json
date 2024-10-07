@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "709752 seconds",
-    "serveruptime": "709755 seconds",
+    "weewxuptime": "710052 seconds",
+    "serveruptime": "710055 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,21 +20,21 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1728273300",
+        "datetime": "1728273600",
         "outTemp": "9.7",
         "outHumidity": "99",
-        "windchill": "9.6",
+        "windchill": "9.7",
         "heatindex": "9.3",
         "dewpoint": "9.6",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
         "windspeed": "4",
-        "winddir": "E",
+        "winddir": "ENE",
         "windGust": "5",
-        "windGustDir": "NW",
-        "windcompass": "E",
-        "rainRate": "0.32990117647057315",
-        "rain": "0.050799999999994405"
+        "windGustDir": "ENE",
+        "windcompass": "ENE",
+        "rainRate": "0.557260606060603",
+        "rain": "0.05080000000000794"
     },
     "day": {
         "outTemp": {
@@ -70,7 +70,7 @@
             "mintime": ""
         },
         "rain": {
-            "sum": "0.74",
+            "sum": "0.79",
             "max": "1.83",
             "maxtime": "1728269516"
         },        
@@ -126,7 +126,7 @@
             "mintime": ""
         },
         "rain": {
-            "sum": "0.74",
+            "sum": "0.79",
             "max": "1.83",
             "maxtime": "1728269516"
         },        
@@ -182,7 +182,7 @@
             "mintime": ""
         },
         "rain": {
-            "sum": "1.32",
+            "sum": "1.37",
             "max": "1.83",
             "maxtime": "1728269516"
         },        
@@ -238,7 +238,7 @@
             "mintime": ""
         },
         "rain": {
-            "sum": "20.93",
+            "sum": "20.98",
             "max": "3.86",
             "maxtime": "1723220444"
         },        
@@ -261,14 +261,14 @@
         }
     },
     "almanac": {
-        "sunrise": "06:54:06 AM",
-        "sunrise_epoch": "1728212046.069251",
+        "sunrise": "06:55:22 AM",
+        "sunrise_epoch": "1728298522.2955463",
         "sunrise_hour": "06",
-        "sunrise_minute": "54",
-        "sunset": "06:19:47 PM",
-        "sunset_epoch": "1728253187.5473826",
+        "sunrise_minute": "55",
+        "sunset": "06:17:57 PM",
+        "sunset_epoch": "1728339477.402314",
         "sunset_hour": "18",
-        "sunset_minute": "19",
+        "sunset_minute": "17",
         "moon": {
             "moon_fullness": "17",
             "moon_phase": "Waxing crescent"
