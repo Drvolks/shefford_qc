@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "887644 seconds",
-    "serveruptime": "887647 seconds",
+    "weewxuptime": "887953 seconds",
+    "serveruptime": "887956 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,19 +20,19 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1728451200",
+        "datetime": "1728451500",
         "outTemp": "6.7",
-        "outHumidity": "92",
+        "outHumidity": "93",
         "windchill": "6.7",
-        "heatindex": "5.9",
+        "heatindex": "5.8",
         "dewpoint": "5.6",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
-        "windspeed": "1",
-        "winddir": "SE",
-        "windGust": "2",
-        "windGustDir": "N/A",
-        "windcompass": "SE",
+        "windspeed": "0",
+        "winddir": "NW",
+        "windGust": "3",
+        "windGustDir": "NW",
+        "windcompass": "NW",
         "rainRate": "0.0",
         "rain": "0.0"
     },
@@ -40,20 +40,20 @@
         "outTemp": {
             "max": "7.4",
             "maxtime": "1728446700",
-            "min": "6.7",
-            "mintime": "1728450796"
+            "min": "6.6",
+            "mintime": "1728451359"
         },
         "heatindex": {
             "max": "6.4",
             "maxtime": "1728446634"
         },
         "windchill": {
-            "max": "6.7",
-            "maxtime": "1728450796"
+            "max": "6.6",
+            "maxtime": "1728451359"
         },
         "humidity": {
-            "max": "93",
-            "maxtime": "1728451096",
+            "max": "94",
+            "maxtime": "1728451471",
             "min": "84",
             "mintime": "1728446409"
         },
@@ -262,11 +262,11 @@
     },
     "almanac": {
         "sunrise": "06:57:53 AM",
-        "sunrise_epoch": "1728471473.2048433",
+        "sunrise_epoch": "1728471473.1611469",
         "sunrise_hour": "06",
         "sunrise_minute": "57",
         "sunset": "06:14:21 PM",
-        "sunset_epoch": "1728512061.1895187",
+        "sunset_epoch": "1728512061.233151",
         "sunset_hour": "18",
         "sunset_minute": "14",
         "moon": {
