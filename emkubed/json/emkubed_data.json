@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "1449544 seconds",
-    "serveruptime": "1449547 seconds",
+    "weewxuptime": "1449855 seconds",
+    "serveruptime": "1449858 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,21 +20,21 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1729013100",
-        "outTemp": "5.0",
+        "datetime": "1729013400",
+        "outTemp": "4.7",
         "outHumidity": "99",
-        "windchill": "5.0",
-        "heatindex": "4.1",
-        "dewpoint": "4.8",
+        "windchill": "4.6",
+        "heatindex": "3.8",
+        "dewpoint": "4.6",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
-        "windspeed": "0",
-        "winddir": "N/A",
-        "windGust": "0",
-        "windGustDir": "N/A",
-        "windcompass": "N/A",
-        "rainRate": "0.04340194174757189",
-        "rain": "0.025399999999999458"
+        "windspeed": "2",
+        "winddir": "NNW",
+        "windGust": "8",
+        "windGustDir": "SW",
+        "windcompass": "NNW",
+        "rainRate": "0.10159999999999783",
+        "rain": "0.0"
     },
     "day": {
         "outTemp": {
@@ -75,9 +75,9 @@
             "maxtime": "1728969851"
         },        
         "wind": {
-            "max": "7",
-            "maxtime": "1728998258",
-            "gustdir": "   N/A"
+            "max": "8",
+            "maxtime": "1729013127",
+            "gustdir": "225&#176;"
         },
         "uv": {
             "max": "   N/A",
@@ -261,12 +261,12 @@
         }
     },
     "almanac": {
-        "sunrise": "07:05:38 AM",
-        "sunrise_epoch": "1728990338.032639",
+        "sunrise": "07:05:37 AM",
+        "sunrise_epoch": "1728990337.8198738",
         "sunrise_hour": "07",
         "sunrise_minute": "05",
         "sunset": "06:03:43 PM",
-        "sunset_epoch": "1729029823.229511",
+        "sunset_epoch": "1729029823.4420147",
         "sunset_hour": "18",
         "sunset_minute": "03",
         "moon": {
