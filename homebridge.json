@@ -4,10 +4,11 @@
         "stationID": "Shefford, QC",
         "softwareType": "weewx 5.1.0",
         "realtimeFrequency": "5.0 minutes",
-        "rainbool": true,
+        "rainbool": false,
         "lon": -72.3529,
-        "epoch": 1729043100,
+        "epoch": 1729043400,
         "lat": 45.2043,
+        "winddir": 270.0,
         "humidity": 99.0,
         "imperial": {
                         "temp": 34.70000000000001,
@@ -15,9 +16,9 @@
                         "mintemp": 34.199600000000004,
                         "apptemp": 31.500743852968327,
                         "dewpt": 34.4480005158947,
-                        "windSpeed": 0.0,
-                        "windGust": 0.0,
-                        "precipRate": 0.03689320384586329,
+                        "windSpeed": 0.14114612427306383,
+                        "windGust": 2.164240572186979,
+                        "precipRate": 0.039999999959199145,
                         "rainday": 0.39000000000000057
         },
         "metric": {
@@ -26,9 +27,9 @@
                         "mintemp": 1.222000000000002,
                         "apptemp": -0.2773645261287072,
                         "dewpt": 1.3600002866081655,
-                        "windSpeed": 0.0,
-                        "windGust": 0.0,
-                        "precipRate": 0.9370873786407568,
+                        "windSpeed": 0.22715210363761257,
+                        "windGust": 3.4829989224433926,
+                        "precipRate": 1.0159999999999783,
                         "rainday": 9.906000000000015
         },
         "metric_si": {
@@ -37,9 +38,9 @@
                         "mintemp": 1.222000000000002,
                         "apptemp": -0.2773645261287072,
                         "dewpt": 1.3600002866081655,
-                        "windSpeed": 0.0,
-                        "windGust": 0.0,
-                        "precipRate": 0.9370873786407568,
+                        "windSpeed": 0.06309780661648173,
+                        "windGust": 0.9674997014527198,
+                        "precipRate": 1.0159999999999783,
                         "rainday": 9.906000000000015
         },
         "uk_hybrid": {
@@ -48,9 +49,9 @@
                         "mintemp": 1.222000000000002,
                         "apptemp": -0.2773645261287072,
                         "dewpt": 1.3600002866081655,
-                        "windSpeed": 0.0,
-                        "windGust": 0.0,
-                        "precipRate": 0.9370873786407568,
+                        "windSpeed": 0.14114612427306383,
+                        "windGust": 2.164240572186979,
+                        "precipRate": 1.0159999999999783,
                         "rainday": 9.906000000000015
         }
     }
