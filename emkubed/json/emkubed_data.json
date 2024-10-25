@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "205348 seconds",
-    "serveruptime": "205351 seconds",
+    "weewxuptime": "205648 seconds",
+    "serveruptime": "205651 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,19 +20,19 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1729839000",
+        "datetime": "1729839300",
         "outTemp": "2.2",
-        "outHumidity": "91",
+        "outHumidity": "92",
         "windchill": "2.2",
         "heatindex": "2.2",
-        "dewpoint": "0.9",
+        "dewpoint": "1.0",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
         "windspeed": "1",
-        "winddir": "N",
-        "windGust": "2",
-        "windGustDir": "NNW",
-        "windcompass": "N",
+        "winddir": "WNW",
+        "windGust": "3",
+        "windGustDir": "N/A",
+        "windcompass": "WNW",
         "rainRate": "0.0",
         "rain": "0.0"
     },
@@ -60,8 +60,8 @@
         "dewpoint": {
             "max": "2.3",
             "maxtime": "1729829475",
-            "min": "0.9",
-            "mintime": "1729838363"
+            "min": "0.8",
+            "mintime": "1729839300"
         },
         "barometer": {
             "max": "   N/A",
@@ -116,8 +116,8 @@
         "dewpoint": {
             "max": "13.8",
             "maxtime": "1729624452",
-            "min": "0.9",
-            "mintime": "1729838363"
+            "min": "0.8",
+            "mintime": "1729839300"
         },
         "barometer": {
             "max": "   N/A",
@@ -270,7 +270,7 @@
         "sunset_hour": "17",
         "sunset_minute": "47",
         "moon": {
-            "moon_fullness": "41",
+            "moon_fullness": "40",
             "moon_phase": "Last quarter"
         }
     }
