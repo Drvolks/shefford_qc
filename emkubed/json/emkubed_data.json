@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "454348 seconds",
-    "serveruptime": "454351 seconds",
+    "weewxuptime": "454658 seconds",
+    "serveruptime": "454661 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,48 +20,48 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1730088000",
-        "outTemp": "-2.8",
+        "datetime": "1730088300",
+        "outTemp": "-2.9",
         "outHumidity": "59",
-        "windchill": "-2.8",
-        "heatindex": "-2.8",
-        "dewpoint": "-9.7",
+        "windchill": "-2.9",
+        "heatindex": "-2.9",
+        "dewpoint": "-9.8",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
-        "windspeed": "2",
-        "winddir": "NNE",
-        "windGust": "3",
+        "windspeed": "3",
+        "winddir": "NE",
+        "windGust": "4",
         "windGustDir": "N/A",
-        "windcompass": "NNE",
+        "windcompass": "NE",
         "rainRate": "0.0",
         "rain": "0.0"
     },
     "day": {
         "outTemp": {
-            "max": "4.5",
-            "maxtime": "1730059200",
-            "min": "-2.8",
-            "mintime": "1730087400"
+            "max": "-2.8",
+            "maxtime": "1730088010",
+            "min": "-2.9",
+            "mintime": "1730088048"
         },
         "heatindex": {
-            "max": "4.4",
-            "maxtime": "1730058460"
+            "max": "-2.8",
+            "maxtime": "1730088010"
         },
         "windchill": {
-            "max": "-4.1",
-            "maxtime": "1730017000"
+            "max": "-2.9",
+            "maxtime": "1730088048"
         },
         "humidity": {
-            "max": "78",
-            "maxtime": "1730027201",
-            "min": "41",
-            "mintime": "1730071585"
+            "max": "60",
+            "maxtime": "1730088160",
+            "min": "58",
+            "mintime": "1730088048"
         },
         "dewpoint": {
-            "max": "0.2",
-            "maxtime": "1730055422",
-            "min": "-10.5",
-            "mintime": "1730081823"
+            "max": "-9.6",
+            "maxtime": "1730088160",
+            "min": "-10.0",
+            "mintime": "1730088048"
         },
         "barometer": {
             "max": "   N/A",
@@ -72,11 +72,11 @@
         "rain": {
             "sum": "0.00",
             "max": "0.00",
-            "maxtime": "1730001603"
+            "maxtime": "1730088003"
         },        
         "wind": {
-            "max": "13",
-            "maxtime": "1730052684",
+            "max": "4",
+            "maxtime": "1730088273",
             "gustdir": "   N/A"
         },
         "uv": {
@@ -96,8 +96,8 @@
         "outTemp": {
             "max": "4.5",
             "maxtime": "1730059200",
-            "min": "-2.8",
-            "mintime": "1730087400"
+            "min": "-2.9",
+            "mintime": "1730088048"
         },
         "heatindex": {
             "max": "4.4",
@@ -152,8 +152,8 @@
         "outTemp": {
             "max": "26.7",
             "maxtime": "1729700956",
-            "min": "-2.8",
-            "mintime": "1730087400"
+            "min": "-2.9",
+            "mintime": "1730088048"
         },
         "heatindex": {
             "max": "26.2",
@@ -208,8 +208,8 @@
         "outTemp": {
             "max": "29.8",
             "maxtime": "1723912277",
-            "min": "-2.8",
-            "mintime": "1730087400"
+            "min": "-2.9",
+            "mintime": "1730088048"
         },
         "heatindex": {
             "max": "32.3",
@@ -262,11 +262,11 @@
     },
     "almanac": {
         "sunrise": "07:22:57 AM",
-        "sunrise_epoch": "1730114577.9593763",
+        "sunrise_epoch": "1730114577.8745222",
         "sunrise_hour": "07",
         "sunrise_minute": "22",
         "sunset": "05:42:40 PM",
-        "sunset_epoch": "1730151760.4582007",
+        "sunset_epoch": "1730151760.5429888",
         "sunset_hour": "17",
         "sunset_minute": "42",
         "moon": {
