@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "545546 seconds",
-    "serveruptime": "545549 seconds",
+    "weewxuptime": "545845 seconds",
+    "serveruptime": "545848 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,19 +20,19 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1730179200",
-        "outTemp": "0.6",
-        "outHumidity": "41",
-        "windchill": "0.6",
-        "heatindex": "0.6",
-        "dewpoint": "-11.2",
+        "datetime": "1730179500",
+        "outTemp": "0.5",
+        "outHumidity": "42",
+        "windchill": "0.5",
+        "heatindex": "0.5",
+        "dewpoint": "-11.0",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
-        "windspeed": "2",
-        "winddir": "ESE",
+        "windspeed": "1",
+        "winddir": "ENE",
         "windGust": "3",
-        "windGustDir": "E",
-        "windcompass": "ESE",
+        "windGustDir": "ENE",
+        "windcompass": "ENE",
         "rainRate": "0.0",
         "rain": "0.0"
     },
@@ -52,14 +52,14 @@
             "maxtime": "1730177754"
         },
         "humidity": {
-            "max": "41",
-            "maxtime": "1730179029",
+            "max": "43",
+            "maxtime": "1730179442",
             "min": "37",
             "mintime": "1730177379"
         },
         "dewpoint": {
-            "max": "-11.1",
-            "maxtime": "1730179029",
+            "max": "-10.6",
+            "maxtime": "1730179442",
             "min": "-12.9",
             "mintime": "1730174529"
         },
@@ -262,11 +262,11 @@
     },
     "almanac": {
         "sunrise": "07:24:23 AM",
-        "sunrise_epoch": "1730201063.2995284",
+        "sunrise_epoch": "1730201063.204069",
         "sunrise_hour": "07",
         "sunrise_minute": "24",
         "sunset": "05:41:08 PM",
-        "sunset_epoch": "1730238068.2323506",
+        "sunset_epoch": "1730238068.3277383",
         "sunset_hour": "17",
         "sunset_minute": "41",
         "moon": {
