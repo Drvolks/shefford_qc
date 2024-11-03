@@ -9,28 +9,29 @@
     },
     "generation":
     {
-        "time": "2024-11-03T02:05:00-0500",
+        "time": "2024-11-03T02:10:00-0500",
         "generator": "weewx 5.1.0"
     },
     "current":
     {
-        "temperature": {"value": -3.0158571428571372, "units": "°C"},
-        "dewpoint": {"value": -4.7185169623538625, "units": "°C"},
-        "humidity": {"value": 88.0, "units": "%"},
-        "heat index": {"value": -3.0158571428571372, "units": "°C"},
-        "wind speed": {"value": 0.12186662896404482, "units": "km/h"},
-        "wind gust": {"value": 1.8279994344606723, "units": "km/h"},
-        "wind chill": {"value": -3.0158571428571372, "units": "°C"},
+        "temperature": {"value": -3.152625000000007, "units": "°C"},
+        "dewpoint": {"value": -4.685503324721167, "units": "°C"},
+        "humidity": {"value": 89.125, "units": "%"},
+        "heat index": {"value": -3.152625000000007, "units": "°C"},
+        "wind speed": {"value": 1.5672495151304644, "units": "km/h"},
+        "wind gust": {"value": 2.6559991782973444, "units": "km/h"},
+        "wind direction": {"value": 303.5143933070206, "units": "°"},
+        "wind chill": {"value": -3.152625000000007, "units": "°C"},
         "rain rate": {"value": 0.0, "units": "cm/h"},
         "void_end": null
     },
     "day":
     {
         "max temperature": {"value": -0.4999999999999933, "units": "°C", "at": "12:05:00 AM"},
-        "min temperature": {"value": -3.111000000000001, "units": "°C", "at": "02:04:48 AM"},
+        "min temperature": {"value": -3.2219999999999986, "units": "°C", "at": "02:08:33 AM"},
         "max dewpoint": {"value": -2.5493054206049037, "units": "°C", "at": "12:02:17 AM"},
         "min dewpoint": {"value": -4.81228451313348, "units": "°C", "at": "02:04:48 AM"},
-        "max humidity": {"value": 89.0, "units": "%", "at": "01:51:03 AM"},
+        "max humidity": {"value": 90.0, "units": "%", "at": "02:09:48 AM"},
         "min humidity": {"value": 81.0, "units": "%", "at": "01:14:10 AM"},
         "max wind speed": {"value": 2.024412417173452, "units": "km/h", "at": "01:20:00 AM"},
         "max wind gust": {"value": 5.966998153953408, "units": "km/h", "at": "01:25:00 AM"},
@@ -41,10 +42,10 @@
     "week":
     {
         "max temperature": {"value": -0.4999999999999933, "units": "°C", "at": "12:05:00 AM (Sunday)"},
-        "min temperature": {"value": -3.111000000000001, "units": "°C", "at": "02:04:48 AM (Sunday)"},
+        "min temperature": {"value": -3.2219999999999986, "units": "°C", "at": "02:08:33 AM (Sunday)"},
         "max dewpoint": {"value": -2.5493054206049037, "units": "°C", "at": "12:02:17 AM (Sunday)"},
         "min dewpoint": {"value": -4.81228451313348, "units": "°C", "at": "02:04:48 AM (Sunday)"},
-        "max humidity": {"value": 89.0, "units": "%", "at": "01:51:03 AM (Sunday)"},
+        "max humidity": {"value": 90.0, "units": "%", "at": "02:09:48 AM (Sunday)"},
         "min humidity": {"value": 81.0, "units": "%", "at": "01:14:10 AM (Sunday)"},
         "max wind speed": {"value": 2.024412417173452, "units": "km/h", "at": "01:20:00 AM (Sunday)"},
         "max wind gust": {"value": 5.966998153953408, "units": "km/h", "at": "01:25:00 AM (Sunday)"},
@@ -55,7 +56,7 @@
     "month":
     {
         "max temperature": {"value": 20.111000000000004, "units": "°C", "at": "2024-11-01 12:00:15 AM"},
-        "min temperature": {"value": -3.111000000000001, "units": "°C", "at": "2024-11-03 02:04:48 AM"},
+        "min temperature": {"value": -3.2219999999999986, "units": "°C", "at": "2024-11-03 02:08:33 AM"},
         "max dewpoint": {"value": 15.95338042567423, "units": "°C", "at": "2024-11-01 02:49:02 AM"},
         "min dewpoint": {"value": -4.81228451313348, "units": "°C", "at": "2024-11-03 02:04:48 AM"},
         "max humidity": {"value": 99.0, "units": "%", "at": "2024-11-01 02:49:02 AM"},
