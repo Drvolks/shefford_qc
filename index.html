@@ -167,7 +167,7 @@
             </a>
             <span>
                 <strong>Shefford, QC</strong><br>
-                <span class="font-small">2024-11-04 04:45:00 PM</span>
+                <span class="font-small">2024-11-04 04:55:00 PM</span>
             </span>
         </span>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -243,7 +243,7 @@
 
 
             <i class="wi wi-direction-down-right"
-               title="Trend: -1.9°C (3.0 hours)"
+               title="Trend: -1.4°C (3.0 hours)"
                data-toggle="tooltip"></i>
 
         </h3>
@@ -255,7 +255,7 @@
             (00:00)
           </div>
           <div class="col-6">
-            <h4 class="h2-responsive">4.5°C</h4>
+            <h4 class="h2-responsive">4.7°C</h4>
           </div>
           <div class="col-3 text-muted font-small hi-text">
             6.8°C <br>
@@ -279,7 +279,7 @@
 
 
             <i class="wi wi-direction-up-right"
-               title="Trend: 13% (3.0 hours)"
+               title="Trend: 10% (3.0 hours)"
                data-toggle="tooltip"></i>
 
         </h3>
@@ -291,7 +291,7 @@
             (12:41)
           </div>
           <div class="col-6">
-            <h4 class="h2-responsive">57%</h4>
+            <h4 class="h2-responsive">55%</h4>
           </div>
           <div class="col-3 text-muted font-small hi-text">
             69% <br>
@@ -330,7 +330,7 @@
           </div>
           <div class="col-6">
             <h4 class="h2-responsive">
-              3 km/h NNW
+              4 km/h NNW
             </h4>
           </div>
           <div class="col-3 text-muted font-small hi-text">
@@ -398,7 +398,7 @@
             (04:00)
           </div>
           <div class="col-6">
-            <h4 class="h2-responsive">-3.2°C</h4>
+            <h4 class="h2-responsive">-3.5°C</h4>
           </div>
           <div class="col-3 text-muted font-small hi-text">
             -2.2°C <br>
@@ -429,7 +429,7 @@
             (02:19)
           </div>
           <div class="col-6">
-            <h4 class="h2-responsive">4.3°C</h4>
+            <h4 class="h2-responsive">4.2°C</h4>
           </div>
           <div class="col-3 text-muted font-small hi-text">
             6.8°C <br>
@@ -460,7 +460,7 @@
             (00:00)
           </div>
           <div class="col-6">
-            <h4 class="h2-responsive">2.5°C</h4>
+            <h4 class="h2-responsive">2.7°C</h4>
           </div>
           <div class="col-3 text-muted font-small hi-text">
             4.7°C <br>
@@ -505,7 +505,7 @@
             (02:19)
           </div>
           <div class="col-6">
-            <h4 class="h2-responsive">1.4°C</h4>
+            <h4 class="h2-responsive">1.5°C</h4>
           </div>
           <div class="col-3 text-muted font-small hi-text">
             3.7°C <br>
@@ -536,7 +536,7 @@
             (00:05)
           </div>
           <div class="col-6">
-            <h4 class="h2-responsive">1266 meters</h4>
+            <h4 class="h2-responsive">1321 meters</h4>
           </div>
           <div class="col-3 text-muted font-small hi-text">
             1757 meters <br>
@@ -1106,7 +1106,6 @@ new ApexCharts(document.querySelector('#outTempchart'), {
     {
       name: "Outside Temperature",
       data: [ 
-      [1730670300, 0.4],
       [1730670900, 0.0],
       [1730671500, -0.1],
       [1730672100, -0.2],
@@ -1250,12 +1249,12 @@ new ApexCharts(document.querySelector('#outTempchart'), {
       [1730754900, 4.3],
       [1730755500, 4.4],
       [1730756100, 4.5],
+      [1730756700, 4.7],
  ]
     }
     ,{
       name: "Dew Point",
       data: [ 
-      [1730670300, -4.5],
       [1730670900, -4.6],
       [1730671500, -4.7],
       [1730672100, -4.7],
@@ -1399,6 +1398,7 @@ new ApexCharts(document.querySelector('#outTempchart'), {
       [1730754900, -3.1],
       [1730755500, -3.3],
       [1730756100, -3.2],
+      [1730756700, -3.5],
  ]
     }
   ]
@@ -1423,7 +1423,6 @@ new ApexCharts(document.querySelector('#windchillchart'), {
     {
       name: "Wind Chill",
       data: [ 
-      [1730670300, 0.4],
       [1730670900, 0.0],
       [1730671500, -0.1],
       [1730672100, -0.2],
@@ -1567,12 +1566,12 @@ new ApexCharts(document.querySelector('#windchillchart'), {
       [1730754900, 4.0],
       [1730755500, 4.1],
       [1730756100, 4.3],
+      [1730756700, 4.2],
  ]
     }
     ,{
       name: "Heat Index",
       data: [ 
-      [1730670300, 0.4],
       [1730670900, 0.0],
       [1730671500, -0.1],
       [1730672100, -0.2],
@@ -1716,12 +1715,12 @@ new ApexCharts(document.querySelector('#windchillchart'), {
       [1730754900, 4.3],
       [1730755500, 4.4],
       [1730756100, 2.9],
+      [1730756700, 2.7],
  ]
     }
     ,{
       name: "appTemp",
       data: [ 
-      [1730670300, -2.4],
       [1730670900, -3.0],
       [1730671500, -3.2],
       [1730672100, -3.3],
@@ -1865,6 +1864,7 @@ new ApexCharts(document.querySelector('#windchillchart'), {
       [1730754900, 1.1],
       [1730755500, 1.3],
       [1730756100, 1.5],
+      [1730756700, 1.5],
  ]
     }
   ]
@@ -1889,7 +1889,6 @@ new ApexCharts(document.querySelector('#barometerchart'), {
     {
       name: "Barometer",
       data: [ 
-      [1730670300, null],
       [1730670900, null],
       [1730671500, null],
       [1730672100, null],
@@ -2033,6 +2032,7 @@ new ApexCharts(document.querySelector('#barometerchart'), {
       [1730754900, null],
       [1730755500, null],
       [1730756100, null],
+      [1730756700, null],
  ]
     }
   ]
@@ -2057,30 +2057,30 @@ new ApexCharts(document.querySelector('#rainchart'), {
     {
       name: "Rain",
       data: [ 
-      [1730670300, 0.00],
-      [1730673900, 0.00],
-      [1730677500, 0.00],
-      [1730681100, 0.00],
-      [1730684700, 0.00],
-      [1730688300, 0.00],
-      [1730691900, 0.00],
-      [1730695500, 0.00],
-      [1730699100, 0.00],
-      [1730702700, 0.00],
-      [1730706300, 0.00],
-      [1730709900, 0.00],
-      [1730713500, 0.00],
-      [1730717100, 0.00],
-      [1730720700, 0.00],
-      [1730724300, 0.00],
-      [1730727900, 0.00],
-      [1730731500, 0.00],
-      [1730735100, 0.00],
-      [1730738700, 0.00],
-      [1730742300, 0.00],
-      [1730745900, 0.00],
-      [1730749500, 0.00],
-      [1730753100, 0.00],
+      [1730670900, 0.00],
+      [1730674500, 0.00],
+      [1730678100, 0.00],
+      [1730681700, 0.00],
+      [1730685300, 0.00],
+      [1730688900, 0.00],
+      [1730692500, 0.00],
+      [1730696100, 0.00],
+      [1730699700, 0.00],
+      [1730703300, 0.00],
+      [1730706900, 0.00],
+      [1730710500, 0.00],
+      [1730714100, 0.00],
+      [1730717700, 0.00],
+      [1730721300, 0.00],
+      [1730724900, 0.00],
+      [1730728500, 0.00],
+      [1730732100, 0.00],
+      [1730735700, 0.00],
+      [1730739300, 0.00],
+      [1730742900, 0.00],
+      [1730746500, 0.00],
+      [1730750100, 0.00],
+      [1730753700, 0.00],
  ]
     }
   ]
@@ -2105,7 +2105,6 @@ new ApexCharts(document.querySelector('#windSpeedchart'), {
     {
       name: "Wind Speed",
       data: [ 
-      [1730670300, 2],
       [1730670900, 3],
       [1730671500, 3],
       [1730672100, 3],
@@ -2249,12 +2248,12 @@ new ApexCharts(document.querySelector('#windSpeedchart'), {
       [1730754900, 4],
       [1730755500, 4],
       [1730756100, 3],
+      [1730756700, 4],
  ]
     }
     ,{
       name: "Gust Speed",
       data: [ 
-      [1730670300, 3],
       [1730670900, 3],
       [1730671500, 3],
       [1730672100, 3],
@@ -2398,6 +2397,7 @@ new ApexCharts(document.querySelector('#windSpeedchart'), {
       [1730754900, 8],
       [1730755500, 8],
       [1730756100, 6],
+      [1730756700, 8],
  ]
     }
   ]
@@ -2422,7 +2422,6 @@ new ApexCharts(document.querySelector('#outHumiditychart'), {
     {
       name: "Outside Humidity",
       data: [ 
-      [1730670300, 70],
       [1730670900, 71],
       [1730671500, 71],
       [1730672100, 72],
@@ -2566,6 +2565,7 @@ new ApexCharts(document.querySelector('#outHumiditychart'), {
       [1730754900, 59],
       [1730755500, 57],
       [1730756100, 57],
+      [1730756700, 55],
  ]
     }
   ]
@@ -2594,7 +2594,6 @@ new ApexCharts(document.querySelector('#inTempchart'), {
     {
       name: "Inside Temperature",
       data: [ 
-      [1730670300, null],
       [1730670900, null],
       [1730671500, null],
       [1730672100, null],
@@ -2738,6 +2737,7 @@ new ApexCharts(document.querySelector('#inTempchart'), {
       [1730754900, null],
       [1730755500, null],
       [1730756100, null],
+      [1730756700, null],
  ]
     }
   ]
@@ -2760,7 +2760,6 @@ new ApexCharts(document.querySelector('#inHumiditychart'), {
     {
       name: "Inside Humidity",
       data: [ 
-      [1730670300, null],
       [1730670900, null],
       [1730671500, null],
       [1730672100, null],
@@ -2904,6 +2903,7 @@ new ApexCharts(document.querySelector('#inHumiditychart'), {
       [1730754900, null],
       [1730755500, null],
       [1730756100, null],
+      [1730756700, null],
  ]
     }
   ]
@@ -2932,7 +2932,6 @@ new ApexCharts(document.querySelector('#cloudbasechart'), {
     {
       name: "cloudbase",
       data: [ 
-      [1730670300, 914],
       [1730670900, 879],
       [1730671500, 870],
       [1730672100, 852],
@@ -3076,6 +3075,7 @@ new ApexCharts(document.querySelector('#cloudbasechart'), {
       [1730754900, 1224],
       [1730755500, 1255],
       [1730756100, 1257],
+      [1730756700, 1321],
  ]
     }
   ]
@@ -3097,11 +3097,6 @@ new ApexCharts(document.querySelector('#cloudbasechart'), {
   };
 
   var raw_data = [
-  {
-    'dir': "29.550748404728115",
-    'speed': "1.343271323554398",
-    'max': "2.6559991782973444"
-  },
   {
     'dir': "25.491500756754583",
     'speed': "2.472559017658041",
@@ -3817,6 +3812,11 @@ new ApexCharts(document.querySelector('#cloudbasechart'), {
     'speed': "3.144078583263941",
     'max': "5.966998153953408"
   },
+  {
+    'dir': "341.97584599411863",
+    'speed': "3.621498879594817",
+    'max': "7.621997641936128"
+  },
   ];
 
   raw_data.forEach(function(item) {
@@ -3918,7 +3918,6 @@ new ApexCharts(document.querySelector('#extraTemp1chart'), {
     {
       name: "Temperature1",
       data: [ 
-      [1730670300, 10.6],
       [1730670900, 10.7],
       [1730671500, 10.6],
       [1730672100, 10.6],
@@ -4062,6 +4061,7 @@ new ApexCharts(document.querySelector('#extraTemp1chart'), {
       [1730754900, 10.3],
       [1730755500, 10.4],
       [1730756100, 10.3],
+      [1730756700, 10.3],
  ]
     }
   ]
