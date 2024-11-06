@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "135250 seconds",
-    "serveruptime": "135253 seconds",
+    "weewxuptime": "135559 seconds",
+    "serveruptime": "135562 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,7 +20,7 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1730892300",
+        "datetime": "1730892600",
         "outTemp": "17.7",
         "outHumidity": "76",
         "windchill": "17.7",
@@ -28,11 +28,11 @@
         "dewpoint": "13.4",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
-        "windspeed": "6",
-        "winddir": "WNW",
-        "windGust": "11",
+        "windspeed": "5",
+        "winddir": "N",
+        "windGust": "9",
         "windGustDir": "N/A",
-        "windcompass": "WNW",
+        "windcompass": "N",
         "rainRate": "0.0",
         "rain": "0.0"
     },
@@ -45,7 +45,7 @@
         },
         "heatindex": {
             "max": "17.5",
-            "maxtime": "1730891723"
+            "maxtime": "1730892600"
         },
         "windchill": {
             "max": "16.3",
@@ -59,7 +59,7 @@
         },
         "dewpoint": {
             "max": "13.4",
-            "maxtime": "1730891723",
+            "maxtime": "1730892600",
             "min": "12.2",
             "mintime": "1730870609"
         },
@@ -115,7 +115,7 @@
         },
         "dewpoint": {
             "max": "13.4",
-            "maxtime": "1730891723",
+            "maxtime": "1730892600",
             "min": "-7.5",
             "mintime": "1730710812"
         },
@@ -262,15 +262,15 @@
     },
     "almanac": {
         "sunrise": "06:35:41 AM",
-        "sunrise_epoch": "1730892941.524865",
+        "sunrise_epoch": "1730892941.552427",
         "sunrise_hour": "06",
         "sunrise_minute": "35",
-        "sunset": "04:29:53 PM",
-        "sunset_epoch": "1730928593.0100079",
+        "sunset": "04:29:52 PM",
+        "sunset_epoch": "1730928592.9824607",
         "sunset_hour": "16",
         "sunset_minute": "29",
         "moon": {
-            "moon_fullness": "22",
+            "moon_fullness": "23",
             "moon_phase": "Waxing crescent"
         }
     }
