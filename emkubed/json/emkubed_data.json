@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "192855 seconds",
-    "serveruptime": "192858 seconds",
+    "weewxuptime": "193159 seconds",
+    "serveruptime": "193162 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,19 +20,19 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1730949900",
+        "datetime": "1730950200",
         "outTemp": "10.3",
-        "outHumidity": "89",
+        "outHumidity": "90",
         "windchill": "10.3",
-        "heatindex": "9.8",
+        "heatindex": "9.7",
         "dewpoint": "8.6",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
         "windspeed": "4",
-        "winddir": "ESE",
-        "windGust": "8",
-        "windGustDir": "N/A",
-        "windcompass": "ESE",
+        "winddir": "SSE",
+        "windGust": "6",
+        "windGustDir": "SSE",
+        "windcompass": "SSE",
         "rainRate": "0.0",
         "rain": "0.0"
     },
@@ -40,16 +40,16 @@
         "outTemp": {
             "max": "19.7",
             "maxtime": "1730917056",
-            "min": "10.3",
-            "mintime": "1730949794"
+            "min": "10.2",
+            "mintime": "1730950094"
         },
         "heatindex": {
             "max": "19.8",
             "maxtime": "1730917094"
         },
         "windchill": {
-            "max": "10.3",
-            "maxtime": "1730949794"
+            "max": "10.2",
+            "maxtime": "1730950094"
         },
         "humidity": {
             "max": "98",
@@ -262,15 +262,15 @@
     },
     "almanac": {
         "sunrise": "06:35:35 AM",
-        "sunrise_epoch": "1730892935.6485703",
+        "sunrise_epoch": "1730892935.573567",
         "sunrise_hour": "06",
         "sunrise_minute": "35",
         "sunset": "04:29:58 PM",
-        "sunset_epoch": "1730928598.883163",
+        "sunset_epoch": "1730928598.958126",
         "sunset_hour": "16",
         "sunset_minute": "29",
         "moon": {
-            "moon_fullness": "28",
+            "moon_fullness": "29",
             "moon_phase": "Waxing crescent"
         }
     }
