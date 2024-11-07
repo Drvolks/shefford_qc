@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "197959 seconds",
-    "serveruptime": "197962 seconds",
+    "weewxuptime": "198250 seconds",
+    "serveruptime": "198253 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,18 +20,18 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1730955000",
+        "datetime": "1730955300",
         "outTemp": "8.3",
         "outHumidity": "87",
-        "windchill": "8.3",
-        "heatindex": "7.5",
+        "windchill": "8.2",
+        "heatindex": "7.4",
         "dewpoint": "6.3",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
-        "windspeed": "4",
+        "windspeed": "3",
         "winddir": "SE",
-        "windGust": "6",
-        "windGustDir": "ESE",
+        "windGust": "5",
+        "windGustDir": "N/A",
         "windcompass": "SE",
         "rainRate": "0.0",
         "rain": "0.0"
@@ -41,15 +41,15 @@
             "max": "19.7",
             "maxtime": "1730917056",
             "min": "8.3",
-            "mintime": "1730954820"
+            "mintime": "1730955300"
         },
         "heatindex": {
             "max": "19.8",
             "maxtime": "1730917094"
         },
         "windchill": {
-            "max": "7.9",
-            "maxtime": "1730954745"
+            "max": "7.8",
+            "maxtime": "1730955120"
         },
         "humidity": {
             "max": "98",
@@ -262,16 +262,16 @@
     },
     "almanac": {
         "sunrise": "06:35:33 AM",
-        "sunrise_epoch": "1730892933.9711137",
+        "sunrise_epoch": "1730892933.9364266",
         "sunrise_hour": "06",
         "sunrise_minute": "35",
         "sunset": "04:30:00 PM",
-        "sunset_epoch": "1730928600.5597305",
+        "sunset_epoch": "1730928600.594399",
         "sunset_hour": "16",
         "sunset_minute": "30",
         "moon": {
             "moon_fullness": "29",
-            "moon_phase": "Waxing crescent"
+            "moon_phase": "First quarter"
         }
     }
 }
