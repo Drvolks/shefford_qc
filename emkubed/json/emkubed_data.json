@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "535156 seconds",
-    "serveruptime": "535159 seconds",
+    "weewxuptime": "535449 seconds",
+    "serveruptime": "535452 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,19 +20,19 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1731292200",
+        "datetime": "1731292500",
         "outTemp": "5.7",
-        "outHumidity": "71",
-        "windchill": "5.6",
+        "outHumidity": "72",
+        "windchill": "5.5",
         "heatindex": "4.2",
         "dewpoint": "1.0",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
         "windspeed": "4",
-        "winddir": "WNW",
-        "windGust": "5",
-        "windGustDir": "NW",
-        "windcompass": "WNW",
+        "winddir": "W",
+        "windGust": "6",
+        "windGustDir": "N/A",
+        "windcompass": "W",
         "rainRate": "0.0",
         "rain": "0.0"
     },
@@ -58,8 +58,8 @@
             "mintime": "1731260126"
         },
         "dewpoint": {
-            "max": "1.1",
-            "maxtime": "1731292116",
+            "max": "1.3",
+            "maxtime": "1731292492",
             "min": "-7.0",
             "mintime": "1731258926"
         },
@@ -114,8 +114,8 @@
             "mintime": "1731260126"
         },
         "dewpoint": {
-            "max": "1.1",
-            "maxtime": "1731292116",
+            "max": "1.3",
+            "maxtime": "1731292492",
             "min": "-7.0",
             "mintime": "1731258926"
         },
@@ -262,11 +262,11 @@
     },
     "almanac": {
         "sunrise": "06:41:03 AM",
-        "sunrise_epoch": "1731238863.891755",
+        "sunrise_epoch": "1731238863.8765538",
         "sunrise_hour": "06",
         "sunrise_minute": "41",
         "sunset": "04:25:11 PM",
-        "sunset_epoch": "1731273911.7149377",
+        "sunset_epoch": "1731273911.7301326",
         "sunset_hour": "16",
         "sunset_minute": "25",
         "moon": {
