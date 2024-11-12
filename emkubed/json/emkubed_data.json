@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "676151 seconds",
-    "serveruptime": "676154 seconds",
+    "weewxuptime": "676450 seconds",
+    "serveruptime": "676453 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,19 +20,19 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1731433200",
-        "outTemp": "4.0",
-        "outHumidity": "69",
-        "windchill": "3.4",
+        "datetime": "1731433500",
+        "outTemp": "4.2",
+        "outHumidity": "68",
+        "windchill": "4.1",
         "heatindex": "4.0",
-        "dewpoint": "-1.2",
+        "dewpoint": "-1.1",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
-        "windspeed": "5",
-        "winddir": "NE",
-        "windGust": "7",
-        "windGustDir": "N/A",
-        "windcompass": "NE",
+        "windspeed": "4",
+        "winddir": "E",
+        "windGust": "6",
+        "windGustDir": "ESE",
+        "windcompass": "E",
         "rainRate": "0.0",
         "rain": "0.0"
     },
@@ -54,8 +54,8 @@
         "humidity": {
             "max": "99",
             "maxtime": "1731387615",
-            "min": "68",
-            "mintime": "1731433011"
+            "min": "67",
+            "mintime": "1731433386"
         },
         "dewpoint": {
             "max": "7.0",
@@ -262,11 +262,11 @@
     },
     "almanac": {
         "sunrise": "06:43:47 AM",
-        "sunrise_epoch": "1731411827.4558063",
+        "sunrise_epoch": "1731411827.644179",
         "sunrise_hour": "06",
         "sunrise_minute": "43",
         "sunset": "04:22:58 PM",
-        "sunset_epoch": "1731446578.6964302",
+        "sunset_epoch": "1731446578.5081327",
         "sunset_hour": "16",
         "sunset_minute": "22",
         "moon": {
