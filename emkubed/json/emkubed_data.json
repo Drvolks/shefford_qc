@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "836349 seconds",
-    "serveruptime": "836352 seconds",
+    "weewxuptime": "836648 seconds",
+    "serveruptime": "836652 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,32 +20,32 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1731593400",
-        "outTemp": "1.1",
-        "outHumidity": "50",
+        "datetime": "1731593700",
+        "outTemp": "1.2",
+        "outHumidity": "51",
         "windchill": "0.9",
-        "heatindex": "1.1",
-        "dewpoint": "-8.0",
+        "heatindex": "1.2",
+        "dewpoint": "-7.9",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
         "windspeed": "4",
-        "winddir": "S",
-        "windGust": "6",
-        "windGustDir": "N/A",
-        "windcompass": "S",
+        "winddir": "SSE",
+        "windGust": "5",
+        "windGustDir": "ESE",
+        "windcompass": "SSE",
         "rainRate": "0.0",
         "rain": "0.0"
     },
     "day": {
         "outTemp": {
-            "max": "1.2",
-            "maxtime": "1731593097",
+            "max": "1.4",
+            "maxtime": "1731593472",
             "min": "-3.5",
             "mintime": "1731564272"
         },
         "heatindex": {
-            "max": "1.2",
-            "maxtime": "1731593097"
+            "max": "1.4",
+            "maxtime": "1731593472"
         },
         "windchill": {
             "max": "-7.5",
@@ -262,15 +262,15 @@
     },
     "almanac": {
         "sunrise": "06:46:28 AM",
-        "sunrise_epoch": "1731584788.7946496",
+        "sunrise_epoch": "1731584788.867515",
         "sunrise_hour": "06",
         "sunrise_minute": "46",
         "sunset": "04:20:54 PM",
-        "sunset_epoch": "1731619254.6157546",
+        "sunset_epoch": "1731619254.5429156",
         "sunset_hour": "16",
         "sunset_minute": "20",
         "moon": {
-            "moon_fullness": "97",
+            "moon_fullness": "98",
             "moon_phase": "Full"
         }
     }
