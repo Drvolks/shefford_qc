@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "1323552 seconds",
-    "serveruptime": "1323555 seconds",
+    "weewxuptime": "1323854 seconds",
+    "serveruptime": "1323857 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,18 +20,18 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1732080600",
+        "datetime": "1732080900",
         "outTemp": "1.8",
         "outHumidity": "99",
-        "windchill": "1.4",
+        "windchill": "1.3",
         "heatindex": "1.8",
         "dewpoint": "1.6",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
         "windspeed": "5",
         "winddir": "SE",
-        "windGust": "6",
-        "windGustDir": "ESE",
+        "windGust": "7",
+        "windGustDir": "N/A",
         "windcompass": "SE",
         "rainRate": "0.0",
         "rain": "0.0"
@@ -48,8 +48,8 @@
             "maxtime": "1732079100"
         },
         "windchill": {
-            "max": "0.0",
-            "maxtime": "1732080582"
+            "max": "-0.3",
+            "maxtime": "1732080732"
         },
         "humidity": {
             "max": "99",
@@ -75,9 +75,9 @@
             "maxtime": "1732078808"
         },        
         "wind": {
-            "max": "6",
-            "maxtime": "1732080525",
-            "gustdir": "112&#176;"
+            "max": "7",
+            "maxtime": "1732080732",
+            "gustdir": "   N/A"
         },
         "uv": {
             "max": "   N/A",
