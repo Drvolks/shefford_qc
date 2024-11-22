@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "1502051 seconds",
-    "serveruptime": "1502054 seconds",
+    "weewxuptime": "1502350 seconds",
+    "serveruptime": "1502353 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,19 +20,19 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1732259100",
-        "outTemp": "4.5",
-        "outHumidity": "96",
-        "windchill": "1.8",
-        "heatindex": "3.8",
-        "dewpoint": "3.9",
+        "datetime": "1732259400",
+        "outTemp": "4.3",
+        "outHumidity": "97",
+        "windchill": "1.5",
+        "heatindex": "4.3",
+        "dewpoint": "3.8",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
         "windspeed": "11",
-        "winddir": "SSE",
-        "windGust": "16",
+        "winddir": "S",
+        "windGust": "14",
         "windGustDir": "N/A",
-        "windcompass": "SSE",
+        "windcompass": "S",
         "rainRate": "0.0",
         "rain": "0.0"
     },
@@ -40,16 +40,16 @@
         "outTemp": {
             "max": "5.1",
             "maxtime": "1732251615",
-            "min": "4.4",
-            "mintime": "1732259042"
+            "min": "4.3",
+            "mintime": "1732259400"
         },
         "heatindex": {
             "max": "4.4",
             "maxtime": "1732259042"
         },
         "windchill": {
-            "max": "1.1",
-            "maxtime": "1732258817"
+            "max": "1.0",
+            "maxtime": "1732259154"
         },
         "humidity": {
             "max": "97",
@@ -262,15 +262,15 @@
     },
     "almanac": {
         "sunrise": "06:57:10 AM",
-        "sunrise_epoch": "1732276630.2127721",
+        "sunrise_epoch": "1732276630.021693",
         "sunrise_hour": "06",
         "sunrise_minute": "57",
         "sunset": "04:13:49 PM",
-        "sunset_epoch": "1732310029.5163321",
+        "sunset_epoch": "1732310029.7073672",
         "sunset_hour": "16",
         "sunset_minute": "13",
         "moon": {
-            "moon_fullness": "58",
+            "moon_fullness": "57",
             "moon_phase": "Last quarter"
         }
     }
