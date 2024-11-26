@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "1844349 seconds",
-    "serveruptime": "1844353 seconds",
+    "weewxuptime": "1844653 seconds",
+    "serveruptime": "1844656 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,19 +20,19 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1732601400",
+        "datetime": "1732601700",
         "outTemp": "-1.7",
         "outHumidity": "96",
-        "windchill": "-2.3",
+        "windchill": "-1.7",
         "heatindex": "-1.7",
-        "dewpoint": "-2.2",
+        "dewpoint": "-2.3",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
-        "windspeed": "4",
-        "winddir": "ESE",
-        "windGust": "8",
-        "windGustDir": "N/A",
-        "windcompass": "ESE",
+        "windspeed": "3",
+        "winddir": "SE",
+        "windGust": "6",
+        "windGustDir": "SSE",
+        "windcompass": "SE",
         "rainRate": "0.0",
         "rain": "0.0"
     },
@@ -40,8 +40,8 @@
         "outTemp": {
             "max": "-1.6",
             "maxtime": "1732597201",
-            "min": "-1.7",
-            "mintime": "1732601288"
+            "min": "-1.8",
+            "mintime": "1732601626"
         },
         "heatindex": {
             "max": "-1.6",
@@ -61,7 +61,7 @@
             "max": "-1.9",
             "maxtime": "1732597201",
             "min": "-2.3",
-            "mintime": "1732601288"
+            "mintime": "1732601626"
         },
         "barometer": {
             "max": "   N/A",
@@ -262,11 +262,11 @@
     },
     "almanac": {
         "sunrise": "07:02:07 AM",
-        "sunrise_epoch": "1732622527.6056986",
+        "sunrise_epoch": "1732622527.525624",
         "sunrise_hour": "07",
         "sunrise_minute": "02",
         "sunset": "04:11:19 PM",
-        "sunset_epoch": "1732655479.460312",
+        "sunset_epoch": "1732655479.5403721",
         "sunset_hour": "16",
         "sunset_minute": "11",
         "moon": {
