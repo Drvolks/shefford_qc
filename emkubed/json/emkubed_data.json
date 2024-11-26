@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "1840153 seconds",
-    "serveruptime": "1840156 seconds",
+    "weewxuptime": "1840450 seconds",
+    "serveruptime": "1840453 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,12 +20,12 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1732597200",
+        "datetime": "1732597500",
         "outTemp": "-1.6",
-        "outHumidity": "97",
+        "outHumidity": "98",
         "windchill": "-1.6",
         "heatindex": "-1.6",
-        "dewpoint": "-2.0",
+        "dewpoint": "-1.9",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
         "windspeed": "0",
@@ -38,30 +38,30 @@
     },
     "day": {
         "outTemp": {
-            "max": "0.1",
-            "maxtime": "1732560018",
-            "min": "-3.1",
-            "mintime": "1732536300"
+            "max": "-1.6",
+            "maxtime": "1732597201",
+            "min": "-1.6",
+            "mintime": "1732597500"
         },
         "heatindex": {
-            "max": "0.1",
-            "maxtime": "1732560018"
+            "max": "-1.6",
+            "maxtime": "1732597201"
         },
         "windchill": {
-            "max": "-8.2",
-            "maxtime": "1732536391"
+            "max": "-1.6",
+            "maxtime": "1732597500"
         },
         "humidity": {
-            "max": "99",
-            "maxtime": "1732537779",
-            "min": "88",
-            "mintime": "1732560393"
+            "max": "98",
+            "maxtime": "1732597201",
+            "min": "98",
+            "mintime": "1732597201"
         },
         "dewpoint": {
-            "max": "-1.3",
-            "maxtime": "1732559793",
-            "min": "-3.7",
-            "mintime": "1732518600"
+            "max": "-1.9",
+            "maxtime": "1732597201",
+            "min": "-1.9",
+            "mintime": "1732597500"
         },
         "barometer": {
             "max": "   N/A",
@@ -72,12 +72,12 @@
         "rain": {
             "sum": "0.00",
             "max": "0.00",
-            "maxtime": "1732510807"
+            "maxtime": "1732597201"
         },        
         "wind": {
-            "max": "15",
-            "maxtime": "1732533409",
-            "gustdir": "022&#176;"
+            "max": "0",
+            "maxtime": "1732597201",
+            "gustdir": "   N/A"
         },
         "uv": {
             "max": "   N/A",
