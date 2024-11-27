@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "1946951 seconds",
-    "serveruptime": "1946954 seconds",
+    "weewxuptime": "1947260 seconds",
+    "serveruptime": "1947263 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,19 +20,19 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1732704000",
+        "datetime": "1732704300",
         "outTemp": "0.5",
-        "outHumidity": "87",
-        "windchill": "0.1",
+        "outHumidity": "86",
+        "windchill": "-0.8",
         "heatindex": "0.5",
-        "dewpoint": "-1.4",
+        "dewpoint": "-1.5",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
-        "windspeed": "4",
-        "winddir": "NW",
-        "windGust": "5",
-        "windGustDir": "WNW",
-        "windcompass": "NW",
+        "windspeed": "6",
+        "winddir": "NNW",
+        "windGust": "13",
+        "windGustDir": "N/A",
+        "windcompass": "NNW",
         "rainRate": "0.0",
         "rain": "0.0"
     },
@@ -48,20 +48,20 @@
             "maxtime": "1732684200"
         },
         "windchill": {
-            "max": "-2.8",
-            "maxtime": "1732700801"
+            "max": "-3.5",
+            "maxtime": "1732704252"
         },
         "humidity": {
             "max": "99",
             "maxtime": "1732683663",
-            "min": "86",
-            "mintime": "1732700651"
+            "min": "85",
+            "mintime": "1732704252"
         },
         "dewpoint": {
             "max": "1.9",
             "maxtime": "1732683900",
-            "min": "-1.6",
-            "mintime": "1732702939"
+            "min": "-1.7",
+            "mintime": "1732704252"
         },
         "barometer": {
             "max": "   N/A",
@@ -76,8 +76,8 @@
         },        
         "wind": {
             "max": "13",
-            "maxtime": "1732694782",
-            "gustdir": "292&#176;"
+            "maxtime": "1732704252",
+            "gustdir": "   N/A"
         },
         "uv": {
             "max": "   N/A",
