@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "3315858 seconds",
-    "serveruptime": "3315861 seconds",
+    "weewxuptime": "3316155 seconds",
+    "serveruptime": "3316158 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,19 +20,19 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1734072900",
-        "outTemp": "-10.0",
+        "datetime": "1734073200",
+        "outTemp": "-10.1",
         "outHumidity": "90",
-        "windchill": "-10.0",
-        "heatindex": "-10.0",
-        "dewpoint": "-11.3",
+        "windchill": "-10.1",
+        "heatindex": "-10.1",
+        "dewpoint": "-11.4",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
-        "windspeed": "1",
-        "winddir": "NW",
+        "windspeed": "2",
+        "winddir": "WNW",
         "windGust": "3",
-        "windGustDir": "NW",
-        "windcompass": "NW",
+        "windGustDir": "N/A",
+        "windcompass": "WNW",
         "rainRate": "0.0",
         "rain": "0.0"
     },
@@ -40,8 +40,8 @@
         "outTemp": {
             "max": "-8.5",
             "maxtime": "1734066006",
-            "min": "-10.0",
-            "mintime": "1734072456"
+            "min": "-10.1",
+            "mintime": "1734072981"
         },
         "heatindex": {
             "max": "-8.5",
@@ -60,8 +60,8 @@
         "dewpoint": {
             "max": "-10.7",
             "maxtime": "1734066006",
-            "min": "-11.3",
-            "mintime": "1734070731"
+            "min": "-11.4",
+            "mintime": "1734072981"
         },
         "barometer": {
             "max": "   N/A",
@@ -96,8 +96,8 @@
         "outTemp": {
             "max": "5.8",
             "maxtime": "1733950650",
-            "min": "-10.0",
-            "mintime": "1734072456"
+            "min": "-10.1",
+            "mintime": "1734072981"
         },
         "heatindex": {
             "max": "5.0",
@@ -116,8 +116,8 @@
         "dewpoint": {
             "max": "5.6",
             "maxtime": "1733951100",
-            "min": "-11.3",
-            "mintime": "1734070731"
+            "min": "-11.4",
+            "mintime": "1734072981"
         },
         "barometer": {
             "max": "   N/A",
@@ -262,11 +262,11 @@
     },
     "almanac": {
         "sunrise": "07:19:37 AM",
-        "sunrise_epoch": "1734092377.5560777",
+        "sunrise_epoch": "1734092377.4686484",
         "sunrise_hour": "07",
         "sunrise_minute": "19",
-        "sunset": "04:08:02 PM",
-        "sunset_epoch": "1734124082.998576",
+        "sunset": "04:08:03 PM",
+        "sunset_epoch": "1734124083.0860019",
         "sunset_hour": "16",
         "sunset_minute": "08",
         "moon": {
