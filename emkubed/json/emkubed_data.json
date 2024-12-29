@@ -1,7 +1,7 @@
 {
     "version": "5.1.0",
-    "weewxuptime": "451118 seconds",
-    "serveruptime": "451121 seconds",
+    "weewxuptime": "451410 seconds",
+    "serveruptime": "451413 seconds",
     "station": {
         "hardware": "SDR",
         "location": "Shefford, QC",
@@ -20,21 +20,21 @@
 	"windSpeed": "km_per_hour"
     },
     "current": {
-        "datetime": "1735445100",
-        "outTemp": "3.4",
+        "datetime": "1735445400",
+        "outTemp": "3.5",
         "outHumidity": "99",
-        "windchill": "3.4",
-        "heatindex": "3.4",
-        "dewpoint": "3.3",
+        "windchill": "3.2",
+        "heatindex": "3.5",
+        "dewpoint": "3.4",
         "barometer": "   N/A",
         "barometer_trend": "   N/A",
-        "windspeed": "4",
+        "windspeed": "5",
         "winddir": "NW",
-        "windGust": "5",
-        "windGustDir": "N",
+        "windGust": "8",
+        "windGustDir": "N/A",
         "windcompass": "NW",
-        "rainRate": "0.1463039999999709",
-        "rain": "0.025399999999994947"
+        "rainRate": "0.13217864077667274",
+        "rain": "0.0"
     },
     "day": {
         "outTemp": {
@@ -59,7 +59,7 @@
         },
         "dewpoint": {
             "max": "3.4",
-            "maxtime": "1735445071",
+            "maxtime": "1735445400",
             "min": "-10.2",
             "mintime": "1735365867"
         },
@@ -115,7 +115,7 @@
         },
         "dewpoint": {
             "max": "3.4",
-            "maxtime": "1735445071",
+            "maxtime": "1735445400",
             "min": "-20.9",
             "mintime": "1734860839"
         },
@@ -262,15 +262,15 @@
     },
     "almanac": {
         "sunrise": "07:27:26 AM",
-        "sunrise_epoch": "1735388846.4719033",
+        "sunrise_epoch": "1735388846.5642729",
         "sunrise_hour": "07",
         "sunrise_minute": "27",
         "sunset": "04:15:12 PM",
-        "sunset_epoch": "1735420512.1052756",
+        "sunset_epoch": "1735420512.0129018",
         "sunset_hour": "16",
         "sunset_minute": "15",
         "moon": {
-            "moon_fullness": "4",
+            "moon_fullness": "3",
             "moon_phase": "New"
         }
     }
