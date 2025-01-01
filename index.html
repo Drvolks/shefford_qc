@@ -1,660 +1,4093 @@
 
 
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Shefford, QC</title>
-    <link rel="icon" type="image/png" href="favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="seasons.css"/>
-    <script src="seasons.js"></script>
+<head>
+  <title>
+    Current | Shefford, QC
+  </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
 
+<meta name="description" content="">
+<meta name="keywords" content="['weather', 'weewx', 'neowx-material']">
 
-  </head>
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Weather">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="application-name" content="Weather | Shefford, QC">
 
-  <body onload="setup();">
+<meta name="application-name" content="Weather | Shefford, QC">
+<meta name="msapplication-tooltip" content="Shefford, QC">
+<meta name="msapplication-starturl" content="/">
 
+<meta name="msapplication-tap-highlight" content="no">
 
-<div id="title_bar">
-  <div id="title">
-    <h1 class="page_title">Shefford, QC</h1>
-    <p class="lastupdate">2025-01-01 05:20:00 PM</p>
-  </div>
-  <div id="rss_link"><a href="rss.xml">RSS</a></div>
-  <div id="reports">
-    Monthly Reports:
-    <select name="reports" onchange="openTabularFile(value)">
-      <option value="2024-08">2024-08</option>
-      <option value="2024-09">2024-09</option>
-      <option value="2024-10">2024-10</option>
-      <option value="2024-11">2024-11</option>
-      <option value="2024-12">2024-12</option>
-      <option value="2025-01">2025-01</option>
-      <option selected>- Select Month -</option>
-    </select>
-    <br/>
-    Yearly Reports:
-    <select name="reports" onchange="openTabularFile(value)">
-      <option value="2024">2024</option>
-      <option value="2025">2025</option>
-      <option selected>- Select Year -</option>
-    </select>
-    <br/>
-  </div>
-</div>
-    
-    <div id="contents">
-      <div id="widget_group">
+<link href="img/icon-16.ico" rel="shortcut icon" type="image/x-icon">
+<link href="img/icon-16.png" rel="icon" type="image/png" sizes="16x16">
+<link href="img/icon-32.png" rel="icon" type="image/png" sizes="32x32">
+<link href="img/icon-48.png" rel="icon" type="image/png" sizes="48x48">
 
-<div id='current_widget' class="widget">
-  <div class="widget_title">
-    Current Conditions
-    <a class="widget_control"
-      onclick="toggle_widget('current')">&diams;</a>
-  </div>
+<link href="img/icon-180.png" rel="apple-touch-icon">
+<link href="img/icon-76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="img/icon-120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="img/icon-152.png" rel="apple-touch-icon" sizes="152x152">
 
-  <div class="widget_contents">
-  <table>
-    <tbody>
+<link href="img/icon-192.png" rel="icon" sizes="192x192">
+<link href="img/icon-128.png" rel="icon" sizes="128x128">
 
+<link href="manifest.json" rel="manifest">
 
-      <tr>
-        <td class="label">Outside Temperature</td>
-        <td class="data">1.6&#176;C</td>
-      </tr>
-      <tr>
-        <td class="label">Heat Index</td>
-        <td class="data">1.6&#176;C</td>
-      </tr>
-      <tr>
-        <td class="label">Wind Chill</td>
-        <td class="data">0.3&#176;C</td>
-      </tr>
-      <tr>
-        <td class="label">Dew Point</td>
-        <td class="data">1.5&#176;C</td>
-      </tr>
-      <tr>
-        <td class="label">Outside Humidity</td>
-        <td class="data">99%</td>
-      </tr>
-      <tr>
-        <td class="label">Wind</td>
-        <td class="data">6 km/h W (281&#176;)</td>
-      </tr>
-      <tr>
-        <td class="label">Rain Today</td>
-        <td class="data">0.36 cm</td>
-      </tr>
-      <tr>
-        <td class="label">Rain Rate</td>
-        <td class="data">0.00 cm/h</td>
-      </tr>
-      <tr>
-        <td class="label">Temperature1</td>
-        <td class="data">10.0&#176;C</td>
-      </tr>
+<link rel="stylesheet" href="css/bootstrap.min.css">
 
-    </tbody>
-  </table>
-  </div>
+<link rel="stylesheet" href="css/style.min.css">
 
-</div>
-
-
-
-<div id="sunmoon_widget" class="widget">
-  <div class="widget_title">
-    <a href="celestial.html">Celestial</a>
-    <a class="widget_control"
-       onclick="toggle_widget('sunmoon')">&diams;</a>
-  </div>
-  <div class="widget_contents">
-    <div id="celestial_summary">
-      <table class="celestial">
-        <tr><th>&#9728;</th><td></td><td></td><th>&#9789;</th><td></td></tr>
-        <tr>
-          <td class="label">Rise</td>
-          <td class="data">07:27:51 AM</td>
-          <td>&nbsp;</td>
-          <td class="label">Rise</td>
-          <td class="data">09:10:43 AM</td>
-        </tr>
-        <tr>
-          <td class="label">Set</td>
-          <td class="data">04:18:40 PM</td>
-          <td>&nbsp;</td>
-          <td class="label">Set</td>
-          <td class="data">06:05:02 PM</td>
-        </tr>
-        <tr>
-          <td class="label">Daylight</td>
-          <td class="data">08:50</td>
-          <td>&nbsp;</td>
-          <td class="label"></td>
-          <td class="data">Waxing crescent<br/>
-            5%</td>
-        </tr>
-      </table>
-    </div>
-  </div>
-</div>
-
-
-
-
-<div id='hilo_widget' class="widget">
-  <div class="widget_title">
-    <a href="statistics.html">Statistics</a>
-    <a class="widget_control"
-      onclick="toggle_widget('hilo')">&diams;</a>
-  </div>
-
-  <div class="widget_contents">
-  <table>
-    <tbody>
-      <tr>
-        <td></td>
-        <th>&nbsp;<br/>Today</th>
-        <th class="hilo_week">&nbsp;<br/>Week</th>
-        <th class="hilo_month">&nbsp;<br/>Month</th>
-        <th class="hilo_year">
-          <a onclick="toggle_rainyear()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>Year</a>
-        </th>
-        <th class="hilo_rainyear">
-          <a onclick="toggle_rainyear()">Rain<br/>Year</a>
-        </th>
-        <td></td>
-      </tr>
-
-      <tr>
-        <td class="label">Outside Temperature</td>
-        <td class="data new_row hilo_day">
-          <span title="12:24:04 PM">
-            3.3</span><br/>
-          <span title="07:18:24 AM">
-            0.4</span>
-        </td>
-        <td class="data new_row hilo_week">
-          <span title="10:32:49 AM (Monday)">
-            10.5</span><br/>
-          <span title="07:18:24 AM (Wednesday)">
-            0.4</span>
-        </td>
-        <td class="data new_row hilo_month">
-          <span title="2025-01-01 12:24:04 PM">
-            3.3</span><br/>
-          <span title="2025-01-01 07:18:24 AM">
-            0.4</span>
-        </td>
-        <td class="data new_row hilo_year">
-          <span title="2025-01-01 12:24:04 PM">
-            3.3</span><br/>
-          <span title="2025-01-01 07:18:24 AM">
-            0.4</span>
-        </td>
-        <td class="data new_row hilo_rainyear">
-          <span title="2025-01-01 12:24:04 PM">
-            3.3</span><br/>
-          <span title="2025-01-01 07:18:24 AM">
-            0.4</span>
-        </td>
-        <td class="units">&#176;C</td>
-      </tr>
-      <tr>
-        <td class="label">Heat Index</td>
-        <td class="data new_row hilo_day">
-          <span title="12:24:04 PM">
-            3.3</span><br/>
-          <span title="07:18:24 AM">
-            0.4</span>
-        </td>
-        <td class="data new_row hilo_week">
-          <span title="10:32:49 AM (Monday)">
-            10.0</span><br/>
-          <span title="07:18:24 AM (Wednesday)">
-            0.4</span>
-        </td>
-        <td class="data new_row hilo_month">
-          <span title="2025-01-01 12:24:04 PM">
-            3.3</span><br/>
-          <span title="2025-01-01 07:18:24 AM">
-            0.4</span>
-        </td>
-        <td class="data new_row hilo_year">
-          <span title="2025-01-01 12:24:04 PM">
-            3.3</span><br/>
-          <span title="2025-01-01 07:18:24 AM">
-            0.4</span>
-        </td>
-        <td class="data new_row hilo_rainyear">
-          <span title="2025-01-01 12:24:04 PM">
-            3.3</span><br/>
-          <span title="2025-01-01 07:18:24 AM">
-            0.4</span>
-        </td>
-        <td class="units">&#176;C</td>
-      </tr>
-      <tr>
-        <td class="label">Wind Chill</td>
-        <td class="data new_row hilo_day">
-          <span title="12:24:41 PM">
-            3.3</span><br/>
-          <span title="08:48:43 AM">
-            -3.8</span>
-        </td>
-        <td class="data new_row hilo_week">
-          <span title="10:32:49 AM (Monday)">
-            10.5</span><br/>
-          <span title="08:48:43 AM (Wednesday)">
-            -3.8</span>
-        </td>
-        <td class="data new_row hilo_month">
-          <span title="2025-01-01 12:24:41 PM">
-            3.3</span><br/>
-          <span title="2025-01-01 08:48:43 AM">
-            -3.8</span>
-        </td>
-        <td class="data new_row hilo_year">
-          <span title="2025-01-01 12:24:41 PM">
-            3.3</span><br/>
-          <span title="2025-01-01 08:48:43 AM">
-            -3.8</span>
-        </td>
-        <td class="data new_row hilo_rainyear">
-          <span title="2025-01-01 12:24:41 PM">
-            3.3</span><br/>
-          <span title="2025-01-01 08:48:43 AM">
-            -3.8</span>
-        </td>
-        <td class="units">&#176;C</td>
-      </tr>
-      <tr>
-        <td class="label">Dew Point</td>
-        <td class="data new_row hilo_day">
-          <span title="02:40:57 PM">
-            3.1</span><br/>
-          <span title="12:27:03 AM">
-            -0.5</span>
-        </td>
-        <td class="data new_row hilo_week">
-          <span title="12:07:31 PM (Monday)">
-            9.6</span><br/>
-          <span title="06:32:20 PM (Tuesday)">
-            -1.0</span>
-        </td>
-        <td class="data new_row hilo_month">
-          <span title="2025-01-01 02:40:57 PM">
-            3.1</span><br/>
-          <span title="2025-01-01 12:27:03 AM">
-            -0.5</span>
-        </td>
-        <td class="data new_row hilo_year">
-          <span title="2025-01-01 02:40:57 PM">
-            3.1</span><br/>
-          <span title="2025-01-01 12:27:03 AM">
-            -0.5</span>
-        </td>
-        <td class="data new_row hilo_rainyear">
-          <span title="2025-01-01 02:40:57 PM">
-            3.1</span><br/>
-          <span title="2025-01-01 12:27:03 AM">
-            -0.5</span>
-        </td>
-        <td class="units">&#176;C</td>
-      </tr>
-      <tr>
-        <td class="label">Outside Humidity</td>
-        <td class="data new_row hilo_day">
-          <span title="07:00:54 AM">
-            99</span><br/>
-          <span title="04:26:11 AM">
-            81</span>
-        </td>
-        <td class="data new_row hilo_week">
-          <span title="12:00:27 AM (Sunday)">
-            99</span><br/>
-          <span title="01:59:49 PM (Tuesday)">
-            74</span>
-        </td>
-        <td class="data new_row hilo_month">
-          <span title="2025-01-01 07:00:54 AM">
-            99</span><br/>
-          <span title="2025-01-01 04:26:11 AM">
-            81</span>
-        </td>
-        <td class="data new_row hilo_year">
-          <span title="2025-01-01 07:00:54 AM">
-            99</span><br/>
-          <span title="2025-01-01 04:26:11 AM">
-            81</span>
-        </td>
-        <td class="data new_row hilo_rainyear">
-          <span title="2025-01-01 07:00:54 AM">
-            99</span><br/>
-          <span title="2025-01-01 04:26:11 AM">
-            81</span>
-        </td>
-        <td class="units">%</td>
-      </tr>
-      <tr>
-        <td class="label">Max Wind</td>
-        <td class="data new_row hilo_day">
-          <span title="06:33:42 AM">
-            19</span><br/>
-          112
-        </td>
-        <td class="data new_row hilo_week">
-          <span title="10:49:07 PM (Monday)">
-            23</span><br/>
-          248
-        </td>
-        <td class="data new_row hilo_month">
-          <span title="2025-01-01 06:33:42 AM">
-            19</span><br/>
-          112
-        </td>
-        <td class="data new_row hilo_year">
-          <span title="2025-01-01 06:33:42 AM">
-            19</span><br/>
-          112
-        </td>
-        <td class="data new_row hilo_rainyear">
-          <span title="2025-01-01 06:33:42 AM">
-            19</span><br/>
-          112
-        </td>
-        <td class="units">
-           km/h<br/>
-          &#176;
-        </td>
-      </tr>
-      <tr>
-        <td class="label">Average Wind</td>
-        <td class="data new_row hilo_day">
-          6</td>
-        <td class="data new_row hilo_week">
-          4</td>
-        <td class="data new_row hilo_month">
-          6</td>
-        <td class="data new_row hilo_year">
-          6</td>
-        <td class="data new_row hilo_rainyear">
-          6</td>
-        <td class="units"> km/h</td>
-      </tr>
-      <tr>
-        <td class="label">RMS Wind</td>
-        <td class="data new_row hilo_day">
-          7</td>
-        <td class="data new_row hilo_week">
-          5</td>
-        <td class="data new_row hilo_month">
-          7</td>
-        <td class="data new_row hilo_year">
-          7</td>
-        <td class="data new_row hilo_rainyear">
-          7</td>
-        <td class="units"> km/h</td>
-      </tr>
-
-      <tr>
-        <td class="label">
-          Vector Average<br/>
-          Vector Direction
-        </td>
-        <td class="data new_row hilo_day">
-          6<br/>
-          139
-        </td>
-        <td class="data new_row hilo_week">
-          1<br/>
-          085
-        </td>
-        <td class="data new_row hilo_month">
-          6<br/>
-          139
-        </td>
-        <td class="data new_row hilo_year">
-          6<br/>
-          139
-        </td>
-        <td class="data new_row hilo_rainyear">
-          6<br/>
-          139
-        </td>
-        <td class="units">
-           km/h<br/>
-          &#176;
-        </td>
-      </tr>
-      <tr>
-        <td class="label">Rain</td>
-        <td class="data new_row hilo_day">
-          0.36</td>
-        <td class="data new_row hilo_week">
-          1.73</td>
-        <td class="data new_row hilo_month">
-          0.36</td>
-        <td class="data new_row hilo_year">
-          0.36</td>
-        <td class="data new_row hilo_rainyear">
-          0.36</td>
-        <td class="units"> cm</td>
-      </tr>
-      <tr>
-        <td class="label">Rain Rate</td>
-        <td class="data new_row hilo_day">
-          <span title="03:40:38 PM">
-            0.20</span>
-        </td>
-        <td class="data new_row hilo_week">
-          <span title="12:55:57 PM (Monday)">
-            1.12</span>
-        </td>
-        <td class="data new_row hilo_month">
-          <span title="2025-01-01 03:40:38 PM">
-            0.20</span>
-        </td>
-        <td class="data new_row hilo_year">
-          <span title="2025-01-01 03:40:38 PM">
-            0.20</span>
-        </td>
-        <td class="data new_row hilo_rainyear">
-          <span title="2025-01-01 03:40:38 PM">
-            0.20</span>
-        </td>
-        <td class="units"> cm/h</td>
-      </tr>
-      <tr>
-        <td class="label">Temperature1</td>
-        <td class="data new_row hilo_day">
-          <span title="03:20:56 PM">
-            10.2</span><br/>
-          <span title="02:28:31 AM">
-            9.6</span>
-        </td>
-        <td class="data new_row hilo_week">
-          <span title="12:33:33 PM (Sunday)">
-            10.7</span><br/>
-          <span title="08:10:19 AM (Sunday)">
-            9.3</span>
-        </td>
-        <td class="data new_row hilo_month">
-          <span title="2025-01-01 03:20:56 PM">
-            10.2</span><br/>
-          <span title="2025-01-01 02:28:31 AM">
-            9.6</span>
-        </td>
-        <td class="data new_row hilo_year">
-          <span title="2025-01-01 03:20:56 PM">
-            10.2</span><br/>
-          <span title="2025-01-01 02:28:31 AM">
-            9.6</span>
-        </td>
-        <td class="data new_row hilo_rainyear">
-          <span title="2025-01-01 03:20:56 PM">
-            10.2</span><br/>
-          <span title="2025-01-01 02:28:31 AM">
-            9.6</span>
-        </td>
-        <td class="units">&#176;C</td>
-      </tr>
-
-    </tbody>
-  </table>
-  </div>
-</div>
+<link rel="stylesheet" href="weather-icons/css/weather-icons.min.css">
+<link rel="stylesheet" href="weather-icons/css/weather-icons-wind.min.css">
 
 
 
 
 
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="img/splash/splash_1136x640.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+        href="img/splash/splash_2436x1125.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="img/splash/splash_1792x828.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="img/splash/splash_828x1792.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="img/splash/splash_1334x750.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="img/splash/splash_1242x2688.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+        href="img/splash/splash_2208x1242.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="img/splash/splash_1125x2436.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="img/splash/splash_1242x2208.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="img/splash/splash_2732x2048.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+        href="img/splash/splash_2688x1242.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="img/splash/splash_2224x1668.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="img/splash/splash_750x1334.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="img/splash/splash_2048x2732.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="img/splash/splash_2388x1668.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="img/splash/splash_1668x2224.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="img/splash/splash_640x1136.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="img/splash/splash_1668x2388.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="img/splash/splash_2048x1536.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="img/splash/splash_1536x2048.png"
+/>
+</head>
+<body class="auto-theme main-bg" ontouchstart="">
+
+<header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark indigo">
+        <span class="navbar-brand d-flex">
+            <a class="mr-2" href="index.html">
+                <img src="img/icon-alpha-1x.png" srcset="img/icon-alpha-1x.png 1x, img/icon-alpha-2x.png 2x" style="width: 4rem">
+            </a>
+            <span>
+                <strong>Shefford, QC</strong><br>
+                <span class="font-small">2025-01-01 05:25:00 PM</span>
+            </span>
+        </span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="ml-3 collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mr-auto">
+
+                    <li class="nav-item active mr-3">
+                        <a class="nav-link" href="index.html">Current</a>
+                    </li>
+
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="yesterday.html">Yesterday</a>
+                    </li>
+
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="week.html">Week</a>
+                    </li>
+
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="month.html">Month</a>
+                    </li>
+
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="year.html">Year</a>
+                    </li>
+
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="archive.html">Archive</a>
+                    </li>
 
 
 
 
+            </ul>
+        </div>
+
+            <ul class="navbar-nav nav-flex-icons" style="line-height: 1.75; padding-top: .5rem">
+                <li class="nav-item mr-4 text-white">
+                    <i class="wi wi-sunrise mr-1" style="opacity: .75"></i> 07:27:51 AM <br>
+                    <i class="wi wi-sunset mr-1" style="opacity: .75"></i> 04:18:40 PM
+                </li>
+                <li class="nav-item mr-4 text-white" style="line-height: 1.75">
+                    <i class="wi wi-moonrise mr-1" style="opacity: .75"></i> 09:10:43 AM <br>
+                    <i class="wi wi-moonset mr-1" style="opacity: .75"></i> 06:05:02 PM
+                </li>
+                <li class="nav-item mr-4 text-white text-center" style="line-height: 1.75" >
+                    <span title="Waxing crescent" data-toggle="tooltip">
+                        <i class="wi wi-moon-waxing-crescent-4 mr-1" style="opacity: .75"></i>
+                        5%
+                    </span><br>
+                    <a href="almanac.html" class="text-white" style="opacity: .6">
+                        More
+                    </a>
+                </li>
+            </ul>
+    </nav>
+
+</header>
+<main>
+  <div class="container-fluid d-flex-xxl">
+
+    <div class="row my-4 temprow align-content-start">
+
+          <div class="col-12 col-md-6 col-xl-4 mb-4">
+    <div class="card">
+      <div class="card-body text-center">
+        <h3 class="h5-responsive indigo-text">
+          Outside Temperature
 
 
 
+            <i class="wi wi-direction-down-right"
+               title="Trend: -1.7°C (3.0 hours)"
+               data-toggle="tooltip"></i>
+
+        </h3>
 
 
-<div id='sensors_widget' class="widget">
-  <div class="widget_title">
-    <a href="telemetry.html">Sensor Status</a>
-    <a class="widget_control" onclick="toggle_widget('sensors')">&diams;</a>
-  </div>
-  <div class="widget_contents">
-  <table>
-
-
-    <tr><th>Battery Status</th><th></th></tr>
-    <tr>
-      <td class="label">Outside Temperature Battery</td>
-      <td class="data"><span class="status_ok">OK</span>
-</td>
-      <td class="timestamp">4 minutes ago
-</td>
-    </tr>
-
-
-  </table>
-  </div>
-
-</div>
-
-<div id='about_widget' class="widget">
-  <div class="widget_title">
-    About this station
-    <a class="widget_control"
-      onclick="toggle_widget('about')">&diams;</a>
-  </div>
-  <div class="widget_contents">
-  <table>
-    <tr>
-      <td class="label">Hardware</td>
-      <td class="data">SDR</td>
-    </tr>
-    <tr>
-      <td class="label">Latitude</td>
-      <td class="data">45&deg; 12.26' N</td>
-    </tr>
-    <tr>
-      <td class="label">Longitude</td>
-      <td class="data">072&deg; 21.17' W</td>
-    </tr>
-    <tr>
-      <td class="label">Altitude</td>
-      <td class="data">300 meters</td>
-    </tr>
-    <tr>
-      <td class="label">Server uptime</td>
-      <td class="data">8 days, 23 hours, 38 minutes</td>
-    </tr>
-    <tr>
-      <td class="label">WeeWX uptime</td>
-      <td class="data">0 days, 0 hours, 0 minutes</td>
-    </tr>
-    <tr>
-      <td class="label">WeeWX version</td>
-      <td class="data">5.1.0</td>
-    </tr>
-    <tr>
-      <td class="label">Skin</td>
-      <td class="data">Seasons 5.1.0</td>
-    </tr>
-  </table>
-  </div>
-
-</div>
-
+        <div class="row">
+          <div class="col-3 text-muted font-small lo-text">
+            0.4°C <br>
+            (07:18)
+          </div>
+          <div class="col-6">
+            <h4 class="h2-responsive">1.5°C</h4>
+          </div>
+          <div class="col-3 text-muted font-small hi-text">
+            3.3°C <br>
+            (12:24)
+          </div>
+        </div>
 
 
       </div>
+    </div>
+  </div>
 
-      <div id="plot_group">
-        <div id="history_widget" class="widget">
-          <div id="plot_title" class="widget_title">History:&nbsp;&nbsp;
-            <a class="button_selected" id="button_history_day"
-               onclick="choose_history('day')">Day</a>
-            <a class="button" id="button_history_week"
-               onclick="choose_history('week')">Week</a>
-            <a class="button" id="button_history_month"
-               onclick="choose_history('month')">Month</a>
-            <a class="button" id="button_history_year"
-               onclick="choose_history('year')">Year</a>
-          </div>
 
-          <div id="history_day" class="plot_container" style="display:none">
-            <img src="daytempdew.png" alt="daytempdew"/>
-            <img src="daytempfeel.png" alt="daytempfeel"/>
-            <img src="dayhum.png" alt="dayhum"/>
-            <img src="daywind.png" alt="daywind"/>
-            <img src="daywinddir.png" alt="daywinddir"/>
-            <img src="daywindvec.png" alt="daywindvec"/>
-            <img src="dayrain.png" alt="dayrain"/>
-            <img src="daytempext.png" alt="daytempext"/>
-          </div>
-          <div id="history_week" class="plot_container" style="display:none">
-            <img src="weektempdew.png" alt="weektempdew"/>
-            <img src="weektempfeel.png" alt="weektempfeel"/>
-            <img src="weekhum.png" alt="weekhum"/>
-            <img src="weekwind.png" alt="weekwind"/>
-            <img src="weekwinddir.png" alt="weekwinddir"/>
-            <img src="weekwindvec.png" alt="weekwindvec"/>
-            <img src="weekrain.png" alt="weekrain"/>
-            <img src="weektempext.png" alt="weektempext"/>
-          </div>
-          <div id="history_month" class="plot_container" style="display:none">
-            <img src="monthtempdew.png" alt="monthtempdew"/>
-            <img src="monthtempfeel.png" alt="monthtempfeel"/>
-            <img src="monthhum.png" alt="monthhum"/>
-            <img src="monthwind.png" alt="monthwind"/>
-            <img src="monthwinddir.png" alt="monthwinddir"/>
-            <img src="monthwindvec.png" alt="monthwindvec"/>
-            <img src="monthrain.png" alt="monthrain"/>
-            <img src="monthtempext.png" alt="monthtempext"/>
-          </div>
-          <div id="history_year" class="plot_container" style="display:none">
-            <img src="yeartempdew.png" alt="yeartempdew"/>
-            <img src="yeartempfeel.png" alt="yeartempfeel"/>
-            <img src="yearhum.png" alt="yearhum"/>
-            <img src="yearwind.png" alt="yearwind"/>
-            <img src="yearwinddir.png" alt="yearwinddir"/>
-            <img src="yearwindvec.png" alt="yearwindvec"/>
-            <img src="yearrain.png" alt="yearrain"/>
-            <img src="yeartempext.png" alt="yeartempext"/>
-          </div>
 
+          <div class="col-12 col-md-6 col-xl-4 mb-4">
+    <div class="card">
+      <div class="card-body text-center">
+        <h3 class="h5-responsive indigo-text">
+          Outside Humidity
+
+
+
+            <i class="wi wi-direction-up-right"
+               title="Trend: 2% (3.0 hours)"
+               data-toggle="tooltip"></i>
+
+        </h3>
+
+
+        <div class="row">
+          <div class="col-3 text-muted font-small lo-text">
+            81% <br>
+            (04:26)
+          </div>
+          <div class="col-6">
+            <h4 class="h2-responsive">99%</h4>
+          </div>
+          <div class="col-3 text-muted font-small hi-text">
+            99% <br>
+            (07:00)
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+        
+
+
+          <div class="col-12 col-md-6 col-xl-4 mb-4">
+    <div class="card">
+      <div class="card-body text-center">
+        <h3 class="h5-responsive indigo-text">
+          Wind Speed
+
+
+
+            <i class="wi wi-wind from-329-deg"
+               title="329°" data-toggle="tooltip"></i>
+
+        </h3>
+
+
+        <div class="row">
+          <div class="col-3 text-muted font-small">
+            6 km/h <br>
+            Avg
+          </div>
+          <div class="col-6">
+            <h4 class="h2-responsive">
+              5 km/h NNW
+            </h4>
+          </div>
+          <div class="col-3 text-muted font-small hi-text">
+            19 km/h ESE <br>
+            <i class="wi wi-wind from-112-deg mr-2"
+               title="112°" data-toggle="tooltip"></i>
+            (06:33)
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+          <div class="col-12 col-md-6 col-xl-4 mb-4">
+    <div class="card">
+      <div class="card-body text-center">
+        <h3 class="h5-responsive indigo-text">
+          Rain
+
+
+        </h3>
+
+
+        <div class="row">
+          <div class="col-3 text-muted font-small">
+            0.00 cm/h <br>
+            Rain Rate
+          </div>
+          <div class="col-6">
+            <h4 class="h2-responsive">0.36 cm</h4>
+          </div>
+          <div class="col-3 text-muted font-small hi-text">
+            0.20 cm/h <br>
+            (15:40)
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+        
+
+
+          <div class="col-12 col-md-6 col-xl-4 mb-4">
+    <div class="card">
+      <div class="card-body text-center">
+        <h3 class="h5-responsive indigo-text">
+          Dew Point
+
+
+        </h3>
+
+
+        <div class="row">
+          <div class="col-3 text-muted font-small lo-text">
+            -0.5°C <br>
+            (00:27)
+          </div>
+          <div class="col-6">
+            <h4 class="h2-responsive">1.4°C</h4>
+          </div>
+          <div class="col-3 text-muted font-small hi-text">
+            3.1°C <br>
+            (14:40)
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+          <div class="col-12 col-md-6 col-xl-4 mb-4">
+    <div class="card">
+      <div class="card-body text-center">
+        <h3 class="h5-responsive indigo-text">
+          Wind Chill
+
+
+        </h3>
+
+
+        <div class="row">
+          <div class="col-3 text-muted font-small lo-text">
+            -3.8°C <br>
+            (08:48)
+          </div>
+          <div class="col-6">
+            <h4 class="h2-responsive">0.2°C</h4>
+          </div>
+          <div class="col-3 text-muted font-small hi-text">
+            3.3°C <br>
+            (12:24)
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+          <div class="col-12 col-md-6 col-xl-4 mb-4">
+    <div class="card">
+      <div class="card-body text-center">
+        <h3 class="h5-responsive indigo-text">
+          Heat Index
+
+
+        </h3>
+
+
+        <div class="row">
+          <div class="col-3 text-muted font-small lo-text">
+            0.4°C <br>
+            (07:18)
+          </div>
+          <div class="col-6">
+            <h4 class="h2-responsive">1.5°C</h4>
+          </div>
+          <div class="col-3 text-muted font-small hi-text">
+            3.3°C <br>
+            (12:24)
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+        
+
+
+        
+
+
+        
+
+
+
+
+        
+
+
+          <div class="col-12 col-md-6 col-xl-4 mb-4">
+    <div class="card">
+      <div class="card-body text-center">
+        <h3 class="h5-responsive indigo-text">
+          appTemp
+
+
+        </h3>
+
+
+        <div class="row">
+          <div class="col-3 text-muted font-small lo-text">
+            -4.4°C <br>
+            (08:48)
+          </div>
+          <div class="col-6">
+            <h4 class="h2-responsive">-1.4°C</h4>
+          </div>
+          <div class="col-3 text-muted font-small hi-text">
+            1.7°C <br>
+            (13:21)
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+          <div class="col-12 col-md-6 col-xl-4 mb-4">
+    <div class="card">
+      <div class="card-body text-center">
+        <h3 class="h5-responsive indigo-text">
+          cloudbase
+
+
+        </h3>
+
+
+        <div class="row">
+          <div class="col-3 text-muted font-small lo-text">
+            317 meters <br>
+            (07:18)
+          </div>
+          <div class="col-6">
+            <h4 class="h2-responsive">317 meters</h4>
+          </div>
+          <div class="col-3 text-muted font-small hi-text">
+            666 meters <br>
+            (05:10)
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+          <div class="col-12 col-md-6 col-xl-4 mb-4">
+    <div class="card">
+      <div class="card-body text-center">
+        <h3 class="h5-responsive indigo-text">
+          Temperature1
+
+
+        </h3>
+
+
+        <div class="row">
+          <div class="col-3 text-muted font-small lo-text">
+            9.6°C <br>
+            (02:28)
+          </div>
+          <div class="col-6">
+            <h4 class="h2-responsive">10.0°C</h4>
+          </div>
+          <div class="col-3 text-muted font-small hi-text">
+            10.2°C <br>
+            (15:20)
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+    </div>
+
+    <hr class="my-4 rowdivider">
+
+    <div class="row mt-5 mb-4 graphrow align-content-start">
+
+            <div class="col-12 col-xl-6 mb-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="h5-responsive indigo-text">
+              Outside Temperature
+          </h5>
+          <div id="outTempchart"></div>
         </div>
       </div>
     </div>
 
-    <p class="footnote">
-      This station is controlled by <a href='https://weewx.com'>WeeWX</a>, an experimental weather software system written in Python.
-    </p>
 
-  </body>
 
+            <div class="col-12 col-xl-6 mb-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="h5-responsive indigo-text">
+              Wind Chill
+          </h5>
+          <div id="windchillchart"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+        
+
+
+            <div class="col-12 col-xl-6 mb-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="h5-responsive indigo-text">
+              Rain
+          </h5>
+          <div id="rainchart"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+        
+
+
+            <div class="col-12 col-xl-6 mb-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="h5-responsive indigo-text">
+              Wind Speed
+          </h5>
+          <div id="windSpeedchart"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+            <div class="col-12 col-xl-6 mb-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="h5-responsive indigo-text">
+              Wind Vector
+          </h5>
+          <div id="windvecchart"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+        
+
+
+
+
+        
+
+
+            <div class="col-12 col-xl-6 mb-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="h5-responsive indigo-text">
+              Outside Humidity
+          </h5>
+          <div id="outHumiditychart"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+        
+
+
+        
+
+
+        
+
+
+            <div class="col-12 col-xl-6 mb-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="h5-responsive indigo-text">
+              cloudbase
+          </h5>
+          <div id="cloudbasechart"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+            <div class="col-12 col-xl-6 mb-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="h5-responsive indigo-text">
+              Temperature1
+          </h5>
+          <div id="extraTemp1chart"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+    </div>
+
+  </div>
+</main>
+
+
+<footer class="page-footer font-small indigo pt-4">
+
+    <div class="container-fluid text-center text-md-left mb-4">
+
+        <div class="row">
+
+            <div class="col-md-6 mt-md-0 mt-3">
+
+                <h5 class="text-uppercase">About</h5>
+
+                <table class="d-inline">
+                    <tr>
+                        <td>Hardware:</td>
+                        <td>SDR</td>
+                    </tr>
+                    <tr>
+                        <td>Altitude:</td>
+                        <td>300 meters</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="telemetry.html">
+                                Telemetry
+                            </a>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+
+
+            </div>
+
+            <hr class="clearfix w-100 d-md-none pb-3">
+
+            <div class="col-md-3 mb-md-0 mb-3">
+
+
+            </div>
+
+            <div class="col-md-3 mb-md-0 mb-3">
+
+                <h5 class="text-uppercase">Links</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="https://www.lightningmaps.org" target="_blank" rel="noopener">Lightning Maps</a>
+                    </li>
+                    <li>
+                        <a href="https://www.windy.com" target="_blank" rel="noopener">Windy</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-copyright text-center py-3">
+        &copy; 2025 My weather station
+
+          <span class="mx-2">&bull;</span>
+          Powered by <a href="https://weewx.com" target="_blank">weewx</a>
+          v5.1.0
+
+          <span class="mx-2">&bull;</span>
+          <a href="https://neoground.com/projects/neowx-material" target="_blank">NeoWX Material</a> skin
+          v1.11
+
+    </div>
+
+</footer>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<script src="js/vendor/moment.min.js"></script>
+<script src="js/vendor/apexcharts/apexcharts.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+
+<script type="text/javascript">
+    var config_mode = 'auto';
+    var theme_mode = 'light';
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        theme_mode = 'dark';
+    }
+    // Override mode by config
+    if(config_mode != "auto") {
+        theme_mode = config_mode;
+    }
+
+    window.Apex = {
+        theme: {
+            mode: theme_mode,
+            palette: 'palette1'
+        },
+        dataLabels: {
+            enabled: false
+        },
+        stroke: {
+            curve: 'smooth',
+            width: 2
+        },
+        markers: {
+            size: 0,
+        },
+        chart: {
+            height: 300,
+            stacked: false,
+            zoom: {
+                type: 'x',
+                enabled: true,
+                autoScaleYaxis: true
+            },
+            toolbar: {
+                autoSelected: 'zoom',
+                export: {
+                    csv: {
+                        headerCategory: 'DateTime',
+                        dateFormatter(timestamp) {
+                            return moment.unix(timestamp).toISOString()
+                        }
+                    }
+                }
+            },
+            locales: [
+{
+  "name": "en",
+  "options": {
+    "months": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "shortMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ],
+    "days": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "shortDays": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    "toolbar": {
+      "exportToSVG": "Download SVG",
+      "exportToPNG": "Download PNG",
+      "exportToCSV": "Download CSV",
+      "menu": "Menu",
+      "selection": "Selection",
+      "selectionZoom": "Selection Zoom",
+      "zoomIn": "Zoom In",
+      "zoomOut": "Zoom Out",
+      "pan": "Panning",
+      "reset": "Reset Zoom"
+    }
+  }
+}
+            ],
+            defaultLocale: 'en',
+            animations: {
+                enabled: false
+            },
+        },
+    }
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+  // Config templates
+
+  var graph_area_config = {
+
+chart: {
+    type: 'area'
+},
+fill: {
+    type: 'gradient',
+    gradient: {
+        shadeIntensity: 1,
+        inverseColors: false,
+        opacityFrom: 0.6,
+        opacityTo: 0,
+        stops: [0, 75, 100]
+    },
+},
+xaxis: {
+    type: 'datetime',
+    hideOverlappingLabels: true,
+    tickAmount: 8,
+    labels: {
+        formatter: function(val, timestamp) {
+            return moment.unix(timestamp).format("dd DD HH:mm");
+        }
+    }
+},
+tooltip: {
+    x: {
+        format: "dd DD.MM. HH:MM"
+    }
+},  }
+  var graph_bar_config = {
+
+chart: {
+    type: 'bar'
+},
+fill: {
+    opacity: 0.1
+},
+xaxis: {
+    type: 'datetime',
+    hideOverlappingLabels: true,
+    tickAmount: 8,
+    labels: {
+        formatter: function(val, timestamp) {
+            return moment.unix(timestamp).format("dd DD HH:mm");
+        }
+    }
+},
+tooltip: {
+    x: {
+        format: "dd DD.MM. HH:MM"
+    }
+},  }
+
+  var graph_radar_config = {
+
+chart: {
+    type: 'radar',
+},
+fill: {
+    opacity: 0.1
+},
+xaxis: {
+    categories: [
+      'N',
+      'NE',
+      'E',
+      'SE',
+      'S',
+      'SW',
+      'W',
+      'NW'
+    ]
+},
+tooltip: {
+    x: {
+        formatter: function(value, { series, seriesIndex, dataPointIndex, w }) {
+            return value
+        }
+    }
+},  }
+
+  // outTemp + Dewpoint
+  
+
+new ApexCharts(document.querySelector('#outTempchart'), {
+  ...graph_area_config,
+  yaxis: {
+    labels: {
+      formatter: function (val) {
+        return formatNumber(val, "%.1f") + "°C";
+      }
+    }
+  },
+  series: [
+    {
+      name: "Outside Temperature",
+      data: [ 
+      [1735683900, 1.5],
+      [1735684500, 1.7],
+      [1735685100, 1.9],
+      [1735685700, 2.0],
+      [1735686300, 2.0],
+      [1735686900, 1.9],
+      [1735687500, 1.9],
+      [1735688100, 2.0],
+      [1735688700, 2.0],
+      [1735689300, 1.9],
+      [1735689900, 1.9],
+      [1735690500, 1.8],
+      [1735691100, 1.7],
+      [1735691700, 1.5],
+      [1735692300, 1.5],
+      [1735692900, 1.5],
+      [1735693500, 1.5],
+      [1735694100, 1.6],
+      [1735694700, 1.6],
+      [1735695300, 1.6],
+      [1735695900, 1.6],
+      [1735696500, 1.5],
+      [1735697100, 1.4],
+      [1735697700, 1.4],
+      [1735698300, 1.3],
+      [1735698900, 1.1],
+      [1735699500, 1.1],
+      [1735700100, 1.1],
+      [1735700700, 1.1],
+      [1735701300, 1.2],
+      [1735701900, 1.4],
+      [1735702500, 1.8],
+      [1735703100, 1.7],
+      [1735703700, 1.9],
+      [1735704300, 1.8],
+      [1735704900, 1.7],
+      [1735705500, 1.8],
+      [1735706100, 2.0],
+      [1735706700, 2.2],
+      [1735707300, 2.4],
+      [1735707900, 2.1],
+      [1735708500, 1.8],
+      [1735709100, 2.0],
+      [1735709700, 2.1],
+      [1735710300, 2.1],
+      [1735710900, 2.1],
+      [1735711500, 2.3],
+      [1735712100, 2.4],
+      [1735712700, 2.5],
+      [1735713300, 2.3],
+      [1735713900, 2.3],
+      [1735714500, 2.2],
+      [1735715100, 2.0],
+      [1735715700, 1.9],
+      [1735716300, 1.9],
+      [1735716900, 1.9],
+      [1735717500, 1.8],
+      [1735718100, 1.9],
+      [1735718700, 1.8],
+      [1735719300, 1.8],
+      [1735719900, 2.0],
+      [1735720500, 2.1],
+      [1735721100, 2.2],
+      [1735721700, 2.3],
+      [1735722300, 2.4],
+      [1735722900, 2.4],
+      [1735723500, 2.8],
+      [1735724100, 2.8],
+      [1735724700, 2.8],
+      [1735725300, 2.6],
+      [1735725900, 2.8],
+      [1735726500, 2.8],
+      [1735727100, 2.8],
+      [1735727700, 2.8],
+      [1735728300, 2.9],
+      [1735728900, 2.8],
+      [1735729500, 2.8],
+      [1735730100, 2.8],
+      [1735730700, 2.5],
+      [1735731300, 2.0],
+      [1735731900, 1.4],
+      [1735732500, 0.9],
+      [1735733100, 0.6],
+      [1735733700, 0.4],
+      [1735734300, 0.4],
+      [1735734900, 0.4],
+      [1735735500, 0.7],
+      [1735736100, 0.8],
+      [1735736700, 0.8],
+      [1735737300, 0.7],
+      [1735737900, 0.6],
+      [1735738500, 0.6],
+      [1735739100, 0.6],
+      [1735739700, 0.6],
+      [1735740300, 0.7],
+      [1735740900, 0.8],
+      [1735741500, 0.9],
+      [1735742100, 1.1],
+      [1735742700, 1.3],
+      [1735743300, 1.6],
+      [1735743900, 1.7],
+      [1735744500, 1.8],
+      [1735745100, 1.8],
+      [1735745700, 2.0],
+      [1735746300, 2.2],
+      [1735746900, 2.2],
+      [1735747500, 2.3],
+      [1735748100, 2.4],
+      [1735748700, 2.5],
+      [1735749300, 2.7],
+      [1735749900, 2.7],
+      [1735750500, 2.8],
+      [1735751100, 2.9],
+      [1735751700, 3.2],
+      [1735752300, 3.3],
+      [1735752900, 3.2],
+      [1735753500, 3.2],
+      [1735754100, 3.2],
+      [1735754700, 3.2],
+      [1735755300, 3.3],
+      [1735755900, 3.3],
+      [1735756500, 3.2],
+      [1735757100, 3.2],
+      [1735757700, 3.2],
+      [1735758300, 3.2],
+      [1735758900, 3.2],
+      [1735759500, 3.2],
+      [1735760100, 3.2],
+      [1735760700, 3.0],
+      [1735761300, 2.8],
+      [1735761900, 2.7],
+      [1735762500, 2.6],
+      [1735763100, 2.4],
+      [1735763700, 2.2],
+      [1735764300, 2.0],
+      [1735764900, 1.9],
+      [1735765500, 1.9],
+      [1735766100, 1.9],
+      [1735766700, 1.9],
+      [1735767300, 1.9],
+      [1735767900, 1.9],
+      [1735768500, 1.9],
+      [1735769100, 1.7],
+      [1735769700, 1.5],
+ ]
+    }
+    ,{
+      name: "Dew Point",
+      data: [ 
+      [1735683900, -0.8],
+      [1735684500, -0.8],
+      [1735685100, -0.7],
+      [1735685700, -0.7],
+      [1735686300, -0.6],
+      [1735686900, -0.7],
+      [1735687500, -0.8],
+      [1735688100, -0.7],
+      [1735688700, -0.9],
+      [1735689300, -0.7],
+      [1735689900, -0.6],
+      [1735690500, -0.5],
+      [1735691100, -0.4],
+      [1735691700, -0.3],
+      [1735692300, -0.3],
+      [1735692900, -0.2],
+      [1735693500, -0.1],
+      [1735694100, -0.0],
+      [1735694700, -0.0],
+      [1735695300, 0.0],
+      [1735695900, -0.0],
+      [1735696500, -0.0],
+      [1735697100, -0.1],
+      [1735697700, -0.1],
+      [1735698300, -0.1],
+      [1735698900, -0.1],
+      [1735699500, -0.0],
+      [1735700100, -0.0],
+      [1735700700, -0.1],
+      [1735701300, -0.1],
+      [1735701900, -0.2],
+      [1735702500, -0.1],
+      [1735703100, -0.1],
+      [1735703700, -0.2],
+      [1735704300, -0.2],
+      [1735704900, -0.2],
+      [1735705500, -0.3],
+      [1735706100, -0.2],
+      [1735706700, -0.3],
+      [1735707300, -0.3],
+      [1735707900, -0.3],
+      [1735708500, -0.3],
+      [1735709100, -0.3],
+      [1735709700, -0.3],
+      [1735710300, -0.3],
+      [1735710900, -0.3],
+      [1735711500, -0.3],
+      [1735712100, -0.3],
+      [1735712700, -0.2],
+      [1735713300, -0.2],
+      [1735713900, -0.1],
+      [1735714500, -0.0],
+      [1735715100, -0.2],
+      [1735715700, -0.3],
+      [1735716300, -0.2],
+      [1735716900, -0.2],
+      [1735717500, -0.2],
+      [1735718100, -0.2],
+      [1735718700, -0.1],
+      [1735719300, -0.2],
+      [1735719900, -0.2],
+      [1735720500, -0.1],
+      [1735721100, -0.1],
+      [1735721700, -0.2],
+      [1735722300, -0.0],
+      [1735722900, -0.1],
+      [1735723500, -0.1],
+      [1735724100, -0.1],
+      [1735724700, 0.1],
+      [1735725300, 0.2],
+      [1735725900, 0.0],
+      [1735726500, 0.2],
+      [1735727100, 0.3],
+      [1735727700, 0.2],
+      [1735728300, 0.3],
+      [1735728900, 0.3],
+      [1735729500, 0.4],
+      [1735730100, 0.5],
+      [1735730700, 0.8],
+      [1735731300, 1.0],
+      [1735731900, 1.0],
+      [1735732500, 0.7],
+      [1735733100, 0.5],
+      [1735733700, 0.3],
+      [1735734300, 0.3],
+      [1735734900, 0.3],
+      [1735735500, 0.6],
+      [1735736100, 0.6],
+      [1735736700, 0.6],
+      [1735737300, 0.6],
+      [1735737900, 0.5],
+      [1735738500, 0.5],
+      [1735739100, 0.5],
+      [1735739700, 0.5],
+      [1735740300, 0.6],
+      [1735740900, 0.6],
+      [1735741500, 0.8],
+      [1735742100, 1.0],
+      [1735742700, 1.2],
+      [1735743300, 1.4],
+      [1735743900, 1.4],
+      [1735744500, 1.5],
+      [1735745100, 1.6],
+      [1735745700, 1.7],
+      [1735746300, 1.7],
+      [1735746900, 1.7],
+      [1735747500, 1.9],
+      [1735748100, 1.9],
+      [1735748700, 2.1],
+      [1735749300, 2.2],
+      [1735749900, 2.2],
+      [1735750500, 2.3],
+      [1735751100, 2.4],
+      [1735751700, 2.8],
+      [1735752300, 2.7],
+      [1735752900, 2.6],
+      [1735753500, 2.6],
+      [1735754100, 2.6],
+      [1735754700, 2.7],
+      [1735755300, 2.8],
+      [1735755900, 2.8],
+      [1735756500, 2.7],
+      [1735757100, 2.8],
+      [1735757700, 2.8],
+      [1735758300, 2.8],
+      [1735758900, 2.8],
+      [1735759500, 2.8],
+      [1735760100, 2.9],
+      [1735760700, 2.9],
+      [1735761300, 2.6],
+      [1735761900, 2.6],
+      [1735762500, 2.4],
+      [1735763100, 2.3],
+      [1735763700, 2.1],
+      [1735764300, 1.9],
+      [1735764900, 1.7],
+      [1735765500, 1.7],
+      [1735766100, 1.7],
+      [1735766700, 1.7],
+      [1735767300, 1.7],
+      [1735767900, 1.7],
+      [1735768500, 1.7],
+      [1735769100, 1.6],
+      [1735769700, 1.4],
+ ]
+    }
+  ]
+}).render()
+
+
+
+
+  // Wind chill + Heat index + optional appTemp
+  
+
+new ApexCharts(document.querySelector('#windchillchart'), {
+  ...graph_area_config,
+  yaxis: {
+    labels: {
+      formatter: function (val) {
+        return formatNumber(val, "%.1f") + "°C";
+      }
+    }
+  },
+  series: [
+    {
+      name: "Wind Chill",
+      data: [ 
+      [1735683900, 1.1],
+      [1735684500, 1.1],
+      [1735685100, 0.8],
+      [1735685700, 0.9],
+      [1735686300, 1.2],
+      [1735686900, 0.6],
+      [1735687500, 0.0],
+      [1735688100, 0.2],
+      [1735688700, 0.0],
+      [1735689300, -0.0],
+      [1735689900, -0.0],
+      [1735690500, 0.0],
+      [1735691100, 0.5],
+      [1735691700, 0.8],
+      [1735692300, 0.3],
+      [1735692900, 1.1],
+      [1735693500, 0.8],
+      [1735694100, 0.9],
+      [1735694700, 1.2],
+      [1735695300, 1.4],
+      [1735695900, 0.8],
+      [1735696500, 1.2],
+      [1735697100, 0.4],
+      [1735697700, 1.0],
+      [1735698300, 0.8],
+      [1735698900, 0.9],
+      [1735699500, 0.4],
+      [1735700100, -0.0],
+      [1735700700, 0.4],
+      [1735701300, 0.1],
+      [1735701900, 0.5],
+      [1735702500, 0.7],
+      [1735703100, 0.8],
+      [1735703700, 1.3],
+      [1735704300, 1.6],
+      [1735704900, 1.6],
+      [1735705500, 1.5],
+      [1735706100, 1.9],
+      [1735706700, 1.8],
+      [1735707300, 1.6],
+      [1735707900, 1.6],
+      [1735708500, 1.2],
+      [1735709100, -0.4],
+      [1735709700, -0.0],
+      [1735710300, -0.5],
+      [1735710900, 0.1],
+      [1735711500, 0.4],
+      [1735712100, 0.8],
+      [1735712700, 1.0],
+      [1735713300, 0.6],
+      [1735713900, 0.9],
+      [1735714500, 0.6],
+      [1735715100, 1.4],
+      [1735715700, 0.1],
+      [1735716300, -0.3],
+      [1735716900, -0.7],
+      [1735717500, -1.0],
+      [1735718100, -1.0],
+      [1735718700, -1.1],
+      [1735719300, -1.1],
+      [1735719900, -0.7],
+      [1735720500, -0.1],
+      [1735721100, -0.3],
+      [1735721700, -0.3],
+      [1735722300, -0.6],
+      [1735722900, -0.7],
+      [1735723500, 0.2],
+      [1735724100, -0.1],
+      [1735724700, 0.1],
+      [1735725300, -0.1],
+      [1735725900, -0.4],
+      [1735726500, -0.5],
+      [1735727100, -0.2],
+      [1735727700, 0.2],
+      [1735728300, 1.2],
+      [1735728900, 1.4],
+      [1735729500, 1.5],
+      [1735730100, 2.2],
+      [1735730700, 1.0],
+      [1735731300, 0.2],
+      [1735731900, -0.4],
+      [1735732500, -1.6],
+      [1735733100, -2.0],
+      [1735733700, -2.6],
+      [1735734300, -2.5],
+      [1735734900, -2.2],
+      [1735735500, -2.6],
+      [1735736100, -2.7],
+      [1735736700, -2.8],
+      [1735737300, -2.6],
+      [1735737900, -2.7],
+      [1735738500, -2.9],
+      [1735739100, -2.8],
+      [1735739700, -2.5],
+      [1735740300, -2.5],
+      [1735740900, -2.2],
+      [1735741500, -1.8],
+      [1735742100, -1.9],
+      [1735742700, -1.8],
+      [1735743300, -1.4],
+      [1735743900, -0.8],
+      [1735744500, -0.4],
+      [1735745100, 0.3],
+      [1735745700, 0.1],
+      [1735746300, 0.6],
+      [1735746900, 1.1],
+      [1735747500, 1.1],
+      [1735748100, 1.9],
+      [1735748700, 2.1],
+      [1735749300, 2.3],
+      [1735749900, 2.3],
+      [1735750500, 2.6],
+      [1735751100, 2.6],
+      [1735751700, 3.0],
+      [1735752300, 3.3],
+      [1735752900, 3.2],
+      [1735753500, 3.2],
+      [1735754100, 3.2],
+      [1735754700, 3.2],
+      [1735755300, 3.3],
+      [1735755900, 3.3],
+      [1735756500, 3.2],
+      [1735757100, 3.2],
+      [1735757700, 3.2],
+      [1735758300, 3.2],
+      [1735758900, 3.2],
+      [1735759500, 3.2],
+      [1735760100, 3.2],
+      [1735760700, 3.0],
+      [1735761300, 2.8],
+      [1735761900, 2.7],
+      [1735762500, 2.6],
+      [1735763100, 2.4],
+      [1735763700, 2.2],
+      [1735764300, 2.0],
+      [1735764900, 1.9],
+      [1735765500, 1.9],
+      [1735766100, 1.9],
+      [1735766700, 1.8],
+      [1735767300, 1.7],
+      [1735767900, 1.9],
+      [1735768500, 1.9],
+      [1735769100, 1.0],
+      [1735769700, 0.3],
+ ]
+    }
+    ,{
+      name: "Heat Index",
+      data: [ 
+      [1735683900, 1.5],
+      [1735684500, 1.7],
+      [1735685100, 1.9],
+      [1735685700, 2.0],
+      [1735686300, 2.0],
+      [1735686900, 1.9],
+      [1735687500, 1.9],
+      [1735688100, 2.0],
+      [1735688700, 2.0],
+      [1735689300, 1.9],
+      [1735689900, 1.9],
+      [1735690500, 1.8],
+      [1735691100, 1.7],
+      [1735691700, 1.5],
+      [1735692300, 1.5],
+      [1735692900, 1.5],
+      [1735693500, 1.5],
+      [1735694100, 1.6],
+      [1735694700, 1.6],
+      [1735695300, 1.6],
+      [1735695900, 1.6],
+      [1735696500, 1.5],
+      [1735697100, 1.4],
+      [1735697700, 1.4],
+      [1735698300, 1.3],
+      [1735698900, 1.1],
+      [1735699500, 1.1],
+      [1735700100, 1.1],
+      [1735700700, 1.1],
+      [1735701300, 1.2],
+      [1735701900, 1.4],
+      [1735702500, 1.8],
+      [1735703100, 1.7],
+      [1735703700, 1.9],
+      [1735704300, 1.8],
+      [1735704900, 1.7],
+      [1735705500, 1.8],
+      [1735706100, 2.0],
+      [1735706700, 2.2],
+      [1735707300, 2.4],
+      [1735707900, 2.1],
+      [1735708500, 1.8],
+      [1735709100, 2.0],
+      [1735709700, 2.1],
+      [1735710300, 2.1],
+      [1735710900, 2.1],
+      [1735711500, 2.3],
+      [1735712100, 2.4],
+      [1735712700, 2.5],
+      [1735713300, 2.3],
+      [1735713900, 2.3],
+      [1735714500, 2.2],
+      [1735715100, 2.0],
+      [1735715700, 1.9],
+      [1735716300, 1.9],
+      [1735716900, 1.9],
+      [1735717500, 1.8],
+      [1735718100, 1.9],
+      [1735718700, 1.8],
+      [1735719300, 1.8],
+      [1735719900, 2.0],
+      [1735720500, 2.1],
+      [1735721100, 2.2],
+      [1735721700, 2.3],
+      [1735722300, 2.4],
+      [1735722900, 2.4],
+      [1735723500, 2.8],
+      [1735724100, 2.8],
+      [1735724700, 2.8],
+      [1735725300, 2.6],
+      [1735725900, 2.8],
+      [1735726500, 2.8],
+      [1735727100, 2.8],
+      [1735727700, 2.8],
+      [1735728300, 2.9],
+      [1735728900, 2.8],
+      [1735729500, 2.8],
+      [1735730100, 2.8],
+      [1735730700, 2.5],
+      [1735731300, 2.0],
+      [1735731900, 1.4],
+      [1735732500, 0.9],
+      [1735733100, 0.6],
+      [1735733700, 0.4],
+      [1735734300, 0.4],
+      [1735734900, 0.4],
+      [1735735500, 0.7],
+      [1735736100, 0.8],
+      [1735736700, 0.8],
+      [1735737300, 0.7],
+      [1735737900, 0.6],
+      [1735738500, 0.6],
+      [1735739100, 0.6],
+      [1735739700, 0.6],
+      [1735740300, 0.7],
+      [1735740900, 0.8],
+      [1735741500, 0.9],
+      [1735742100, 1.1],
+      [1735742700, 1.3],
+      [1735743300, 1.6],
+      [1735743900, 1.7],
+      [1735744500, 1.8],
+      [1735745100, 1.8],
+      [1735745700, 2.0],
+      [1735746300, 2.2],
+      [1735746900, 2.2],
+      [1735747500, 2.3],
+      [1735748100, 2.4],
+      [1735748700, 2.5],
+      [1735749300, 2.7],
+      [1735749900, 2.7],
+      [1735750500, 2.8],
+      [1735751100, 2.9],
+      [1735751700, 3.2],
+      [1735752300, 3.3],
+      [1735752900, 3.2],
+      [1735753500, 3.2],
+      [1735754100, 3.2],
+      [1735754700, 3.2],
+      [1735755300, 3.3],
+      [1735755900, 3.3],
+      [1735756500, 3.2],
+      [1735757100, 3.2],
+      [1735757700, 3.2],
+      [1735758300, 3.2],
+      [1735758900, 3.2],
+      [1735759500, 3.2],
+      [1735760100, 3.2],
+      [1735760700, 3.0],
+      [1735761300, 2.8],
+      [1735761900, 2.7],
+      [1735762500, 2.6],
+      [1735763100, 2.4],
+      [1735763700, 2.2],
+      [1735764300, 2.0],
+      [1735764900, 1.9],
+      [1735765500, 1.9],
+      [1735766100, 1.9],
+      [1735766700, 1.9],
+      [1735767300, 1.9],
+      [1735767900, 1.9],
+      [1735768500, 1.9],
+      [1735769100, 1.7],
+      [1735769700, 1.5],
+ ]
+    }
+    ,{
+      name: "appTemp",
+      data: [ 
+      [1735683900, -1.4],
+      [1735684500, -1.3],
+      [1735685100, -1.2],
+      [1735685700, -1.1],
+      [1735686300, -1.0],
+      [1735686900, -1.3],
+      [1735687500, -1.4],
+      [1735688100, -1.3],
+      [1735688700, -1.4],
+      [1735689300, -1.5],
+      [1735689900, -1.5],
+      [1735690500, -1.5],
+      [1735691100, -1.4],
+      [1735691700, -1.4],
+      [1735692300, -1.5],
+      [1735692900, -1.3],
+      [1735693500, -1.4],
+      [1735694100, -1.3],
+      [1735694700, -1.1],
+      [1735695300, -1.1],
+      [1735695900, -1.3],
+      [1735696500, -1.3],
+      [1735697100, -1.6],
+      [1735697700, -1.4],
+      [1735698300, -1.6],
+      [1735698900, -1.6],
+      [1735699500, -1.8],
+      [1735700100, -1.9],
+      [1735700700, -1.8],
+      [1735701300, -1.8],
+      [1735701900, -1.5],
+      [1735702500, -1.2],
+      [1735703100, -1.2],
+      [1735703700, -1.0],
+      [1735704300, -0.9],
+      [1735704900, -0.9],
+      [1735705500, -1.0],
+      [1735706100, -0.6],
+      [1735706700, -0.6],
+      [1735707300, -0.6],
+      [1735707900, -0.8],
+      [1735708500, -1.1],
+      [1735709100, -1.6],
+      [1735709700, -1.4],
+      [1735710300, -1.7],
+      [1735710900, -1.3],
+      [1735711500, -1.1],
+      [1735712100, -0.9],
+      [1735712700, -0.7],
+      [1735713300, -1.0],
+      [1735713900, -0.8],
+      [1735714500, -1.0],
+      [1735715100, -0.9],
+      [1735715700, -1.4],
+      [1735716300, -1.6],
+      [1735716900, -1.9],
+      [1735717500, -2.0],
+      [1735718100, -2.1],
+      [1735718700, -2.1],
+      [1735719300, -2.2],
+      [1735719900, -1.8],
+      [1735720500, -1.4],
+      [1735721100, -1.5],
+      [1735721700, -1.5],
+      [1735722300, -1.7],
+      [1735722900, -1.8],
+      [1735723500, -1.0],
+      [1735724100, -1.3],
+      [1735724700, -1.1],
+      [1735725300, -1.3],
+      [1735725900, -1.5],
+      [1735726500, -1.6],
+      [1735727100, -1.4],
+      [1735727700, -1.0],
+      [1735728300, -0.4],
+      [1735728900, -0.4],
+      [1735729500, -0.3],
+      [1735730100, 0.0],
+      [1735730700, -0.6],
+      [1735731300, -1.3],
+      [1735731900, -1.7],
+      [1735732500, -2.5],
+      [1735733100, -2.9],
+      [1735733700, -3.3],
+      [1735734300, -3.3],
+      [1735734900, -3.1],
+      [1735735500, -3.3],
+      [1735736100, -3.4],
+      [1735736700, -3.4],
+      [1735737300, -3.3],
+      [1735737900, -3.3],
+      [1735738500, -3.5],
+      [1735739100, -3.5],
+      [1735739700, -3.2],
+      [1735740300, -3.2],
+      [1735740900, -2.9],
+      [1735741500, -2.6],
+      [1735742100, -2.7],
+      [1735742700, -2.5],
+      [1735743300, -2.2],
+      [1735743900, -1.7],
+      [1735744500, -1.4],
+      [1735745100, -1.1],
+      [1735745700, -1.0],
+      [1735746300, -0.8],
+      [1735746900, -0.6],
+      [1735747500, -0.5],
+      [1735748100, -0.1],
+      [1735748700, -0.0],
+      [1735749300, 0.3],
+      [1735749900, 0.3],
+      [1735750500, 0.4],
+      [1735751100, 0.4],
+      [1735751700, 1.1],
+      [1735752300, 1.2],
+      [1735752900, 1.1],
+      [1735753500, 1.3],
+      [1735754100, 1.7],
+      [1735754700, 1.7],
+      [1735755300, 1.3],
+      [1735755900, 1.2],
+      [1735756500, 1.2],
+      [1735757100, 1.5],
+      [1735757700, 1.7],
+      [1735758300, 1.7],
+      [1735758900, 1.7],
+      [1735759500, 1.7],
+      [1735760100, 1.6],
+      [1735760700, 1.5],
+      [1735761300, 1.0],
+      [1735761900, 1.1],
+      [1735762500, 0.7],
+      [1735763100, 0.5],
+      [1735763700, 0.2],
+      [1735764300, 0.3],
+      [1735764900, -0.0],
+      [1735765500, -0.1],
+      [1735766100, 0.1],
+      [1735766700, -0.1],
+      [1735767300, -0.3],
+      [1735767900, 0.1],
+      [1735768500, -0.1],
+      [1735769100, -0.7],
+      [1735769700, -1.4],
+ ]
+    }
+  ]
+}).render()
+
+
+
+
+  // Barometer
+  
+
+new ApexCharts(document.querySelector('#barometerchart'), {
+  ...graph_area_config,
+  yaxis: {
+    labels: {
+      formatter: function (val) {
+        return formatNumber(val, "%.1f") + " mbar";
+      }
+    }
+  },
+  series: [
+    {
+      name: "Barometer",
+      data: [ 
+      [1735683900, null],
+      [1735684500, null],
+      [1735685100, null],
+      [1735685700, null],
+      [1735686300, null],
+      [1735686900, null],
+      [1735687500, null],
+      [1735688100, null],
+      [1735688700, null],
+      [1735689300, null],
+      [1735689900, null],
+      [1735690500, null],
+      [1735691100, null],
+      [1735691700, null],
+      [1735692300, null],
+      [1735692900, null],
+      [1735693500, null],
+      [1735694100, null],
+      [1735694700, null],
+      [1735695300, null],
+      [1735695900, null],
+      [1735696500, null],
+      [1735697100, null],
+      [1735697700, null],
+      [1735698300, null],
+      [1735698900, null],
+      [1735699500, null],
+      [1735700100, null],
+      [1735700700, null],
+      [1735701300, null],
+      [1735701900, null],
+      [1735702500, null],
+      [1735703100, null],
+      [1735703700, null],
+      [1735704300, null],
+      [1735704900, null],
+      [1735705500, null],
+      [1735706100, null],
+      [1735706700, null],
+      [1735707300, null],
+      [1735707900, null],
+      [1735708500, null],
+      [1735709100, null],
+      [1735709700, null],
+      [1735710300, null],
+      [1735710900, null],
+      [1735711500, null],
+      [1735712100, null],
+      [1735712700, null],
+      [1735713300, null],
+      [1735713900, null],
+      [1735714500, null],
+      [1735715100, null],
+      [1735715700, null],
+      [1735716300, null],
+      [1735716900, null],
+      [1735717500, null],
+      [1735718100, null],
+      [1735718700, null],
+      [1735719300, null],
+      [1735719900, null],
+      [1735720500, null],
+      [1735721100, null],
+      [1735721700, null],
+      [1735722300, null],
+      [1735722900, null],
+      [1735723500, null],
+      [1735724100, null],
+      [1735724700, null],
+      [1735725300, null],
+      [1735725900, null],
+      [1735726500, null],
+      [1735727100, null],
+      [1735727700, null],
+      [1735728300, null],
+      [1735728900, null],
+      [1735729500, null],
+      [1735730100, null],
+      [1735730700, null],
+      [1735731300, null],
+      [1735731900, null],
+      [1735732500, null],
+      [1735733100, null],
+      [1735733700, null],
+      [1735734300, null],
+      [1735734900, null],
+      [1735735500, null],
+      [1735736100, null],
+      [1735736700, null],
+      [1735737300, null],
+      [1735737900, null],
+      [1735738500, null],
+      [1735739100, null],
+      [1735739700, null],
+      [1735740300, null],
+      [1735740900, null],
+      [1735741500, null],
+      [1735742100, null],
+      [1735742700, null],
+      [1735743300, null],
+      [1735743900, null],
+      [1735744500, null],
+      [1735745100, null],
+      [1735745700, null],
+      [1735746300, null],
+      [1735746900, null],
+      [1735747500, null],
+      [1735748100, null],
+      [1735748700, null],
+      [1735749300, null],
+      [1735749900, null],
+      [1735750500, null],
+      [1735751100, null],
+      [1735751700, null],
+      [1735752300, null],
+      [1735752900, null],
+      [1735753500, null],
+      [1735754100, null],
+      [1735754700, null],
+      [1735755300, null],
+      [1735755900, null],
+      [1735756500, null],
+      [1735757100, null],
+      [1735757700, null],
+      [1735758300, null],
+      [1735758900, null],
+      [1735759500, null],
+      [1735760100, null],
+      [1735760700, null],
+      [1735761300, null],
+      [1735761900, null],
+      [1735762500, null],
+      [1735763100, null],
+      [1735763700, null],
+      [1735764300, null],
+      [1735764900, null],
+      [1735765500, null],
+      [1735766100, null],
+      [1735766700, null],
+      [1735767300, null],
+      [1735767900, null],
+      [1735768500, null],
+      [1735769100, null],
+      [1735769700, null],
+ ]
+    }
+  ]
+}).render()
+
+
+
+
+  // Rain
+  
+
+new ApexCharts(document.querySelector('#rainchart'), {
+  ...graph_bar_config,
+  yaxis: {
+    labels: {
+      formatter: function (val) {
+        return formatNumber(val, "%.2f") + " cm";
+      }
+    }
+  },
+  series: [
+    {
+      name: "Rain",
+      data: [ 
+      [1735683900, 0.00],
+      [1735687500, 0.00],
+      [1735691100, 0.00],
+      [1735694700, 0.00],
+      [1735698300, 0.00],
+      [1735701900, 0.00],
+      [1735705500, 0.00],
+      [1735709100, 0.00],
+      [1735712700, 0.00],
+      [1735716300, 0.00],
+      [1735719900, 0.00],
+      [1735723500, 0.00],
+      [1735727100, 0.00],
+      [1735730700, 0.03],
+      [1735734300, 0.03],
+      [1735737900, 0.08],
+      [1735741500, 0.08],
+      [1735745100, 0.03],
+      [1735748700, 0.00],
+      [1735752300, 0.00],
+      [1735755900, 0.00],
+      [1735759500, 0.05],
+      [1735763100, 0.05],
+      [1735766700, 0.03],
+ ]
+    }
+  ]
+}).render()
+
+
+
+
+  // Wind
+  
+
+new ApexCharts(document.querySelector('#windSpeedchart'), {
+  ...graph_area_config,
+  yaxis: {
+    labels: {
+      formatter: function (val) {
+        return formatNumber(val, "%.0f") + " km/h";
+      }
+    }
+  },
+  series: [
+    {
+      name: "Wind Speed",
+      data: [ 
+      [1735683900, 4],
+      [1735684500, 5],
+      [1735685100, 6],
+      [1735685700, 5],
+      [1735686300, 5],
+      [1735686900, 6],
+      [1735687500, 7],
+      [1735688100, 6],
+      [1735688700, 7],
+      [1735689300, 7],
+      [1735689900, 7],
+      [1735690500, 7],
+      [1735691100, 6],
+      [1735691700, 5],
+      [1735692300, 5],
+      [1735692900, 5],
+      [1735693500, 5],
+      [1735694100, 5],
+      [1735694700, 4],
+      [1735695300, 4],
+      [1735695900, 5],
+      [1735696500, 4],
+      [1735697100, 5],
+      [1735697700, 4],
+      [1735698300, 5],
+      [1735698900, 4],
+      [1735699500, 5],
+      [1735700100, 5],
+      [1735700700, 5],
+      [1735701300, 5],
+      [1735701900, 5],
+      [1735702500, 5],
+      [1735703100, 5],
+      [1735703700, 5],
+      [1735704300, 4],
+      [1735704900, 4],
+      [1735705500, 4],
+      [1735706100, 3],
+      [1735706700, 5],
+      [1735707300, 5],
+      [1735707900, 5],
+      [1735708500, 6],
+      [1735709100, 9],
+      [1735709700, 8],
+      [1735710300, 9],
+      [1735710900, 8],
+      [1735711500, 7],
+      [1735712100, 7],
+      [1735712700, 6],
+      [1735713300, 7],
+      [1735713900, 7],
+      [1735714500, 7],
+      [1735715100, 5],
+      [1735715700, 7],
+      [1735716300, 9],
+      [1735716900, 9],
+      [1735717500, 10],
+      [1735718100, 11],
+      [1735718700, 10],
+      [1735719300, 10],
+      [1735719900, 9],
+      [1735720500, 8],
+      [1735721100, 10],
+      [1735721700, 9],
+      [1735722300, 11],
+      [1735722900, 12],
+      [1735723500, 10],
+      [1735724100, 11],
+      [1735724700, 10],
+      [1735725300, 11],
+      [1735725900, 13],
+      [1735726500, 13],
+      [1735727100, 11],
+      [1735727700, 10],
+      [1735728300, 8],
+      [1735728900, 7],
+      [1735729500, 7],
+      [1735730100, 5],
+      [1735730700, 9],
+      [1735731300, 8],
+      [1735731900, 7],
+      [1735732500, 8],
+      [1735733100, 8],
+      [1735733700, 9],
+      [1735734300, 9],
+      [1735734900, 9],
+      [1735735500, 11],
+      [1735736100, 12],
+      [1735736700, 12],
+      [1735737300, 11],
+      [1735737900, 10],
+      [1735738500, 12],
+      [1735739100, 11],
+      [1735739700, 11],
+      [1735740300, 11],
+      [1735740900, 10],
+      [1735741500, 8],
+      [1735742100, 10],
+      [1735742700, 10],
+      [1735743300, 10],
+      [1735743900, 9],
+      [1735744500, 8],
+      [1735745100, 6],
+      [1735745700, 7],
+      [1735746300, 7],
+      [1735746900, 6],
+      [1735747500, 6],
+      [1735748100, 4],
+      [1735748700, 4],
+      [1735749300, 4],
+      [1735749900, 4],
+      [1735750500, 4],
+      [1735751100, 5],
+      [1735751700, 3],
+      [1735752300, 3],
+      [1735752900, 3],
+      [1735753500, 3],
+      [1735754100, 0],
+      [1735754700, 0],
+      [1735755300, 2],
+      [1735755900, 3],
+      [1735756500, 3],
+      [1735757100, 1],
+      [1735757700, 0],
+      [1735758300, 0],
+      [1735758900, 0],
+      [1735759500, 0],
+      [1735760100, 0],
+      [1735760700, 0],
+      [1735761300, 2],
+      [1735761900, 1],
+      [1735762500, 2],
+      [1735763100, 2],
+      [1735763700, 3],
+      [1735764300, 0],
+      [1735764900, 2],
+      [1735765500, 1],
+      [1735766100, 1],
+      [1735766700, 2],
+      [1735767300, 3],
+      [1735767900, 1],
+      [1735768500, 2],
+      [1735769100, 4],
+      [1735769700, 6],
+ ]
+    }
+    ,{
+      name: "Gust Speed",
+      data: [ 
+      [1735683900, 6],
+      [1735684500, 6],
+      [1735685100, 8],
+      [1735685700, 6],
+      [1735686300, 6],
+      [1735686900, 8],
+      [1735687500, 8],
+      [1735688100, 8],
+      [1735688700, 8],
+      [1735689300, 8],
+      [1735689900, 8],
+      [1735690500, 8],
+      [1735691100, 8],
+      [1735691700, 7],
+      [1735692300, 8],
+      [1735692900, 6],
+      [1735693500, 6],
+      [1735694100, 9],
+      [1735694700, 6],
+      [1735695300, 7],
+      [1735695900, 7],
+      [1735696500, 6],
+      [1735697100, 7],
+      [1735697700, 7],
+      [1735698300, 7],
+      [1735698900, 6],
+      [1735699500, 7],
+      [1735700100, 8],
+      [1735700700, 7],
+      [1735701300, 8],
+      [1735701900, 7],
+      [1735702500, 8],
+      [1735703100, 7],
+      [1735703700, 6],
+      [1735704300, 6],
+      [1735704900, 7],
+      [1735705500, 6],
+      [1735706100, 5],
+      [1735706700, 8],
+      [1735707300, 7],
+      [1735707900, 6],
+      [1735708500, 7],
+      [1735709100, 13],
+      [1735709700, 13],
+      [1735710300, 13],
+      [1735710900, 11],
+      [1735711500, 11],
+      [1735712100, 11],
+      [1735712700, 9],
+      [1735713300, 10],
+      [1735713900, 8],
+      [1735714500, 8],
+      [1735715100, 7],
+      [1735715700, 9],
+      [1735716300, 10],
+      [1735716900, 12],
+      [1735717500, 13],
+      [1735718100, 13],
+      [1735718700, 13],
+      [1735719300, 13],
+      [1735719900, 13],
+      [1735720500, 10],
+      [1735721100, 15],
+      [1735721700, 11],
+      [1735722300, 14],
+      [1735722900, 15],
+      [1735723500, 13],
+      [1735724100, 13],
+      [1735724700, 12],
+      [1735725300, 13],
+      [1735725900, 16],
+      [1735726500, 17],
+      [1735727100, 14],
+      [1735727700, 13],
+      [1735728300, 13],
+      [1735728900, 10],
+      [1735729500, 12],
+      [1735730100, 8],
+      [1735730700, 19],
+      [1735731300, 13],
+      [1735731900, 10],
+      [1735732500, 10],
+      [1735733100, 10],
+      [1735733700, 11],
+      [1735734300, 11],
+      [1735734900, 11],
+      [1735735500, 13],
+      [1735736100, 14],
+      [1735736700, 15],
+      [1735737300, 17],
+      [1735737900, 12],
+      [1735738500, 14],
+      [1735739100, 16],
+      [1735739700, 13],
+      [1735740300, 14],
+      [1735740900, 13],
+      [1735741500, 10],
+      [1735742100, 14],
+      [1735742700, 14],
+      [1735743300, 13],
+      [1735743900, 13],
+      [1735744500, 10],
+      [1735745100, 8],
+      [1735745700, 9],
+      [1735746300, 8],
+      [1735746900, 8],
+      [1735747500, 7],
+      [1735748100, 7],
+      [1735748700, 6],
+      [1735749300, 5],
+      [1735749900, 5],
+      [1735750500, 7],
+      [1735751100, 6],
+      [1735751700, 6],
+      [1735752300, 4],
+      [1735752900, 3],
+      [1735753500, 4],
+      [1735754100, 0],
+      [1735754700, 0],
+      [1735755300, 4],
+      [1735755900, 4],
+      [1735756500, 4],
+      [1735757100, 3],
+      [1735757700, 0],
+      [1735758300, 3],
+      [1735758900, 0],
+      [1735759500, 0],
+      [1735760100, 2],
+      [1735760700, 0],
+      [1735761300, 3],
+      [1735761900, 3],
+      [1735762500, 3],
+      [1735763100, 3],
+      [1735763700, 4],
+      [1735764300, 3],
+      [1735764900, 3],
+      [1735765500, 3],
+      [1735766100, 3],
+      [1735766700, 5],
+      [1735767300, 5],
+      [1735767900, 3],
+      [1735768500, 4],
+      [1735769100, 5],
+      [1735769700, 13],
+ ]
+    }
+  ]
+}).render()
+
+
+
+
+  // outHumidity
+  
+
+new ApexCharts(document.querySelector('#outHumiditychart'), {
+  ...graph_area_config,
+  yaxis: {
+    labels: {
+      formatter: function (val) {
+        return formatNumber(val, "%.0f") + "%";
+      }
+    }
+  },
+  series: [
+    {
+      name: "Outside Humidity",
+      data: [ 
+      [1735683900, 85],
+      [1735684500, 83],
+      [1735685100, 83],
+      [1735685700, 83],
+      [1735686300, 83],
+      [1735686900, 83],
+      [1735687500, 82],
+      [1735688100, 82],
+      [1735688700, 81],
+      [1735689300, 83],
+      [1735689900, 84],
+      [1735690500, 85],
+      [1735691100, 86],
+      [1735691700, 88],
+      [1735692300, 88],
+      [1735692900, 88],
+      [1735693500, 89],
+      [1735694100, 89],
+      [1735694700, 89],
+      [1735695300, 89],
+      [1735695900, 89],
+      [1735696500, 90],
+      [1735697100, 90],
+      [1735697700, 90],
+      [1735698300, 90],
+      [1735698900, 92],
+      [1735699500, 92],
+      [1735700100, 92],
+      [1735700700, 92],
+      [1735701300, 91],
+      [1735701900, 89],
+      [1735702500, 87],
+      [1735703100, 88],
+      [1735703700, 86],
+      [1735704300, 87],
+      [1735704900, 87],
+      [1735705500, 86],
+      [1735706100, 85],
+      [1735706700, 83],
+      [1735707300, 83],
+      [1735707900, 84],
+      [1735708500, 86],
+      [1735709100, 85],
+      [1735709700, 84],
+      [1735710300, 84],
+      [1735710900, 84],
+      [1735711500, 83],
+      [1735712100, 82],
+      [1735712700, 82],
+      [1735713300, 83],
+      [1735713900, 84],
+      [1735714500, 85],
+      [1735715100, 85],
+      [1735715700, 85],
+      [1735716300, 86],
+      [1735716900, 86],
+      [1735717500, 87],
+      [1735718100, 86],
+      [1735718700, 87],
+      [1735719300, 86],
+      [1735719900, 85],
+      [1735720500, 85],
+      [1735721100, 85],
+      [1735721700, 84],
+      [1735722300, 84],
+      [1735722900, 83],
+      [1735723500, 81],
+      [1735724100, 81],
+      [1735724700, 82],
+      [1735725300, 84],
+      [1735725900, 82],
+      [1735726500, 83],
+      [1735727100, 83],
+      [1735727700, 83],
+      [1735728300, 83],
+      [1735728900, 84],
+      [1735729500, 84],
+      [1735730100, 85],
+      [1735730700, 89],
+      [1735731300, 93],
+      [1735731900, 97],
+      [1735732500, 98],
+      [1735733100, 99],
+      [1735733700, 99],
+      [1735734300, 99],
+      [1735734900, 99],
+      [1735735500, 99],
+      [1735736100, 99],
+      [1735736700, 99],
+      [1735737300, 99],
+      [1735737900, 99],
+      [1735738500, 99],
+      [1735739100, 99],
+      [1735739700, 99],
+      [1735740300, 99],
+      [1735740900, 99],
+      [1735741500, 99],
+      [1735742100, 99],
+      [1735742700, 99],
+      [1735743300, 99],
+      [1735743900, 98],
+      [1735744500, 98],
+      [1735745100, 99],
+      [1735745700, 98],
+      [1735746300, 97],
+      [1735746900, 96],
+      [1735747500, 97],
+      [1735748100, 96],
+      [1735748700, 97],
+      [1735749300, 97],
+      [1735749900, 97],
+      [1735750500, 97],
+      [1735751100, 97],
+      [1735751700, 97],
+      [1735752300, 96],
+      [1735752900, 96],
+      [1735753500, 96],
+      [1735754100, 96],
+      [1735754700, 96],
+      [1735755300, 96],
+      [1735755900, 96],
+      [1735756500, 97],
+      [1735757100, 97],
+      [1735757700, 97],
+      [1735758300, 97],
+      [1735758900, 97],
+      [1735759500, 97],
+      [1735760100, 98],
+      [1735760700, 99],
+      [1735761300, 99],
+      [1735761900, 99],
+      [1735762500, 99],
+      [1735763100, 99],
+      [1735763700, 99],
+      [1735764300, 99],
+      [1735764900, 99],
+      [1735765500, 99],
+      [1735766100, 99],
+      [1735766700, 99],
+      [1735767300, 99],
+      [1735767900, 99],
+      [1735768500, 99],
+      [1735769100, 99],
+      [1735769700, 99],
+ ]
+    }
+  ]
+}).render()
+
+
+
+
+  // UV / ET / Radiation
+
+
+
+  // inTemp + inHumidity
+  
+
+new ApexCharts(document.querySelector('#inTempchart'), {
+  ...graph_area_config,
+  yaxis: {
+    labels: {
+      formatter: function (val) {
+        return formatNumber(val, "%.1f") + "°C";
+      }
+    }
+  },
+  series: [
+    {
+      name: "Inside Temperature",
+      data: [ 
+      [1735683900, null],
+      [1735684500, null],
+      [1735685100, null],
+      [1735685700, null],
+      [1735686300, null],
+      [1735686900, null],
+      [1735687500, null],
+      [1735688100, null],
+      [1735688700, null],
+      [1735689300, null],
+      [1735689900, null],
+      [1735690500, null],
+      [1735691100, null],
+      [1735691700, null],
+      [1735692300, null],
+      [1735692900, null],
+      [1735693500, null],
+      [1735694100, null],
+      [1735694700, null],
+      [1735695300, null],
+      [1735695900, null],
+      [1735696500, null],
+      [1735697100, null],
+      [1735697700, null],
+      [1735698300, null],
+      [1735698900, null],
+      [1735699500, null],
+      [1735700100, null],
+      [1735700700, null],
+      [1735701300, null],
+      [1735701900, null],
+      [1735702500, null],
+      [1735703100, null],
+      [1735703700, null],
+      [1735704300, null],
+      [1735704900, null],
+      [1735705500, null],
+      [1735706100, null],
+      [1735706700, null],
+      [1735707300, null],
+      [1735707900, null],
+      [1735708500, null],
+      [1735709100, null],
+      [1735709700, null],
+      [1735710300, null],
+      [1735710900, null],
+      [1735711500, null],
+      [1735712100, null],
+      [1735712700, null],
+      [1735713300, null],
+      [1735713900, null],
+      [1735714500, null],
+      [1735715100, null],
+      [1735715700, null],
+      [1735716300, null],
+      [1735716900, null],
+      [1735717500, null],
+      [1735718100, null],
+      [1735718700, null],
+      [1735719300, null],
+      [1735719900, null],
+      [1735720500, null],
+      [1735721100, null],
+      [1735721700, null],
+      [1735722300, null],
+      [1735722900, null],
+      [1735723500, null],
+      [1735724100, null],
+      [1735724700, null],
+      [1735725300, null],
+      [1735725900, null],
+      [1735726500, null],
+      [1735727100, null],
+      [1735727700, null],
+      [1735728300, null],
+      [1735728900, null],
+      [1735729500, null],
+      [1735730100, null],
+      [1735730700, null],
+      [1735731300, null],
+      [1735731900, null],
+      [1735732500, null],
+      [1735733100, null],
+      [1735733700, null],
+      [1735734300, null],
+      [1735734900, null],
+      [1735735500, null],
+      [1735736100, null],
+      [1735736700, null],
+      [1735737300, null],
+      [1735737900, null],
+      [1735738500, null],
+      [1735739100, null],
+      [1735739700, null],
+      [1735740300, null],
+      [1735740900, null],
+      [1735741500, null],
+      [1735742100, null],
+      [1735742700, null],
+      [1735743300, null],
+      [1735743900, null],
+      [1735744500, null],
+      [1735745100, null],
+      [1735745700, null],
+      [1735746300, null],
+      [1735746900, null],
+      [1735747500, null],
+      [1735748100, null],
+      [1735748700, null],
+      [1735749300, null],
+      [1735749900, null],
+      [1735750500, null],
+      [1735751100, null],
+      [1735751700, null],
+      [1735752300, null],
+      [1735752900, null],
+      [1735753500, null],
+      [1735754100, null],
+      [1735754700, null],
+      [1735755300, null],
+      [1735755900, null],
+      [1735756500, null],
+      [1735757100, null],
+      [1735757700, null],
+      [1735758300, null],
+      [1735758900, null],
+      [1735759500, null],
+      [1735760100, null],
+      [1735760700, null],
+      [1735761300, null],
+      [1735761900, null],
+      [1735762500, null],
+      [1735763100, null],
+      [1735763700, null],
+      [1735764300, null],
+      [1735764900, null],
+      [1735765500, null],
+      [1735766100, null],
+      [1735766700, null],
+      [1735767300, null],
+      [1735767900, null],
+      [1735768500, null],
+      [1735769100, null],
+      [1735769700, null],
+ ]
+    }
+  ]
+}).render()
+
+
+
+  
+
+new ApexCharts(document.querySelector('#inHumiditychart'), {
+  ...graph_area_config,
+  yaxis: {
+    labels: {
+      formatter: function (val) {
+        return formatNumber(val, "%.0f") + "%";
+      }
+    }
+  },
+  series: [
+    {
+      name: "Inside Humidity",
+      data: [ 
+      [1735683900, null],
+      [1735684500, null],
+      [1735685100, null],
+      [1735685700, null],
+      [1735686300, null],
+      [1735686900, null],
+      [1735687500, null],
+      [1735688100, null],
+      [1735688700, null],
+      [1735689300, null],
+      [1735689900, null],
+      [1735690500, null],
+      [1735691100, null],
+      [1735691700, null],
+      [1735692300, null],
+      [1735692900, null],
+      [1735693500, null],
+      [1735694100, null],
+      [1735694700, null],
+      [1735695300, null],
+      [1735695900, null],
+      [1735696500, null],
+      [1735697100, null],
+      [1735697700, null],
+      [1735698300, null],
+      [1735698900, null],
+      [1735699500, null],
+      [1735700100, null],
+      [1735700700, null],
+      [1735701300, null],
+      [1735701900, null],
+      [1735702500, null],
+      [1735703100, null],
+      [1735703700, null],
+      [1735704300, null],
+      [1735704900, null],
+      [1735705500, null],
+      [1735706100, null],
+      [1735706700, null],
+      [1735707300, null],
+      [1735707900, null],
+      [1735708500, null],
+      [1735709100, null],
+      [1735709700, null],
+      [1735710300, null],
+      [1735710900, null],
+      [1735711500, null],
+      [1735712100, null],
+      [1735712700, null],
+      [1735713300, null],
+      [1735713900, null],
+      [1735714500, null],
+      [1735715100, null],
+      [1735715700, null],
+      [1735716300, null],
+      [1735716900, null],
+      [1735717500, null],
+      [1735718100, null],
+      [1735718700, null],
+      [1735719300, null],
+      [1735719900, null],
+      [1735720500, null],
+      [1735721100, null],
+      [1735721700, null],
+      [1735722300, null],
+      [1735722900, null],
+      [1735723500, null],
+      [1735724100, null],
+      [1735724700, null],
+      [1735725300, null],
+      [1735725900, null],
+      [1735726500, null],
+      [1735727100, null],
+      [1735727700, null],
+      [1735728300, null],
+      [1735728900, null],
+      [1735729500, null],
+      [1735730100, null],
+      [1735730700, null],
+      [1735731300, null],
+      [1735731900, null],
+      [1735732500, null],
+      [1735733100, null],
+      [1735733700, null],
+      [1735734300, null],
+      [1735734900, null],
+      [1735735500, null],
+      [1735736100, null],
+      [1735736700, null],
+      [1735737300, null],
+      [1735737900, null],
+      [1735738500, null],
+      [1735739100, null],
+      [1735739700, null],
+      [1735740300, null],
+      [1735740900, null],
+      [1735741500, null],
+      [1735742100, null],
+      [1735742700, null],
+      [1735743300, null],
+      [1735743900, null],
+      [1735744500, null],
+      [1735745100, null],
+      [1735745700, null],
+      [1735746300, null],
+      [1735746900, null],
+      [1735747500, null],
+      [1735748100, null],
+      [1735748700, null],
+      [1735749300, null],
+      [1735749900, null],
+      [1735750500, null],
+      [1735751100, null],
+      [1735751700, null],
+      [1735752300, null],
+      [1735752900, null],
+      [1735753500, null],
+      [1735754100, null],
+      [1735754700, null],
+      [1735755300, null],
+      [1735755900, null],
+      [1735756500, null],
+      [1735757100, null],
+      [1735757700, null],
+      [1735758300, null],
+      [1735758900, null],
+      [1735759500, null],
+      [1735760100, null],
+      [1735760700, null],
+      [1735761300, null],
+      [1735761900, null],
+      [1735762500, null],
+      [1735763100, null],
+      [1735763700, null],
+      [1735764300, null],
+      [1735764900, null],
+      [1735765500, null],
+      [1735766100, null],
+      [1735766700, null],
+      [1735767300, null],
+      [1735767900, null],
+      [1735768500, null],
+      [1735769100, null],
+      [1735769700, null],
+ ]
+    }
+  ]
+}).render()
+
+
+
+
+  // Other sensors
+
+
+
+
+  
+
+new ApexCharts(document.querySelector('#cloudbasechart'), {
+  ...graph_area_config,
+  yaxis: {
+    labels: {
+      formatter: function (val) {
+        return formatNumber(val, "%.0f") + " meters";
+      }
+    }
+  },
+  series: [
+    {
+      name: "cloudbase",
+      data: [ 
+      [1735683900, 586],
+      [1735684500, 612],
+      [1735685100, 629],
+      [1735685700, 631],
+      [1735686300, 622],
+      [1735686900, 621],
+      [1735687500, 639],
+      [1735688100, 642],
+      [1735688700, 655],
+      [1735689300, 630],
+      [1735689900, 606],
+      [1735690500, 585],
+      [1735691100, 562],
+      [1735691700, 530],
+      [1735692300, 521],
+      [1735692900, 514],
+      [1735693500, 501],
+      [1735694100, 501],
+      [1735694700, 501],
+      [1735695300, 504],
+      [1735695900, 501],
+      [1735696500, 486],
+      [1735697100, 482],
+      [1735697700, 482],
+      [1735698300, 472],
+      [1735698900, 451],
+      [1735699500, 444],
+      [1735700100, 444],
+      [1735700700, 453],
+      [1735701300, 468],
+      [1735701900, 499],
+      [1735702500, 532],
+      [1735703100, 528],
+      [1735703700, 557],
+      [1735704300, 547],
+      [1735704900, 541],
+      [1735705500, 555],
+      [1735706100, 578],
+      [1735706700, 613],
+      [1735707300, 627],
+      [1735707900, 602],
+      [1735708500, 564],
+      [1735709100, 585],
+      [1735709700, 601],
+      [1735710300, 591],
+      [1735710900, 606],
+      [1735711500, 620],
+      [1735712100, 633],
+      [1735712700, 635],
+      [1735713300, 616],
+      [1735713900, 598],
+      [1735714500, 576],
+      [1735715100, 581],
+      [1735715700, 580],
+      [1735716300, 563],
+      [1735716900, 561],
+      [1735717500, 548],
+      [1735718100, 559],
+      [1735718700, 544],
+      [1735719300, 551],
+      [1735719900, 573],
+      [1735720500, 585],
+      [1735721100, 589],
+      [1735721700, 610],
+      [1735722300, 602],
+      [1735722900, 614],
+      [1735723500, 659],
+      [1735724100, 659],
+      [1735724700, 635],
+      [1735725300, 605],
+      [1735725900, 648],
+      [1735726500, 627],
+      [1735727100, 615],
+      [1735727700, 622],
+      [1735728300, 619],
+      [1735728900, 610],
+      [1735729500, 594],
+      [1735730100, 577],
+      [1735730700, 505],
+      [1735731300, 424],
+      [1735731900, 356],
+      [1735732500, 327],
+      [1735733100, 317],
+      [1735733700, 317],
+      [1735734300, 317],
+      [1735734900, 317],
+      [1735735500, 317],
+      [1735736100, 317],
+      [1735736700, 317],
+      [1735737300, 317],
+      [1735737900, 317],
+      [1735738500, 317],
+      [1735739100, 317],
+      [1735739700, 317],
+      [1735740300, 317],
+      [1735740900, 317],
+      [1735741500, 317],
+      [1735742100, 317],
+      [1735742700, 317],
+      [1735743300, 325],
+      [1735743900, 335],
+      [1735744500, 335],
+      [1735745100, 321],
+      [1735745700, 340],
+      [1735746300, 354],
+      [1735746900, 369],
+      [1735747500, 353],
+      [1735748100, 365],
+      [1735748700, 353],
+      [1735749300, 360],
+      [1735749900, 361],
+      [1735750500, 353],
+      [1735751100, 353],
+      [1735751700, 354],
+      [1735752300, 366],
+      [1735752900, 372],
+      [1735753500, 372],
+      [1735754100, 372],
+      [1735754700, 370],
+      [1735755300, 363],
+      [1735755900, 363],
+      [1735756500, 359],
+      [1735757100, 354],
+      [1735757700, 354],
+      [1735758300, 354],
+      [1735758900, 354],
+      [1735759500, 354],
+      [1735760100, 336],
+      [1735760700, 318],
+      [1735761300, 318],
+      [1735761900, 318],
+      [1735762500, 318],
+      [1735763100, 318],
+      [1735763700, 318],
+      [1735764300, 318],
+      [1735764900, 318],
+      [1735765500, 318],
+      [1735766100, 318],
+      [1735766700, 318],
+      [1735767300, 318],
+      [1735767900, 318],
+      [1735768500, 318],
+      [1735769100, 317],
+      [1735769700, 317],
+ ]
+    }
+  ]
+}).render()
+
+
+
+
+  // Build wind vector chart
+  var vector_data = {
+    'N': {'sum': 0.0, 'amt': 0, 'avg': 0.0, 'max': 0.0},
+    'NE': {'sum': 0.0, 'amt': 0, 'avg': 0.0, 'max': 0.0},
+    'E': {'sum': 0.0, 'amt': 0, 'avg': 0.0, 'max': 0.0},
+    'SE': {'sum': 0.0, 'amt': 0, 'avg': 0.0, 'max': 0.0},
+    'S': {'sum': 0.0, 'amt': 0, 'avg': 0.0, 'max': 0.0},
+    'SW': {'sum': 0.0, 'amt': 0, 'avg': 0.0, 'max': 0.0},
+    'W': {'sum': 0.0, 'amt': 0, 'avg': 0.0, 'max': 0.0},
+    'NW': {'sum': 0.0, 'amt': 0, 'avg': 0.0, 'max': 0.0},
+  };
+
+  var raw_data = [
+  {
+    'dir': "118.29352374110371",
+    'speed': "4.14231257716316",
+    'max': "5.966998153953408"
+  },
+  {
+    'dir': "123.17809701701795",
+    'speed': "4.725029788188734",
+    'max': "5.966998153953408"
+  },
+  {
+    'dir': "133.27809946793803",
+    'speed': "5.337340015421253",
+    'max': "7.621997641936128"
+  },
+  {
+    'dir': "116.74145324780376",
+    'speed': "5.187298395173875",
+    'max': "5.966998153953408"
+  },
+  {
+    'dir': "132.36642749887642",
+    'speed': "4.704748544463265",
+    'max': "5.966998153953408"
+  },
+  {
+    'dir': "121.36731428086227",
+    'speed': "5.636185756298858",
+    'max': "7.621997641936128"
+  },
+  {
+    'dir': "143.20094022219996",
+    'speed': "6.5978879044233745",
+    'max': "7.621997641936128"
+  },
+  {
+    'dir': "138.5441063619108",
+    'speed': "6.406810517885975",
+    'max': "8.4499973857728"
+  },
+  {
+    'dir': "133.1961009985925",
+    'speed': "6.872247873890786",
+    'max': "8.4499973857728"
+  },
+  {
+    'dir': "135.63378747668276",
+    'speed': "6.801720376330463",
+    'max': "8.4499973857728"
+  },
+  {
+    'dir': "127.48323077851808",
+    'speed': "6.561618401885807",
+    'max': "8.4499973857728"
+  },
+  {
+    'dir': "141.69396873097358",
+    'speed': "6.5208478301665345",
+    'max': "8.4499973857728"
+  },
+  {
+    'dir': "131.7841660771834",
+    'speed': "5.489986073268673",
+    'max': "7.621997641936128"
+  },
+  {
+    'dir': "137.6519278927699",
+    'speed': "4.887029738069821",
+    'max': "6.794997897790081"
+  },
+  {
+    'dir': "118.75808453355712",
+    'speed': "5.216623386101425",
+    'max': "7.621997641936128"
+  },
+  {
+    'dir': "112.2586830967513",
+    'speed': "4.047029997945659",
+    'max': "5.966998153953408"
+  },
+  {
+    'dir': "119.06971852727088",
+    'speed': "4.795723516317783",
+    'max': "5.966998153953408"
+  },
+  {
+    'dir': "110.51069418384583",
+    'speed': "4.652575643937644",
+    'max': "9.277997129609473"
+  },
+  {
+    'dir': "89.44455409722352",
+    'speed': "3.8860341238408904",
+    'max': "5.966998153953408"
+  },
+  {
+    'dir': "108.02262346503807",
+    'speed': "3.9017637385397435",
+    'max': "6.794997897790081"
+  },
+  {
+    'dir': "123.40447042346949",
+    'speed': "4.647373562213711",
+    'max': "6.794997897790081"
+  },
+  {
+    'dir': "109.67294475228135",
+    'speed': "3.9229362863372867",
+    'max': "5.966998153953408"
+  },
+  {
+    'dir': "115.95310455596204",
+    'speed': "4.880248490167775",
+    'max': "6.794997897790081"
+  },
+  {
+    'dir': "113.03349881715755",
+    'speed': "4.186863288017913",
+    'max': "6.794997897790081"
+  },
+  {
+    'dir': "114.66022501261081",
+    'speed': "4.3024049189387625",
+    'max': "6.794997897790081"
+  },
+  {
+    'dir': "80.11545478508137",
+    'speed': "3.7081904288614815",
+    'max': "5.966998153953408"
+  },
+  {
+    'dir': "112.36343104195475",
+    'speed': "4.475357311083601",
+    'max': "6.794997897790081"
+  },
+  {
+    'dir': "123.54649412948183",
+    'speed': "5.164779652140637",
+    'max': "7.621997641936128"
+  },
+  {
+    'dir': "118.96071901195415",
+    'speed': "4.776811022168856",
+    'max': "6.794997897790081"
+  },
+  {
+    'dir': "110.49620089712764",
+    'speed': "5.202076896699323",
+    'max': "7.621997641936128"
+  },
+  {
+    'dir': "130.54674637194256",
+    'speed': "4.547710497808986",
+    'max': "6.794997897790081"
+  },
+  {
+    'dir': "124.08970120639225",
+    'speed': "4.852368953338495",
+    'max': "7.621997641936128"
+  },
+  {
+    'dir': "108.36364344758759",
+    'speed': "4.905092232481717",
+    'max': "6.794997897790081"
+  },
+  {
+    'dir': "119.86659596743596",
+    'speed': "4.026561254278198",
+    'max': "5.966998153953408"
+  },
+  {
+    'dir': "111.2801696871542",
+    'speed': "3.5296864079994004",
+    'max': "5.966998153953408"
+  },
+  {
+    'dir': "110.40761833963478",
+    'speed': "3.6072488840034245",
+    'max': "6.794997897790081"
+  },
+  {
+    'dir': "97.81995397443302",
+    'speed': "3.8455300602849247",
+    'max': "5.966998153953408"
+  },
+  {
+    'dir': "104.44692527405078",
+    'speed': "3.262653157279771",
+    'max': "5.138998410116736"
+  },
+  {
+    'dir': "82.25604244830134",
+    'speed': "4.19034870360628",
+    'max': "7.621997641936128"
+  },
+  {
+    'dir': "101.87342059701794",
+    'speed': "4.537317889740567",
+    'max': "6.794997897790081"
+  },
+  {
+    'dir': "115.43457221578024",
+    'speed': "4.311123666241391",
+    'max': "5.966998153953408"
+  },
+  {
+    'dir': "112.4507206585451",
+    'speed': "4.6992172961745",
+    'max': "6.794997897790081"
+  },
+  {
+    'dir': "139.58515698314102",
+    'speed': "8.165684973732263",
+    'max': "12.588996105265538"
+  },
+  {
+    'dir': "139.14421017309547",
+    'speed': "7.9259642145628035",
+    'max': "13.416995849102207"
+  },
+  {
+    'dir': "142.05413140841517",
+    'speed': "8.727004377929875",
+    'max': "13.416995849102207"
+  },
+  {
+    'dir': "115.54410275850628",
+    'speed': "7.5821940310620075",
+    'max': "10.933996617282816"
+  },
+  {
+    'dir': "135.20038279751446",
+    'speed': "6.768810405891864",
+    'max': "10.933996617282816"
+  },
+  {
+    'dir': "120.91035216843363",
+    'speed': "6.510060485942904",
+    'max': "10.933996617282816"
+  },
+  {
+    'dir': "129.37740696629896",
+    'speed': "5.992748145986979",
+    'max': "9.277997129609473"
+  },
+  {
+    'dir': "121.83088452802149",
+    'speed': "6.561841719923027",
+    'max': "10.105996873446145"
+  },
+  {
+    'dir': "135.79544889228845",
+    'speed': "5.759779468061917",
+    'max': "8.4499973857728"
+  },
+  {
+    'dir': "131.9891642003859",
+    'speed': "6.339640569154559",
+    'max': "8.4499973857728"
+  },
+  {
+    'dir': "128.01628303065883",
+    'speed': "4.699146273469199",
+    'max': "6.794997897790081"
+  },
+  {
+    'dir': "125.52784319742292",
+    'speed': "6.3438617341693355",
+    'max': "9.277997129609473"
+  },
+  {
+    'dir': "122.46019183494226",
+    'speed': "7.868297432758136",
+    'max': "10.105996873446145"
+  },
+  {
+    'dir': "124.33022374714814",
+    'speed': "8.814072273136734",
+    'max': "11.760996361428864"
+  },
+  {
+    'dir': "140.74923080515381",
+    'speed': "9.743684485536933",
+    'max': "12.588996105265538"
+  },
+  {
+    'dir': "146.54499655596473",
+    'speed': "9.924653179549546",
+    'max': "13.416995849102207"
+  },
+  {
+    'dir': "143.30886166411003",
+    'speed': "9.991309408927703",
+    'max': "13.416995849102207"
+  },
+  {
+    'dir': "144.29517631212147",
+    'speed': "9.87299694553075",
+    'max': "12.588996105265538"
+  },
+  {
+    'dir': "149.28829692509225",
+    'speed': "9.174497161629887",
+    'max': "13.416995849102207"
+  },
+  {
+    'dir': "140.47970959400686",
+    'speed': "7.829372577779277",
+    'max': "10.105996873446145"
+  },
+  {
+    'dir': "135.96185190921557",
+    'speed': "8.786528531658108",
+    'max': "15.072995336775554"
+  },
+  {
+    'dir': "136.85454838109067",
+    'speed': "8.852051428053555",
+    'max': "10.933996617282816"
+  },
+  {
+    'dir': "141.74608198003165",
+    'speed': "10.442184269437796",
+    'max': "14.24499559293888"
+  },
+  {
+    'dir': "140.06540778164185",
+    'speed': "11.399308973326292",
+    'max': "15.072995336775554"
+  },
+  {
+    'dir': "125.4070407423817",
+    'speed': "9.556888347675022",
+    'max': "13.416995849102207"
+  },
+  {
+    'dir': "132.91827382417807",
+    'speed': "10.393866349603595",
+    'max': "12.588996105265538"
+  },
+  {
+    'dir': "149.57034055584307",
+    'speed': "9.439964470804993",
+    'max': "11.760996361428864"
+  },
+  {
+    'dir': "129.98936766779786",
+    'speed': "9.952823007790998",
+    'max': "13.416995849102207"
+  },
+  {
+    'dir': "129.62264795699764",
+    'speed': "12.104570560296876",
+    'max': "15.899995080921602"
+  },
+  {
+    'dir': "135.2459375097501",
+    'speed': "12.280109895917981",
+    'max': "16.727994824758273"
+  },
+  {
+    'dir': "151.84267367358822",
+    'speed': "11.058521941076494",
+    'max': "14.24499559293888"
+  },
+  {
+    'dir': "134.03746221702977",
+    'speed': "9.425631866543505",
+    'max': "13.416995849102207"
+  },
+  {
+    'dir': "117.79365124650522",
+    'speed': "6.740704436326313",
+    'max': "12.588996105265538"
+  },
+  {
+    'dir': "136.0558661998413",
+    'speed': "6.23894686208951",
+    'max': "10.105996873446145"
+  },
+  {
+    'dir': "141.85602750624264",
+    'speed': "5.817701374745439",
+    'max': "11.760996361428864"
+  },
+  {
+    'dir': "148.33165981713879",
+    'speed': "4.504393955285393",
+    'max': "7.621997641936128"
+  },
+  {
+    'dir': "129.00417239531248",
+    'speed': "6.578247964847329",
+    'max': "19.21199405626829"
+  },
+  {
+    'dir': "137.40572298693377",
+    'speed': "6.939614396389574",
+    'max': "12.588996105265538"
+  },
+  {
+    'dir': "146.93466727789635",
+    'speed': "6.669390613417646",
+    'max': "10.105996873446145"
+  },
+  {
+    'dir': "152.60648539791458",
+    'speed': "7.643698140273017",
+    'max': "10.105996873446145"
+  },
+  {
+    'dir': "163.65465134431884",
+    'speed': "7.813083780998627",
+    'max': "10.105996873446145"
+  },
+  {
+    'dir': "149.43363577046634",
+    'speed': "9.242008010308862",
+    'max': "10.933996617282816"
+  },
+  {
+    'dir': "143.1242279668758",
+    'speed': "8.972029832964092",
+    'max': "10.933996617282816"
+  },
+  {
+    'dir': "125.82204459359579",
+    'speed': "8.108859810153191",
+    'max': "10.933996617282816"
+  },
+  {
+    'dir': "150.31721613260316",
+    'speed': "10.514866312169096",
+    'max': "12.588996105265538"
+  },
+  {
+    'dir': "141.36931506436133",
+    'speed': "11.576086661304865",
+    'max': "14.24499559293888"
+  },
+  {
+    'dir': "140.1116044919109",
+    'speed': "11.12254003721286",
+    'max': "15.072995336775554"
+  },
+  {
+    'dir': "153.49801041909674",
+    'speed': "11.02362702433591",
+    'max': "16.727994824758273"
+  },
+  {
+    'dir': "147.55581663410652",
+    'speed': "10.042899066880135",
+    'max': "11.760996361428864"
+  },
+  {
+    'dir': "143.05493842046195",
+    'speed': "11.38342039128532",
+    'max': "14.24499559293888"
+  },
+  {
+    'dir': "131.3547365249315",
+    'speed': "10.959286531939336",
+    'max': "15.899995080921602"
+  },
+  {
+    'dir': "143.5392381422312",
+    'speed': "10.111131654466261",
+    'max': "13.416995849102207"
+  },
+  {
+    'dir': "148.92198815439184",
+    'speed': "10.681670608389927",
+    'max': "14.24499559293888"
+  },
+  {
+    'dir': "144.0880715307544",
+    'speed': "9.179018899361404",
+    'max': "12.588996105265538"
+  },
+  {
+    'dir': "130.3790683434441",
+    'speed': "8.387062622634616",
+    'max': "10.105996873446145"
+  },
+  {
+    'dir': "137.59457357996087",
+    'speed': "9.835866522235404",
+    'max': "14.24499559293888"
+  },
+  {
+    'dir': "162.5857327201376",
+    'speed': "10.34396708967892",
+    'max': "14.24499559293888"
+  },
+  {
+    'dir': "144.8089322302942",
+    'speed': "9.856931733109638",
+    'max': "13.416995849102207"
+  },
+  {
+    'dir': "140.3414187231411",
+    'speed': "8.283428596725491",
+    'max': "12.588996105265538"
+  },
+  {
+    'dir': "138.1461069341732",
+    'speed': "7.217508636640574",
+    'max': "10.105996873446145"
+  },
+  {
+    'dir': "133.9698069539839",
+    'speed': "5.966802501840023",
+    'max': "8.4499973857728"
+  },
+  {
+    'dir': "134.0163960172148",
+    'speed': "6.722628354962099",
+    'max': "9.277997129609473"
+  },
+  {
+    'dir': "134.1616587225367",
+    'speed': "6.315743939779607",
+    'max': "7.621997641936128"
+  },
+  {
+    'dir': "127.86056238304009",
+    'speed': "5.334217954583697",
+    'max': "8.4499973857728"
+  },
+  {
+    'dir': "146.9788534356738",
+    'speed': "5.410798326028342",
+    'max': "6.794997897790081"
+  },
+  {
+    'dir': "137.59676094381905",
+    'speed': "4.365083145671649",
+    'max': "6.794997897790081"
+  },
+  {
+    'dir': "143.99248062616888",
+    'speed': "4.401631971573617",
+    'max': "5.966998153953408"
+  },
+  {
+    'dir': "140.3263013220096",
+    'speed': "3.655401043019341",
+    'max': "5.138998410116736"
+  },
+  {
+    'dir': "141.20169138962007",
+    'speed': "4.017618322262322",
+    'max': "5.138998410116736"
+  },
+  {
+    'dir': "131.42094584511145",
+    'speed': "3.9241292207508307",
+    'max': "6.794997897790081"
+  },
+  {
+    'dir': "127.8903743284503",
+    'speed': "4.258232378256865",
+    'max': "5.966998153953408"
+  },
+  {
+    'dir': "133.2849607317288",
+    'speed': "2.61535353869822",
+    'max': "5.966998153953408"
+  },
+  {
+    'dir': "130.2705226420938",
+    'speed': "2.547161530809691",
+    'max': "4.310998666280064"
+  },
+  {
+    'dir': "128.88944872746555",
+    'speed': "2.9199012705653904",
+    'max': "3.4829989224433926"
+  },
+  {
+    'dir': "120.91999417274232",
+    'speed': "1.8159124816783478",
+    'max': "4.310998666280064"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "150.53465900820188",
+    'speed': "2.1539830292613154",
+    'max': "4.310998666280064"
+  },
+  {
+    'dir': "138.91228448879326",
+    'speed': "2.7316078505580026",
+    'max': "4.310998666280064"
+  },
+  {
+    'dir': "154.4492845880372",
+    'speed': "2.4306456248279416",
+    'max': "4.310998666280064"
+  },
+  {
+    'dir': "157.5",
+    'speed': "0.6440541485711292",
+    'max': "3.4829989224433926"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "135.0",
+    'speed': "0.10647822792774682",
+    'max': "2.6559991782973444"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "",
+    'speed': "0.059608677210674095",
+    'max': "1.8279994344606723"
+  },
+  {
+    'dir': "",
+    'speed': "0.0",
+    'max': "0.0"
+  },
+  {
+    'dir': "284.43315160598615",
+    'speed': "0.7764219820158208",
+    'max': "3.4829989224433926"
+  },
+  {
+    'dir': "337.5",
+    'speed': "0.34493322661923836",
+    'max': "2.6559991782973444"
+  },
+  {
+    'dir': "281.0133172883893",
+    'speed': "1.6142217228206082",
+    'max': "3.4829989224433926"
+  },
+  {
+    'dir': "279.90859431011245",
+    'speed': "1.5597489631272303",
+    'max': "3.4829989224433926"
+  },
+  {
+    'dir': "280.70080336198413",
+    'speed': "1.8795202056610665",
+    'max': "4.310998666280064"
+  },
+  {
+    'dir': "292.5",
+    'speed': "0.09265113412665155",
+    'max': "2.6559991782973444"
+  },
+  {
+    'dir': "314.1801127071367",
+    'speed': "1.2043769001218496",
+    'max': "3.4829989224433926"
+  },
+  {
+    'dir': "269.24784453752596",
+    'speed': "1.172765546265283",
+    'max': "3.4829989224433926"
+  },
+  {
+    'dir': "245.9726698347546",
+    'speed': "0.3416859408021656",
+    'max': "3.4829989224433926"
+  },
+  {
+    'dir': "268.2503602687277",
+    'speed': "1.4868853555960513",
+    'max': "5.138998410116736"
+  },
+  {
+    'dir': "349.424368768699",
+    'speed': "2.061944484034886",
+    'max': "5.138998410116736"
+  },
+  {
+    'dir': "301.5248962440009",
+    'speed': "0.3560443342928384",
+    'max': "2.6559991782973444"
+  },
+  {
+    'dir': "315.0",
+    'speed': "1.5209154958516566",
+    'max': "4.310998666280064"
+  },
+  {
+    'dir': "165.1551461750753",
+    'speed': "3.055749054624288",
+    'max': "5.138998410116736"
+  },
+  {
+    'dir': "305.05313857128533",
+    'speed': "5.195316574511423",
+    'max': "13.416995849102207"
+  },
+  ];
+
+  raw_data.forEach(function(item) {
+    var vec_dir = parseInt(item.dir);
+    var vec_speed = parseFloat(item.speed);
+    var max_speed = parseFloat(item.max);
+
+    if(typeof vec_dir === 'number') {
+      var vec_key = false;
+
+      // Detect key based on vec direction (0-360). 45° steps, using the middle +- 45/2=22.5
+      if(vec_dir > 337.5 || vec_dir <= 22.5) {
+        vec_key = 'N';
+      }
+      if(vec_dir > 22.5 && vec_dir <= 67.5) {
+        vec_key = 'NE';
+      }
+      if(vec_dir > 67.5 && vec_dir <= 112.5) {
+        vec_key = 'E';
+      }
+      if(vec_dir > 112.5 && vec_dir <= 157.5) {
+        vec_key = 'SE';
+      }
+      if(vec_dir > 157.5 && vec_dir <= 202.5) {
+        vec_key = 'S';
+      }
+      if(vec_dir > 202.5 && vec_dir <= 247.5) {
+        vec_key = 'SW';
+      }
+      if(vec_dir > 247.5 && vec_dir <= 292.5) {
+        vec_key = 'W';
+      }
+      if(vec_dir > 292.5 && vec_dir <= 337.5) {
+        vec_key = 'NW';
+      }
+
+      if(vec_key !== false) {
+        vector_data[vec_key]['sum'] += vec_speed;
+        vector_data[vec_key]['amt']++;
+
+        if(max_speed > vector_data[vec_key]['max']) {
+          vector_data[vec_key]['max'] = max_speed;
+        }
+      }
+
+    }
+  });
+
+  // Finally build arrays for chart
+  var avg_values = [];
+  var max_values = [];
+  Object.keys(vector_data).forEach(function (item) {
+    if(vector_data[item]['amt'] > 0) {
+      avg_values.push(vector_data[item]['sum'] / vector_data[item]['amt']);
+    } else {
+      avg_values.push(0);
+    }
+
+    max_values.push(vector_data[item]['max'])
+  });
+
+  // Display wind vector chart
+
+  new ApexCharts(document.querySelector('#windvecchart'), {
+    ...graph_radar_config,
+    yaxis: {
+      labels: {
+        formatter: function (val) {
+          return formatNumber(val, "%.0f") + " km/h";
+        }
+      }
+    },
+    series: [
+      {
+        name: "Wind Speed",
+        data: avg_values
+      },
+      {
+        name: "Gust Speed",
+        data: max_values
+      },
+    ]
+  }).render()
+
+  // extraTemp 1-8
+
+  
+
+new ApexCharts(document.querySelector('#extraTemp1chart'), {
+  ...graph_area_config,
+  yaxis: {
+    labels: {
+      formatter: function (val) {
+        return formatNumber(val, "%.1f") + "°C";
+      }
+    }
+  },
+  series: [
+    {
+      name: "Temperature1",
+      data: [ 
+      [1735683900, 10.0],
+      [1735684500, 9.9],
+      [1735685100, 9.9],
+      [1735685700, 9.9],
+      [1735686300, 9.9],
+      [1735686900, 9.9],
+      [1735687500, 9.9],
+      [1735688100, 9.9],
+      [1735688700, 9.8],
+      [1735689300, 9.9],
+      [1735689900, 9.8],
+      [1735690500, 9.9],
+      [1735691100, 9.9],
+      [1735691700, 9.9],
+      [1735692300, 9.9],
+      [1735692900, 9.9],
+      [1735693500, 9.9],
+      [1735694100, 9.9],
+      [1735694700, 9.9],
+      [1735695300, 9.9],
+      [1735695900, 9.9],
+      [1735696500, 9.9],
+      [1735697100, 9.9],
+      [1735697700, 9.9],
+      [1735698300, 9.9],
+      [1735698900, 9.9],
+      [1735699500, 9.9],
+      [1735700100, 9.9],
+      [1735700700, 10.0],
+      [1735701300, 9.9],
+      [1735701900, 9.9],
+      [1735702500, 9.9],
+      [1735703100, 9.9],
+      [1735703700, 9.9],
+      [1735704300, 9.9],
+      [1735704900, 9.9],
+      [1735705500, 9.9],
+      [1735706100, 9.9],
+      [1735706700, 9.9],
+      [1735707300, 9.9],
+      [1735707900, 9.9],
+      [1735708500, 9.9],
+      [1735709100, 9.9],
+      [1735709700, 9.9],
+      [1735710300, 9.9],
+      [1735710900, 9.9],
+      [1735711500, 9.8],
+      [1735712100, 9.9],
+      [1735712700, 9.8],
+      [1735713300, 9.8],
+      [1735713900, 9.8],
+      [1735714500, 9.7],
+      [1735715100, 9.7],
+      [1735715700, 9.8],
+      [1735716300, 9.7],
+      [1735716900, 9.7],
+      [1735717500, 9.7],
+      [1735718100, 9.7],
+      [1735718700, 9.7],
+      [1735719300, 9.6],
+      [1735719900, 9.7],
+      [1735720500, 9.7],
+      [1735721100, 9.6],
+      [1735721700, 9.7],
+      [1735722300, 9.6],
+      [1735722900, 9.7],
+      [1735723500, 9.7],
+      [1735724100, 9.6],
+      [1735724700, 9.7],
+      [1735725300, 9.7],
+      [1735725900, 9.7],
+      [1735726500, 9.7],
+      [1735727100, 9.7],
+      [1735727700, 9.7],
+      [1735728300, 9.7],
+      [1735728900, 9.7],
+      [1735729500, 9.7],
+      [1735730100, 9.7],
+      [1735730700, 9.7],
+      [1735731300, 9.7],
+      [1735731900, 9.7],
+      [1735732500, 9.8],
+      [1735733100, 9.8],
+      [1735733700, 9.7],
+      [1735734300, 9.8],
+      [1735734900, 9.7],
+      [1735735500, 9.7],
+      [1735736100, 9.8],
+      [1735736700, 9.7],
+      [1735737300, 9.8],
+      [1735737900, 9.7],
+      [1735738500, 9.7],
+      [1735739100, 9.7],
+      [1735739700, 9.7],
+      [1735740300, 9.7],
+      [1735740900, 9.7],
+      [1735741500, 9.6],
+      [1735742100, 9.7],
+      [1735742700, 9.6],
+      [1735743300, 9.6],
+      [1735743900, 9.7],
+      [1735744500, 9.6],
+      [1735745100, 9.7],
+      [1735745700, 9.6],
+      [1735746300, 9.6],
+      [1735746900, 9.7],
+      [1735747500, 9.6],
+      [1735748100, 9.7],
+      [1735748700, 9.7],
+      [1735749300, 9.7],
+      [1735749900, 9.8],
+      [1735750500, 9.7],
+      [1735751100, 9.8],
+      [1735751700, 9.8],
+      [1735752300, 9.8],
+      [1735752900, 9.8],
+      [1735753500, 9.8],
+      [1735754100, 9.8],
+      [1735754700, 9.9],
+      [1735755300, 9.8],
+      [1735755900, 9.9],
+      [1735756500, 9.9],
+      [1735757100, 9.8],
+      [1735757700, 9.9],
+      [1735758300, 9.9],
+      [1735758900, 9.9],
+      [1735759500, 9.9],
+      [1735760100, 9.9],
+      [1735760700, 9.9],
+      [1735761300, 9.9],
+      [1735761900, 10.0],
+      [1735762500, 10.1],
+      [1735763100, 10.0],
+      [1735763700, 10.1],
+      [1735764300, 10.1],
+      [1735764900, 10.1],
+      [1735765500, 10.1],
+      [1735766100, 10.0],
+      [1735766700, 10.1],
+      [1735767300, 10.1],
+      [1735767900, 10.0],
+      [1735768500, 10.0],
+      [1735769100, 10.0],
+      [1735769700, 10.0],
+ ]
+    }
+  ]
+}).render()
+
+
+
+
+
+
+
+
+
+
+
+  // extraHumid 1-8
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
 </html>
