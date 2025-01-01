@@ -288,27 +288,27 @@
         <h3 class="h5-responsive indigo-text">
           Wind Speed
 
-            <i class="wi wi-wind from-117-deg"
-               title="117°" data-toggle="tooltip"></i>
+            <i class="wi wi-wind from-120-deg"
+               title="120°" data-toggle="tooltip"></i>
 
         </h3>
 
 
         <div class="row">
           <div class="col-3 text-muted font-small">
-            5 km/h <br>
+            6 km/h <br>
             Avg
           </div>
           <div class="col-6">
             <h4 class="h2-responsive">
-              7 km/h ESE
+              9 km/h ESE
             </h4>
           </div>
           <div class="col-3 text-muted font-small hi-text">
-            9 km/h N/A <br>
-            <i class="wi wi-wind from-   N/A-deg mr-2"
-               title="   N/A°" data-toggle="tooltip"></i>
-            (Wed 01 00:26)
+            13 km/h S <br>
+            <i class="wi wi-wind from-180-deg mr-2"
+               title="180°" data-toggle="tooltip"></i>
+            (Wed 01 00:34)
           </div>
         </div>
 
@@ -390,10 +390,10 @@
         <div class="row">
           <div class="col-3 text-muted font-small lo-text">
             -1.1°C <br>
-            (Wed 01 00:26)
+            (Wed 01 00:31)
           </div>
           <div class="col-6">
-            <h4 class="h2-responsive">1.1°C</h4>
+            <h4 class="h2-responsive">0.9°C</h4>
           </div>
           <div class="col-3 text-muted font-small hi-text">
             2.4°C <br>
@@ -461,11 +461,11 @@
 
         <div class="row">
           <div class="col-3 text-muted font-small lo-text">
-            -2.1°C <br>
-            (Wed 01 00:26)
+            -2.2°C <br>
+            (Wed 01 00:31)
           </div>
           <div class="col-6">
-            <h4 class="h2-responsive">-1.0°C</h4>
+            <h4 class="h2-responsive">-1.1°C</h4>
           </div>
           <div class="col-3 text-muted font-small hi-text">
             -0.3°C <br>
@@ -494,7 +494,7 @@
             (Wed 01 00:22)
           </div>
           <div class="col-6">
-            <h4 class="h2-responsive">588 meters</h4>
+            <h4 class="h2-responsive">589 meters</h4>
           </div>
           <div class="col-3 text-muted font-small hi-text">
             623 meters <br>
@@ -1191,7 +1191,7 @@ new ApexCharts(document.querySelector('#windchillchart'), {
   series: [
     {
       name: "Wind Chill",
-      data: [       [1735707600, 1.1],
+      data: [       [1735707600, 0.9],
       [1735794000, null],
       [1735880400, null],
       [1735966800, null],
@@ -1261,7 +1261,7 @@ new ApexCharts(document.querySelector('#windchillchart'), {
     }
     ,{
       name: "appTemp",
-      data: [       [1735707600, -1.0],
+      data: [       [1735707600, -1.1],
       [1735794000, null],
       [1735880400, null],
       [1735966800, null],
@@ -1429,7 +1429,7 @@ new ApexCharts(document.querySelector('#windSpeedchart'), {
   series: [
     {
       name: "Wind Speed",
-      data: [       [1735707600, 7],
+      data: [       [1735707600, 9],
       [1735794000, null],
       [1735880400, null],
       [1735966800, null],
@@ -1464,7 +1464,7 @@ new ApexCharts(document.querySelector('#windSpeedchart'), {
     }
     ,{
       name: "Gust Speed",
-      data: [       [1735707600, 9],
+      data: [       [1735707600, 13],
       [1735794000, null],
       [1735880400, null],
       [1735966800, null],
@@ -1696,7 +1696,7 @@ new ApexCharts(document.querySelector('#cloudbasechart'), {
   series: [
     {
       name: "cloudbase",
-      data: [       [1735707600, 588],
+      data: [       [1735707600, 589],
       [1735794000, null],
       [1735880400, null],
       [1735966800, null],
@@ -1750,9 +1750,9 @@ new ApexCharts(document.querySelector('#cloudbasechart'), {
 
   var raw_data = [
   {
-    'dir': "116.62704101953635",
-    'speed': "5.001008869474068",
-    'max': "9.277997129609473"
+    'dir': "119.92272330218368",
+    'speed': "5.575051846640797",
+    'max': "12.588996105265538"
   },
   {
     'dir': "",
