@@ -1,0 +1,83 @@
+{
+    "station":
+    {
+        "location": "Shefford, QC",
+        "latitude": 45.2043,
+        "longitude": -72.3529,
+        "altitude (meters)": 300.0,
+        "link": ""
+    },
+    "generation":
+    {
+        "time": "2025-01-28T15:05:00-0500",
+        "generator": "weewx 5.1.0"
+    },
+    "current":
+    {
+        "temperature": {"value": -14.154090909090908, "units": "°C"},
+        "dewpoint": {"value": -18.886538065283858, "units": "°C"},
+        "humidity": {"value": 67.22727272727273, "units": "%"},
+        "heat index": {"value": -14.154090909090908, "units": "°C"},
+        "wind speed": {"value": 0.0, "units": "km/h"},
+        "wind gust": {"value": 0.0, "units": "km/h"},
+        "wind chill": {"value": -14.154090909090908, "units": "°C"},
+        "rain rate": {"value": 0.0, "units": "cm/h"},
+        "void_end": null
+    },
+    "day":
+    {
+        "max temperature": {"value": -2.9999999999999933, "units": "°C", "at": "12:05:00 AM"},
+        "min temperature": {"value": -15.278, "units": "°C", "at": "11:37:45 AM"},
+        "max dewpoint": {"value": -4.0227643554814305, "units": "°C", "at": "01:25:00 AM"},
+        "min dewpoint": {"value": -19.150208357313286, "units": "°C", "at": "03:02:45 PM"},
+        "max humidity": {"value": 99.0, "units": "%", "at": "01:16:28 AM"},
+        "min humidity": {"value": 58.0, "units": "%", "at": "01:57:08 PM"},
+        "max wind speed": {"value": 9.898871937525652, "units": "km/h", "at": "12:20:00 AM"},
+        "max wind gust": {"value": 16.727994824758273, "units": "km/h", "at": "12:20:00 AM"},
+        "max rain rate": {"value": 0.0, "units": "cm/h", "at": "12:00:07 AM"},
+        "rain total": {"value": 0.0, "units": "cm"},
+        "void_end": null
+    },
+    "week":
+    {
+        "max temperature": {"value": -0.11099999999999986, "units": "°C", "at": "01:05:06 PM (Monday)"},
+        "min temperature": {"value": -15.278, "units": "°C", "at": "11:37:45 AM (Tuesday)"},
+        "max dewpoint": {"value": -4.0227643554814305, "units": "°C", "at": "01:25:00 AM (Tuesday)"},
+        "min dewpoint": {"value": -19.150208357313286, "units": "°C", "at": "03:02:45 PM (Tuesday)"},
+        "max humidity": {"value": 99.0, "units": "%", "at": "01:16:28 AM (Tuesday)"},
+        "min humidity": {"value": 52.0, "units": "%", "at": "09:13:19 PM (Monday)"},
+        "max wind speed": {"value": 10.312746809482654, "units": "km/h", "at": "09:45:00 PM (Monday)"},
+        "max wind gust": {"value": 24.177992519907075, "units": "km/h", "at": "10:45:00 PM (Monday)"},
+        "max rain rate": {"value": 0.0, "units": "cm/h", "at": "12:00:07 AM (Sunday)"},
+        "rain total": {"value": 0.0, "units": "cm"},
+        "void_end": null
+    },
+    "month":
+    {
+        "max temperature": {"value": 3.2779999999999987, "units": "°C", "at": "2025-01-01 12:24:04 PM"},
+        "min temperature": {"value": -20.278, "units": "°C", "at": "2025-01-20 10:20:51 PM"},
+        "max dewpoint": {"value": 3.079977914511747, "units": "°C", "at": "2025-01-01 02:40:57 PM"},
+        "min dewpoint": {"value": -22.001047541878513, "units": "°C", "at": "2025-01-20 10:20:51 PM"},
+        "max humidity": {"value": 99.0, "units": "%", "at": "2025-01-01 07:00:54 AM"},
+        "min humidity": {"value": 38.0, "units": "%", "at": "2025-01-22 02:16:58 PM"},
+        "max wind speed": {"value": 13.416949337488694, "units": "km/h", "at": "2025-01-01 05:15:00 AM"},
+        "max wind gust": {"value": 24.177992519907075, "units": "km/h", "at": "2025-01-18 03:25:00 PM"},
+        "max rain rate": {"value": 0.20319999999999566, "units": "cm/h", "at": "2025-01-01 03:40:38 PM"},
+        "rain total": {"value": 0.3809999999999964, "units": "cm"},
+        "void_end": null
+    },
+    "year":
+    {
+        "max temperature": {"value": 3.2779999999999987, "units": "°C", "at": "2025-01-01 12:24:04 PM"},
+        "min temperature": {"value": -20.278, "units": "°C", "at": "2025-01-20 10:20:51 PM"},
+        "max dewpoint": {"value": 3.079977914511747, "units": "°C", "at": "2025-01-01 02:40:57 PM"},
+        "min dewpoint": {"value": -22.001047541878513, "units": "°C", "at": "2025-01-20 10:20:51 PM"},
+        "max humidity": {"value": 99.0, "units": "%", "at": "2025-01-01 07:00:54 AM"},
+        "min humidity": {"value": 38.0, "units": "%", "at": "2025-01-22 02:16:58 PM"},
+        "max wind speed": {"value": 13.416949337488694, "units": "km/h", "at": "2025-01-01 05:15:00 AM"},
+        "max wind gust": {"value": 24.177992519907075, "units": "km/h", "at": "2025-01-18 03:25:00 PM"},
+        "max rain rate": {"value": 0.20319999999999566, "units": "cm/h", "at": "2025-01-01 03:40:38 PM"},
+        "rain total": {"value": 0.3809999999999964, "units": "cm"},
+        "void_end": null
+    }
+}
