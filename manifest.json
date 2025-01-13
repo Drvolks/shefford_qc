@@ -1,0 +1,61 @@
+
+{
+  "theme_color": "#161616",
+  "background_color": "#1F40AF",
+  "display": "standalone",
+  "scope": "/shefford_qc/",
+  "start_url": "/shefford_qc/",
+  "name": "weewx WDC",
+  "testing": "test",
+  "short_name": "weewx WDC",
+  "description": "weewx Station site with WDC Skin",
+  "icons": [
+    {
+      "src": "/shefford_qc/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/shefford_qc/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/shefford_qc/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/shefford_qc/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Week",
+      "url": "/shefford_qc/week.html",
+      "description": "Weekly weather conditions"
+    },
+    {
+      "name": "Month",
+      "url": "/shefford_qc/month.html",
+      "description": "Monthly weather conditions"
+    },
+    {
+      "name": "Year",
+      "url": "/shefford_qc/year.html",
+      "description": "Yearly weather conditions"
+    },
+    {
+      "name": "All time",
+      "url": "/shefford_qc/statistics.html",
+      "description": "All time stats"
+    },
+    {
+      "name": "Celestial",
+      "url": "/shefford_qc/celestial.html",
+      "description": "Almanac"
+    }
+  ]
+}
