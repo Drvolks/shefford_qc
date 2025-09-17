@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Almanac | Shefford, QC</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta name="description" content="">
+<meta name="keywords" content="['weather', 'weewx', 'neowx-material']">
+
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Weather">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="application-name" content="Weather | Shefford, QC">
+
+<meta name="application-name" content="Weather | Shefford, QC">
+<meta name="msapplication-tooltip" content="Shefford, QC">
+<meta name="msapplication-starturl" content="/">
+
+<meta name="msapplication-tap-highlight" content="no">
+
+<link href="img/icon-16.ico" rel="shortcut icon" type="image/x-icon">
+<link href="img/icon-16.png" rel="icon" type="image/png" sizes="16x16">
+<link href="img/icon-32.png" rel="icon" type="image/png" sizes="32x32">
+<link href="img/icon-48.png" rel="icon" type="image/png" sizes="48x48">
+
+<link href="img/icon-180.png" rel="apple-touch-icon">
+<link href="img/icon-76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="img/icon-120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="img/icon-152.png" rel="apple-touch-icon" sizes="152x152">
+
+<link href="img/icon-192.png" rel="icon" sizes="192x192">
+<link href="img/icon-128.png" rel="icon" sizes="128x128">
+
+<link href="manifest.json" rel="manifest">
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<link rel="stylesheet" href="css/style.min.css">
+
+<link rel="stylesheet" href="weather-icons/css/weather-icons.min.css">
+<link rel="stylesheet" href="weather-icons/css/weather-icons-wind.min.css">
+
+
+
+
+
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="img/splash/splash_1136x640.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+        href="img/splash/splash_2436x1125.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="img/splash/splash_1792x828.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="img/splash/splash_828x1792.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="img/splash/splash_1334x750.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="img/splash/splash_1242x2688.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+        href="img/splash/splash_2208x1242.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="img/splash/splash_1125x2436.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="img/splash/splash_1242x2208.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="img/splash/splash_2732x2048.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+        href="img/splash/splash_2688x1242.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="img/splash/splash_2224x1668.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="img/splash/splash_750x1334.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="img/splash/splash_2048x2732.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="img/splash/splash_2388x1668.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="img/splash/splash_1668x2224.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="img/splash/splash_640x1136.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="img/splash/splash_1668x2388.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="img/splash/splash_2048x1536.png"
+/>
+<link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="img/splash/splash_1536x2048.png"
+/>
+</head>
+<body class="auto-theme main-bg" ontouchstart="">
+
+<header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark indigo">
+        <span class="navbar-brand d-flex">
+            <a class="mr-2" href="index.html">
+                <img src="img/icon-alpha-1x.png" srcset="img/icon-alpha-1x.png 1x, img/icon-alpha-2x.png 2x" style="width: 4rem">
+            </a>
+            <span>
+                <strong>Shefford, QC</strong><br>
+                <span class="font-small">2025-01-12 07:05:00 PM</span>
+            </span>
+        </span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="ml-3 collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mr-auto">
+
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="index.html">Current</a>
+                    </li>
+
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="yesterday.html">Yesterday</a>
+                    </li>
+
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="week.html">Week</a>
+                    </li>
+
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="month.html">Month</a>
+                    </li>
+
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="year.html">Year</a>
+                    </li>
+
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="archive.html">Archive</a>
+                    </li>
+
+
+
+
+            </ul>
+        </div>
+
+            <ul class="navbar-nav nav-flex-icons" style="line-height: 1.75; padding-top: .5rem">
+                <li class="nav-item mr-4 text-white">
+                    <i class="wi wi-sunrise mr-1" style="opacity: .75"></i> 07:25:19 AM <br>
+                    <i class="wi wi-sunset mr-1" style="opacity: .75"></i> 04:30:46 PM
+                </li>
+                <li class="nav-item mr-4 text-white" style="line-height: 1.75">
+                    <i class="wi wi-moonrise mr-1" style="opacity: .75"></i> 02:49:26 PM <br>
+                    <i class="wi wi-moonset mr-1" style="opacity: .75"></i> 06:51:42 AM
+                </li>
+                <li class="nav-item mr-4 text-white text-center" style="line-height: 1.75" >
+                    <span title="Full" data-toggle="tooltip">
+                        <i class="wi wi-moon-full mr-1" style="opacity: .75"></i>
+                        99%
+                    </span><br>
+                    <a href="almanac.html" class="text-white" style="opacity: .6">
+                        More
+                    </a>
+                </li>
+            </ul>
+    </nav>
+
+</header>
+<main>
+
+    <div class="container">
+
+        <div class="row my-4 align-content-start">
+
+            <div class="col-12 mb-4 text-center">
+                <h2 class="h2-responsive text-dark">Almanac</h2>
+            </div>
+
+
+            <div class="col-12 col-lg-6 mb-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="h5-responsive indigo-text">Sun</h5>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <h6 class="indigo-text"><i class="wi wi-sunrise"></i>
+                                    Rise</h6>
+                                07:25:19 AM
+                                <span class="d-block text-muted" data-toggle="tooltip"
+                                      title="Start civil twilight">06:51:58 AM</span>
+                            </div>
+                            <div class="col-4">
+                                <h6 class="indigo-text"><i class="wi wi-day-sunny"></i>
+                                    Transit</h6>
+                                11:57:53 AM
+                            </div>
+                            <div class="col-4">
+                                <h6 class="indigo-text"><i class="wi wi-sunset"></i>
+                                    Set</h6>
+                                04:30:46 PM
+                                <span class="d-block text-muted" data-toggle="tooltip"
+                                      title="End civil twilight">05:04:07 PM</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-6 mb-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="h5-responsive indigo-text">Moon</h5>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <h6 class="indigo-text"><i class="wi wi-moonrise"></i>
+                                    Rise</h6>
+                                02:49:26 PM
+                            </div>
+                            <div class="col-4">
+                                <h6 class="indigo-text"><i class="wi wi-night-clear"></i>
+                                    Transit</h6>
+                                11:19:46 PM
+                            </div>
+                            <div class="col-4">
+                                <h6 class="indigo-text"><i class="wi wi-moonset"></i>
+                                    Set</h6>
+                                06:51:42 AM
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-6 col-xl-3 mb-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="h5-responsive indigo-text">Venus</h5>
+
+                        <div class="row">
+                            <div class="col-4 col-xl-12">
+                                <h6 class="indigo-text d-xl-inline mr-xl-2"><i class="wi wi-direction-up"></i>
+                                    Rise</h6>
+                                09:36:20 AM
+                            </div>
+                            <div class="col-4 col-xl-12">
+                                <h6 class="indigo-text d-xl-inline mr-xl-2"><i class="wi wi-moon-alt-full"></i>
+                                    Transit</h6>
+                                03:05:59 PM
+                            </div>
+                            <div class="col-4 col-xl-12">
+                                <h6 class="indigo-text d-xl-inline mr-xl-2"><i class="wi wi-direction-down"></i>
+                                    Set</h6>
+                                08:36:31 PM
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-6 col-xl-3 mb-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="h5-responsive indigo-text">Mars</h5>
+
+                        <div class="row">
+                            <div class="col-4 col-xl-12">
+                                <h6 class="indigo-text d-xl-inline mr-xl-2"><i class="wi wi-direction-up"></i>
+                                    Rise</h6>
+                                04:25:30 PM
+                            </div>
+                            <div class="col-4 col-xl-12">
+                                <h6 class="indigo-text d-xl-inline mr-xl-2"><i class="wi wi-moon-alt-full"></i>
+                                    Transit</h6>
+                                12:24:36 AM
+                            </div>
+                            <div class="col-4 col-xl-12">
+                                <h6 class="indigo-text d-xl-inline mr-xl-2"><i class="wi wi-direction-down"></i>
+                                    Set</h6>
+                                08:17:54 AM
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-6 col-xl-3 mb-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="h5-responsive indigo-text">Jupiter</h5>
+
+                        <div class="row">
+                            <div class="col-4 col-xl-12">
+                                <h6 class="indigo-text d-xl-inline mr-xl-2"><i class="wi wi-direction-up"></i>
+                                    Rise</h6>
+                                01:23:45 PM
+                            </div>
+                            <div class="col-4 col-xl-12">
+                                <h6 class="indigo-text d-xl-inline mr-xl-2"><i class="wi wi-moon-alt-full"></i>
+                                    Transit</h6>
+                                09:00:59 PM
+                            </div>
+                            <div class="col-4 col-xl-12">
+                                <h6 class="indigo-text d-xl-inline mr-xl-2"><i class="wi wi-direction-down"></i>
+                                    Set</h6>
+                                04:42:29 AM
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-6 col-xl-3 mb-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="h5-responsive indigo-text">Saturn</h5>
+
+                        <div class="row">
+                            <div class="col-4 col-xl-12">
+                                <h6 class="indigo-text d-xl-inline mr-xl-2"><i class="wi wi-direction-up"></i>
+                                    Rise</h6>
+                                09:56:38 AM
+                            </div>
+                            <div class="col-4 col-xl-12">
+                                <h6 class="indigo-text d-xl-inline mr-xl-2"><i class="wi wi-moon-alt-full"></i>
+                                    Transit</h6>
+                                03:28:46 PM
+                            </div>
+                            <div class="col-4 col-xl-12">
+                                <h6 class="indigo-text d-xl-inline mr-xl-2"><i class="wi wi-direction-down"></i>
+                                    Set</h6>
+                                09:00:58 PM
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-6 mb-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="h5-responsive indigo-text">
+                            Equinox
+                            & Solstice
+                        </h5>
+
+                        <table class="table table-striped text-left">
+                            <tr>
+                                <td>Vernal Equinox:</td>
+                                <td>2025-03-20 05:01:14 AM</td>
+                            </tr>
+                            <tr>
+                                <td>Summer Solstice:</td>
+                                <td>2025-06-20 10:42:18 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Autumnal Equinox:</td>
+                                <td>2025-09-22 02:19:17 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Winter Solstice:</td>
+                                <td>2025-12-21 10:02:51 AM</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-6 mb-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="h5-responsive indigo-text">
+                            Moon Phases
+                        </h5>
+
+                        <table class="table table-striped text-left">
+                            <tr>
+                                <td>Currently:</td>
+                                <td>
+                                    <i class="wi wi-moon-full mr-1" style="opacity: .75"></i>
+                                    99% Full
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Next Full Moon:</td>
+                                <td>2025-01-13 05:26:51 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Next New Moon:</td>
+                                <td>2025-01-29 07:35:54 AM</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer class="page-footer font-small indigo pt-4">
+
+    <div class="container-fluid text-center text-md-left mb-4">
+
+        <div class="row">
+
+            <div class="col-md-6 mt-md-0 mt-3">
+
+                <h5 class="text-uppercase">About</h5>
+
+                <table class="d-inline">
+                    <tr>
+                        <td>Hardware:</td>
+                        <td>SDR</td>
+                    </tr>
+                    <tr>
+                        <td>Altitude:</td>
+                        <td>300 meters</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="telemetry.html">
+                                Telemetry
+                            </a>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+
+
+            </div>
+
+            <hr class="clearfix w-100 d-md-none pb-3">
+
+            <div class="col-md-3 mb-md-0 mb-3">
+
+
+            </div>
+
+            <div class="col-md-3 mb-md-0 mb-3">
+
+                <h5 class="text-uppercase">Links</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="https://www.lightningmaps.org" target="_blank" rel="noopener">Lightning Maps</a>
+                    </li>
+                    <li>
+                        <a href="https://www.windy.com" target="_blank" rel="noopener">Windy</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-copyright text-center py-3">
+        &copy; 2025 My weather station
+
+          <span class="mx-2">&bull;</span>
+          Powered by <a href="https://weewx.com" target="_blank">weewx</a>
+          v5.1.0
+
+          <span class="mx-2">&bull;</span>
+          <a href="https://neoground.com/projects/neowx-material" target="_blank">NeoWX Material</a> skin
+          v1.11
+
+    </div>
+
+</footer>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<script src="js/vendor/moment.min.js"></script>
+<script src="js/vendor/apexcharts/apexcharts.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+
+<script type="text/javascript">
+    var config_mode = 'auto';
+    var theme_mode = 'light';
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        theme_mode = 'dark';
+    }
+    // Override mode by config
+    if(config_mode != "auto") {
+        theme_mode = config_mode;
+    }
+
+    window.Apex = {
+        theme: {
+            mode: theme_mode,
+            palette: 'palette1'
+        },
+        dataLabels: {
+            enabled: false
+        },
+        stroke: {
+            curve: 'smooth',
+            width: 2
+        },
+        markers: {
+            size: 0,
+        },
+        chart: {
+            height: 300,
+            stacked: false,
+            zoom: {
+                type: 'x',
+                enabled: true,
+                autoScaleYaxis: true
+            },
+            toolbar: {
+                autoSelected: 'zoom',
+                export: {
+                    csv: {
+                        headerCategory: 'DateTime',
+                        dateFormatter(timestamp) {
+                            return moment.unix(timestamp).toISOString()
+                        }
+                    }
+                }
+            },
+            locales: [
+{
+  "name": "en",
+  "options": {
+    "months": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "shortMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ],
+    "days": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "shortDays": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    "toolbar": {
+      "exportToSVG": "Download SVG",
+      "exportToPNG": "Download PNG",
+      "exportToCSV": "Download CSV",
+      "menu": "Menu",
+      "selection": "Selection",
+      "selectionZoom": "Selection Zoom",
+      "zoomIn": "Zoom In",
+      "zoomOut": "Zoom Out",
+      "pan": "Panning",
+      "reset": "Reset Zoom"
+    }
+  }
+}
+            ],
+            defaultLocale: 'en',
+            animations: {
+                enabled: false
+            },
+        },
+    }
+</script>
+</body>
+</html>

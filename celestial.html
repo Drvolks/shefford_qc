@@ -1,0 +1,1492 @@
+<!--prettier-ignore-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<!--prettier-ignore-->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link
+  href="/shefford_qc/dist/main.css"
+  rel="preload"
+  as="style"
+  onload="this.onload=null;this.rel='stylesheet'"
+/>
+<noscript
+  ><link rel="stylesheet" href="/shefford_qc/dist/main.css"
+/></noscript>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.6.0/webcomponents-loader.min.js"></script>
+<!-- <script>
+  window.WebComponents = window.WebComponents || {};
+  window.WebComponents.root = "node_modules/@webcomponents/webcomponentsjs/";
+</script> -->
+<script src="/shefford_qc/plotly-custom-build.min.js" defer></script>
+
+<link
+  rel="icon"
+  type="image/x-icon"
+  href="/shefford_qc/favicon.ico"
+/>
+<meta
+  name="description"
+  content='Weewx Shefford, QC - Current Weather Conditions'
+/>
+<link rel="manifest" href="/shefford_qc/manifest.json" />
+<meta name="theme-color" content="#161616" />
+<link rel="apple-touch-icon" href="/shefford_qc/icon-192x192.png" />
+<script>
+  // Check that service workers are supported
+  if ("serviceWorker" in navigator) {
+    // Use the window load event to keep the page load performant
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register(
+        "/shefford_qc/service-worker.js"
+      );
+    });
+  }
+</script>
+<!--prettier-ignore-->
+<script>
+  /*prettier-ignore*/
+  window.weewxWdcConfig = {
+    diagramWindDirOrdinals: 1,
+    ordinalCompass: ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW'],
+    windRoseColors: ["#f3cec9", "#e7a4b6", "#cd7eaf", "#a262a9", "#6f4d96", "#3d3b72"],
+    units: {'group_altitude': 'meter', 'group_amp': 'amp', 'group_concentration': 'microgram_per_meter_cubed', 'group_data': 'byte', 'group_db': 'dB', 'group_degree_day': 'degree_C_day', 'group_deltatime': 'second', 'group_direction': 'degree_compass', 'group_distance': 'km', 'group_energy': 'watt_hour', 'group_energy2': 'watt_second', 'group_fraction': 'ppm', 'group_frequency': 'hertz', 'group_illuminance': 'lux', 'group_length': 'cm', 'group_moisture': 'centibar', 'group_percent': 'percent', 'group_power': 'watt', 'group_pressure': 'mbar', 'group_pressure_rate': 'inHq_per_hour', 'group_radiation': 'watt_per_meter_squared', 'group_rain': 'cm', 'group_rainrate': 'cm_per_hour', 'group_speed': 'km_per_hour', 'group_speed2': 'km_per_hour2', 'group_temperature': 'degree_C', 'group_uv': 'uv_index', 'group_volt': 'volt', 'group_volume': 'liter', 'group_boolean': 'boolean', 'group_count': 'count', 'group_elapsed': 'second', 'group_interval': 'minute', 'group_time': 'unix_epoch', 'group_angle': 'degree_angle', 'group_pressurerate': 'mbar_per_hour', 'unused': 'unused'},
+    dwdForecastTable: {},
+    basePath: "/shefford_qc/",
+    translations: {
+      "Daily": "Daily",
+      "Hourly": "Hourly",
+      "Forecast_for": "Forecast for",
+      "Forecast_from": "Forecast from",
+      "Issued_on": "Issued on",
+      "Station_name": "Station name",
+      "POP": "Probability of precipitation",
+      "obs_cloud_cover": "Cloud cover",
+      "obs_sunshine_dur": "Rel. Sunshine duration",
+      "obs_dew_point": "Dew Point",
+      "obs_barometer": "Barometer",
+      "obs_wind_speed": "Wind Speed",
+      "obs_precipitation": "Precipitation",
+      "no_warnings": "no warnings at this time",
+      "Verhaltenshinweise": "Behavioral Advice",
+      "source": "Source",
+      "Select_a_day": "Select a day",
+      "Archive_day": "Archive day",
+      "stats_helper_text": "Choose a day to view a statistics page. You can also filter/search for a date by start typing, eg:",
+      "Format_is": "Format is",
+    },
+    locale: "en-US",
+    time: 1761935122.717403,
+    defaultTheme: 'auto',
+    color_temperature: 0,
+    color_temperature_transparency: 0.35,
+    color_temperature_min: -20,
+    color_temperature_max: 40,
+  };
+</script>
+
+<script
+  type="module"
+  src="https://1.www.s81c.com/common/carbon/web-components/version/v2.0.1/modal.min.js"
+></script>
+
+<!--prettier-ignore-->
+<style>
+  *:not(:defined) {
+    display: none;
+  }
+
+      .diagram {
+        height: 220px;
+      }
+      @media screen and (min-width: 672px) {
+        .diagram {
+          height: 325px;
+        }
+      }
+      @media screen and (min-width: 1056px) {
+        .diagram {
+          height: 325px;
+        }
+      }
+      @media screen and (min-width: 1312px) {
+        .diagram {
+          height: 250px;
+        }
+      }
+      @media screen and (min-width: 1920px) {
+        .diagram {
+          height: 250px;
+        }
+      }
+
+      body.theme-classic .diagram {
+        height: 220px;
+      }
+      @media screen and (min-width: 672px) {
+        body.theme-classic .diagram {
+          height: 300px;
+        }
+      }
+      @media screen and (min-width: 1056px) {
+        body.theme-classic .diagram {
+          height: 250px;
+        }
+      }
+      @media screen and (min-width: 1312px) {
+        body.theme-classic .diagram {
+          height: 225px;
+        }
+      }
+      @media screen and (min-width: 1920px) {
+        body.theme-classic .diagram {
+          height: 225px;
+        }
+      }
+</style>
+    <title>Shefford, QC - Almanac</title>
+  </head>
+
+  <body class="theme-alternative">
+<!--prettier-ignore-->
+
+<script
+  type="module"
+  src="https://1.www.s81c.com/common/carbon/web-components/version/v1.27.0/ui-shell.min.js"
+></script>
+<script
+  type="module"
+  src="https://1.www.s81c.com/common/carbon/web-components/version/v1.21.0/button.min.js"
+></script>
+
+<bx-header aria-label="Weewx Shefford, QC - 2025-10-31 02:25:00 PM">
+  <bx-header-menu-button
+    button-label-active="Close menu"
+    button-label-inactive="Open menu"
+  ></bx-header-menu-button>
+  <bx-header-name href="/shefford_qc/index.html" prefix="">
+    <!--prettier-ignore-->
+<svg
+  version="1.1"
+  id="Layer_1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  x="0px"
+  y="0px"
+  width="32px"
+  height="32px"
+  viewBox="0 0 1024 1024"
+  enable-background="new 0 0 1024 1024"
+  xml:space="preserve"
+>
+  <g>
+    <path
+      fill="#1E40AF"
+      d="M1024,950c0,41.421-33.579,75-75,75H75c-41.421,0-75-33.579-75-75V76C0,34.579,33.579,1,75,1h874
+		c41.421,0,75,33.579,75,75V950z"
+    />
+  </g>
+  <g id="Sun">
+    <line
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-width="50"
+      stroke-miterlimit="10"
+      x1="364.764"
+      y1="405.969"
+      x2="455.595"
+      y2="120.987"
+    />
+
+    <line
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-width="50"
+      stroke-miterlimit="10"
+      x1="273.932"
+      y1="690.951"
+      x2="364.764"
+      y2="405.969"
+    />
+
+    <line
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-width="50"
+      stroke-miterlimit="10"
+      x1="646.109"
+      y1="495.866"
+      x2="361.004"
+      y2="405.421"
+    />
+    <line
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-width="50"
+      stroke-miterlimit="10"
+      x1="361.127"
+      y1="405.034"
+      x2="76.021"
+      y2="314.59"
+    />
+
+    <line
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-width="50"
+      stroke-miterlimit="10"
+      x1="365.026"
+      y1="405.644"
+      x2="630.651"
+      y2="268.135"
+    />
+    <line
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-width="50"
+      stroke-miterlimit="10"
+      x1="99.13"
+      y1="543.01"
+      x2="364.755"
+      y2="405.5"
+    />
+
+    <line
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-width="50"
+      stroke-miterlimit="10"
+      x1="361.761"
+      y1="403.099"
+      x2="221.129"
+      y2="139.114"
+    />
+
+    <line
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-width="50"
+      stroke-miterlimit="10"
+      x1="506.236"
+      y1="668.637"
+      x2="365.604"
+      y2="404.653"
+    />
+    <circle
+      fill="#FFFFFD"
+      stroke="#FFFFFF"
+      stroke-width="50"
+      stroke-miterlimit="10"
+      cx="364.546"
+      cy="404.922"
+      r="166.99"
+    />
+  </g>
+  <line
+    fill="none"
+    stroke="#FFFFFF"
+    stroke-width="50"
+    stroke-miterlimit="10"
+    x1="274.959"
+    y1="736.733"
+    x2="219.273"
+    y2="819.853"
+  />
+  <line
+    fill="none"
+    stroke="#FFFFFF"
+    stroke-width="50"
+    stroke-miterlimit="10"
+    x1="383.292"
+    y1="736.733"
+    x2="282.046"
+    y2="885.06"
+  />
+  <line
+    fill="none"
+    stroke="#FFFFFF"
+    stroke-width="50"
+    stroke-miterlimit="10"
+    x1="492.622"
+    y1="736.733"
+    x2="436.936"
+    y2="819.853"
+  />
+  <line
+    fill="none"
+    stroke="#FFFFFF"
+    stroke-width="50"
+    stroke-miterlimit="10"
+    x1="600.955"
+    y1="736.733"
+    x2="499.709"
+    y2="885.06"
+  />
+  <line
+    fill="none"
+    stroke="#FFFFFF"
+    stroke-width="50"
+    stroke-miterlimit="10"
+    x1="696.508"
+    y1="736.733"
+    x2="640.823"
+    y2="819.853"
+  />
+  <line
+    fill="none"
+    stroke="#FFFFFF"
+    stroke-width="50"
+    stroke-miterlimit="10"
+    x1="804.842"
+    y1="736.733"
+    x2="703.596"
+    y2="885.06"
+  />
+  <g>
+    <path
+      fill="#FFFFFF"
+      stroke="#FFFFFF"
+      stroke-width="18"
+      stroke-miterlimit="10"
+      d="M269.148,528.245
+		c-62.37,0-113.114,51.061-113.114,113.829c0,60.251,47.618,104.612,113.246,105.433h524.147
+		c77.387-0.821,138.062-59.775,138.062-134.168c0-76.142-61.92-138.088-138.062-138.088c-16.844,0-37.581,3.046-50.452,7.416
+		c-4.847,1.668-10.064-0.821-11.944-5.562c-31.251-80.3-107.287-134.274-189.202-134.274c-101.408,0-192.089,86.577-202.18,192.99
+		c-0.318,3.231-2.225,6.065-5.085,7.574c-2.887,1.51-6.33,1.404-9.111-0.185C308.265,533.435,288.8,528.245,269.148,528.245z"
+    />
+    <rect
+      id="_Transparent_Rectangle_1_"
+      x="312.37"
+      y="275.786"
+      fill="none"
+      width="492.173"
+      height="492.173"
+    />
+  </g>
+</svg>
+
+    <span part="prefix" class="bx--header__name--prefix">WeeWX</span>
+    Shefford, QC
+  </bx-header-name>
+  <bx-header-nav menu-bar-label="Weewx Shefford, QC - 2025-10-31 02:25:00 PM">
+    <bx-header-nav-item href="/shefford_qc/index.html"
+      >Today</bx-header-nav-item
+    >
+    <bx-header-nav-item href="/shefford_qc/week.html"
+      >Week</bx-header-nav-item
+    >
+    <bx-header-nav-item href="/shefford_qc/month.html"
+      >Month</bx-header-nav-item
+    >
+    <bx-header-nav-item href="/shefford_qc/year.html"
+      >Year</bx-header-nav-item
+    >
+  </bx-header-nav>
+  <div id="header-global">
+    <bx-btn kind="ghost" data-id="theme-toggle"
+      ><svg
+        class="hidden"
+        data-id="theme-toggle-light-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 32 32"
+      >
+        <defs>
+          <style>
+            .cls-1 {
+              fill: none;
+            }
+          </style>
+        </defs>
+        <rect x="15" y="2" width="2" height="5" />
+        <rect
+          x="21.6675"
+          y="6.8536"
+          width="4.958"
+          height="1.9998"
+          transform="translate(1.5191 19.3744) rotate(-45)"
+        />
+        <rect x="25" y="15" width="5" height="2" />
+        <rect
+          x="23.1466"
+          y="21.6675"
+          width="1.9998"
+          height="4.958"
+          transform="translate(-10.0018 24.1465) rotate(-45)"
+        />
+        <rect x="15" y="25" width="2" height="5" />
+        <rect
+          x="5.3745"
+          y="23.1466"
+          width="4.958"
+          height="1.9998"
+          transform="translate(-14.7739 12.6256) rotate(-45)"
+        />
+        <rect x="2" y="15" width="5" height="2" />
+        <rect
+          x="6.8536"
+          y="5.3745"
+          width="1.9998"
+          height="4.958"
+          transform="translate(-3.253 7.8535) rotate(-45)"
+        />
+        <path
+          d="M16,12a4,4,0,1,1-4,4,4.0045,4.0045,0,0,1,4-4m0-2a6,6,0,1,0,6,6,6,6,0,0,0-6-6Z"
+        />
+        <rect
+          data-name="&lt;Transparent Rectangle&gt;"
+          class="cls-1"
+          width="32"
+          height="32"
+        />
+      </svg>
+
+      <svg
+        class="hidden"
+        data-id="theme-toggle-dark-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 32 32"
+      >
+        <defs>
+          <style>
+            .cls-1 {
+              fill: none;
+            }
+          </style>
+        </defs>
+        <title>asleep</title>
+        <path
+          d="M13.5025,5.4136A15.0755,15.0755,0,0,0,25.096,23.6082a11.1134,11.1134,0,0,1-7.9749,3.3893c-.1385,0-.2782.0051-.4178,0A11.0944,11.0944,0,0,1,13.5025,5.4136M14.98,3a1.0024,1.0024,0,0,0-.1746.0156A13.0959,13.0959,0,0,0,16.63,28.9973c.1641.006.3282,0,.4909,0a13.0724,13.0724,0,0,0,10.702-5.5556,1.0094,1.0094,0,0,0-.7833-1.5644A13.08,13.08,0,0,1,15.8892,4.38,1.0149,1.0149,0,0,0,14.98,3Z"
+        />
+        <rect
+          data-name="&lt;Transparent Rectangle&gt;"
+          class="cls-1"
+          width="32"
+          height="32"
+        />
+      </svg>
+    </bx-btn>
+  </div>
+</bx-header>
+<bx-side-nav aria-label="Side navigation" collapse-mode="responsive">
+  <bx-side-nav-items>
+    <bx-side-nav-link
+      class="show-small"
+      href="/shefford_qc/index.html"
+      ><span>Today</span></bx-side-nav-link
+    >
+    <bx-side-nav-link class="show-small" href="/shefford_qc/week.html"
+      ><span>Week</span></bx-side-nav-link
+    >
+    <bx-side-nav-link
+      class="show-small"
+      href="/shefford_qc/month.html"
+      ><span>Month</span></bx-side-nav-link
+    >
+    <bx-side-nav-link class="show-small" href="/shefford_qc/year.html"
+      ><span>Year</span></bx-side-nav-link
+    >
+    <bx-side-nav-divider class="show-small"></bx-side-nav-divider>
+    <bx-side-nav-link href="/shefford_qc/celestial.html">
+      <svg
+        slot="title-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 32 32"
+      >
+        <defs>
+          <style>
+            .cls-1 {
+              fill: none;
+            }
+          </style>
+        </defs>
+        <title>asleep</title>
+        <path
+          d="M13.5025,5.4136A15.0755,15.0755,0,0,0,25.096,23.6082a11.1134,11.1134,0,0,1-7.9749,3.3893c-.1385,0-.2782.0051-.4178,0A11.0944,11.0944,0,0,1,13.5025,5.4136M14.98,3a1.0024,1.0024,0,0,0-.1746.0156A13.0959,13.0959,0,0,0,16.63,28.9973c.1641.006.3282,0,.4909,0a13.0724,13.0724,0,0,0,10.702-5.5556,1.0094,1.0094,0,0,0-.7833-1.5644A13.08,13.08,0,0,1,15.8892,4.38,1.0149,1.0149,0,0,0,14.98,3Z"
+        />
+        <rect
+          id="_Transparent_Rectangle_"
+          data-name="&lt;Transparent Rectangle&gt;"
+          class="cls-1"
+          width="32"
+          height="32"
+        />
+      </svg>
+      <span>Celestial</span>
+    </bx-side-nav-link>
+    <bx-side-nav-link href="/shefford_qc/statistics.html">
+      <svg
+        slot="title-icon"
+        width="16"
+        height="16"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 32 32"
+      >
+        <defs>
+          <style>
+            .cls-1 {
+              fill: none;
+            }
+          </style>
+        </defs>
+        <title>analytics</title>
+        <path d="M4,2H2V28a2,2,0,0,0,2,2H30V28H4Z" />
+        <path
+          d="M30,9H23v2h3.59L19,18.59l-4.29-4.3a1,1,0,0,0-1.42,0L6,21.59,7.41,23,14,16.41l4.29,4.3a1,1,0,0,0,1.42,0L28,12.41V16h2Z"
+        />
+        <rect
+          id="_Transparent_Rectangle_"
+          data-name="&lt;Transparent Rectangle&gt;"
+          class="cls-1"
+          width="32"
+          height="32"
+        />
+      </svg>
+      <span>Statistics</span>
+    </bx-side-nav-link>
+
+    <!--prettier-ignore-->
+
+    <!--prettier-ignore-->
+
+    <!--prettier-ignore-->
+    <bx-side-nav-link href="/shefford_qc/about.html">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        slot="title-icon"
+        width="16"
+        height="16"
+        viewBox="0 0 32 32"
+      >
+        <defs>
+          <style>
+            .cls-1 {
+              fill: none;
+            }
+          </style>
+        </defs>
+        <polygon
+          points="17 22 17 14 13 14 13 16 15 16 15 22 12 22 12 24 20 24 20 22 17 22"
+        />
+        <path d="M16,8a1.5,1.5,0,1,0,1.5,1.5A1.5,1.5,0,0,0,16,8Z" />
+        <path
+          d="M16,30A14,14,0,1,1,30,16,14,14,0,0,1,16,30ZM16,4A12,12,0,1,0,28,16,12,12,0,0,0,16,4Z"
+        />
+        <rect class="cls-1" width="32" height="32" />
+      </svg>
+      <span>About</span>
+    </bx-side-nav-link>
+
+    <bx-side-nav-divider></bx-side-nav-divider>
+    <bx-side-nav-link class="sidebar-heading"
+      ><span>Archive & NOAA Reports</span></bx-side-nav-link
+    >
+    <!--prettier-ignore-->
+    <bx-side-nav-menu title="Years">
+      <bx-side-nav-menu-item
+        href="/shefford_qc/year-2024.html"
+      >
+        <b>2024</b>
+      </bx-side-nav-menu-item>
+      <bx-side-nav-menu-item
+        href="/shefford_qc/year-2025.html"
+      >
+        <b>2025</b>
+      </bx-side-nav-menu-item>
+    </bx-side-nav-menu>
+    <!--prettier-ignore-->
+    <!--prettier-ignore-->
+    <bx-side-nav-menu title="2024">
+      <!--prettier-ignore-->
+      <bx-side-nav-menu-item href="/shefford_qc/month-2024-08.html">
+        <span>August</span>
+      </bx-side-nav-menu-item>
+      <bx-side-nav-menu-item href="/shefford_qc/month-2024-09.html">
+        <span>September</span>
+      </bx-side-nav-menu-item>
+      <bx-side-nav-menu-item href="/shefford_qc/month-2024-10.html">
+        <span>October</span>
+      </bx-side-nav-menu-item>
+      <bx-side-nav-menu-item href="/shefford_qc/month-2024-11.html">
+        <span>November</span>
+      </bx-side-nav-menu-item>
+      <bx-side-nav-menu-item href="/shefford_qc/month-2024-12.html">
+        <span>December</span>
+      </bx-side-nav-menu-item>
+    </bx-side-nav-menu>
+    <!--prettier-ignore-->
+    <!--prettier-ignore-->
+    <bx-side-nav-menu title="2025">
+      <!--prettier-ignore-->
+      <bx-side-nav-menu-item href="/shefford_qc/month-2025-01.html">
+        <span>January</span>
+      </bx-side-nav-menu-item>
+      <bx-side-nav-menu-item href="/shefford_qc/month-2025-02.html">
+        <span>February</span>
+      </bx-side-nav-menu-item>
+      <bx-side-nav-menu-item href="/shefford_qc/month-2025-03.html">
+        <span>March</span>
+      </bx-side-nav-menu-item>
+      <bx-side-nav-menu-item href="/shefford_qc/month-2025-04.html">
+        <span>April</span>
+      </bx-side-nav-menu-item>
+      <bx-side-nav-menu-item href="/shefford_qc/month-2025-05.html">
+        <span>May</span>
+      </bx-side-nav-menu-item>
+      <bx-side-nav-menu-item href="/shefford_qc/month-2025-06.html">
+        <span>June</span>
+      </bx-side-nav-menu-item>
+      <bx-side-nav-menu-item href="/shefford_qc/month-2025-07.html">
+        <span>July</span>
+      </bx-side-nav-menu-item>
+      <bx-side-nav-menu-item href="/shefford_qc/month-2025-08.html">
+        <span>August</span>
+      </bx-side-nav-menu-item>
+      <bx-side-nav-menu-item href="/shefford_qc/month-2025-09.html">
+        <span>September</span>
+      </bx-side-nav-menu-item>
+      <bx-side-nav-menu-item href="/shefford_qc/month-2025-10.html">
+        <span>October</span>
+      </bx-side-nav-menu-item>
+    </bx-side-nav-menu>
+    <!--prettier-ignore-->
+  </bx-side-nav-items>
+</bx-side-nav>
+
+<script>
+  // Add 'active' class to nav-items.
+  const bxSideNavLinks = document.querySelectorAll(
+    "bx-side-nav-link, bx-side-nav-menu-item"
+  );
+
+  bxSideNavLinks.forEach((element) => {
+    if (
+      element.getAttribute("href") &&
+      window.location.pathname.includes(
+        // Remove leading slash.
+        element.getAttribute("href").replace(/^\/+/, "")
+      )
+    ) {
+      element.setAttribute("active", true);
+    }
+  });
+</script>
+
+<script>
+  // Default theme.
+  const defaultTheme = window.weewxWdcConfig.defaultTheme;
+
+  if (!("weewx.weewx_wdc.color-theme" in localStorage) && defaultTheme !== "auto") {
+    localStorage.setItem("weewx.weewx_wdc.color-theme", defaultTheme);
+  }
+
+  var themeToggleDarkIcon = document.querySelectorAll(
+    '[data-id="theme-toggle-dark-icon"]'
+  );
+  var themeToggleLightIcon = document.querySelectorAll(
+    '[data-id="theme-toggle-light-icon"]'
+  );
+
+  // Change the icons inside the button based on previous settings
+  if (
+    localStorage.getItem("weewx.weewx_wdc.color-theme") === "dark" ||
+    (!("weewx.weewx_wdc.color-theme" in localStorage) &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches)
+  ) {
+    document.documentElement.classList.add("dark");
+    themeToggleLightIcon.forEach(function (element) {
+      element.classList.remove("hidden");
+    });
+  } else {
+    themeToggleDarkIcon.forEach(function (element) {
+      element.classList.remove("hidden");
+    });
+  }
+
+  var themeToggleBtn = document.querySelectorAll('[data-id="theme-toggle"]');
+
+  themeToggleBtn.forEach(function (element) {
+    element.addEventListener("click", function () {
+      // toggle icons inside button
+      themeToggleDarkIcon.forEach(function (element) {
+        element.classList.toggle("hidden");
+      });
+      themeToggleLightIcon.forEach(function (element) {
+        element.classList.toggle("hidden");
+      });
+
+      // if set via local storage previously
+      if (localStorage.getItem("weewx.weewx_wdc.color-theme")) {
+        if (localStorage.getItem("weewx.weewx_wdc.color-theme") === "light") {
+          document.documentElement.classList.add("dark");
+          localStorage.setItem("weewx.weewx_wdc.color-theme", "dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+          localStorage.setItem("weewx.weewx_wdc.color-theme", "light");
+        }
+
+        // if NOT set via local storage previously
+      } else {
+        if (document.documentElement.classList.contains("dark")) {
+          document.documentElement.classList.remove("dark");
+          localStorage.setItem("weewx.weewx_wdc.color-theme", "light");
+        } else {
+          document.documentElement.classList.add("dark");
+          localStorage.setItem("weewx.weewx_wdc.color-theme", "dark");
+        }
+      }
+    });
+  });
+</script>
+
+<!--prettier-ignore-->
+
+    <main class="main bx--content">
+      <section>
+        <div class="bx--grid bx--grid--full-width">
+          <div class="bx--row">
+            <header class="bx--col page-header">
+              <h1>Almanac</h1>
+              <h2>2025-10-31</h2>
+            </header>
+          </div>
+          <!--prettier-ignore-->
+          <div class="bx--row">
+            <!--prettier-ignore-->
+<!--prettier-ignore-->
+
+<div class="bx--col-sm-4 bx--col-md-4 bx--col-lg-4 bx--col-xlg-4 bx--col-max-3">
+  <div class="bx--tile almanac-tile">
+    <div class="bx--row">
+      <div class="bx--col">
+        <p class="label">
+          <!--prettier-ignore-->
+          Sun
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  x="0px"
+  y="0px"
+  viewBox="0 0 32 32"
+  style="enable-background: new 0 0 32 32"
+  xml:space="preserve"
+>
+  <path
+    id="sunny_1_"
+    d="M16,29.36c-0.199,0-0.36-0.161-0.36-0.36v-3c0-0.199,0.161-0.36,0.36-0.36s0.36,0.161,0.36,0.36v3
+	C16.36,29.199,16.199,29.36,16,29.36z M25.192,25.553c-0.092,0-0.185-0.035-0.255-0.105l-2.121-2.121
+	c-0.141-0.141-0.141-0.369,0-0.51s0.369-0.141,0.51,0l2.121,2.121c0.141,0.141,0.141,0.369,0,0.51
+	C25.377,25.518,25.284,25.553,25.192,25.553z M6.808,25.553c-0.092,0-0.184-0.035-0.254-0.105c-0.141-0.141-0.141-0.369,0-0.51
+	l2.121-2.121c0.141-0.141,0.368-0.141,0.509,0s0.141,0.369,0,0.51l-2.121,2.121C6.992,25.518,6.9,25.553,6.808,25.553z M16,23.36
+	c-4.058,0-7.36-3.302-7.36-7.36S11.942,8.64,16,8.64c4.059,0,7.36,3.302,7.36,7.36C23.36,20.059,20.059,23.36,16,23.36z M16,9.36
+	c-3.661,0-6.64,2.979-6.64,6.64s2.979,6.64,6.64,6.64s6.64-2.979,6.64-6.64S19.661,9.36,16,9.36z M29,16.36h-3
+	c-0.199,0-0.36-0.161-0.36-0.36s0.161-0.36,0.36-0.36h3c0.199,0,0.36,0.161,0.36,0.36S29.199,16.36,29,16.36z M6,16.36H3
+	c-0.199,0-0.36-0.161-0.36-0.36S2.801,15.64,3,15.64h3c0.199,0,0.36,0.161,0.36,0.36S6.199,16.36,6,16.36z M23.071,9.289
+	c-0.092,0-0.185-0.035-0.255-0.105c-0.141-0.141-0.141-0.368,0-0.509l2.121-2.121c0.141-0.141,0.369-0.141,0.51,0
+	s0.141,0.368,0,0.509l-2.121,2.121C23.256,9.253,23.163,9.289,23.071,9.289z M8.929,9.289c-0.092,0-0.184-0.035-0.254-0.105
+	L6.553,7.062c-0.141-0.141-0.141-0.368,0-0.509s0.368-0.141,0.509,0l2.121,2.121c0.141,0.141,0.141,0.368,0,0.509
+	C9.113,9.253,9.021,9.289,8.929,9.289z M16,6.36c-0.199,0-0.36-0.161-0.36-0.36V3c0-0.199,0.161-0.36,0.36-0.36S16.36,2.801,16.36,3
+	v3C16.36,6.199,16.199,6.36,16,6.36z"
+  />
+  <rect style="fill: none" width="32" height="32" />
+</svg>
+        </p>
+        <div class="bx--row">
+          <div class="bx--col value">
+            <!--prettier-ignore-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="32"
+  height="32"
+  viewBox="0 0 32 32"
+>
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <title>Sunrise</title>
+  <rect x="2" y="27" width="27.9985" height="2" />
+  <path
+    d="M16,20a4.0045,4.0045,0,0,1,4,4h2a6,6,0,0,0-12,0h2A4.0045,4.0045,0,0,1,16,20Z"
+  />
+  <rect x="25" y="22" width="5" height="2" />
+  <rect
+    x="21.6675"
+    y="14.8536"
+    width="4.958"
+    height="1.9998"
+    transform="translate(-4.1378 21.7175) rotate(-45)"
+  />
+  <polygon
+    points="16 4 11 9 12.41 10.41 15 7.83 15 8 15 15 17 15 17 8 17 7.83 19.59 10.41 21 9 16 4"
+  />
+  <rect
+    x="6.8536"
+    y="13.3745"
+    width="1.9998"
+    height="4.958"
+    transform="translate(-8.9099 10.1967) rotate(-45)"
+  />
+  <rect x="2" y="22" width="5" height="2" />
+  <rect
+    data-name="&lt;Transparent Rectangle&gt;"
+    class="cls-1"
+    width="32"
+    height="32"
+  />
+</svg>
+            <div class="value-col">
+              <p class="label small">Sunrise</p>
+              <p class="value">07:26:55 AM</p>
+            </div>
+          </div>
+          <div class="bx--col value">
+            <!--prettier-ignore-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="32"
+  height="32"
+  viewBox="0 0 32 32"
+>
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <title>sunny</title>
+  <path
+    d="M16,12a4,4,0,1,1-4,4,4.0045,4.0045,0,0,1,4-4m0-2a6,6,0,1,0,6,6,6,6,0,0,0-6-6Z"
+    transform="translate(0 0.0049)"
+  />
+  <rect
+    x="6.8536"
+    y="5.3745"
+    width="1.9998"
+    height="4.958"
+    transform="translate(-3.253 7.8584) rotate(-45)"
+  />
+  <rect x="2" y="15.0049" width="5" height="2" />
+  <rect
+    x="5.3745"
+    y="23.1466"
+    width="4.958"
+    height="1.9998"
+    transform="translate(-14.7739 12.6305) rotate(-45)"
+  />
+  <rect x="15" y="25.0049" width="2" height="5" />
+  <rect
+    x="23.1466"
+    y="21.6675"
+    width="1.9998"
+    height="4.958"
+    transform="translate(-10.0018 24.1514) rotate(-45)"
+  />
+  <rect x="25" y="15.0049" width="5" height="2" />
+  <rect
+    x="21.6675"
+    y="6.8536"
+    width="4.958"
+    height="1.9998"
+    transform="translate(1.5191 19.3793) rotate(-45)"
+  />
+  <rect x="15" y="2.0049" width="2" height="5" />
+  <rect
+    data-name="&lt;Transparent Rectangle&gt;"
+    class="cls-1"
+    width="32"
+    height="32"
+  />
+</svg>
+            <div class="value-col">
+              <p class="label small">Transit</p>
+              <p class="value">12:33:01 PM</p>
+            </div>
+          </div>
+          <div class="bx--col value">
+            <!--prettier-ignore-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="32"
+  height="32"
+  viewBox="0 0 32 32"
+>
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <title>Sunset</title>
+  <rect x="2" y="27.0049" width="27.9985" height="2" />
+  <path
+    d="M16,20a4.0045,4.0045,0,0,1,4,4h2a6,6,0,0,0-12,0h2A4.0045,4.0045,0,0,1,16,20Z"
+    transform="translate(0 0.0049)"
+  />
+  <rect x="25" y="22.0049" width="5" height="2" />
+  <rect
+    x="21.6675"
+    y="14.8536"
+    width="4.958"
+    height="1.9998"
+    transform="translate(-4.1378 21.7224) rotate(-45)"
+  />
+  <polygon
+    points="19.59 9.595 17 12.175 17 4.005 15 4.005 15 12.175 12.41 9.595 11 11.005 16 16.005 21 11.005 19.59 9.595"
+  />
+  <rect
+    x="6.8536"
+    y="13.3745"
+    width="1.9998"
+    height="4.958"
+    transform="translate(-8.9099 10.2015) rotate(-45)"
+  />
+  <rect x="2" y="22.0049" width="5" height="2" />
+  <rect
+    data-name="&lt;Transparent Rectangle&gt;"
+    class="cls-1"
+    width="32"
+    height="32"
+  />
+</svg>
+            <div class="value-col">
+              <p class="label small">Sunset</p>
+              <p class="value">05:38:30 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--prettier-ignore-->
+
+<div class="bx--col-sm-4 bx--col-md-4 bx--col-lg-4 bx--col-xlg-4 bx--col-max-3">
+  <div class="bx--tile almanac-tile">
+    <div class="bx--row">
+      <div class="bx--col">
+        <p class="label">
+          <!--prettier-ignore-->
+          Moon
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  x="0px"
+  y="0px"
+  viewBox="0 0 32 32"
+  style="enable-background: new 0 0 32 32"
+  xml:space="preserve"
+>
+  <path
+    id="night--clear_1_"
+    d="M15.004,29.36c-7.369,0-13.364-5.995-13.364-13.363C1.64,8.702,7.552,2.71,14.818,2.64
+	c0.001,0,0.002,0,0.003,0c0.143,0,0.271,0.084,0.329,0.214c0.058,0.131,0.033,0.285-0.065,0.391
+	c-2.146,2.312-3.329,5.363-3.329,8.59c0,6.972,5.672,12.644,12.644,12.644l0.013,0.248l0.027-0.25
+	c0.162-0.015,0.316,0.068,0.381,0.201s0.069,0.291-0.031,0.399C22.264,27.799,18.696,29.36,15.004,29.36z M14.001,3.395
+	C7.511,3.885,2.36,9.373,2.36,15.998c0,6.971,5.672,12.642,12.644,12.642c3.267,0,6.315-1.223,8.673-3.46
+	c-7.034-0.378-12.64-6.219-12.64-13.345C11.037,8.715,12.083,5.75,14.001,3.395z M28,21.36c-0.199,0-0.36-0.161-0.36-0.36v-1.64H26
+	c-0.199,0-0.36-0.161-0.36-0.36s0.161-0.36,0.36-0.36h1.64V17c0-0.199,0.161-0.36,0.36-0.36s0.36,0.161,0.36,0.36v1.64H30
+	c0.199,0,0.36,0.161,0.36,0.36s-0.161,0.36-0.36,0.36h-1.64V21C28.36,21.199,28.199,21.36,28,21.36z M18,12.36
+	c-0.199,0-0.36-0.161-0.36-0.36v-1.64H16c-0.199,0-0.36-0.161-0.36-0.36S15.801,9.64,16,9.64h1.64V8c0-0.199,0.161-0.36,0.36-0.36
+	S18.36,7.802,18.36,8v1.64H20c0.199,0,0.36,0.161,0.36,0.36s-0.161,0.36-0.36,0.36h-1.64V12C18.36,12.199,18.199,12.36,18,12.36z
+	 M24,8.36c-0.199,0-0.36-0.161-0.36-0.36V6.36H22c-0.199,0-0.36-0.161-0.36-0.36S21.801,5.64,22,5.64h1.64V4
+	c0-0.199,0.161-0.36,0.36-0.36S24.36,3.802,24.36,4v1.64H26c0.199,0,0.36,0.161,0.36,0.36S26.199,6.36,26,6.36h-1.64V8
+	C24.36,8.199,24.199,8.36,24,8.36z"
+  />
+  <rect style="fill: none" width="32" height="32" />
+</svg>
+        </p>
+        <div class="bx--row">
+          <div class="bx--col value">
+            <!--prettier-ignore-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="32"
+  height="32"
+  viewBox="0 0 32 32"
+>
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <rect x="2" y="28" width="28" height="2" />
+  <path
+    d="M26,26H24a7.987,7.987,0,0,0-2.0371-5.3335l1.49-1.334A9.9835,9.9835,0,0,1,26,26Z"
+  />
+  <path
+    d="M16,26H14a9.9268,9.9268,0,0,1,3.7539-7.804A7.89,7.89,0,0,0,16,18a8.0092,8.0092,0,0,0-8,8H6A10.0113,10.0113,0,0,1,16,16a9.8923,9.8923,0,0,1,4.4458,1.0515,1,1,0,0,1,0,1.79A7.9567,7.9567,0,0,0,16,26Z"
+  />
+  <polygon
+    points="16 2 11 7 12.41 8.41 15 5.83 15 6 15 14 17 14 17 6 17 5.83 19.59 8.41 21 7 16 2"
+  />
+  <rect
+    data-name="&lt;Transparent Rectangle&gt;"
+    class="cls-1"
+    width="32"
+    height="32"
+  />
+</svg>
+            <div class="value-col">
+              <p class="label small">Moonrise</p>
+              <p class="value">03:19:46 PM</p>
+            </div>
+          </div>
+          <div class="bx--col value">
+            <!--prettier-ignore-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="32"
+  height="32"
+  viewBox="0 0 32 32"
+>
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <title>asleep</title>
+  <path
+    d="M13.5025,5.4136A15.0755,15.0755,0,0,0,25.096,23.6082a11.1134,11.1134,0,0,1-7.9749,3.3893c-.1385,0-.2782.0051-.4178,0A11.0944,11.0944,0,0,1,13.5025,5.4136M14.98,3a1.0024,1.0024,0,0,0-.1746.0156A13.0959,13.0959,0,0,0,16.63,28.9973c.1641.006.3282,0,.4909,0a13.0724,13.0724,0,0,0,10.702-5.5556,1.0094,1.0094,0,0,0-.7833-1.5644A13.08,13.08,0,0,1,15.8892,4.38,1.0149,1.0149,0,0,0,14.98,3Z"
+  />
+  <rect
+    data-name="&lt;Transparent Rectangle&gt;"
+    class="cls-1"
+    width="32"
+    height="32"
+  />
+</svg>
+            <div class="value-col">
+              <p class="label small">Transit</p>
+              <p class="value">08:44:26 PM</p>
+            </div>
+          </div>
+          <div class="bx--col value">
+            <!--prettier-ignore-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="32"
+  height="32"
+  viewBox="0 0 32 32"
+>
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <rect x="2" y="28" width="28" height="2" />
+  <path
+    d="M26,26H24a7.987,7.987,0,0,0-2.0371-5.3335l1.49-1.334A9.9835,9.9835,0,0,1,26,26Z"
+  />
+  <path
+    d="M16,26H14a9.9268,9.9268,0,0,1,3.7539-7.804A7.89,7.89,0,0,0,16,18a8.0092,8.0092,0,0,0-8,8H6A10.0113,10.0113,0,0,1,16,16a9.8923,9.8923,0,0,1,4.4458,1.0515,1,1,0,0,1,0,1.79A7.9567,7.9567,0,0,0,16,26Z"
+  />
+  <polygon
+    points="16 14 11 9 12.41 7.59 15 10.17 15 10 15 2 17 2 17 10 17 10.17 19.59 7.59 21 9 16 14"
+  />
+  <rect
+    data-name="&lt;Transparent Rectangle&gt;"
+    class="cls-1"
+    width="32"
+    height="32"
+  />
+</svg>
+            <div class="value-col">
+              <p class="label small">Moonset</p>
+              <p class="value">01:06:34 AM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+          <div class="bx--row">
+            <!--prettier-ignore-->
+<!--prettier-ignore-->
+
+<div class="bx--col-sm-4 bx--col-md-4 bx--col-lg-4 bx--col-xlg-4 bx--col-max-3">
+  <div class="bx--tile almanac-tile">
+    <div class="bx--row">
+      <div class="bx--col">
+        <p class="label">
+          <!--prettier-ignore-->
+          Venus
+        </p>
+        <div class="bx--row">
+          <div class="bx--col value">
+            <!--prettier-ignore-->
+            <div class="value-col">
+              <p class="label small">Venusrise</p>
+              <p class="value">05:58:10 AM</p>
+            </div>
+          </div>
+          <div class="bx--col value">
+            <!--prettier-ignore-->
+            <div class="value-col">
+              <p class="label small">Transit</p>
+              <p class="value">11:32:41 AM</p>
+            </div>
+          </div>
+          <div class="bx--col value">
+            <!--prettier-ignore-->
+            <div class="value-col">
+              <p class="label small">Venusset</p>
+              <p class="value">05:06:18 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--prettier-ignore-->
+
+<div class="bx--col-sm-4 bx--col-md-4 bx--col-lg-4 bx--col-xlg-4 bx--col-max-3">
+  <div class="bx--tile almanac-tile">
+    <div class="bx--row">
+      <div class="bx--col">
+        <p class="label">
+          <!--prettier-ignore-->
+          Mars
+        </p>
+        <div class="bx--row">
+          <div class="bx--col value">
+            <!--prettier-ignore-->
+            <div class="value-col">
+              <p class="label small">Marsrise</p>
+              <p class="value">09:09:54 AM</p>
+            </div>
+          </div>
+          <div class="bx--col value">
+            <!--prettier-ignore-->
+            <div class="value-col">
+              <p class="label small">Transit</p>
+              <p class="value">01:47:54 PM</p>
+            </div>
+          </div>
+          <div class="bx--col value">
+            <!--prettier-ignore-->
+            <div class="value-col">
+              <p class="label small">Marsset</p>
+              <p class="value">06:25:35 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--prettier-ignore-->
+
+<div class="bx--col-sm-4 bx--col-md-4 bx--col-lg-4 bx--col-xlg-4 bx--col-max-3">
+  <div class="bx--tile almanac-tile">
+    <div class="bx--row">
+      <div class="bx--col">
+        <p class="label">
+          <!--prettier-ignore-->
+          Jupiter
+        </p>
+        <div class="bx--row">
+          <div class="bx--col value">
+            <!--prettier-ignore-->
+            <div class="value-col">
+              <p class="label small">Jupiterrise</p>
+              <p class="value">10:18:37 PM</p>
+            </div>
+          </div>
+          <div class="bx--col value">
+            <!--prettier-ignore-->
+            <div class="value-col">
+              <p class="label small">Transit</p>
+              <p class="value">05:57:09 AM</p>
+            </div>
+          </div>
+          <div class="bx--col value">
+            <!--prettier-ignore-->
+            <div class="value-col">
+              <p class="label small">Jupiterset</p>
+              <p class="value">01:31:55 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--prettier-ignore-->
+
+<div class="bx--col-sm-4 bx--col-md-4 bx--col-lg-4 bx--col-xlg-4 bx--col-max-3">
+  <div class="bx--tile almanac-tile">
+    <div class="bx--row">
+      <div class="bx--col">
+        <p class="label">
+          <!--prettier-ignore-->
+          Saturn
+        </p>
+        <div class="bx--row">
+          <div class="bx--col value">
+            <!--prettier-ignore-->
+            <div class="value-col">
+              <p class="label small">Saturnrise</p>
+              <p class="value">04:08:58 PM</p>
+            </div>
+          </div>
+          <div class="bx--col value">
+            <!--prettier-ignore-->
+            <div class="value-col">
+              <p class="label small">Transit</p>
+              <p class="value">09:55:25 PM</p>
+            </div>
+          </div>
+          <div class="bx--col value">
+            <!--prettier-ignore-->
+            <div class="value-col">
+              <p class="label small">Saturnset</p>
+              <p class="value">03:45:59 AM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+          <div class="bx--row">
+            <!--prettier-ignore-->
+<!--prettier-ignore-->
+
+<div class="bx--col-sm-4 bx--col-md-4 bx--col-lg-4 bx--col-xlg-4 bx--col-max-3">
+  <div class="bx--tile almanac-tile detail">
+    <div class="bx--row">
+      <div class="bx--col">
+        <p class="label">Sun</p>
+        <div class="bx--row stats">
+          <div class="bx--col">
+            <p class="label small">Start civil twilight</p>
+            <p class="value">06:55:47 AM</p>
+          </div>
+          <div class="bx--col">
+            <p class="label small">End civil twilight</p>
+            <p class="value">06:09:37 PM</p>
+          </div>
+        </div>
+        <div class="bx--row stats">
+          <div class="bx--col">
+            <p class="label small">Start nautic twilight</p>
+            <p class="value">06:21:54 AM</p>
+          </div>
+          <div class="bx--col">
+            <p class="label small">End nautic twilight</p>
+            <p class="value">06:43:28 PM</p>
+          </div>
+        </div>
+        <div class="bx--row stats">
+          <div class="bx--col">
+            <p class="label small">Start astronomic twilight</p>
+            <p class="value">05:47:39 AM</p>
+          </div>
+          <div class="bx--col">
+            <p class="label small">End astronomic twilight</p>
+            <p class="value">07:17:40 PM</p>
+          </div>
+        </div>
+        <div class="bx--row stats">
+          <div class="bx--col">
+            <p class="label small">Azimuth</p>
+            <p class="value">210.2&deg;s</p>
+          </div>
+          <div class="bx--col">
+            <p class="label small">Altitude</p>
+            <p class="value">25.3&deg;</p>
+          </div>
+        </div>
+        <div class="bx--row stats">
+          <div class="bx--col">
+            <p class="label small">Right ascension</p>
+            <p class="value">216.2&deg;</p>
+          </div>
+          <div class="bx--col">
+            <p class="label small">Declination</p>
+            <p class="value">-14.4&deg;</p>
+          </div>
+        </div>
+        <!--prettier-ignore-->
+        <div class="bx--row stats">
+          <div class="bx--col">
+            <p class="label small">Solstice</p>
+            <p class="value">2025-12-21</p>
+          </div>
+          <div class="bx--col">
+            <p class="label small">Equinox</p>
+            <p class="value">2026-03-20</p>
+          </div>
+        </div>
+        <div class="bx--row">
+          <div class="bx--col">
+            <p class="label small">Total daylight</p>
+            <p class="value">10 hours, 11 minutes, 34 seconds</p>
+            <p class="label small">
+              <!--prettier-ignore-->
+              2 minutes, 49 seconds
+                less than yesterday
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--prettier-ignore-->
+
+<div class="bx--col-sm-4 bx--col-md-4 bx--col-lg-4 bx--col-xlg-4 bx--col-max-3">
+  <div class="bx--tile almanac-tile detail">
+    <div class="bx--row">
+      <div class="bx--col">
+        <p class="label">Moon</p>
+        <div class="bx--row stats">
+          <div class="bx--col">
+            <p class="label small">Azimuth</p>
+            <p class="value">96.7&deg;s</p>
+          </div>
+          <div class="bx--col">
+            <p class="label small">Altitude</p>
+            <p class="value">-10.2&deg;</p>
+          </div>
+        </div>
+        <div class="bx--row stats">
+          <div class="bx--col">
+            <p class="label small">Right ascension</p>
+            <p class="value">336.8&deg;</p>
+          </div>
+          <div class="bx--col">
+            <p class="label small">Declination</p>
+            <p class="value">-11.9&deg;</p>
+          </div>
+        </div>
+        <!--prettier-ignore-->
+        <div class="bx--row stats">
+          <div class="bx--col">
+            <p class="label small">Full moon</p>
+            <p class="value">2025-11-05</p>
+          </div>
+          <div class="bx--col">
+            <p class="label small">New moon</p>
+            <p class="value">2025-11-20</p>
+          </div>
+        </div>
+        <div class="bx--row">
+          <div class="bx--col">
+            <p class="label small">Phase</p>
+            <p class="value">Waxing gibbous</p>
+            <p class="label small">71% full</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+<!--prettier-ignore-->
+
+<div id="footer">
+  <div class="bx--grid bx--grid--full-width">
+    <div class="bx--row">
+      <div class="bx--col-sm-12 bx--col-lg-6">
+        <p>
+          WeeWX uptime: 16 days, 21 hours, 4 minutes<br />
+          Server uptime: 39 days, 0 hours, 45 minutes<br />
+          WeeWX version: 5.2.0 with
+          SDR<br />
+          Skin: Weather Data Center 3.5.1
+        </p>
+      </div>
+      <div class="bx--col-sm-12 bx--col-lg-6">
+        <p>
+          Altitude: 300 meters<br />
+          Latitude: 45&deg; 12.26'
+          N<br />
+          Longitude: 072&deg;
+          21.17' W
+        </p>
+      </div>
+    </div>
+    <!--prettier-ignore-->
+    <div class="bx--row">
+      <div class="bx--col">
+        <a
+          class="icon-link"
+          href="https://github.com/Daveiano/weewx-wdc"
+          target="_blank"
+        >
+<svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <title>Weewx WDC GitHub</title>
+  <path
+    class="cls-1"
+    d="M16,2a14,14,0,0,0-4.43,27.28c.7.13,1-.3,1-.67s0-1.21,0-2.38c-3.89.84-4.71-1.88-4.71-1.88A3.71,3.71,0,0,0,6.24,22.3c-1.27-.86.1-.85.1-.85A2.94,2.94,0,0,1,8.48,22.9a3,3,0,0,0,4.08,1.16,2.93,2.93,0,0,1,.88-1.87c-3.1-.36-6.37-1.56-6.37-6.92a5.4,5.4,0,0,1,1.44-3.76,5,5,0,0,1,.14-3.7s1.17-.38,3.85,1.43a13.3,13.3,0,0,1,7,0c2.67-1.81,3.84-1.43,3.84-1.43a5,5,0,0,1,.14,3.7,5.4,5.4,0,0,1,1.44,3.76c0,5.38-3.27,6.56-6.39,6.91a3.33,3.33,0,0,1,.95,2.59c0,1.87,0,3.38,0,3.84s.25.81,1,.67A14,14,0,0,0,16,2Z"
+  />
+  <rect
+    data-name="&lt;Transparent Rectangle&gt;"
+    class="cls-2"
+    width="32"
+    height="32"
+  />
+</svg>
+        </a>
+      </div>
+    </div>
+    <div class="bx--row">
+      <div class="bx--col">
+        <!--prettier-ignore-->
+        <p class="footnote">
+          This station is controlled by <a target='_blank' href='https://weewx.com'>WeeWX</a>, an experimental weather software system written in Python.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script src="/shefford_qc/dist/main.js" defer></script>
+  </body>
+</html>

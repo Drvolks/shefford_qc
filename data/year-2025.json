@@ -1,0 +1,100 @@
+{
+  "report": {
+    "time": 1735707600
+  },
+  "observations": [
+    {
+      "observation": "outTemp",
+      "label": "Outside Temperature",
+      "unit": "°C",
+      "min": 0.3890000000000013,
+      "minTime": 1735733904,
+      "max": 3.2779999999999987,
+      "maxTime": 1735752244,
+      "avg": 2.116605340176155,
+      "graph": [[1735707600, 2.116605340176155]]
+    },
+    {
+      "observation": "outHumidity",
+      "label": "Outside Humidity",
+      "unit": "%",
+      "min": 81.0,
+      "minTime": 1735723571,
+      "max": 99.0,
+      "maxTime": 1735732854,
+      "avg": 92.84368459949677,
+      "graph": [[1735707600, 92.84368459949677]]
+    },
+    {
+      "observation": "windDir",
+      "label": "Wind Direction",
+      "unit": "°",
+      "avg": 138.9606962743407,
+      "avgCompass": "SE",
+      "avgLabel": "steady",
+      "graph": [[1735707600, 158.66365493850486]]
+    },
+    {
+      "observation": "windSpeed",
+      "label": "Wind Speed",
+      "unit": " km/h",
+      "min": 0.0,
+      "minTime": 1735749431,
+      "max": 13.416949337488694,
+      "maxTime": 1735726500,
+      "avg": 5.993482103230346,
+      "graph": [[1735707600, 5.993482103230346]]
+    },
+    {
+      "observation": "windGust",
+      "label": "Gust Speed",
+      "unit": " km/h",
+      "min": 0.0,
+      "minTime": 1735754400,
+      "max": 19.21199405626829,
+      "maxTime": 1735731300,
+      "avg": 8.23460882681646,
+      "graph": [[1735707600, 8.23460882681646]]
+    },
+    {
+      "observation": "rainRate",
+      "label": "Rain Rate",
+      "unit": " cm/h",
+      "max": 0.20319999999999566,
+      "maxTime": 1735764038,
+      "graph": [[1735707600, 0.20319999999999566]]
+    },
+    {
+      "observation": "rain",
+      "label": "Rain",
+      "unit": " cm",
+      "sum": 0.3555999999999924,
+      "graph": [[1735707600, 0.3555999999999924]]
+    },
+    {
+      "observation": "lightning_strike_count",
+      "label": "Lightning Strikes",
+      "unit": "",
+      "graph": []
+    },
+    {
+      "observation": "lightning_distance",
+      "label": "Lightning Distance",
+      "unit": " km",
+      "graph": []
+    },
+    {
+      "observation": "barometer",
+      "label": "Barometer",
+      "unit": " mbar",
+      "graph": []
+    },
+    {
+      "observation": "UV",
+      "label": "UV Index",
+      "unit": "",
+      "graph": []
+    },
+    null
+  ]
+}
